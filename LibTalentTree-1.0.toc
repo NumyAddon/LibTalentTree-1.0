@@ -4,8 +4,7 @@
 ## Notes: Library for retrieving class and spec talent tree information
 ## Author: Numy
 ## Version: 0.1
-## X-Licence: All Rights Reserved
+## X-Licence: Permition is granted to use and redistribute this library in any way you see fit, including but not limited to, embedding it in your own addons.
 ## X-DeveloperNotes: This library is not in it's final state, has known issues, and will receive a totally different interface in a future update.
 
-LibStub\LibStub.lua
-LibTalentTree-1.0\LibTalentTree-1.0.xml
+LibTalentTree-1.0.xml

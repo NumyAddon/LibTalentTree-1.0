@@ -1,4 +1,4 @@
-local MAJOR, MINOR = "LibTalentTree-1.0", 1
+local MAJOR, MINOR = "LibTalentTree-0.1", 1
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
 --[[
@@ -11,8 +11,40 @@ Known issues:
 
 if not LibTalentTree then return end -- No upgrade needed
 
+local deepCopy
+function deepCopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in next, orig, nil do
+            copy[deepCopy(orig_key)] = deepCopy(orig_value)
+        end
+        setmetatable(copy, deepCopy(getmetatable(orig)))
+    else
+        copy = orig
+    end
+    return copy
+end
+
+function LibTalentTree:GetLibNodeInfo(treeId, nodeId)
+    return self.nodeData[treeId] and deepCopy(self.nodeData[treeId][nodeId]) or nil
+end
+
 function LibTalentTree:GetNodeInfo(treeId, nodeId)
-    return self.nodeData[treeId] and self.nodeData[treeId][nodeId] or nil
+    local cNodeInfo = C_Traits.GetNodeInfo(C_ClassTalents.GetActiveConfigID(), nodeId)
+    local libNodeInfo = self:GetLibNodeInfo(treeId, nodeId)
+
+    if not libNodeInfo then return cNodeInfo end
+
+    if cNodeInfo.ID == nodeId then
+        cNodeInfo.specID = libNodeInfo.specID
+        cNodeInfo.specBehaviour = libNodeInfo.specBehaviour
+
+        return cNodeInfo
+    end
+
+    return Mixin(cNodeInfo, libNodeInfo)
 end
 
 function LibTalentTree:GetClassTreeId(classId)
