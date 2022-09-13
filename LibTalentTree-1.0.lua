@@ -2,11 +2,11 @@ local MAJOR, MINOR = "LibTalentTree-0.1", 1
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
 --[[
-Note: This library is not in it's final state, has known issues, and will receive a totally different interface in a future update.
+Note: This library is not in it's final state, has known issues, and will likely receive a different interface in a future update.
 
 Known issues:
     - the visibleEdges list is not in the same order as it is when fetched through C_Traits
-    - none of the trees info has been checked besides the DK tree
+    - most of the trees have not been thoroughly checked, but a sample set turned out to be accurate, besides the issue(s) mentioned above
 --]]
 
 if not LibTalentTree then return end -- No upgrade needed
@@ -38,8 +38,7 @@ function LibTalentTree:GetNodeInfo(treeId, nodeId)
     if not libNodeInfo then return cNodeInfo end
 
     if cNodeInfo.ID == nodeId then
-        cNodeInfo.specID = libNodeInfo.specID
-        cNodeInfo.specBehaviour = libNodeInfo.specBehaviour
+        cNodeInfo.specInfo = libNodeInfo.specInfo
 
         return cNodeInfo
     end
@@ -71,8 +70,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71640},
             },
             ["ID"] = 71556,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19129
             },
@@ -94,8 +94,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71640},
             },
             ["ID"] = 71557,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19130
             },
@@ -117,8 +118,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71640},
             },
             ["ID"] = 71558,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19131
             },
@@ -142,8 +144,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71572},
             },
             ["ID"] = 71559,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -167,8 +171,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71560,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -192,8 +198,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71591},
             },
             ["ID"] = 71561,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -217,8 +225,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71587},
             },
             ["ID"] = 71562,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -244,8 +254,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71576},
             },
             ["ID"] = 71563,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -271,8 +283,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71578},
             },
             ["ID"] = 71564,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -297,8 +311,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71561},
             },
             ["ID"] = 71565,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -325,8 +341,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71589},
             },
             ["ID"] = 71566,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -351,8 +369,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71577},
             },
             ["ID"] = 71567,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -377,8 +397,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71573},
             },
             ["ID"] = 71568,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -402,8 +424,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71591},
             },
             ["ID"] = 71569,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -428,8 +452,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71596},
             },
             ["ID"] = 71570,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -451,8 +476,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71571,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -476,8 +502,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71563},
             },
             ["ID"] = 71572,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -502,8 +530,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71588},
             },
             ["ID"] = 71573,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -526,8 +556,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71600},
             },
             ["ID"] = 71574,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -550,8 +581,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71575,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -575,8 +608,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71576,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -601,8 +636,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71565},
             },
             ["ID"] = 71577,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -628,8 +665,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71560},
             },
             ["ID"] = 71578,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -655,8 +694,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71566},
             },
             ["ID"] = 71579,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -679,8 +720,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71580,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -703,8 +745,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71581,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -728,8 +772,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71562},
             },
             ["ID"] = 71582,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -753,8 +798,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71595},
             },
             ["ID"] = 71583,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -778,8 +825,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71581},
             },
             ["ID"] = 71584,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -803,8 +852,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71567},
             },
             ["ID"] = 71585,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -828,8 +878,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71599},
             },
             ["ID"] = 71586,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -853,8 +905,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71579},
             },
             ["ID"] = 71587,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -881,8 +935,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71561},
             },
             ["ID"] = 71588,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -908,8 +964,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71591},
             },
             ["ID"] = 71589,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -933,8 +991,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71575},
             },
             ["ID"] = 71590,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -958,8 +1018,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71591,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -985,8 +1047,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71597},
             },
             ["ID"] = 71592,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -1011,8 +1075,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71582},
             },
             ["ID"] = 71593,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -1034,8 +1099,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71593},
             },
             ["ID"] = 71594,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -1059,8 +1125,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71579},
             },
             ["ID"] = 71595,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19143
@@ -1083,8 +1151,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71598},
             },
             ["ID"] = 71596,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -1107,8 +1176,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71597,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -1133,8 +1204,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71571},
             },
             ["ID"] = 71598,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -1157,8 +1229,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71599,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19133,
                 19148
@@ -1182,8 +1256,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71585},
             },
             ["ID"] = 71600,
-            ["specID"] = 105,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [105] = "visible",
+            },
             ["conditionIDs"] = {
                 19133
             },
@@ -1207,8 +1282,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71601,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -1230,8 +1307,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71602,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -1252,8 +1330,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71603,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -1275,8 +1354,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71604,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1298,8 +1378,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71605,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1320,8 +1401,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71606,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -1343,8 +1425,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71646},
             },
             ["ID"] = 71607,
-            ["specID"] = 103,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [103] = "granted",
+            },
             ["conditionIDs"] = {
                 19147
             },
@@ -1366,8 +1449,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71608,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1390,8 +1474,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71609,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19136,
                 19140
@@ -1415,8 +1500,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71610,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140,
                 19136
@@ -1440,8 +1526,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71612},
             },
             ["ID"] = 71611,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19136,
                 19140
@@ -1465,8 +1552,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71612,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19136,
                 19140
@@ -1490,8 +1578,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71612},
             },
             ["ID"] = 71613,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19136,
                 19140
@@ -1516,8 +1605,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71611},
             },
             ["ID"] = 71614,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140,
                 19136
@@ -1541,8 +1631,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71614},
             },
             ["ID"] = 71615,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1564,8 +1655,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71617},
             },
             ["ID"] = 71616,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1588,8 +1680,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71615},
             },
             ["ID"] = 71617,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1611,8 +1704,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71618,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1633,8 +1727,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71618},
             },
             ["ID"] = 71619,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -1656,8 +1751,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71621},
             },
             ["ID"] = 71620,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -1678,8 +1774,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71622},
             },
             ["ID"] = 71621,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -1702,8 +1799,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71617},
             },
             ["ID"] = 71622,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1726,8 +1824,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71610},
             },
             ["ID"] = 71623,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1749,8 +1848,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71625},
             },
             ["ID"] = 71624,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1773,8 +1873,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71626},
             },
             ["ID"] = 71625,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19136,
                 19140
@@ -1799,8 +1900,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71609},
             },
             ["ID"] = 71626,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19136,
                 19140
@@ -1824,8 +1926,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71627,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140,
                 19136
@@ -1849,8 +1952,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71633},
             },
             ["ID"] = 71628,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1874,8 +1978,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71632},
             },
             ["ID"] = 71629,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1897,8 +2002,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71630,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1921,8 +2027,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71630},
             },
             ["ID"] = 71631,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1945,8 +2052,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71608},
             },
             ["ID"] = 71632,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -1969,8 +2077,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71634},
             },
             ["ID"] = 71633,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19136,
                 19140
@@ -1995,8 +2104,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71635},
             },
             ["ID"] = 71634,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19136,
                 19140
@@ -2020,8 +2130,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71635,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19136,
                 19140
@@ -2043,8 +2154,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71639},
             },
             ["ID"] = 71636,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [105] = "visible",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19141,
                 19149,
@@ -2069,8 +2183,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71638},
             },
             ["ID"] = 71637,
-            ["specID"] = 102,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [102] = "granted",
+            },
             ["conditionIDs"] = {
                 19142
             },
@@ -2092,8 +2207,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71639},
             },
             ["ID"] = 71638,
-            ["specID"] = 102,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [102] = "granted",
+            },
             ["conditionIDs"] = {
                 19142,
                 19144
@@ -2117,8 +2233,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71603},
             },
             ["ID"] = 71639,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -2139,8 +2256,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71604},
             },
             ["ID"] = 71640,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -2162,8 +2280,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71640},
             },
             ["ID"] = 71641,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19132
             },
@@ -2188,8 +2307,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71641},
             },
             ["ID"] = 71642,
-            ["specID"] = 105,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [105] = "granted",
+            },
             ["conditionIDs"] = {
                 19150
             },
@@ -2212,8 +2332,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71642},
             },
             ["ID"] = 71643,
-            ["specID"] = 105,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [105] = "granted",
+            },
             ["conditionIDs"] = {
                 19150
             },
@@ -2234,8 +2355,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71602},
             },
             ["ID"] = 71644,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -2258,8 +2380,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71644},
             },
             ["ID"] = 71645,
-            ["specID"] = 104,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [104] = "granted",
+            },
             ["conditionIDs"] = {
                 19138
             },
@@ -2283,8 +2406,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71620},
             },
             ["ID"] = 71646,
-            ["specID"] = 104,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [104] = "granted",
+                [103] = "granted",
+            },
             ["conditionIDs"] = {
                 19138,
                 19147
@@ -2307,8 +2432,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71648},
             },
             ["ID"] = 71647,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -2331,8 +2457,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71624},
             },
             ["ID"] = 71648,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19140
             },
@@ -2356,8 +2483,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71649,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19148,
@@ -2381,8 +2510,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71650,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -2405,8 +2535,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71687},
             },
             ["ID"] = 71651,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -2429,8 +2561,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71652,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -2452,8 +2585,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71652},
             },
             ["ID"] = 71653,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -2477,8 +2611,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71654,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -2503,8 +2639,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71655,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -2528,8 +2666,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71656,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -2553,8 +2693,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71656},
             },
             ["ID"] = 71657,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -2579,8 +2721,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71658,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -2606,8 +2750,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71658},
             },
             ["ID"] = 71659,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -2634,8 +2780,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71660,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -2661,8 +2809,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71660},
             },
             ["ID"] = 71661,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -2687,8 +2837,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71663},
             },
             ["ID"] = 71662,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -2715,8 +2867,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71661},
             },
             ["ID"] = 71663,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -2742,8 +2896,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71665},
             },
             ["ID"] = 71664,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19148,
@@ -2769,8 +2925,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71665,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -2796,8 +2954,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71666,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -2823,8 +2983,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71668},
             },
             ["ID"] = 71667,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -2846,8 +3007,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71669},
             },
             ["ID"] = 71668,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -2871,8 +3033,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71670},
             },
             ["ID"] = 71669,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -2896,8 +3060,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71670,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -2921,8 +3087,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71672},
             },
             ["ID"] = 71671,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -2949,8 +3117,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71664},
             },
             ["ID"] = 71672,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -2976,8 +3146,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71672},
             },
             ["ID"] = 71673,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -3004,8 +3176,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71662},
             },
             ["ID"] = 71674,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -3029,8 +3203,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71674},
             },
             ["ID"] = 71675,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -3055,8 +3231,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71657},
             },
             ["ID"] = 71676,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -3080,8 +3257,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71674},
             },
             ["ID"] = 71677,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -3104,8 +3283,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71677},
             },
             ["ID"] = 71678,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -3128,8 +3308,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71676},
             },
             ["ID"] = 71679,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -3153,8 +3334,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71653},
             },
             ["ID"] = 71680,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -3178,8 +3360,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71682},
             },
             ["ID"] = 71681,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -3203,8 +3386,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71667},
             },
             ["ID"] = 71682,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -3228,8 +3412,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71669},
             },
             ["ID"] = 71683,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146
             },
@@ -3252,8 +3437,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71685},
             },
             ["ID"] = 71684,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -3279,8 +3466,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71686},
             },
             ["ID"] = 71685,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -3305,8 +3494,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71688},
             },
             ["ID"] = 71686,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19146,
                 19143
@@ -3334,8 +3525,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71688},
             },
             ["ID"] = 71687,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -3361,8 +3554,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71688,
-            ["specID"] = 103,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [103] = "visible",
+            },
             ["conditionIDs"] = {
                 19148,
                 19146,
@@ -3389,8 +3584,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71690},
             },
             ["ID"] = 71689,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19134,
@@ -3421,8 +3618,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71690,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19134,
@@ -3453,8 +3652,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71690},
             },
             ["ID"] = 71691,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3482,8 +3683,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71692,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3511,8 +3713,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71693,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3542,8 +3746,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71694,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19134,
@@ -3573,8 +3779,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71694},
             },
             ["ID"] = 71695,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19134,
@@ -3605,8 +3813,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71695},
             },
             ["ID"] = 71696,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3636,8 +3846,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71698},
             },
             ["ID"] = 71697,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3668,8 +3880,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71698,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3699,8 +3913,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71698},
             },
             ["ID"] = 71699,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3732,8 +3948,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71697},
             },
             ["ID"] = 71700,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3762,8 +3980,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71701,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3792,8 +4012,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71703},
             },
             ["ID"] = 71702,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3821,8 +4043,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71704},
             },
             ["ID"] = 71703,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3850,8 +4074,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71700},
             },
             ["ID"] = 71704,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3880,8 +4106,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71704},
             },
             ["ID"] = 71705,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3910,8 +4138,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71693},
             },
             ["ID"] = 71706,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3940,8 +4170,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71706},
             },
             ["ID"] = 71707,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3969,8 +4201,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71708,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -3998,8 +4232,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71709,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4029,8 +4265,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71708},
             },
             ["ID"] = 71710,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4058,8 +4296,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71712},
             },
             ["ID"] = 71711,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4088,8 +4327,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71701},
             },
             ["ID"] = 71712,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4117,8 +4358,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71702},
             },
             ["ID"] = 71713,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4145,8 +4387,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71713},
             },
             ["ID"] = 71714,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4172,8 +4415,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71715,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4201,8 +4445,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71715},
             },
             ["ID"] = 71716,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4228,8 +4473,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71717,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4257,8 +4503,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71714},
             },
             ["ID"] = 71718,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4285,8 +4532,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71718},
             },
             ["ID"] = 71719,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4313,8 +4561,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71716},
             },
             ["ID"] = 71720,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4341,8 +4590,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71692},
             },
             ["ID"] = 71721,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4370,8 +4620,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71710},
             },
             ["ID"] = 71722,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4399,8 +4650,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71709},
             },
             ["ID"] = 71723,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4428,8 +4681,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71725},
             },
             ["ID"] = 71724,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4457,8 +4712,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71726},
             },
             ["ID"] = 71725,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19134,
                 19135,
@@ -4488,8 +4745,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71691},
             },
             ["ID"] = 71726,
-            ["specID"] = 104,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [104] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19134,
@@ -4519,8 +4778,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71727,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19148,
@@ -4547,8 +4808,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71727},
             },
             ["ID"] = 71728,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19137,
@@ -4574,8 +4837,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71728},
             },
             ["ID"] = 71729,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19148,
@@ -4601,8 +4866,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71730,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19148,
@@ -4628,8 +4895,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71730},
             },
             ["ID"] = 71731,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19148,
@@ -4656,8 +4925,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71731},
             },
             ["ID"] = 71732,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19148,
@@ -4683,8 +4954,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71732},
             },
             ["ID"] = 71733,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -4708,8 +4981,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71735},
             },
             ["ID"] = 71734,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -4734,8 +5009,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71733},
             },
             ["ID"] = 71735,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -4759,8 +5036,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71737},
             },
             ["ID"] = 71736,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -4786,8 +5065,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71728},
             },
             ["ID"] = 71737,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19137,
@@ -4814,8 +5095,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71738,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19148,
@@ -4842,8 +5125,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71739,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19148,
@@ -4870,8 +5155,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71740,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19143,
@@ -4897,8 +5184,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71740},
             },
             ["ID"] = 71741,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19137,
@@ -4924,8 +5213,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71743},
             },
             ["ID"] = 71742,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -4950,8 +5241,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71744},
             },
             ["ID"] = 71743,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -4975,8 +5268,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71745},
             },
             ["ID"] = 71744,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -5002,8 +5297,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71741},
             },
             ["ID"] = 71745,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19148,
@@ -5029,8 +5326,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71739},
             },
             ["ID"] = 71746,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19148,
                 19143,
@@ -5054,8 +5353,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 71747,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19137
             },
@@ -5079,8 +5379,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71755},
             },
             ["ID"] = 71748,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19137
             },
@@ -5103,8 +5404,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71756},
             },
             ["ID"] = 71749,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19137
             },
@@ -5126,8 +5428,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71749},
             },
             ["ID"] = 71750,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19137
             },
@@ -5150,8 +5453,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71748},
             },
             ["ID"] = 71751,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19137
             },
@@ -5174,8 +5478,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71753},
             },
             ["ID"] = 71752,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19137
             },
@@ -5198,8 +5503,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71754},
             },
             ["ID"] = 71753,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19137
             },
@@ -5221,8 +5527,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71755},
             },
             ["ID"] = 71754,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19137
             },
@@ -5245,8 +5552,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71742},
             },
             ["ID"] = 71755,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+            },
             ["conditionIDs"] = {
                 19137
             },
@@ -5269,8 +5577,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71757},
             },
             ["ID"] = 71756,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -5296,8 +5606,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71758},
             },
             ["ID"] = 71757,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -5322,8 +5634,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71759},
             },
             ["ID"] = 71758,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19143
@@ -5348,8 +5662,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71746},
             },
             ["ID"] = 71759,
-            ["specID"] = 102,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [102] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19137,
                 19148,
@@ -5375,8 +5691,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68568,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -5397,8 +5714,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68569,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -5419,8 +5737,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68570,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -5443,8 +5762,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68571,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -5466,8 +5786,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68680},
             },
             ["ID"] = 68572,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -5489,8 +5810,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68668},
             },
             ["ID"] = 68573,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -5512,8 +5834,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68648},
             },
             ["ID"] = 68574,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -5537,8 +5860,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68575,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18820,
@@ -5563,8 +5888,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68613},
             },
             ["ID"] = 68576,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -5590,8 +5917,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68578},
             },
             ["ID"] = 68577,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -5615,8 +5944,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68578,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -5640,8 +5971,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68601},
             },
             ["ID"] = 68579,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -5665,8 +5998,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68580,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -5690,8 +6025,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68582},
             },
             ["ID"] = 68581,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -5715,8 +6052,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68580},
             },
             ["ID"] = 68582,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -5741,8 +6080,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68601},
             },
             ["ID"] = 68583,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -5766,8 +6107,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68584,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18817
@@ -5792,8 +6135,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68585,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -5817,8 +6162,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68587},
             },
             ["ID"] = 68586,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -5842,8 +6189,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68585},
             },
             ["ID"] = 68587,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -5867,8 +6216,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68587},
             },
             ["ID"] = 68588,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -5894,8 +6245,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68586},
             },
             ["ID"] = 68589,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -5919,8 +6272,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68589},
             },
             ["ID"] = 68590,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -5945,8 +6300,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68591,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -5971,8 +6328,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68590},
             },
             ["ID"] = 68592,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -5995,8 +6354,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68594},
             },
             ["ID"] = 68593,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+            },
             ["conditionIDs"] = {
                 18817
             },
@@ -6020,8 +6380,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68592},
             },
             ["ID"] = 68594,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+            },
             ["conditionIDs"] = {
                 18817
             },
@@ -6045,8 +6406,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68591},
             },
             ["ID"] = 68595,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -6071,8 +6434,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68589},
             },
             ["ID"] = 68596,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18817
@@ -6096,8 +6461,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68598},
             },
             ["ID"] = 68597,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -6121,8 +6488,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68599},
             },
             ["ID"] = 68598,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -6148,8 +6517,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68600},
             },
             ["ID"] = 68599,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -6174,8 +6545,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68587},
             },
             ["ID"] = 68600,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -6200,8 +6573,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68602},
             },
             ["ID"] = 68601,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -6225,8 +6600,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68602,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -6250,8 +6627,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68603,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18817
@@ -6277,8 +6656,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68611},
             },
             ["ID"] = 68604,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+            },
             ["conditionIDs"] = {
                 18817
             },
@@ -6300,8 +6680,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68604},
             },
             ["ID"] = 68605,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+            },
             ["conditionIDs"] = {
                 18817
             },
@@ -6324,8 +6705,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68609},
             },
             ["ID"] = 68606,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+            },
             ["conditionIDs"] = {
                 18817
             },
@@ -6348,8 +6730,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68608},
             },
             ["ID"] = 68607,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+            },
             ["conditionIDs"] = {
                 18817
             },
@@ -6372,8 +6755,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68593},
             },
             ["ID"] = 68608,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+            },
             ["conditionIDs"] = {
                 18817
             },
@@ -6395,8 +6779,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68610},
             },
             ["ID"] = 68609,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+            },
             ["conditionIDs"] = {
                 18817
             },
@@ -6420,8 +6805,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68595},
             },
             ["ID"] = 68610,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+            },
             ["conditionIDs"] = {
                 18817
             },
@@ -6445,8 +6831,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68612},
             },
             ["ID"] = 68611,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -6471,8 +6859,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68599},
             },
             ["ID"] = 68612,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -6498,8 +6888,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68583},
             },
             ["ID"] = 68613,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18823
@@ -6523,8 +6915,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68582},
             },
             ["ID"] = 68614,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1468] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18817,
                 18821
@@ -6549,8 +6943,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68615,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18821,
                 18820,
@@ -6577,8 +6973,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68616,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18821,
                 18820,
@@ -6604,8 +7002,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68618},
             },
             ["ID"] = 68617,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18820
@@ -6630,8 +7030,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68619},
             },
             ["ID"] = 68618,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18820
@@ -6656,8 +7058,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68620},
             },
             ["ID"] = 68619,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18820,
                 18821,
@@ -6684,8 +7088,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68616},
             },
             ["ID"] = 68620,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18820,
@@ -6710,8 +7116,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68621,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18820,
                 18823
@@ -6734,8 +7142,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68625},
             },
             ["ID"] = 68622,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -6758,8 +7167,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68622},
             },
             ["ID"] = 68623,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -6781,8 +7191,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68625},
             },
             ["ID"] = 68624,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -6807,8 +7218,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68617},
             },
             ["ID"] = 68625,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18820,
                 18823
@@ -6833,8 +7246,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68627},
             },
             ["ID"] = 68626,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18820,
                 18823
@@ -6858,8 +7273,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68628},
             },
             ["ID"] = 68627,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18820,
                 18823
@@ -6885,8 +7302,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68620},
             },
             ["ID"] = 68628,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18821,
                 18820,
@@ -6912,8 +7331,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68575},
             },
             ["ID"] = 68629,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18821,
                 18820,
@@ -6940,8 +7361,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68629},
             },
             ["ID"] = 68630,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18821,
                 18820,
@@ -6967,8 +7390,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68575},
             },
             ["ID"] = 68631,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18820,
@@ -6995,8 +7420,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68631},
             },
             ["ID"] = 68632,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18820,
@@ -7022,8 +7449,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68615},
             },
             ["ID"] = 68633,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18821,
                 18820,
@@ -7049,8 +7478,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68633},
             },
             ["ID"] = 68634,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18821,
                 18820,
@@ -7076,8 +7507,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68636},
             },
             ["ID"] = 68635,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18820
@@ -7101,8 +7534,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68632},
             },
             ["ID"] = 68636,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18820,
                 18823
@@ -7127,8 +7562,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68638},
             },
             ["ID"] = 68637,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18820,
                 18823
@@ -7154,8 +7591,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68628},
             },
             ["ID"] = 68638,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18820,
                 18823
@@ -7179,8 +7618,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68638},
             },
             ["ID"] = 68639,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18820,
                 18823
@@ -7206,8 +7647,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68626},
             },
             ["ID"] = 68640,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18820
@@ -7230,8 +7673,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68640},
             },
             ["ID"] = 68641,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -7253,8 +7697,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68641},
             },
             ["ID"] = 68642,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -7278,8 +7723,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68623},
             },
             ["ID"] = 68643,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -7303,8 +7749,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68643},
             },
             ["ID"] = 68644,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -7327,8 +7774,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68642},
             },
             ["ID"] = 68645,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -7351,8 +7799,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68574},
             },
             ["ID"] = 68646,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -7374,8 +7823,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68648},
             },
             ["ID"] = 68647,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+            },
             ["conditionIDs"] = {
                 18820
             },
@@ -7399,8 +7849,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68637},
             },
             ["ID"] = 68648,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [1467] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18823,
                 18820
@@ -7425,8 +7877,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68649,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7450,8 +7903,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68650,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7475,8 +7929,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68659},
             },
             ["ID"] = 68651,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7500,8 +7955,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68655},
             },
             ["ID"] = 68652,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7525,8 +7981,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68654},
             },
             ["ID"] = 68653,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7550,8 +8007,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68655},
             },
             ["ID"] = 68654,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7576,8 +8034,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68655,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7601,8 +8060,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68655},
             },
             ["ID"] = 68656,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7625,8 +8085,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68658},
             },
             ["ID"] = 68657,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -7650,8 +8111,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68656},
             },
             ["ID"] = 68658,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7675,8 +8137,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68650},
             },
             ["ID"] = 68659,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7700,8 +8163,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68660,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7725,8 +8189,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68662},
             },
             ["ID"] = 68661,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7750,8 +8215,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68649},
             },
             ["ID"] = 68662,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7775,8 +8241,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68662},
             },
             ["ID"] = 68663,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7799,8 +8266,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68664,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -7822,8 +8290,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68666},
             },
             ["ID"] = 68665,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -7845,8 +8314,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68667},
             },
             ["ID"] = 68666,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -7870,8 +8340,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68668},
             },
             ["ID"] = 68667,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -7896,8 +8367,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68659},
             },
             ["ID"] = 68668,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18824,
                 18819
@@ -7922,8 +8394,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68658},
             },
             ["ID"] = 68669,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -7945,8 +8418,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68669},
             },
             ["ID"] = 68670,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -7968,8 +8442,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68671,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -7992,8 +8467,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68671},
             },
             ["ID"] = 68672,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -8015,8 +8491,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68571},
             },
             ["ID"] = 68673,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8037,8 +8514,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68674,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8060,8 +8538,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68676},
             },
             ["ID"] = 68675,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8084,8 +8563,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68677},
             },
             ["ID"] = 68676,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8108,8 +8588,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68673},
             },
             ["ID"] = 68677,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8130,8 +8611,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68679},
             },
             ["ID"] = 68678,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8154,8 +8636,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68680},
             },
             ["ID"] = 68679,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -8179,8 +8662,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68653},
             },
             ["ID"] = 68680,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -8203,8 +8687,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68682},
             },
             ["ID"] = 68681,
-            ["specID"] = 1467,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [1467] = "granted",
+            },
             ["conditionIDs"] = {
                 18822
             },
@@ -8227,8 +8712,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68683},
             },
             ["ID"] = 68682,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8251,8 +8737,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68570},
             },
             ["ID"] = 68683,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8273,8 +8760,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68685},
             },
             ["ID"] = 68684,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8297,8 +8785,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68573},
             },
             ["ID"] = 68685,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -8322,8 +8811,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68679},
             },
             ["ID"] = 68686,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18819
             },
@@ -8344,8 +8834,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 68687,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8368,8 +8859,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68687},
             },
             ["ID"] = 68688,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -8392,8 +8884,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 68688},
             },
             ["ID"] = 68689,
-            ["specID"] = 1468,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [1468] = "granted",
+            },
             ["conditionIDs"] = {
                 18818
             },
@@ -8421,8 +8914,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73089},
             },
             ["ID"] = 72968,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19258,
@@ -8448,8 +8943,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73074},
             },
             ["ID"] = 72969,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -8473,8 +8970,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73087},
             },
             ["ID"] = 72970,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -8499,8 +8998,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73090},
             },
             ["ID"] = 72971,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -8526,8 +9027,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73090},
             },
             ["ID"] = 72972,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -8555,8 +9058,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72972},
             },
             ["ID"] = 72973,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -8582,8 +9087,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72973},
             },
             ["ID"] = 72974,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -8606,8 +9113,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73009},
             },
             ["ID"] = 72975,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -8631,8 +9139,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 72976,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8658,8 +9168,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73011},
             },
             ["ID"] = 72977,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -8684,8 +9196,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 72978,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8712,8 +9226,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72978},
             },
             ["ID"] = 72979,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8739,8 +9255,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 72980,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8766,8 +9284,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72997},
             },
             ["ID"] = 72981,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8794,8 +9314,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72981},
             },
             ["ID"] = 72982,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8821,8 +9343,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72980},
             },
             ["ID"] = 72983,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8848,8 +9372,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 72984,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8875,8 +9401,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72984},
             },
             ["ID"] = 72985,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8904,8 +9432,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72983},
             },
             ["ID"] = 72986,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -8930,8 +9460,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72988},
             },
             ["ID"] = 72987,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -8956,8 +9488,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72982},
             },
             ["ID"] = 72988,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -8982,8 +9516,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72994},
             },
             ["ID"] = 72989,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -9008,8 +9544,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72991},
             },
             ["ID"] = 72990,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9031,8 +9568,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72992},
             },
             ["ID"] = 72991,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9056,8 +9594,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72993},
             },
             ["ID"] = 72992,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -9081,8 +9621,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72994},
             },
             ["ID"] = 72993,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -9108,8 +9650,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72995},
             },
             ["ID"] = 72994,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -9135,8 +9679,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72996},
             },
             ["ID"] = 72995,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -9162,8 +9708,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72997},
             },
             ["ID"] = 72996,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -9189,8 +9737,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 72997,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -9214,8 +9764,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72999},
             },
             ["ID"] = 72998,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9238,8 +9789,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72975},
             },
             ["ID"] = 72999,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9263,8 +9815,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73009},
             },
             ["ID"] = 73000,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9289,8 +9842,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73010},
             },
             ["ID"] = 73001,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -9313,8 +9868,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73001},
             },
             ["ID"] = 73002,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9338,8 +9894,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73000},
             },
             ["ID"] = 73003,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9361,8 +9918,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73003},
             },
             ["ID"] = 73004,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9386,8 +9944,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73006},
             },
             ["ID"] = 73005,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9410,8 +9969,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72990},
             },
             ["ID"] = 73006,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9434,8 +9994,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73008},
             },
             ["ID"] = 73007,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9458,8 +10019,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72992},
             },
             ["ID"] = 73008,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261
             },
@@ -9484,8 +10046,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72989},
             },
             ["ID"] = 73009,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -9511,8 +10075,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72988},
             },
             ["ID"] = 73010,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -9537,8 +10103,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72986},
             },
             ["ID"] = 73011,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19261,
                 19262
@@ -9564,8 +10132,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72979},
             },
             ["ID"] = 73012,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -9592,8 +10162,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72976},
             },
             ["ID"] = 73013,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [256] = "visible",
+            },
             ["conditionIDs"] = {
                 19261,
                 19258,
@@ -9619,8 +10191,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73014,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9647,8 +10221,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73014},
             },
             ["ID"] = 73015,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9674,8 +10250,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73016,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9702,8 +10280,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73016},
             },
             ["ID"] = 73017,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9730,8 +10310,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73017},
             },
             ["ID"] = 73018,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9757,8 +10339,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73016},
             },
             ["ID"] = 73019,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9784,8 +10368,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73021},
             },
             ["ID"] = 73020,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9811,8 +10397,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73021,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9839,8 +10427,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73021},
             },
             ["ID"] = 73022,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9868,8 +10458,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73022},
             },
             ["ID"] = 73023,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9895,8 +10487,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73025},
             },
             ["ID"] = 73024,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -9921,8 +10515,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73026},
             },
             ["ID"] = 73025,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -9948,8 +10544,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73019},
             },
             ["ID"] = 73026,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -9975,8 +10573,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73018},
             },
             ["ID"] = 73027,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10001,8 +10601,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73027},
             },
             ["ID"] = 73028,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10026,8 +10628,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73028},
             },
             ["ID"] = 73029,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10050,8 +10654,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73031},
             },
             ["ID"] = 73030,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10075,8 +10680,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73053},
             },
             ["ID"] = 73031,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10101,8 +10707,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73028},
             },
             ["ID"] = 73032,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10127,8 +10735,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73025},
             },
             ["ID"] = 73033,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10153,8 +10763,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73033},
             },
             ["ID"] = 73034,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10178,8 +10790,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73034},
             },
             ["ID"] = 73035,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10202,8 +10815,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73037},
             },
             ["ID"] = 73036,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10228,8 +10843,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73038},
             },
             ["ID"] = 73037,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10254,8 +10871,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73023},
             },
             ["ID"] = 73038,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10281,8 +10900,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73040},
             },
             ["ID"] = 73039,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -10308,8 +10929,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73014},
             },
             ["ID"] = 73040,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19251,
@@ -10333,8 +10956,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73045},
             },
             ["ID"] = 73041,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10357,8 +10981,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73041},
             },
             ["ID"] = 73042,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10382,8 +11007,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73041},
             },
             ["ID"] = 73043,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10406,8 +11032,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73045},
             },
             ["ID"] = 73044,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10431,8 +11058,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73033},
             },
             ["ID"] = 73045,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10456,8 +11085,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73032},
             },
             ["ID"] = 73046,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10482,8 +11112,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73031},
             },
             ["ID"] = 73047,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10506,8 +11137,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73047},
             },
             ["ID"] = 73048,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10531,8 +11163,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73050},
             },
             ["ID"] = 73049,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10555,8 +11188,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73051},
             },
             ["ID"] = 73050,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10579,8 +11213,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73052},
             },
             ["ID"] = 73051,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10602,8 +11237,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73053},
             },
             ["ID"] = 73052,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19251
             },
@@ -10627,8 +11263,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73054},
             },
             ["ID"] = 73053,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10653,8 +11291,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73027},
             },
             ["ID"] = 73054,
-            ["specID"] = 257,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [257] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19251,
                 19262
@@ -10679,8 +11319,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73055,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -10707,8 +11349,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73056,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -10734,8 +11378,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73056},
             },
             ["ID"] = 73057,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -10761,8 +11407,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72968},
             },
             ["ID"] = 73058,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -10786,8 +11434,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73060},
             },
             ["ID"] = 73059,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -10812,8 +11462,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73058},
             },
             ["ID"] = 73060,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -10839,8 +11491,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73062},
             },
             ["ID"] = 73061,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -10867,8 +11521,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73055},
             },
             ["ID"] = 73062,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -10892,8 +11548,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73068},
             },
             ["ID"] = 73063,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -10918,8 +11575,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73085},
             },
             ["ID"] = 73064,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -10943,8 +11601,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73064},
             },
             ["ID"] = 73065,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -10966,8 +11625,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73067},
             },
             ["ID"] = 73066,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -10991,8 +11651,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73068},
             },
             ["ID"] = 73067,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -11016,8 +11677,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73087},
             },
             ["ID"] = 73068,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -11041,8 +11704,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73058},
             },
             ["ID"] = 73069,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -11067,8 +11732,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73070,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -11095,8 +11762,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73070},
             },
             ["ID"] = 73071,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -11123,8 +11792,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73071},
             },
             ["ID"] = 73072,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -11150,8 +11821,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73072},
             },
             ["ID"] = 73073,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -11176,8 +11849,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73072},
             },
             ["ID"] = 73074,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -11200,8 +11875,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73085},
             },
             ["ID"] = 73075,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -11227,8 +11903,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73073},
             },
             ["ID"] = 73076,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -11254,8 +11932,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73074},
             },
             ["ID"] = 73077,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -11280,8 +11960,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73077},
             },
             ["ID"] = 73078,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -11305,8 +11987,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73076},
             },
             ["ID"] = 73079,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -11329,8 +12012,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73075},
             },
             ["ID"] = 73080,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -11353,8 +12037,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73076},
             },
             ["ID"] = 73081,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -11378,8 +12063,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73083},
             },
             ["ID"] = 73082,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -11402,8 +12088,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73081},
             },
             ["ID"] = 73083,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -11426,8 +12113,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73079},
             },
             ["ID"] = 73084,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -11452,8 +12140,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73078},
             },
             ["ID"] = 73085,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19253
             },
@@ -11477,8 +12166,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73077},
             },
             ["ID"] = 73086,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -11503,8 +12194,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72974},
             },
             ["ID"] = 73087,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19253,
                 19262
@@ -11529,8 +12222,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73055},
             },
             ["ID"] = 73088,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -11556,8 +12251,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73090},
             },
             ["ID"] = 73089,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -11583,8 +12280,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73090,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19258,
                 19253,
@@ -11610,8 +12309,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73092},
             },
             ["ID"] = 73091,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -11635,8 +12335,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73092,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -11660,8 +12361,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73093,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -11685,8 +12387,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73094,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -11710,8 +12413,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73095,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267,
                 19265
@@ -11735,8 +12439,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73095},
             },
             ["ID"] = 73096,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -11761,8 +12466,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73098},
             },
             ["ID"] = 73097,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -11787,8 +12493,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73094},
             },
             ["ID"] = 73098,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267,
                 19265
@@ -11813,8 +12520,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73100},
             },
             ["ID"] = 73099,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267,
@@ -11841,8 +12550,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73093},
             },
             ["ID"] = 73100,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -11867,8 +12577,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73100},
             },
             ["ID"] = 73101,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [0] = "available",
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267,
@@ -11894,8 +12607,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73103},
             },
             ["ID"] = 73102,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -11919,8 +12633,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73104},
             },
             ["ID"] = 73103,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -11944,8 +12659,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73105},
             },
             ["ID"] = 73104,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -11970,8 +12686,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73093},
             },
             ["ID"] = 73105,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -11996,8 +12713,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73091},
             },
             ["ID"] = 73106,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19265,
                 19267
@@ -12020,8 +12738,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73108},
             },
             ["ID"] = 73107,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12043,8 +12762,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73109},
             },
             ["ID"] = 73108,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12067,8 +12787,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73106},
             },
             ["ID"] = 73109,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12090,8 +12811,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73109},
             },
             ["ID"] = 73110,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12115,8 +12837,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73108},
             },
             ["ID"] = 73111,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12139,8 +12862,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73109},
             },
             ["ID"] = 73112,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12161,8 +12885,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73114},
             },
             ["ID"] = 73113,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12186,8 +12911,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73112},
             },
             ["ID"] = 73114,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12210,8 +12936,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73103},
             },
             ["ID"] = 73115,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12233,8 +12960,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73117},
             },
             ["ID"] = 73116,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12259,8 +12987,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73101},
             },
             ["ID"] = 73117,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12282,8 +13011,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73117},
             },
             ["ID"] = 73118,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12307,8 +13037,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73115},
             },
             ["ID"] = 73119,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12329,8 +13060,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73119},
             },
             ["ID"] = 73120,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12353,8 +13085,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73123},
             },
             ["ID"] = 73121,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12375,8 +13108,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73123},
             },
             ["ID"] = 73122,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12398,8 +13132,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73114},
             },
             ["ID"] = 73123,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12420,8 +13155,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73126},
             },
             ["ID"] = 73124,
-            ["specID"] = 258,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [258] = "visible",
+            },
             ["conditionIDs"] = {
                 19250
             },
@@ -12442,8 +13178,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73126},
             },
             ["ID"] = 73125,
-            ["specID"] = 256,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [256] = "visible",
+                [257] = "visible",
+            },
             ["conditionIDs"] = {
                 19259,
                 19264
@@ -12467,8 +13205,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73128},
             },
             ["ID"] = 73126,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12489,8 +13228,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73128},
             },
             ["ID"] = 73127,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12513,8 +13253,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73111},
             },
             ["ID"] = 73128,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12537,8 +13278,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73130},
             },
             ["ID"] = 73129,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12560,8 +13302,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73107},
             },
             ["ID"] = 73130,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12582,8 +13325,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73130},
             },
             ["ID"] = 73131,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12606,8 +13350,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73131},
             },
             ["ID"] = 73132,
-            ["specID"] = 258,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [258] = "granted",
+            },
             ["conditionIDs"] = {
                 19266
             },
@@ -12629,8 +13374,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73132},
             },
             ["ID"] = 73133,
-            ["specID"] = 256,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [256] = "granted",
+                [258] = "granted",
+            },
             ["conditionIDs"] = {
                 19255,
                 19257
@@ -12654,8 +13401,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73129},
             },
             ["ID"] = 73134,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12679,8 +13427,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73134},
             },
             ["ID"] = 73135,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12703,8 +13452,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73126},
             },
             ["ID"] = 73136,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12726,8 +13476,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73136},
             },
             ["ID"] = 73137,
-            ["specID"] = 257,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [257] = "granted",
+                [256] = "granted",
+            },
             ["conditionIDs"] = {
                 19252,
                 19256
@@ -12751,8 +13503,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73121},
             },
             ["ID"] = 73138,
-            ["specID"] = 257,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [257] = "granted",
+            },
             ["conditionIDs"] = {
                 19260
             },
@@ -12773,8 +13526,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73140},
             },
             ["ID"] = 73139,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12797,8 +13551,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73119},
             },
             ["ID"] = 73140,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -12820,8 +13575,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73116},
             },
             ["ID"] = 73141,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19267
             },
@@ -12846,8 +13602,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63733},
             },
             ["ID"] = 63730,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -12872,8 +13630,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63831},
             },
             ["ID"] = 63731,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -12899,8 +13659,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63732,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18406,
@@ -12928,8 +13690,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63824},
             },
             ["ID"] = 63733,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -12955,8 +13719,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63857},
             },
             ["ID"] = 63734,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -12982,8 +13748,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63733},
             },
             ["ID"] = 63735,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -13006,8 +13774,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63776},
             },
             ["ID"] = 63736,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13028,8 +13797,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63776},
             },
             ["ID"] = 63737,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13050,8 +13820,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63760},
             },
             ["ID"] = 63738,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13073,8 +13844,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63778},
             },
             ["ID"] = 63739,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13096,8 +13868,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63770},
             },
             ["ID"] = 63740,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13120,8 +13893,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63741,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -13145,8 +13919,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63742,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -13170,8 +13945,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63742},
             },
             ["ID"] = 63743,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -13194,8 +13970,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63779},
             },
             ["ID"] = 63744,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13218,8 +13995,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63745,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -13244,8 +14022,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63747},
             },
             ["ID"] = 63746,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -13269,8 +14048,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63745},
             },
             ["ID"] = 63747,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -13294,8 +14074,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63747},
             },
             ["ID"] = 63748,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -13318,8 +14099,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63750},
             },
             ["ID"] = 63749,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13343,8 +14125,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63748},
             },
             ["ID"] = 63750,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13365,8 +14148,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63753},
             },
             ["ID"] = 63751,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13387,8 +14171,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63753},
             },
             ["ID"] = 63752,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13410,8 +14195,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63754},
             },
             ["ID"] = 63753,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13433,8 +14219,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63755},
             },
             ["ID"] = 63754,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13456,8 +14243,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63750},
             },
             ["ID"] = 63755,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13479,8 +14267,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63770},
             },
             ["ID"] = 63756,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13504,8 +14293,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63769},
             },
             ["ID"] = 63757,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13527,8 +14317,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63757},
             },
             ["ID"] = 63758,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13550,8 +14341,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63760},
             },
             ["ID"] = 63759,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13572,8 +14364,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63757},
             },
             ["ID"] = 63760,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13595,8 +14388,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63767},
             },
             ["ID"] = 63761,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13619,8 +14413,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63761},
             },
             ["ID"] = 63762,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13642,8 +14437,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63762},
             },
             ["ID"] = 63763,
-            ["specID"] = 250,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [250] = "granted",
+            },
             ["conditionIDs"] = {
                 18409
             },
@@ -13664,8 +14460,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63765},
             },
             ["ID"] = 63764,
-            ["specID"] = 252,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [252] = "granted",
+            },
             ["conditionIDs"] = {
                 18405
             },
@@ -13688,8 +14485,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63752},
             },
             ["ID"] = 63765,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13711,8 +14509,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63753},
             },
             ["ID"] = 63766,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13734,8 +14533,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63768},
             },
             ["ID"] = 63767,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13759,8 +14559,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63755},
             },
             ["ID"] = 63768,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13782,8 +14583,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63770},
             },
             ["ID"] = 63769,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13806,8 +14608,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63746},
             },
             ["ID"] = 63770,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13831,8 +14634,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63772},
             },
             ["ID"] = 63771,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -13856,8 +14660,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63741},
             },
             ["ID"] = 63772,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -13879,8 +14684,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63774},
             },
             ["ID"] = 63773,
-            ["specID"] = 251,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [251] = "granted",
+            },
             ["conditionIDs"] = {
                 18403
             },
@@ -13903,8 +14709,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63775},
             },
             ["ID"] = 63774,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13926,8 +14733,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63758},
             },
             ["ID"] = 63775,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13949,8 +14757,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63777},
             },
             ["ID"] = 63776,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -13974,8 +14783,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63756},
             },
             ["ID"] = 63777,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -13997,8 +14807,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63779},
             },
             ["ID"] = 63778,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -14021,8 +14832,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63771},
             },
             ["ID"] = 63779,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18404
             },
@@ -14045,8 +14857,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63743},
             },
             ["ID"] = 63780,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18401,
                 18404
@@ -14071,8 +14884,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63782},
             },
             ["ID"] = 63781,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18402,
                 18399,
@@ -14097,8 +14912,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63782,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18402,
                 18399,
@@ -14124,8 +14941,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63783,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18408,
@@ -14153,8 +14972,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63784,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18408,
                 18399,
@@ -14181,8 +15002,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63785,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18408,
                 18399,
@@ -14209,8 +15032,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63786,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18408,
                 18402,
@@ -14237,8 +15062,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63786},
             },
             ["ID"] = 63787,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14265,8 +15092,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63788,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18408,
                 18402,
@@ -14292,8 +15121,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63789,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18402,
                 18399,
@@ -14320,8 +15151,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63789},
             },
             ["ID"] = 63790,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14347,8 +15180,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63788},
             },
             ["ID"] = 63791,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14373,8 +15208,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63814},
             },
             ["ID"] = 63792,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18402,
                 18399,
@@ -14399,8 +15236,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63792},
             },
             ["ID"] = 63793,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14425,8 +15264,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63796},
             },
             ["ID"] = 63794,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18400
@@ -14449,8 +15290,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63796},
             },
             ["ID"] = 63795,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18400
@@ -14475,8 +15318,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63797},
             },
             ["ID"] = 63796,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14501,8 +15346,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63798},
             },
             ["ID"] = 63797,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18402,
                 18399,
@@ -14528,8 +15375,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63799},
             },
             ["ID"] = 63798,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14556,8 +15405,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63800},
             },
             ["ID"] = 63799,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18408,
                 18399,
@@ -14584,8 +15435,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63785},
             },
             ["ID"] = 63800,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18408,
                 18402,
@@ -14611,8 +15464,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63801,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18402,
                 18399,
@@ -14638,8 +15493,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63791},
             },
             ["ID"] = 63802,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14665,8 +15522,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63790},
             },
             ["ID"] = 63803,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14690,8 +15549,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63803},
             },
             ["ID"] = 63804,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18400
@@ -14715,8 +15576,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63804},
             },
             ["ID"] = 63805,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18400
@@ -14739,8 +15602,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63805},
             },
             ["ID"] = 63806,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18400
@@ -14764,8 +15629,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63806},
             },
             ["ID"] = 63807,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18400
@@ -14788,8 +15655,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63809},
             },
             ["ID"] = 63808,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18400
@@ -14813,8 +15682,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63795},
             },
             ["ID"] = 63809,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18400
@@ -14837,8 +15708,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63811},
             },
             ["ID"] = 63810,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18400
@@ -14863,8 +15736,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63781},
             },
             ["ID"] = 63811,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14889,8 +15764,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63813},
             },
             ["ID"] = 63812,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18402,
                 18399,
@@ -14917,8 +15794,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63814},
             },
             ["ID"] = 63813,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18399,
                 18402,
@@ -14945,8 +15824,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63787},
             },
             ["ID"] = 63814,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18408,
                 18402,
@@ -14973,8 +15854,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63783},
             },
             ["ID"] = 63815,
-            ["specID"] = 251,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [251] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18402,
                 18408,
@@ -15001,8 +15884,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63833},
             },
             ["ID"] = 63816,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15028,8 +15913,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63817,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15055,8 +15942,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63829},
             },
             ["ID"] = 63818,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400
@@ -15081,8 +15970,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63819,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18400,
@@ -15109,8 +16000,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63819},
             },
             ["ID"] = 63820,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18406,
@@ -15136,8 +16029,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63822},
             },
             ["ID"] = 63821,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18402,
@@ -15162,8 +16057,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63828},
             },
             ["ID"] = 63822,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15189,8 +16086,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63825},
             },
             ["ID"] = 63823,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18406,
@@ -15217,8 +16116,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63732},
             },
             ["ID"] = 63824,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18406,
@@ -15245,8 +16146,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63825,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18406,
@@ -15274,8 +16177,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63817},
             },
             ["ID"] = 63826,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18406,
@@ -15302,8 +16207,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63734},
             },
             ["ID"] = 63827,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15331,8 +16238,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63864},
             },
             ["ID"] = 63828,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18406,
@@ -15358,8 +16267,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63835},
             },
             ["ID"] = 63829,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15384,8 +16295,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63821},
             },
             ["ID"] = 63830,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15412,8 +16325,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63823},
             },
             ["ID"] = 63831,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15440,8 +16355,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63830},
             },
             ["ID"] = 63832,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400
@@ -15467,8 +16384,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63730},
             },
             ["ID"] = 63833,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15493,8 +16412,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63831},
             },
             ["ID"] = 63834,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15519,8 +16440,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63735},
             },
             ["ID"] = 63835,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15547,8 +16470,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63859},
             },
             ["ID"] = 63836,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400
@@ -15572,8 +16497,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63858},
             },
             ["ID"] = 63837,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15599,8 +16526,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63839},
             },
             ["ID"] = 63838,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400
@@ -15624,8 +16553,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63833},
             },
             ["ID"] = 63839,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -15650,8 +16581,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63888},
             },
             ["ID"] = 63840,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -15678,8 +16611,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63841,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18407,
@@ -15706,8 +16641,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63841},
             },
             ["ID"] = 63842,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18407,
@@ -15734,8 +16671,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63843,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18407,
@@ -15762,8 +16701,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63843},
             },
             ["ID"] = 63844,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18408,
@@ -15790,8 +16731,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63847},
             },
             ["ID"] = 63845,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18407,
@@ -15818,8 +16761,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63847},
             },
             ["ID"] = 63846,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18408,
@@ -15846,8 +16791,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 63847,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18407,
@@ -15874,8 +16821,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63868},
             },
             ["ID"] = 63848,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -15900,8 +16849,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63850},
             },
             ["ID"] = 63849,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -15928,8 +16879,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63846},
             },
             ["ID"] = 63850,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18408,
                 18407,
@@ -15955,8 +16908,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63850},
             },
             ["ID"] = 63851,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -15981,8 +16936,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63851},
             },
             ["ID"] = 63852,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16007,8 +16964,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63852},
             },
             ["ID"] = 63853,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16034,8 +16993,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63885},
             },
             ["ID"] = 63854,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18400
@@ -16061,8 +17022,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63886},
             },
             ["ID"] = 63855,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16088,8 +17051,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63849},
             },
             ["ID"] = 63856,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16116,8 +17081,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63828},
             },
             ["ID"] = 63857,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -16144,8 +17111,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63857},
             },
             ["ID"] = 63858,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -16170,8 +17139,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63734},
             },
             ["ID"] = 63859,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -16195,8 +17166,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63865},
             },
             ["ID"] = 63860,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400
@@ -16220,8 +17193,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63862},
             },
             ["ID"] = 63861,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400
@@ -16244,8 +17219,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63863},
             },
             ["ID"] = 63862,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400
@@ -16269,8 +17246,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63838},
             },
             ["ID"] = 63863,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400
@@ -16295,8 +17274,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63817},
             },
             ["ID"] = 63864,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -16322,8 +17303,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63832},
             },
             ["ID"] = 63865,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400
@@ -16347,8 +17330,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63733},
             },
             ["ID"] = 63866,
-            ["specID"] = 250,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [250] = "visible",
+            },
             ["conditionIDs"] = {
                 18406,
                 18400,
@@ -16373,8 +17358,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63868},
             },
             ["ID"] = 63867,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16401,8 +17388,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63842},
             },
             ["ID"] = 63868,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18408,
@@ -16428,8 +17417,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63868},
             },
             ["ID"] = 63869,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16455,8 +17446,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63869},
             },
             ["ID"] = 63870,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16483,8 +17476,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63872},
             },
             ["ID"] = 63871,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16509,8 +17504,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63869},
             },
             ["ID"] = 63872,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16536,8 +17533,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63872},
             },
             ["ID"] = 63873,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16563,8 +17562,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63873},
             },
             ["ID"] = 63874,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18400
@@ -16588,8 +17589,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63876},
             },
             ["ID"] = 63875,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16615,8 +17618,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63848},
             },
             ["ID"] = 63876,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16643,8 +17648,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63876},
             },
             ["ID"] = 63877,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16668,8 +17675,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63877},
             },
             ["ID"] = 63878,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18400
@@ -16693,8 +17702,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63874},
             },
             ["ID"] = 63879,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18400
@@ -16717,8 +17728,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63879},
             },
             ["ID"] = 63880,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18400
@@ -16742,8 +17755,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63880},
             },
             ["ID"] = 63881,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18400
@@ -16766,8 +17781,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63883},
             },
             ["ID"] = 63882,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18400
@@ -16791,8 +17808,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63884},
             },
             ["ID"] = 63883,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18400
@@ -16816,8 +17835,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63877},
             },
             ["ID"] = 63884,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18400
@@ -16841,8 +17862,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63886},
             },
             ["ID"] = 63885,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16867,8 +17890,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63887},
             },
             ["ID"] = 63886,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16894,8 +17919,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63888},
             },
             ["ID"] = 63887,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18402,
@@ -16923,8 +17950,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63889},
             },
             ["ID"] = 63888,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18408,
@@ -16951,8 +17980,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 63847},
             },
             ["ID"] = 63889,
-            ["specID"] = 252,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [252] = "visible",
+            },
             ["conditionIDs"] = {
                 18407,
                 18408,
@@ -16981,8 +18012,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73298,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -17008,8 +18041,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73299,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -17033,8 +18067,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73399},
             },
             ["ID"] = 73300,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -17059,8 +18094,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73301,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -17086,8 +18123,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73315},
             },
             ["ID"] = 73302,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -17112,8 +18151,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73303,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -17138,8 +18178,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73303},
             },
             ["ID"] = 73304,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -17163,8 +18204,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73418},
             },
             ["ID"] = 73305,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -17188,8 +18230,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73419},
             },
             ["ID"] = 73306,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -17212,8 +18255,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73450},
             },
             ["ID"] = 73307,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -17238,8 +18283,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73425},
             },
             ["ID"] = 73308,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -17265,8 +18312,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73349},
             },
             ["ID"] = 73309,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -17292,8 +18341,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73310,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -17319,8 +18370,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73353},
             },
             ["ID"] = 73311,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17344,8 +18397,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73311},
             },
             ["ID"] = 73312,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17369,8 +18424,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73339},
             },
             ["ID"] = 73313,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17395,8 +18452,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73314,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -17422,8 +18481,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73315,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -17449,8 +18510,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73376},
             },
             ["ID"] = 73316,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -17473,8 +18536,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73422},
             },
             ["ID"] = 73317,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -17496,8 +18560,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73415},
             },
             ["ID"] = 73318,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19291
             },
@@ -17520,8 +18585,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73415},
             },
             ["ID"] = 73319,
-            ["specID"] = 254,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [254] = "granted",
+            },
             ["conditionIDs"] = {
                 19292,
                 19293
@@ -17544,8 +18610,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73415},
             },
             ["ID"] = 73320,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19294
             },
@@ -17568,8 +18635,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73306},
             },
             ["ID"] = 73321,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19296
             },
@@ -17592,8 +18660,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73306},
             },
             ["ID"] = 73322,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19297
             },
@@ -17615,8 +18684,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73416},
             },
             ["ID"] = 73323,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19298
             },
@@ -17639,8 +18709,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73416},
             },
             ["ID"] = 73324,
-            ["specID"] = 255,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [255] = "granted",
+            },
             ["conditionIDs"] = {
                 19301,
                 19300
@@ -17666,8 +18737,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73375},
             },
             ["ID"] = 73325,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -17692,8 +18765,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73336},
             },
             ["ID"] = 73326,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17718,8 +18793,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73347},
             },
             ["ID"] = 73327,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -17743,8 +18819,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73350},
             },
             ["ID"] = 73328,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17769,8 +18847,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73341},
             },
             ["ID"] = 73329,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17795,8 +18875,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73344},
             },
             ["ID"] = 73330,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -17819,8 +18900,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73335},
             },
             ["ID"] = 73331,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17845,8 +18928,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73334},
             },
             ["ID"] = 73332,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -17870,8 +18954,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73326},
             },
             ["ID"] = 73333,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17896,8 +18982,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73327},
             },
             ["ID"] = 73334,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -17921,8 +19008,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73328},
             },
             ["ID"] = 73335,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17946,8 +19035,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73339},
             },
             ["ID"] = 73336,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -17972,8 +19063,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73314},
             },
             ["ID"] = 73337,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -17998,8 +19091,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73313},
             },
             ["ID"] = 73338,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -18025,8 +19120,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73351},
             },
             ["ID"] = 73339,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -18051,8 +19148,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73352},
             },
             ["ID"] = 73340,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -18076,8 +19174,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73339},
             },
             ["ID"] = 73341,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -18101,8 +19201,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73346},
             },
             ["ID"] = 73342,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -18126,8 +19227,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73343,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -18153,8 +19256,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73333},
             },
             ["ID"] = 73344,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -18177,8 +19281,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73342},
             },
             ["ID"] = 73345,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -18202,8 +19307,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73338},
             },
             ["ID"] = 73346,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -18226,8 +19333,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73347,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -18251,8 +19359,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73345},
             },
             ["ID"] = 73348,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+            },
             ["conditionIDs"] = {
                 19302
             },
@@ -18276,8 +19385,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73349,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -18306,8 +19417,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73343},
             },
             ["ID"] = 73350,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -18333,8 +19446,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73354},
             },
             ["ID"] = 73351,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -18360,8 +19475,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73335},
             },
             ["ID"] = 73352,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19306
@@ -18387,8 +19504,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73310},
             },
             ["ID"] = 73353,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -18414,8 +19533,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73354,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -18441,8 +19562,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73337},
             },
             ["ID"] = 73355,
-            ["specID"] = 255,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [255] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19302,
                 19304,
@@ -18468,8 +19591,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73364},
             },
             ["ID"] = 73356,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -18492,8 +19616,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73363},
             },
             ["ID"] = 73357,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -18518,8 +19644,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73362},
             },
             ["ID"] = 73358,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -18544,8 +19671,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73366},
             },
             ["ID"] = 73359,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -18570,8 +19699,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73388},
             },
             ["ID"] = 73360,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -18597,8 +19728,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73384},
             },
             ["ID"] = 73361,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -18624,8 +19757,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73400},
             },
             ["ID"] = 73362,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -18648,8 +19782,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73363,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -18673,8 +19809,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73381},
             },
             ["ID"] = 73364,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -18697,8 +19834,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73385},
             },
             ["ID"] = 73365,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -18722,8 +19860,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73361},
             },
             ["ID"] = 73366,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -18749,8 +19889,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73370},
             },
             ["ID"] = 73367,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -18776,8 +19918,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73316},
             },
             ["ID"] = 73368,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -18802,8 +19946,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73370},
             },
             ["ID"] = 73369,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -18829,8 +19975,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73298},
             },
             ["ID"] = 73370,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -18856,8 +20004,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73359},
             },
             ["ID"] = 73371,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -18882,8 +20032,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73315},
             },
             ["ID"] = 73372,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -18907,8 +20059,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73371},
             },
             ["ID"] = 73373,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -18931,8 +20084,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73388},
             },
             ["ID"] = 73374,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -18958,8 +20113,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73367},
             },
             ["ID"] = 73375,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -18984,8 +20141,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73369},
             },
             ["ID"] = 73376,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -19009,8 +20168,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73366},
             },
             ["ID"] = 73377,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -19034,8 +20195,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73368},
             },
             ["ID"] = 73378,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -19059,8 +20221,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73379,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -19086,8 +20250,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73356},
             },
             ["ID"] = 73380,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -19112,8 +20277,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73357},
             },
             ["ID"] = 73381,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -19137,8 +20304,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73325},
             },
             ["ID"] = 73382,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19290,
                 19306
@@ -19162,8 +20331,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73356},
             },
             ["ID"] = 73383,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -19187,8 +20357,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73379},
             },
             ["ID"] = 73384,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -19213,8 +20385,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73371},
             },
             ["ID"] = 73385,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -19238,8 +20411,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73387},
             },
             ["ID"] = 73386,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -19265,8 +20440,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73387,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -19295,8 +20472,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73372},
             },
             ["ID"] = 73388,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19304,
                 19290,
@@ -19322,8 +20501,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73389,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -19348,8 +20528,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73396},
             },
             ["ID"] = 73390,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289,
                 19288
@@ -19372,8 +20553,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73406},
             },
             ["ID"] = 73391,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -19397,8 +20579,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73395},
             },
             ["ID"] = 73392,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -19421,8 +20604,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73393,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -19446,8 +20630,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73422},
             },
             ["ID"] = 73394,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -19469,8 +20654,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73405},
             },
             ["ID"] = 73395,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -19494,8 +20680,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73396,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -19520,8 +20707,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73306},
             },
             ["ID"] = 73397,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19295
             },
@@ -19546,8 +20734,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73390},
             },
             ["ID"] = 73398,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289,
                 19288
@@ -19571,8 +20760,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73399,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -19597,8 +20787,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73381},
             },
             ["ID"] = 73400,
-            ["specID"] = 254,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [254] = "visible",
+            },
             ["conditionIDs"] = {
                 19290
             },
@@ -19621,8 +20812,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73401,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -19646,8 +20838,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73441},
             },
             ["ID"] = 73402,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -19670,8 +20863,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73398},
             },
             ["ID"] = 73403,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -19693,8 +20887,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73411},
             },
             ["ID"] = 73404,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -19717,8 +20912,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73407},
             },
             ["ID"] = 73405,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -19742,8 +20938,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73410},
             },
             ["ID"] = 73406,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -19768,8 +20965,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73300},
             },
             ["ID"] = 73407,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -19792,8 +20990,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73403},
             },
             ["ID"] = 73408,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -19814,8 +21013,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73317},
             },
             ["ID"] = 73409,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -19837,8 +21037,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73419},
             },
             ["ID"] = 73410,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -19862,8 +21063,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73414},
             },
             ["ID"] = 73411,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -19886,8 +21088,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73412,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -19910,8 +21113,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73317},
             },
             ["ID"] = 73413,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -19934,8 +21138,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73393},
             },
             ["ID"] = 73414,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289,
                 19288
@@ -19957,8 +21162,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73410},
             },
             ["ID"] = 73415,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -19982,8 +21188,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73397},
             },
             ["ID"] = 73416,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -20006,8 +21213,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73389},
             },
             ["ID"] = 73417,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19288,
                 19289
@@ -20031,8 +21239,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73304},
             },
             ["ID"] = 73418,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -20054,8 +21263,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73418},
             },
             ["ID"] = 73419,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -20078,8 +21288,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73416},
             },
             ["ID"] = 73420,
-            ["specID"] = 253,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [253] = "granted",
+            },
             ["conditionIDs"] = {
                 19305,
                 19299
@@ -20102,8 +21313,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73413},
             },
             ["ID"] = 73421,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -20126,8 +21338,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73403},
             },
             ["ID"] = 73422,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19289
             },
@@ -20152,8 +21365,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73423,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -20177,8 +21392,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73428},
             },
             ["ID"] = 73424,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20202,8 +21418,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73425,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -20229,8 +21447,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73444},
             },
             ["ID"] = 73426,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20255,8 +21475,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73423},
             },
             ["ID"] = 73427,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20280,8 +21502,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73437},
             },
             ["ID"] = 73428,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20306,8 +21530,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73449},
             },
             ["ID"] = 73429,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20330,8 +21555,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73448},
             },
             ["ID"] = 73430,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20355,8 +21581,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73431,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -20382,8 +21610,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73449},
             },
             ["ID"] = 73432,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20406,8 +21635,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73430},
             },
             ["ID"] = 73433,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20431,8 +21661,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73453},
             },
             ["ID"] = 73434,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20455,8 +21686,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73447},
             },
             ["ID"] = 73435,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20480,8 +21713,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73438},
             },
             ["ID"] = 73436,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20506,8 +21741,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73435},
             },
             ["ID"] = 73437,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20533,8 +21770,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73423},
             },
             ["ID"] = 73438,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -20560,8 +21799,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73437},
             },
             ["ID"] = 73439,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20587,8 +21828,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73451},
             },
             ["ID"] = 73440,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20613,8 +21856,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73439},
             },
             ["ID"] = 73441,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20636,8 +21880,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73424},
             },
             ["ID"] = 73442,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20659,8 +21904,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73429},
             },
             ["ID"] = 73443,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20684,8 +21930,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73427},
             },
             ["ID"] = 73444,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20711,8 +21959,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73452},
             },
             ["ID"] = 73445,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -20738,8 +21988,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73446,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -20766,8 +22018,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73452},
             },
             ["ID"] = 73447,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -20793,8 +22047,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73437},
             },
             ["ID"] = 73448,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20820,8 +22076,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73440},
             },
             ["ID"] = 73449,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20848,8 +22106,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73301},
             },
             ["ID"] = 73450,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -20874,8 +22134,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73445},
             },
             ["ID"] = 73451,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19306
@@ -20900,8 +22162,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73431},
             },
             ["ID"] = 73452,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19303,
                 19304,
@@ -20926,8 +22190,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73433},
             },
             ["ID"] = 73453,
-            ["specID"] = 253,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [253] = "visible",
+            },
             ["conditionIDs"] = {
                 19303
             },
@@ -20951,8 +22216,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74376},
             },
             ["ID"] = 74249,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -20974,8 +22240,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74250,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -20998,8 +22265,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74252},
             },
             ["ID"] = 74251,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+            },
             ["conditionIDs"] = {
                 19360
             },
@@ -21022,8 +22290,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74252,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21047,8 +22317,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74253,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21072,8 +22344,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74254,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21098,8 +22372,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74255,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -21125,8 +22401,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74255},
             },
             ["ID"] = 74256,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -21151,8 +22429,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74258},
             },
             ["ID"] = 74257,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21177,8 +22457,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74256},
             },
             ["ID"] = 74258,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -21203,8 +22485,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74258},
             },
             ["ID"] = 74259,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21228,8 +22512,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74260,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21254,8 +22540,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74262},
             },
             ["ID"] = 74261,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -21281,8 +22569,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74367},
             },
             ["ID"] = 74262,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -21308,8 +22598,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74266},
             },
             ["ID"] = 74263,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21334,8 +22626,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74262},
             },
             ["ID"] = 74264,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -21360,8 +22654,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74264},
             },
             ["ID"] = 74265,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21386,8 +22682,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74261},
             },
             ["ID"] = 74266,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21413,8 +22711,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74268},
             },
             ["ID"] = 74267,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21441,8 +22741,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74373},
             },
             ["ID"] = 74268,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -21467,8 +22769,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74269,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -21494,8 +22798,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74269},
             },
             ["ID"] = 74270,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -21521,8 +22827,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74270},
             },
             ["ID"] = 74271,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -21548,8 +22856,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74273},
             },
             ["ID"] = 74272,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -21573,8 +22883,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74274},
             },
             ["ID"] = 74273,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -21599,8 +22911,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74275},
             },
             ["ID"] = 74274,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -21625,8 +22939,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74270},
             },
             ["ID"] = 74275,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -21651,8 +22967,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74276,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -21676,8 +22994,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74310},
             },
             ["ID"] = 74277,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -21700,8 +23019,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74278,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -21725,8 +23046,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74278},
             },
             ["ID"] = 74279,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -21750,8 +23072,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74291},
             },
             ["ID"] = 74280,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -21776,8 +23100,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74281,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -21803,8 +23129,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74281},
             },
             ["ID"] = 74282,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -21830,8 +23158,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74282},
             },
             ["ID"] = 74283,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -21856,8 +23186,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74283},
             },
             ["ID"] = 74284,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -21880,8 +23212,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74302},
             },
             ["ID"] = 74285,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -21904,8 +23237,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74274},
             },
             ["ID"] = 74286,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -21930,8 +23265,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74287,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19363,
                 19359,
@@ -21957,8 +23294,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74287},
             },
             ["ID"] = 74288,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -21984,8 +23323,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74288},
             },
             ["ID"] = 74289,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -22011,8 +23352,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74288},
             },
             ["ID"] = 74290,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19363,
@@ -22039,8 +23382,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74289},
             },
             ["ID"] = 74291,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22064,8 +23409,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74291},
             },
             ["ID"] = 74292,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22089,8 +23436,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74292},
             },
             ["ID"] = 74293,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22115,8 +23464,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74293},
             },
             ["ID"] = 74294,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22140,8 +23491,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74291},
             },
             ["ID"] = 74295,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22164,8 +23517,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74310},
             },
             ["ID"] = 74296,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -22188,8 +23542,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74295},
             },
             ["ID"] = 74297,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22213,8 +23569,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74284},
             },
             ["ID"] = 74298,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22238,8 +23596,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74301},
             },
             ["ID"] = 74299,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22264,8 +23624,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74284},
             },
             ["ID"] = 74300,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22291,8 +23653,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74280},
             },
             ["ID"] = 74301,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22317,8 +23681,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74297},
             },
             ["ID"] = 74302,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -22340,8 +23705,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74303,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -22365,8 +23731,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74305},
             },
             ["ID"] = 74304,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -22389,8 +23756,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74279},
             },
             ["ID"] = 74305,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -22412,8 +23780,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74306,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -22437,8 +23806,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74285},
             },
             ["ID"] = 74307,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -22461,8 +23831,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74296},
             },
             ["ID"] = 74308,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -22484,8 +23855,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74294},
             },
             ["ID"] = 74309,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+            },
             ["conditionIDs"] = {
                 19359
             },
@@ -22509,8 +23881,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74286},
             },
             ["ID"] = 74310,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22534,8 +23908,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74286},
             },
             ["ID"] = 74311,
-            ["specID"] = 260,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [260] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19359,
                 19362
@@ -22560,8 +23936,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74312,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -22585,8 +23963,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74313,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -22609,8 +23988,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74314,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -22634,8 +24015,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74315,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -22658,8 +24041,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74316,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -22683,8 +24067,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74318},
             },
             ["ID"] = 74317,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -22710,8 +24096,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74319},
             },
             ["ID"] = 74318,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -22737,8 +24125,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74319,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -22763,8 +24153,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74320,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -22788,8 +24180,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74321,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -22813,8 +24207,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74322,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -22839,8 +24235,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74323,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -22866,8 +24264,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74327},
             },
             ["ID"] = 74324,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -22893,8 +24293,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74324},
             },
             ["ID"] = 74325,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -22920,8 +24322,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74323},
             },
             ["ID"] = 74326,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -22946,8 +24350,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74327,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -22972,8 +24378,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74328,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -22997,8 +24405,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74343},
             },
             ["ID"] = 74329,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23021,8 +24430,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74329},
             },
             ["ID"] = 74330,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23046,8 +24456,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74322},
             },
             ["ID"] = 74331,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23072,8 +24484,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74326},
             },
             ["ID"] = 74332,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23097,8 +24511,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74333,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23122,8 +24538,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74334,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23148,8 +24566,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74335,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -23175,8 +24595,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74335},
             },
             ["ID"] = 74336,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -23202,8 +24624,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74336},
             },
             ["ID"] = 74337,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19363,
@@ -23228,8 +24652,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74337},
             },
             ["ID"] = 74338,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23255,8 +24681,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74333},
             },
             ["ID"] = 74339,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23280,8 +24708,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74339},
             },
             ["ID"] = 74340,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23307,8 +24737,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74320},
             },
             ["ID"] = 74341,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23333,8 +24765,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74346},
             },
             ["ID"] = 74342,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23356,8 +24789,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74343,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23379,8 +24813,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74342},
             },
             ["ID"] = 74344,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23403,8 +24838,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74328},
             },
             ["ID"] = 74345,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23427,8 +24863,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74331},
             },
             ["ID"] = 74346,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23453,8 +24891,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74344},
             },
             ["ID"] = 74347,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23476,8 +24915,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74342},
             },
             ["ID"] = 74348,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23500,8 +24940,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74348},
             },
             ["ID"] = 74349,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23524,8 +24965,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74351},
             },
             ["ID"] = 74350,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23548,8 +24990,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74352},
             },
             ["ID"] = 74351,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+            },
             ["conditionIDs"] = {
                 19361
             },
@@ -23572,8 +25015,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74353},
             },
             ["ID"] = 74352,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23598,8 +25043,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74354},
             },
             ["ID"] = 74353,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23624,8 +25071,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74334},
             },
             ["ID"] = 74354,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23650,8 +25099,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74317},
             },
             ["ID"] = 74355,
-            ["specID"] = 261,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [261] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19361,
                 19362
@@ -23675,8 +25126,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74356,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -23700,8 +25153,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74267},
             },
             ["ID"] = 74357,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+            },
             ["conditionIDs"] = {
                 19360
             },
@@ -23725,8 +25179,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74363},
             },
             ["ID"] = 74358,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -23750,8 +25206,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74267},
             },
             ["ID"] = 74359,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+            },
             ["conditionIDs"] = {
                 19360
             },
@@ -23774,8 +25231,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74359},
             },
             ["ID"] = 74360,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+            },
             ["conditionIDs"] = {
                 19360
             },
@@ -23798,8 +25256,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74361,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -23824,8 +25284,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74362,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -23851,8 +25313,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74362},
             },
             ["ID"] = 74363,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -23876,8 +25340,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74366},
             },
             ["ID"] = 74364,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+            },
             ["conditionIDs"] = {
                 19360
             },
@@ -23900,8 +25365,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74268},
             },
             ["ID"] = 74365,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -23926,8 +25393,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74371},
             },
             ["ID"] = 74366,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+            },
             ["conditionIDs"] = {
                 19360
             },
@@ -23951,8 +25419,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74367,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -23978,8 +25448,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74369},
             },
             ["ID"] = 74368,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+            },
             ["conditionIDs"] = {
                 19360
             },
@@ -24002,8 +25473,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74251},
             },
             ["ID"] = 74369,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+            },
             ["conditionIDs"] = {
                 19360
             },
@@ -24025,8 +25497,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74371},
             },
             ["ID"] = 74370,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+            },
             ["conditionIDs"] = {
                 19360
             },
@@ -24051,8 +25524,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74254},
             },
             ["ID"] = 74371,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -24077,8 +25552,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74253},
             },
             ["ID"] = 74372,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -24103,8 +25580,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74374},
             },
             ["ID"] = 74373,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -24128,8 +25607,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74375},
             },
             ["ID"] = 74374,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19362
@@ -24154,8 +25635,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74363},
             },
             ["ID"] = 74375,
-            ["specID"] = 259,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [259] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19360,
                 19363,
@@ -24182,8 +25665,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74386},
             },
             ["ID"] = 74376,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24207,8 +25691,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74378},
             },
             ["ID"] = 74377,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24232,8 +25717,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74379},
             },
             ["ID"] = 74378,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24257,8 +25743,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74379,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24283,8 +25770,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74398},
             },
             ["ID"] = 74380,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24308,8 +25796,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74381,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24333,8 +25822,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74383},
             },
             ["ID"] = 74382,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24358,8 +25848,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74381},
             },
             ["ID"] = 74383,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24383,8 +25874,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74384,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24408,8 +25900,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74384},
             },
             ["ID"] = 74385,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24433,8 +25926,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74385},
             },
             ["ID"] = 74386,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24456,8 +25950,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74388},
             },
             ["ID"] = 74387,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -24479,8 +25974,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74389},
             },
             ["ID"] = 74388,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24503,8 +25999,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74249},
             },
             ["ID"] = 74389,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24527,8 +26024,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74390,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24552,8 +26050,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74390},
             },
             ["ID"] = 74391,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24576,8 +26075,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74397},
             },
             ["ID"] = 74392,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24598,8 +26098,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74394},
             },
             ["ID"] = 74393,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -24621,8 +26122,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74395},
             },
             ["ID"] = 74394,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24646,8 +26148,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74396},
             },
             ["ID"] = 74395,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24669,8 +26172,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74396,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24695,8 +26199,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74391},
             },
             ["ID"] = 74397,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24719,8 +26224,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74400},
             },
             ["ID"] = 74398,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24743,8 +26249,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74380},
             },
             ["ID"] = 74399,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24767,8 +26274,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74400,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19365,
                 19366
@@ -24791,8 +26299,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74401,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24814,8 +26323,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74402,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24837,8 +26347,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74409},
             },
             ["ID"] = 74403,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -24860,8 +26371,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74404,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -24884,8 +26396,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74394},
             },
             ["ID"] = 74405,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -24907,8 +26420,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74407},
             },
             ["ID"] = 74406,
-            ["specID"] = 259,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [259] = "granted",
+            },
             ["conditionIDs"] = {
                 19364
             },
@@ -24931,8 +26445,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74405},
             },
             ["ID"] = 74407,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -24953,8 +26468,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74409},
             },
             ["ID"] = 74408,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -24977,8 +26493,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74410},
             },
             ["ID"] = 74409,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -25001,8 +26518,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74401},
             },
             ["ID"] = 74410,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -25024,8 +26542,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74411,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19366
             },
@@ -25047,8 +26566,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74411},
             },
             ["ID"] = 74412,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -25070,8 +26590,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74414},
             },
             ["ID"] = 74413,
-            ["specID"] = 261,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [261] = "granted",
+            },
             ["conditionIDs"] = {
                 19357
             },
@@ -25094,8 +26615,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74412},
             },
             ["ID"] = 74414,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -25118,8 +26640,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74388},
             },
             ["ID"] = 74415,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -25141,8 +26664,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74417},
             },
             ["ID"] = 74416,
-            ["specID"] = 260,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [260] = "granted",
+            },
             ["conditionIDs"] = {
                 19358
             },
@@ -25165,8 +26689,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74415},
             },
             ["ID"] = 74417,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -25191,8 +26716,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69749},
             },
             ["ID"] = 69676,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -25216,8 +26743,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69751},
             },
             ["ID"] = 69677,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -25240,8 +26769,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69820},
             },
             ["ID"] = 69678,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -25264,8 +26794,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69679,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25288,8 +26819,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69680,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25312,8 +26844,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69682},
             },
             ["ID"] = 69681,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25337,8 +26870,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69682,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25363,8 +26897,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69684},
             },
             ["ID"] = 69683,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25388,8 +26923,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69682},
             },
             ["ID"] = 69684,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25414,8 +26950,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69685,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25439,8 +26976,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69686,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25465,8 +27003,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69686},
             },
             ["ID"] = 69687,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25490,8 +27029,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69687},
             },
             ["ID"] = 69688,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25514,8 +27054,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69690},
             },
             ["ID"] = 69689,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25538,8 +27079,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69688},
             },
             ["ID"] = 69690,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25564,8 +27106,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69687},
             },
             ["ID"] = 69691,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25589,8 +27132,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69691},
             },
             ["ID"] = 69692,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25614,8 +27158,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69681},
             },
             ["ID"] = 69693,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25638,8 +27183,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69711},
             },
             ["ID"] = 69694,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -25661,8 +27207,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69696},
             },
             ["ID"] = 69695,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -25685,8 +27232,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69697},
             },
             ["ID"] = 69696,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25711,8 +27259,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69692},
             },
             ["ID"] = 69697,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25736,8 +27285,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69693},
             },
             ["ID"] = 69698,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25760,8 +27310,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69699,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25785,8 +27336,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69699},
             },
             ["ID"] = 69700,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25810,8 +27362,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69685},
             },
             ["ID"] = 69701,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939,
                 18943
@@ -25835,8 +27388,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69685},
             },
             ["ID"] = 69702,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18943,
                 18939
@@ -25858,8 +27412,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69704},
             },
             ["ID"] = 69703,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -25882,8 +27437,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69700},
             },
             ["ID"] = 69704,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25906,8 +27462,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69729},
             },
             ["ID"] = 69705,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -25929,8 +27486,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69705},
             },
             ["ID"] = 69706,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -25953,8 +27511,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69708},
             },
             ["ID"] = 69707,
-            ["specID"] = 264,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [264] = "granted",
+            },
             ["conditionIDs"] = {
                 18940
             },
@@ -25977,8 +27536,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69727},
             },
             ["ID"] = 69708,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26000,8 +27560,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69706},
             },
             ["ID"] = 69709,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26023,8 +27584,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69713},
             },
             ["ID"] = 69710,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18942
             },
@@ -26048,8 +27610,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69679},
             },
             ["ID"] = 69711,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -26071,8 +27634,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69713},
             },
             ["ID"] = 69712,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18946
             },
@@ -26094,8 +27658,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69714},
             },
             ["ID"] = 69713,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26119,8 +27684,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69680},
             },
             ["ID"] = 69714,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -26143,8 +27709,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69716},
             },
             ["ID"] = 69715,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26165,8 +27732,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69714},
             },
             ["ID"] = 69716,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26188,8 +27756,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69716},
             },
             ["ID"] = 69717,
-            ["specID"] = 263,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [263] = "granted",
+            },
             ["conditionIDs"] = {
                 18941
             },
@@ -26214,8 +27783,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69717},
             },
             ["ID"] = 69718,
-            ["specID"] = 263,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [263] = "granted",
+                [262] = "granted",
+            },
             ["conditionIDs"] = {
                 18945,
                 18941
@@ -26240,8 +27811,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69713},
             },
             ["ID"] = 69719,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26263,8 +27835,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69713},
             },
             ["ID"] = 69720,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18936
             },
@@ -26288,8 +27861,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69720},
             },
             ["ID"] = 69721,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26312,8 +27886,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69694},
             },
             ["ID"] = 69722,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26334,8 +27909,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69722},
             },
             ["ID"] = 69723,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26359,8 +27935,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69721},
             },
             ["ID"] = 69724,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26383,8 +27960,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69722},
             },
             ["ID"] = 69725,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26409,8 +27987,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69725},
             },
             ["ID"] = 69726,
-            ["specID"] = 264,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [264] = "granted",
+                [262] = "granted",
+            },
             ["conditionIDs"] = {
                 18945,
                 18940
@@ -26434,8 +28014,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69695},
             },
             ["ID"] = 69727,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26457,8 +28038,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69696},
             },
             ["ID"] = 69728,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -26481,8 +28063,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69698},
             },
             ["ID"] = 69729,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18939
             },
@@ -26506,8 +28089,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69764},
             },
             ["ID"] = 69730,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -26531,8 +28116,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69731,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -26557,8 +28144,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69752},
             },
             ["ID"] = 69732,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -26583,8 +28172,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69733,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18944,
@@ -26610,8 +28201,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69733},
             },
             ["ID"] = 69734,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18944,
@@ -26637,8 +28230,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69735,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18944,
@@ -26664,8 +28259,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69736,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18944,
@@ -26692,8 +28289,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69736},
             },
             ["ID"] = 69737,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18944,
@@ -26718,8 +28317,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69748},
             },
             ["ID"] = 69738,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -26744,8 +28345,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69739,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18944,
@@ -26771,8 +28374,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69739},
             },
             ["ID"] = 69740,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18935,
@@ -26798,8 +28403,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69741,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18944,
@@ -26824,8 +28431,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69743},
             },
             ["ID"] = 69742,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -26851,8 +28460,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69741},
             },
             ["ID"] = 69743,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18935,
@@ -26877,8 +28488,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69743},
             },
             ["ID"] = 69744,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -26903,8 +28516,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69746},
             },
             ["ID"] = 69745,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -26930,8 +28545,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69747},
             },
             ["ID"] = 69746,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -26956,8 +28573,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69748},
             },
             ["ID"] = 69747,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -26984,8 +28603,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69735},
             },
             ["ID"] = 69748,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18935,
@@ -27012,8 +28633,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69750},
             },
             ["ID"] = 69749,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -27038,8 +28661,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69751},
             },
             ["ID"] = 69750,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -27065,8 +28690,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69734},
             },
             ["ID"] = 69751,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18944,
@@ -27093,8 +28720,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69754},
             },
             ["ID"] = 69752,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -27119,8 +28748,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69752},
             },
             ["ID"] = 69753,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -27144,8 +28775,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69751},
             },
             ["ID"] = 69754,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -27169,8 +28802,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69766},
             },
             ["ID"] = 69755,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27194,8 +28828,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69753},
             },
             ["ID"] = 69756,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27220,8 +28855,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69749},
             },
             ["ID"] = 69757,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -27246,8 +28883,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69757},
             },
             ["ID"] = 69758,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27269,8 +28907,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69758},
             },
             ["ID"] = 69759,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27293,8 +28932,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69755},
             },
             ["ID"] = 69760,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27317,8 +28957,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69762},
             },
             ["ID"] = 69761,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27342,8 +28983,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69763},
             },
             ["ID"] = 69762,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27366,8 +29008,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69765},
             },
             ["ID"] = 69763,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27391,8 +29034,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69677},
             },
             ["ID"] = 69764,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944,
                 18934
@@ -27416,8 +29061,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69730},
             },
             ["ID"] = 69765,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27441,8 +29087,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69732},
             },
             ["ID"] = 69766,
-            ["specID"] = 263,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [263] = "visible",
+            },
             ["conditionIDs"] = {
                 18944
             },
@@ -27466,8 +29113,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69831},
             },
             ["ID"] = 69767,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937,
                 18934
@@ -27492,8 +29141,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69768,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18937,
@@ -27519,8 +29170,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69770},
             },
             ["ID"] = 69769,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18934,
@@ -27546,8 +29199,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69770,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18934,
@@ -27574,8 +29229,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69771,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18937,
@@ -27602,8 +29259,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69772,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18935,
@@ -27630,8 +29289,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69773,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18938,
@@ -27657,8 +29318,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69774,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18935,
@@ -27684,8 +29347,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69774},
             },
             ["ID"] = 69775,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18935,
@@ -27710,8 +29375,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69777},
             },
             ["ID"] = 69776,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -27736,8 +29403,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69784},
             },
             ["ID"] = 69777,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -27763,8 +29432,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69779},
             },
             ["ID"] = 69778,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18935,
@@ -27790,8 +29461,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69779,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18938,
@@ -27818,8 +29491,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69779},
             },
             ["ID"] = 69780,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18938,
@@ -27846,8 +29521,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69778},
             },
             ["ID"] = 69781,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18935,
@@ -27874,8 +29551,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69778},
             },
             ["ID"] = 69782,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -27900,8 +29579,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69782},
             },
             ["ID"] = 69783,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -27927,8 +29608,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69781},
             },
             ["ID"] = 69784,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -27955,8 +29638,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69780},
             },
             ["ID"] = 69785,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18935,
@@ -27983,8 +29668,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69773},
             },
             ["ID"] = 69786,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934,
@@ -28010,8 +29697,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69787,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18935,
@@ -28038,8 +29727,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69787},
             },
             ["ID"] = 69788,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18935,
@@ -28067,8 +29758,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69786},
             },
             ["ID"] = 69789,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18938,
@@ -28094,8 +29787,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69772},
             },
             ["ID"] = 69790,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18935,
@@ -28122,8 +29817,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69790},
             },
             ["ID"] = 69791,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18935,
@@ -28149,8 +29846,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69772},
             },
             ["ID"] = 69792,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18938,
@@ -28176,8 +29875,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69791},
             },
             ["ID"] = 69793,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -28201,8 +29902,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69795},
             },
             ["ID"] = 69794,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -28227,8 +29930,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69796},
             },
             ["ID"] = 69795,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -28254,8 +29959,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69789},
             },
             ["ID"] = 69796,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18938
@@ -28280,8 +29987,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69798},
             },
             ["ID"] = 69797,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -28308,8 +30017,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69785},
             },
             ["ID"] = 69798,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -28334,8 +30045,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69777},
             },
             ["ID"] = 69799,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18938
@@ -28360,8 +30073,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69801},
             },
             ["ID"] = 69800,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18934,
@@ -28387,8 +30102,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69801,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18934,
@@ -28416,8 +30133,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69801},
             },
             ["ID"] = 69802,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18934,
@@ -28443,8 +30162,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69800},
             },
             ["ID"] = 69803,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18937
@@ -28469,8 +30190,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69803},
             },
             ["ID"] = 69804,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937,
                 18934
@@ -28495,8 +30218,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69802},
             },
             ["ID"] = 69805,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18937
@@ -28522,8 +30247,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69805},
             },
             ["ID"] = 69806,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937,
                 18934
@@ -28548,8 +30275,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69804},
             },
             ["ID"] = 69807,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937,
                 18934
@@ -28574,8 +30303,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69809},
             },
             ["ID"] = 69808,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -28599,8 +30329,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69803},
             },
             ["ID"] = 69809,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18937
@@ -28626,8 +30358,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69810,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18937,
@@ -28653,8 +30387,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69811,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18937,
@@ -28681,8 +30417,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69811},
             },
             ["ID"] = 69812,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18934,
@@ -28708,8 +30446,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69814},
             },
             ["ID"] = 69813,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18937
@@ -28734,8 +30474,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69815},
             },
             ["ID"] = 69814,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18937
@@ -28763,8 +30505,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69768},
             },
             ["ID"] = 69815,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937,
                 18935,
@@ -28788,8 +30532,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69829},
             },
             ["ID"] = 69816,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -28811,8 +30556,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69817,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -28836,8 +30582,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69817},
             },
             ["ID"] = 69818,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -28860,8 +30607,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69816},
             },
             ["ID"] = 69819,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -28884,8 +30632,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69829},
             },
             ["ID"] = 69820,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -28909,8 +30658,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69767},
             },
             ["ID"] = 69821,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18937
@@ -28935,8 +30686,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69821},
             },
             ["ID"] = 69822,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -28960,8 +30712,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69820},
             },
             ["ID"] = 69823,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -28984,8 +30737,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69678},
             },
             ["ID"] = 69824,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -29009,8 +30763,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69826},
             },
             ["ID"] = 69825,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -29033,8 +30788,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69827},
             },
             ["ID"] = 69826,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -29057,8 +30813,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69808},
             },
             ["ID"] = 69827,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -29081,8 +30838,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69807},
             },
             ["ID"] = 69828,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937
             },
@@ -29107,8 +30865,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69806},
             },
             ["ID"] = 69829,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18934,
                 18937
@@ -29132,8 +30892,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69831},
             },
             ["ID"] = 69830,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937,
                 18934
@@ -29158,8 +30920,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69832},
             },
             ["ID"] = 69831,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18937,
                 18934
@@ -29186,8 +30950,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69833},
             },
             ["ID"] = 69832,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18934,
@@ -29213,8 +30979,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 69833,
-            ["specID"] = 264,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [264] = "visible",
+            },
             ["conditionIDs"] = {
                 18935,
                 18937,
@@ -29238,8 +31006,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69835},
             },
             ["ID"] = 69834,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29261,8 +31030,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69836},
             },
             ["ID"] = 69835,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29286,8 +31056,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69837},
             },
             ["ID"] = 69836,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29310,8 +31081,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69797},
             },
             ["ID"] = 69837,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -29336,8 +31109,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69776},
             },
             ["ID"] = 69838,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29359,8 +31133,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69838},
             },
             ["ID"] = 69839,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29383,8 +31158,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69839},
             },
             ["ID"] = 69840,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29408,8 +31184,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69842},
             },
             ["ID"] = 69841,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29431,8 +31208,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69843},
             },
             ["ID"] = 69842,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29455,8 +31233,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69844},
             },
             ["ID"] = 69843,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29480,8 +31259,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69845},
             },
             ["ID"] = 69844,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938
             },
@@ -29504,8 +31284,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 69783},
             },
             ["ID"] = 69845,
-            ["specID"] = 262,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [262] = "visible",
+            },
             ["conditionIDs"] = {
                 18938,
                 18934
@@ -29531,8 +31313,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61767},
             },
             ["ID"] = 61765,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29557,8 +31342,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61776},
             },
             ["ID"] = 61766,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29583,8 +31370,11 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61767,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29610,8 +31400,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61794},
             },
             ["ID"] = 61768,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29637,8 +31429,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61772},
             },
             ["ID"] = 61769,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 17999,
@@ -29667,8 +31462,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61789},
             },
             ["ID"] = 61770,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29694,8 +31492,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61767},
             },
             ["ID"] = 61771,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 17999,
@@ -29721,8 +31522,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61781},
             },
             ["ID"] = 61772,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 17999,
@@ -29748,8 +31552,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61769},
             },
             ["ID"] = 61773,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29775,8 +31582,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61784},
             },
             ["ID"] = 61774,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 17999,
@@ -29802,8 +31612,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61784},
             },
             ["ID"] = 61775,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29829,8 +31642,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61798},
             },
             ["ID"] = 61776,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29856,8 +31671,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61800},
             },
             ["ID"] = 61777,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29883,8 +31701,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61797},
             },
             ["ID"] = 61778,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -29909,8 +31729,11 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61779,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 17999,
@@ -29938,8 +31761,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61774},
             },
             ["ID"] = 61780,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 17999,
@@ -29965,8 +31791,11 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61781,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 17999,
@@ -29991,8 +31820,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61797},
             },
             ["ID"] = 61782,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -30017,8 +31848,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61799},
             },
             ["ID"] = 61783,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -30044,8 +31877,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61795},
             },
             ["ID"] = 61784,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 17999,
@@ -30071,8 +31907,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61769},
             },
             ["ID"] = 61785,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 17999,
@@ -30099,8 +31938,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61770},
             },
             ["ID"] = 61786,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 17999,
@@ -30128,8 +31970,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61771},
             },
             ["ID"] = 61787,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 17999,
@@ -30155,8 +32000,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61768},
             },
             ["ID"] = 61788,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -30182,8 +32029,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61795},
             },
             ["ID"] = 61789,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 17999,
@@ -30210,8 +32060,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61775},
             },
             ["ID"] = 61790,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 17999,
@@ -30238,8 +32091,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61765},
             },
             ["ID"] = 61791,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 17999,
@@ -30264,8 +32120,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61798},
             },
             ["ID"] = 61792,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -30291,8 +32149,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61774},
             },
             ["ID"] = 61793,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 17999,
@@ -30317,8 +32178,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61801},
             },
             ["ID"] = 61794,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -30343,8 +32206,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61779},
             },
             ["ID"] = 61795,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 17999,
@@ -30370,8 +32236,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61770},
             },
             ["ID"] = 61796,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 17999,
@@ -30400,8 +32269,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61793},
             },
             ["ID"] = 61797,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -30429,8 +32301,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61796},
             },
             ["ID"] = 61798,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -30457,8 +32332,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61782},
             },
             ["ID"] = 61799,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -30484,8 +32361,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61773},
             },
             ["ID"] = 61800,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 17999,
@@ -30511,8 +32391,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61780},
             },
             ["ID"] = 61801,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "visible",
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18003,
@@ -30538,8 +32420,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61808},
             },
             ["ID"] = 61802,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -30568,8 +32454,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61823},
             },
             ["ID"] = 61803,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -30601,8 +32491,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61834},
             },
             ["ID"] = 61804,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "granted",
+                [70] = "visible",
+                [73] = "granted",
+                [65] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18001,
@@ -30636,8 +32530,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61822},
             },
             ["ID"] = 61805,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -30667,8 +32565,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61802},
             },
             ["ID"] = 61806,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -30696,8 +32598,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61814},
             },
             ["ID"] = 61807,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -30726,8 +32632,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61840},
             },
             ["ID"] = 61808,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -30756,8 +32666,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61817},
             },
             ["ID"] = 61809,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -30785,8 +32699,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61806},
             },
             ["ID"] = 61810,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -30813,8 +32730,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61826},
             },
             ["ID"] = 61811,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -30843,8 +32764,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61813},
             },
             ["ID"] = 61812,
-            ["specID"] = 70,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [70] = "granted",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17998,
                 18015,
@@ -30873,8 +32797,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61831},
             },
             ["ID"] = 61813,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -30902,8 +32829,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61840},
             },
             ["ID"] = 61814,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -30932,8 +32863,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61838},
             },
             ["ID"] = 61815,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -30960,8 +32894,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61829},
             },
             ["ID"] = 61816,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -30989,8 +32926,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61803},
             },
             ["ID"] = 61817,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -31019,8 +32960,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61832},
             },
             ["ID"] = 61818,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -31048,8 +32993,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61837},
             },
             ["ID"] = 61819,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -31076,8 +33024,12 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61820,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -31107,8 +33059,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61817},
             },
             ["ID"] = 61821,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -31136,8 +33092,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61836},
             },
             ["ID"] = 61822,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -31165,8 +33125,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61826},
             },
             ["ID"] = 61823,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -31195,8 +33159,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61803},
             },
             ["ID"] = 61824,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -31226,8 +33194,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61818},
             },
             ["ID"] = 61825,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -31256,8 +33228,12 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61826,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -31286,8 +33262,12 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61827,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -31316,8 +33296,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61811},
             },
             ["ID"] = 61828,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -31347,8 +33331,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61821},
             },
             ["ID"] = 61829,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -31376,8 +33364,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61829},
             },
             ["ID"] = 61830,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -31404,8 +33395,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61807},
             },
             ["ID"] = 61831,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -31432,8 +33426,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61827},
             },
             ["ID"] = 61832,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -31462,8 +33460,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61828},
             },
             ["ID"] = 61833,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -31494,8 +33496,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61839},
             },
             ["ID"] = 61834,
-            ["specID"] = 66,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [66] = "granted",
+                [70] = "visible",
+                [73] = "granted",
+                [65] = "granted",
+            },
             ["conditionIDs"] = {
                 17999,
                 18001,
@@ -31530,8 +33536,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61833},
             },
             ["ID"] = 61835,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -31559,8 +33569,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61820},
             },
             ["ID"] = 61836,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -31589,8 +33603,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61814},
             },
             ["ID"] = 61837,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -31619,8 +33637,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61813},
             },
             ["ID"] = 61838,
-            ["specID"] = 70,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [70] = "granted",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17998,
                 18015,
@@ -31650,8 +33671,11 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61819},
             },
             ["ID"] = 61839,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 17996,
                 17997,
@@ -31678,8 +33702,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61832},
             },
             ["ID"] = 61840,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18010,
                 17996,
@@ -31707,8 +33735,12 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61833},
             },
             ["ID"] = 61841,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [66] = "visible",
+                [65] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18013,
                 17996,
@@ -31737,8 +33769,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61842,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -31762,8 +33796,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61842},
             },
             ["ID"] = 61843,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -31789,8 +33825,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61862},
             },
             ["ID"] = 61844,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -31814,8 +33852,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61845,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -31839,8 +33879,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61846,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -31864,8 +33906,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61848},
             },
             ["ID"] = 61847,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -31889,8 +33933,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61848,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -31914,8 +33960,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61849,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -31938,8 +33986,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61850,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -31961,8 +34010,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61906},
             },
             ["ID"] = 61851,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -31985,8 +34035,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61852,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32011,8 +34063,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61853,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32036,8 +34090,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61854,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32061,8 +34117,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61855,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -32086,8 +34144,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61856,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -32112,8 +34172,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61856},
             },
             ["ID"] = 61857,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18007
@@ -32137,8 +34199,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61859},
             },
             ["ID"] = 61858,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32162,8 +34226,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61860},
             },
             ["ID"] = 61859,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32189,8 +34255,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61843},
             },
             ["ID"] = 61860,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -32215,8 +34283,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61844},
             },
             ["ID"] = 61861,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 18004
@@ -32240,8 +34310,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61855},
             },
             ["ID"] = 61862,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -32265,8 +34337,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61863,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18007
@@ -32290,8 +34364,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61863},
             },
             ["ID"] = 61864,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -32316,8 +34392,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61864},
             },
             ["ID"] = 61865,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18007,
                 18004
@@ -32341,8 +34419,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61865},
             },
             ["ID"] = 61866,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32367,8 +34447,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61866},
             },
             ["ID"] = 61867,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 18004
@@ -32393,8 +34475,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61867},
             },
             ["ID"] = 61868,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 18004
@@ -32418,8 +34502,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61873},
             },
             ["ID"] = 61869,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32442,8 +34528,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61871},
             },
             ["ID"] = 61870,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -32467,8 +34554,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61868},
             },
             ["ID"] = 61871,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -32491,8 +34579,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61873},
             },
             ["ID"] = 61872,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 18004
@@ -32518,8 +34608,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61866},
             },
             ["ID"] = 61873,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32545,8 +34637,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61865},
             },
             ["ID"] = 61874,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32572,8 +34666,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61874},
             },
             ["ID"] = 61875,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32600,8 +34696,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61853},
             },
             ["ID"] = 61876,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32625,8 +34723,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61877,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -32650,8 +34750,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61878,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -32675,8 +34777,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61878},
             },
             ["ID"] = 61879,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -32700,8 +34804,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61880,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -32725,8 +34831,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61881,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -32750,8 +34858,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61882,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -32775,8 +34885,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61884},
             },
             ["ID"] = 61883,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -32801,8 +34913,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61882},
             },
             ["ID"] = 61884,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -32829,8 +34943,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61879},
             },
             ["ID"] = 61885,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -32854,8 +34970,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61885},
             },
             ["ID"] = 61886,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -32879,8 +34997,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61886},
             },
             ["ID"] = 61887,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -32904,8 +35024,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61888,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -32930,8 +35052,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61889,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -32955,8 +35079,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61889},
             },
             ["ID"] = 61890,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -32981,8 +35107,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61890},
             },
             ["ID"] = 61891,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33006,8 +35134,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61888},
             },
             ["ID"] = 61892,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33032,8 +35162,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61892},
             },
             ["ID"] = 61893,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33056,8 +35188,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61895},
             },
             ["ID"] = 61894,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011
             },
@@ -33082,8 +35215,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61891},
             },
             ["ID"] = 61895,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011
             },
@@ -33106,8 +35240,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61887},
             },
             ["ID"] = 61896,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33131,8 +35267,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61898},
             },
             ["ID"] = 61897,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -33158,8 +35296,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61861},
             },
             ["ID"] = 61898,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18004,
                 18009
@@ -33184,8 +35324,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61898},
             },
             ["ID"] = 61899,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 18004
@@ -33210,8 +35352,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61869},
             },
             ["ID"] = 61900,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -33235,8 +35378,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61871},
             },
             ["ID"] = 61901,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -33260,8 +35404,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61870},
             },
             ["ID"] = 61902,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -33284,8 +35429,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61902},
             },
             ["ID"] = 61903,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -33309,8 +35455,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61850},
             },
             ["ID"] = 61904,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -33333,8 +35480,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61900},
             },
             ["ID"] = 61905,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -33358,8 +35506,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61899},
             },
             ["ID"] = 61906,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+            },
             ["conditionIDs"] = {
                 18004
             },
@@ -33383,8 +35532,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61898},
             },
             ["ID"] = 61907,
-            ["specID"] = 70,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [70] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18009,
                 18004
@@ -33408,8 +35559,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61908,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -33434,8 +35587,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61910},
             },
             ["ID"] = 61909,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33460,8 +35615,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61921},
             },
             ["ID"] = 61910,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33485,8 +35642,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61910},
             },
             ["ID"] = 61911,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33512,8 +35671,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61849},
             },
             ["ID"] = 61912,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011
             },
@@ -33535,8 +35695,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61912},
             },
             ["ID"] = 61913,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011
             },
@@ -33559,8 +35720,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61917},
             },
             ["ID"] = 61914,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011
             },
@@ -33583,8 +35745,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61916},
             },
             ["ID"] = 61915,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011
             },
@@ -33607,8 +35770,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61894},
             },
             ["ID"] = 61916,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011
             },
@@ -33630,8 +35794,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61918},
             },
             ["ID"] = 61917,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011
             },
@@ -33655,8 +35820,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61896},
             },
             ["ID"] = 61918,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011
             },
@@ -33681,8 +35847,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61887},
             },
             ["ID"] = 61919,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33706,8 +35874,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61921},
             },
             ["ID"] = 61920,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33731,8 +35901,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61922},
             },
             ["ID"] = 61921,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18009
@@ -33758,8 +35930,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61884},
             },
             ["ID"] = 61922,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -33783,8 +35957,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61923,
-            ["specID"] = 65,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [65] = "visible",
+            },
             ["conditionIDs"] = {
                 18011,
                 18007
@@ -33810,8 +35986,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62206},
             },
             ["ID"] = 62083,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -33832,8 +36009,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62124},
             },
             ["ID"] = 62084,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -33855,8 +36033,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62085,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -33880,8 +36059,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62087},
             },
             ["ID"] = 62086,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -33904,8 +36084,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62087,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -33929,8 +36110,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62110},
             },
             ["ID"] = 62088,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -33952,8 +36134,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62099},
             },
             ["ID"] = 62089,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -33975,8 +36158,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62090,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34000,8 +36184,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62090},
             },
             ["ID"] = 62091,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34024,8 +36209,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62092,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34048,8 +36234,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62092},
             },
             ["ID"] = 62093,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34072,8 +36259,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62094,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34097,8 +36285,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62094},
             },
             ["ID"] = 62095,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34123,8 +36312,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62093},
             },
             ["ID"] = 62096,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34149,8 +36339,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62103},
             },
             ["ID"] = 62097,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34173,8 +36364,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62099},
             },
             ["ID"] = 62098,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34197,8 +36389,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62091},
             },
             ["ID"] = 62099,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34221,8 +36414,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62099},
             },
             ["ID"] = 62100,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34245,8 +36439,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62100},
             },
             ["ID"] = 62101,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34268,8 +36463,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62103},
             },
             ["ID"] = 62102,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34293,8 +36489,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62100},
             },
             ["ID"] = 62103,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34318,8 +36515,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62105},
             },
             ["ID"] = 62104,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34342,8 +36540,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62098},
             },
             ["ID"] = 62105,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34366,8 +36565,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62105},
             },
             ["ID"] = 62106,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34390,8 +36590,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62088},
             },
             ["ID"] = 62107,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34413,8 +36614,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62128},
             },
             ["ID"] = 62108,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34436,8 +36638,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62098},
             },
             ["ID"] = 62109,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34459,8 +36662,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62128},
             },
             ["ID"] = 62110,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34482,8 +36686,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62113},
             },
             ["ID"] = 62111,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34505,8 +36710,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62115},
             },
             ["ID"] = 62112,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34529,8 +36735,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62097},
             },
             ["ID"] = 62113,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34552,8 +36759,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62115},
             },
             ["ID"] = 62114,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34576,8 +36784,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62101},
             },
             ["ID"] = 62115,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34598,8 +36807,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62115},
             },
             ["ID"] = 62116,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34622,8 +36832,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62118},
             },
             ["ID"] = 62117,
-            ["specID"] = 64,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [64] = "granted",
+            },
             ["conditionIDs"] = {
                 18040,
                 18039
@@ -34647,8 +36858,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62114},
             },
             ["ID"] = 62118,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34671,8 +36883,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62118},
             },
             ["ID"] = 62119,
-            ["specID"] = 63,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [63] = "granted",
+            },
             ["conditionIDs"] = {
                 18036,
                 18045
@@ -34694,8 +36907,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62113},
             },
             ["ID"] = 62120,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34718,8 +36932,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62118},
             },
             ["ID"] = 62121,
-            ["specID"] = 62,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [62] = "granted",
+            },
             ["conditionIDs"] = {
                 18032,
                 18041
@@ -34743,8 +36958,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62111},
             },
             ["ID"] = 62122,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34765,8 +36981,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62124},
             },
             ["ID"] = 62123,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34789,8 +37006,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62104},
             },
             ["ID"] = 62124,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -34812,8 +37030,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62088},
             },
             ["ID"] = 62125,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34837,8 +37056,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62127},
             },
             ["ID"] = 62126,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34861,8 +37081,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62096},
             },
             ["ID"] = 62127,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031
             },
@@ -34885,8 +37106,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62129},
             },
             ["ID"] = 62128,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34909,8 +37131,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62087},
             },
             ["ID"] = 62129,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18031,
                 18034
@@ -34934,8 +37157,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62130,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -34959,8 +37184,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62235},
             },
             ["ID"] = 62131,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -34984,8 +37211,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62133},
             },
             ["ID"] = 62132,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -35009,8 +37238,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62133,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -35034,8 +37265,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62135},
             },
             ["ID"] = 62134,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -35059,8 +37292,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62135,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -35084,8 +37319,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62136,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -35109,8 +37346,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62136},
             },
             ["ID"] = 62137,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -35134,8 +37373,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62233},
             },
             ["ID"] = 62138,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -35161,8 +37402,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62138},
             },
             ["ID"] = 62139,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -35187,8 +37430,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62233},
             },
             ["ID"] = 62140,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -35212,8 +37457,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62143},
             },
             ["ID"] = 62141,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -35238,8 +37485,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62141},
             },
             ["ID"] = 62142,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -35263,8 +37512,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62137},
             },
             ["ID"] = 62143,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -35288,8 +37539,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62241},
             },
             ["ID"] = 62144,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037
             },
@@ -35312,8 +37564,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62146},
             },
             ["ID"] = 62145,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -35339,8 +37593,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62143},
             },
             ["ID"] = 62146,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -35364,8 +37620,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62148},
             },
             ["ID"] = 62147,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -35389,8 +37647,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62148,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -35413,8 +37673,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62149,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -35437,8 +37698,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62184},
             },
             ["ID"] = 62150,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -35462,8 +37725,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62151,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -35488,8 +37753,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62151},
             },
             ["ID"] = 62152,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -35513,8 +37780,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62153,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18042,
                 18044
@@ -35540,8 +37809,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62155},
             },
             ["ID"] = 62154,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -35565,8 +37836,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62156},
             },
             ["ID"] = 62155,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -35590,8 +37863,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62156,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -35615,8 +37890,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62157,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18042,
                 18044
@@ -35640,8 +37917,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62157},
             },
             ["ID"] = 62158,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -35665,8 +37944,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62183},
             },
             ["ID"] = 62159,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18038
@@ -35690,8 +37971,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62161},
             },
             ["ID"] = 62160,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18038
@@ -35715,8 +37998,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62158},
             },
             ["ID"] = 62161,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18042,
                 18044
@@ -35741,8 +38026,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62161},
             },
             ["ID"] = 62162,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18043,
                 18044,
@@ -35767,8 +38054,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62158},
             },
             ["ID"] = 62163,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -35791,8 +38080,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62165},
             },
             ["ID"] = 62164,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -35815,8 +38105,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62166},
             },
             ["ID"] = 62165,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -35838,8 +38129,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62167},
             },
             ["ID"] = 62166,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -35863,8 +38155,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62160},
             },
             ["ID"] = 62167,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18038,
                 18044
@@ -35888,8 +38182,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62162},
             },
             ["ID"] = 62168,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18038
@@ -35914,8 +38210,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62168},
             },
             ["ID"] = 62169,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18038
@@ -35940,8 +38238,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62171},
             },
             ["ID"] = 62170,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18038
@@ -35967,8 +38267,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62163},
             },
             ["ID"] = 62171,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18038,
                 18044
@@ -35992,8 +38294,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62171},
             },
             ["ID"] = 62172,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18038,
                 18044
@@ -36018,8 +38322,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62172},
             },
             ["ID"] = 62173,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18038,
                 18044
@@ -36044,8 +38350,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62169},
             },
             ["ID"] = 62174,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -36067,8 +38374,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62174},
             },
             ["ID"] = 62175,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -36092,8 +38400,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62164},
             },
             ["ID"] = 62176,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -36115,8 +38424,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62178},
             },
             ["ID"] = 62177,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -36138,8 +38448,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62179},
             },
             ["ID"] = 62178,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -36161,8 +38472,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62180},
             },
             ["ID"] = 62179,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044
             },
@@ -36186,8 +38498,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62181},
             },
             ["ID"] = 62180,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18038
@@ -36212,8 +38526,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62182},
             },
             ["ID"] = 62181,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18038
@@ -36238,8 +38554,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62150},
             },
             ["ID"] = 62182,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18038
@@ -36263,8 +38581,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62184},
             },
             ["ID"] = 62183,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -36288,8 +38608,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62185},
             },
             ["ID"] = 62184,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -36313,8 +38635,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62185,
-            ["specID"] = 64,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [64] = "visible",
+            },
             ["conditionIDs"] = {
                 18044,
                 18042
@@ -36338,8 +38662,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62186,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36363,8 +38689,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62186},
             },
             ["ID"] = 62187,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36388,8 +38716,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62196},
             },
             ["ID"] = 62188,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36413,8 +38743,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62188},
             },
             ["ID"] = 62189,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36439,8 +38771,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62194},
             },
             ["ID"] = 62190,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36464,8 +38798,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62193},
             },
             ["ID"] = 62191,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -36487,8 +38822,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62191},
             },
             ["ID"] = 62192,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -36512,8 +38848,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62189},
             },
             ["ID"] = 62193,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36538,8 +38876,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62188},
             },
             ["ID"] = 62194,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36563,8 +38903,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62196},
             },
             ["ID"] = 62195,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36589,8 +38931,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62187},
             },
             ["ID"] = 62196,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36614,8 +38958,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62197,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36640,8 +38986,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62198,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36665,8 +39013,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62199,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36691,8 +39041,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62203},
             },
             ["ID"] = 62200,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36718,8 +39070,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62202},
             },
             ["ID"] = 62201,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36745,8 +39099,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62197},
             },
             ["ID"] = 62202,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36770,8 +39126,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62203,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36795,8 +39153,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62205},
             },
             ["ID"] = 62204,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36820,8 +39180,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62205,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36845,8 +39207,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62207},
             },
             ["ID"] = 62206,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36872,8 +39236,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62195},
             },
             ["ID"] = 62207,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36897,8 +39263,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62209},
             },
             ["ID"] = 62208,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36923,8 +39291,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62199},
             },
             ["ID"] = 62209,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18035
@@ -36948,8 +39318,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62209},
             },
             ["ID"] = 62210,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36974,8 +39346,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62220},
             },
             ["ID"] = 62211,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -36999,8 +39373,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62219},
             },
             ["ID"] = 62212,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -37022,8 +39397,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62212},
             },
             ["ID"] = 62213,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -37046,8 +39422,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62217},
             },
             ["ID"] = 62214,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -37070,8 +39447,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62216},
             },
             ["ID"] = 62215,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -37094,8 +39472,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62192},
             },
             ["ID"] = 62216,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -37119,8 +39498,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62218},
             },
             ["ID"] = 62217,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -37143,8 +39523,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62190},
             },
             ["ID"] = 62218,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18035
             },
@@ -37168,8 +39549,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62207},
             },
             ["ID"] = 62219,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -37194,8 +39577,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62208},
             },
             ["ID"] = 62220,
-            ["specID"] = 63,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [63] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18035
@@ -37220,8 +39605,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62223},
             },
             ["ID"] = 62221,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -37246,8 +39633,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62223},
             },
             ["ID"] = 62222,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -37271,8 +39660,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62134},
             },
             ["ID"] = 62223,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -37297,8 +39688,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62132},
             },
             ["ID"] = 62224,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -37322,8 +39715,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62224},
             },
             ["ID"] = 62225,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -37347,8 +39742,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62225},
             },
             ["ID"] = 62226,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037
             },
@@ -37372,8 +39768,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62224},
             },
             ["ID"] = 62227,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -37397,8 +39795,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62227},
             },
             ["ID"] = 62228,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037
             },
@@ -37422,8 +39821,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62226},
             },
             ["ID"] = 62229,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037
             },
@@ -37447,8 +39847,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62231},
             },
             ["ID"] = 62230,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037
             },
@@ -37472,8 +39873,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62232},
             },
             ["ID"] = 62231,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -37498,8 +39901,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62221},
             },
             ["ID"] = 62232,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -37524,8 +39929,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62234},
             },
             ["ID"] = 62233,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18033,
                 18037
@@ -37549,8 +39956,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62235},
             },
             ["ID"] = 62234,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -37574,8 +39983,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62236},
             },
             ["ID"] = 62235,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -37599,8 +40010,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 62236,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 18042,
                 18037
@@ -37623,8 +40036,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62238},
             },
             ["ID"] = 62237,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037
             },
@@ -37647,8 +40061,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62229},
             },
             ["ID"] = 62238,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037
             },
@@ -37672,8 +40087,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62230},
             },
             ["ID"] = 62239,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037
             },
@@ -37696,8 +40112,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62139},
             },
             ["ID"] = 62240,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037
             },
@@ -37721,8 +40138,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 62142},
             },
             ["ID"] = 62241,
-            ["specID"] = 62,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [62] = "visible",
+            },
             ["conditionIDs"] = {
                 18037,
                 18033
@@ -37748,8 +40167,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74692},
             },
             ["ID"] = 74606,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -37773,8 +40194,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74609},
             },
             ["ID"] = 74607,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -37799,8 +40222,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74771},
             },
             ["ID"] = 74608,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -37825,8 +40250,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74693},
             },
             ["ID"] = 74609,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -37850,8 +40277,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74760},
             },
             ["ID"] = 74610,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -37875,8 +40304,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74782},
             },
             ["ID"] = 74611,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -37900,8 +40330,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74649},
             },
             ["ID"] = 74612,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -37923,8 +40354,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74642},
             },
             ["ID"] = 74613,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -37947,8 +40379,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74653},
             },
             ["ID"] = 74614,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -37971,8 +40404,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74773},
             },
             ["ID"] = 74615,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -37998,8 +40433,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74727},
             },
             ["ID"] = 74616,
-            ["specID"] = 71,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [71] = "granted",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19379,
                 19387,
@@ -38024,8 +40461,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74781},
             },
             ["ID"] = 74617,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -38047,8 +40485,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74782},
             },
             ["ID"] = 74618,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -38071,8 +40510,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74785},
             },
             ["ID"] = 74619,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -38097,8 +40538,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74621},
             },
             ["ID"] = 74620,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -38123,8 +40566,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74773},
             },
             ["ID"] = 74621,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -38149,8 +40594,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74622,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19383,
@@ -38177,8 +40624,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74623,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19383,
@@ -38206,8 +40655,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74623},
             },
             ["ID"] = 74624,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19383,
@@ -38233,8 +40684,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74787},
             },
             ["ID"] = 74625,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19382,
@@ -38260,8 +40713,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74626,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19384,
                 19386,
@@ -38286,8 +40741,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74627,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38311,8 +40767,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74628,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38337,8 +40794,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74628},
             },
             ["ID"] = 74629,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38363,8 +40821,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74630,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19384,
                 19385,
@@ -38390,8 +40850,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74631,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19384,
                 19385,
@@ -38418,8 +40880,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74632,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -38447,8 +40911,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74633,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19384,
                 19386,
@@ -38474,8 +40940,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74713},
             },
             ["ID"] = 74634,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -38500,8 +40967,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74633},
             },
             ["ID"] = 74635,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38525,8 +40993,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74636,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38550,8 +41019,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74637,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38576,8 +41046,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74650},
             },
             ["ID"] = 74638,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19384,
                 19385,
@@ -38602,8 +41074,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74639,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38627,8 +41100,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74640,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38653,8 +41127,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74640},
             },
             ["ID"] = 74641,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38678,8 +41153,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74641},
             },
             ["ID"] = 74642,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38704,8 +41180,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74650},
             },
             ["ID"] = 74643,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19384,
                 19387,
@@ -38731,8 +41209,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74614},
             },
             ["ID"] = 74644,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -38758,8 +41238,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74614},
             },
             ["ID"] = 74645,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19386,
                 19388
@@ -38784,8 +41266,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74614},
             },
             ["ID"] = 74646,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19385,
                 19388
@@ -38812,8 +41296,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74653},
             },
             ["ID"] = 74647,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -38836,8 +41321,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74614},
             },
             ["ID"] = 74648,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -38861,8 +41347,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74650},
             },
             ["ID"] = 74649,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19384,
                 19386,
@@ -38888,8 +41376,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74636},
             },
             ["ID"] = 74650,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38914,8 +41403,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74651,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -38941,8 +41432,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74713},
             },
             ["ID"] = 74652,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -38965,8 +41457,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74629},
             },
             ["ID"] = 74653,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19384,
                 19388
@@ -38990,8 +41483,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74635},
             },
             ["ID"] = 74654,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388,
                 19384
@@ -39014,8 +41508,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74656},
             },
             ["ID"] = 74655,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -39039,8 +41534,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74657},
             },
             ["ID"] = 74656,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -39069,8 +41565,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74649},
             },
             ["ID"] = 74657,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -39092,8 +41589,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74657},
             },
             ["ID"] = 74658,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -39115,8 +41613,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74658},
             },
             ["ID"] = 74659,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -39137,8 +41636,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74708},
             },
             ["ID"] = 74660,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -39161,8 +41661,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74663},
             },
             ["ID"] = 74661,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -39185,8 +41686,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74720},
             },
             ["ID"] = 74662,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -39209,8 +41711,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74648},
             },
             ["ID"] = 74663,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -39234,8 +41737,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74647},
             },
             ["ID"] = 74664,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -39258,8 +41762,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74704},
             },
             ["ID"] = 74665,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -39284,8 +41789,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74606},
             },
             ["ID"] = 74666,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39310,8 +41817,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74667,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19383,
@@ -39337,8 +41846,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74668,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19385,
@@ -39365,8 +41876,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74667},
             },
             ["ID"] = 74669,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19383,
@@ -39392,8 +41905,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74687},
             },
             ["ID"] = 74670,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39418,8 +41933,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74671,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19385,
@@ -39445,8 +41962,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74671},
             },
             ["ID"] = 74672,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19382,
                 19383,
@@ -39472,8 +41991,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74673,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19385,
@@ -39500,8 +42021,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74673},
             },
             ["ID"] = 74674,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19385,
@@ -39527,8 +42050,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74685},
             },
             ["ID"] = 74675,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19382,
                 19385
@@ -39552,8 +42077,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74677},
             },
             ["ID"] = 74676,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39579,8 +42106,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74674},
             },
             ["ID"] = 74677,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19385,
@@ -39605,8 +42134,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74677},
             },
             ["ID"] = 74678,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39630,8 +42161,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74678},
             },
             ["ID"] = 74679,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39654,8 +42187,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74683},
             },
             ["ID"] = 74680,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -39677,8 +42211,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74682},
             },
             ["ID"] = 74681,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -39700,8 +42235,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74683},
             },
             ["ID"] = 74682,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -39726,8 +42262,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74684},
             },
             ["ID"] = 74683,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39751,8 +42289,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74685},
             },
             ["ID"] = 74684,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39776,8 +42316,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74677},
             },
             ["ID"] = 74685,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39803,8 +42345,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74687},
             },
             ["ID"] = 74686,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39828,8 +42372,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74688},
             },
             ["ID"] = 74687,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39856,8 +42402,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74695},
             },
             ["ID"] = 74688,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19385,
@@ -39883,8 +42431,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74689,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19385,
@@ -39911,8 +42461,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74689},
             },
             ["ID"] = 74690,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19385,
@@ -39937,8 +42489,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74693},
             },
             ["ID"] = 74691,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39962,8 +42516,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74693},
             },
             ["ID"] = 74692,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -39989,8 +42545,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74690},
             },
             ["ID"] = 74693,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19383,
@@ -40016,8 +42574,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74694,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382,
@@ -40043,8 +42603,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74694},
             },
             ["ID"] = 74695,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19383,
@@ -40068,8 +42630,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74666},
             },
             ["ID"] = 74696,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -40094,8 +42657,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74692},
             },
             ["ID"] = 74697,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -40118,8 +42683,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74666},
             },
             ["ID"] = 74698,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -40141,8 +42707,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74698},
             },
             ["ID"] = 74699,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -40164,8 +42731,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74701},
             },
             ["ID"] = 74700,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -40189,8 +42757,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74699},
             },
             ["ID"] = 74701,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -40215,8 +42784,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74696},
             },
             ["ID"] = 74702,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -40238,8 +42808,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74704},
             },
             ["ID"] = 74703,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -40264,8 +42835,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74705},
             },
             ["ID"] = 74704,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -40290,8 +42863,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74609},
             },
             ["ID"] = 74705,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385,
                 19382
@@ -40316,8 +42891,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74708},
             },
             ["ID"] = 74706,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -40341,8 +42917,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74706},
             },
             ["ID"] = 74707,
-            ["specID"] = 72,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [72] = "granted",
+            },
             ["conditionIDs"] = {
                 19389,
                 19385
@@ -40365,8 +42942,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74710},
             },
             ["ID"] = 74708,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -40390,8 +42968,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74708},
             },
             ["ID"] = 74709,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -40416,8 +42995,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74646},
             },
             ["ID"] = 74710,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -40439,8 +43019,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74614},
             },
             ["ID"] = 74711,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -40463,8 +43044,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74634},
             },
             ["ID"] = 74712,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -40489,8 +43072,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74642},
             },
             ["ID"] = 74713,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -40512,8 +43096,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74634},
             },
             ["ID"] = 74714,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19388
             },
@@ -40537,8 +43122,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74634},
             },
             ["ID"] = 74715,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19386,
                 19388
@@ -40563,8 +43150,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74652},
             },
             ["ID"] = 74716,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -40588,8 +43176,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74634},
             },
             ["ID"] = 74717,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19385,
                 19388
@@ -40615,8 +43205,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74652},
             },
             ["ID"] = 74718,
-            ["specID"] = 72,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [72] = "visible",
+            },
             ["conditionIDs"] = {
                 19385
             },
@@ -40637,8 +43228,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74710},
             },
             ["ID"] = 74719,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -40664,8 +43256,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74652},
             },
             ["ID"] = 74720,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -40686,8 +43279,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74722},
             },
             ["ID"] = 74721,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -40711,8 +43305,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74655},
             },
             ["ID"] = 74722,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -40736,8 +43331,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74709},
             },
             ["ID"] = 74723,
-            ["specID"] = 71,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [71] = "granted",
+            },
             ["conditionIDs"] = {
                 19380,
                 19386
@@ -40760,8 +43356,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74719},
             },
             ["ID"] = 74724,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -40786,8 +43383,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74724},
             },
             ["ID"] = 74725,
-            ["specID"] = 73,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [73] = "granted",
+            },
             ["conditionIDs"] = {
                 19381
             },
@@ -40809,8 +43407,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74722},
             },
             ["ID"] = 74726,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -40834,8 +43433,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74708},
             },
             ["ID"] = 74727,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -40858,8 +43458,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74758},
             },
             ["ID"] = 74728,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -40884,8 +43485,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74764},
             },
             ["ID"] = 74729,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -40911,8 +43514,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74760},
             },
             ["ID"] = 74730,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -40937,8 +43542,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74762},
             },
             ["ID"] = 74731,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -40964,8 +43571,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74732,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19387,
@@ -40992,8 +43601,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74732},
             },
             ["ID"] = 74733,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41020,8 +43631,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74764},
             },
             ["ID"] = 74734,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41049,8 +43662,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74734},
             },
             ["ID"] = 74735,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19387,
@@ -41076,8 +43691,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74738},
             },
             ["ID"] = 74736,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41103,8 +43720,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74738},
             },
             ["ID"] = 74737,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41129,8 +43748,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74735},
             },
             ["ID"] = 74738,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19382,
                 19387,
@@ -41156,8 +43777,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74738},
             },
             ["ID"] = 74739,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41185,8 +43808,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74760},
             },
             ["ID"] = 74740,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41210,8 +43835,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74740},
             },
             ["ID"] = 74741,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -41236,8 +43862,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74758},
             },
             ["ID"] = 74742,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -41260,8 +43887,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74740},
             },
             ["ID"] = 74743,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -41286,8 +43914,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74744,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19382,
@@ -41314,8 +43944,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74744},
             },
             ["ID"] = 74745,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19382,
@@ -41342,8 +43974,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74747},
             },
             ["ID"] = 74746,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41371,8 +44005,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74745},
             },
             ["ID"] = 74747,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19382,
@@ -41398,8 +44034,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74750},
             },
             ["ID"] = 74748,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41424,8 +44062,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74750},
             },
             ["ID"] = 74749,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19382,
                 19387,
@@ -41450,8 +44090,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74747},
             },
             ["ID"] = 74750,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41477,8 +44119,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74750},
             },
             ["ID"] = 74751,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41507,8 +44151,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74749},
             },
             ["ID"] = 74752,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19382,
                 19387,
@@ -41533,8 +44179,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74752},
             },
             ["ID"] = 74753,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -41559,8 +44206,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74755},
             },
             ["ID"] = 74754,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -41583,8 +44231,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74752},
             },
             ["ID"] = 74755,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -41607,8 +44256,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74757},
             },
             ["ID"] = 74756,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -41633,8 +44283,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74754},
             },
             ["ID"] = 74757,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -41659,8 +44310,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74730},
             },
             ["ID"] = 74758,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390
@@ -41684,8 +44336,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74760},
             },
             ["ID"] = 74759,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41712,8 +44366,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74746},
             },
             ["ID"] = 74760,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41739,8 +44395,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74762},
             },
             ["ID"] = 74761,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19382,
                 19387,
@@ -41769,8 +44427,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74763},
             },
             ["ID"] = 74762,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19382,
@@ -41797,8 +44457,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74764},
             },
             ["ID"] = 74763,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19387,
                 19390,
@@ -41825,8 +44487,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74764,
-            ["specID"] = 73,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [73] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19382,
@@ -41853,8 +44517,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74765,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382,
@@ -41880,8 +44546,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74765},
             },
             ["ID"] = 74766,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19386,
@@ -41906,8 +44574,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74773},
             },
             ["ID"] = 74767,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -41932,8 +44602,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74608},
             },
             ["ID"] = 74768,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -41957,8 +44629,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74770},
             },
             ["ID"] = 74769,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -41982,8 +44656,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74771},
             },
             ["ID"] = 74770,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -42009,8 +44685,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74766},
             },
             ["ID"] = 74771,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19386,
@@ -42036,8 +44714,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74765},
             },
             ["ID"] = 74772,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19382,
                 19383,
@@ -42063,8 +44743,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74624},
             },
             ["ID"] = 74773,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19382,
@@ -42089,8 +44771,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74771},
             },
             ["ID"] = 74774,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19382,
                 19386
@@ -42116,8 +44800,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74774},
             },
             ["ID"] = 74775,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -42140,8 +44826,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74792},
             },
             ["ID"] = 74776,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -42163,8 +44850,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74792},
             },
             ["ID"] = 74777,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -42187,8 +44875,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74621},
             },
             ["ID"] = 74778,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -42214,8 +44904,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74778},
             },
             ["ID"] = 74779,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -42238,8 +44930,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74779},
             },
             ["ID"] = 74780,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -42261,8 +44954,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74779},
             },
             ["ID"] = 74781,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -42287,8 +44981,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74769},
             },
             ["ID"] = 74782,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -42312,8 +45008,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74784},
             },
             ["ID"] = 74783,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -42337,8 +45035,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74785},
             },
             ["ID"] = 74784,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -42364,8 +45064,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74625},
             },
             ["ID"] = 74785,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19382,
@@ -42391,8 +45093,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74787},
             },
             ["ID"] = 74786,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19383,
                 19386,
@@ -42419,8 +45123,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74787,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19383,
@@ -42444,8 +45150,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74789},
             },
             ["ID"] = 74788,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -42469,8 +45176,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74791},
             },
             ["ID"] = 74789,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -42495,8 +45203,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74611},
             },
             ["ID"] = 74790,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -42519,8 +45228,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74618},
             },
             ["ID"] = 74791,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386
             },
@@ -42545,8 +45255,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74768},
             },
             ["ID"] = 74792,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19382,
                 19386
@@ -42571,8 +45283,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74615},
             },
             ["ID"] = 74793,
-            ["specID"] = 71,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [71] = "visible",
+            },
             ["conditionIDs"] = {
                 19386,
                 19382
@@ -42597,8 +45311,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61086,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -42620,8 +45335,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61087,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -42643,8 +45359,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61088,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -42666,8 +45383,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61088},
             },
             ["ID"] = 61089,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -42689,8 +45407,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61090,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -42712,8 +45431,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61090},
             },
             ["ID"] = 61091,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -42737,8 +45457,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61093},
             },
             ["ID"] = 61092,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -42760,8 +45481,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61094},
             },
             ["ID"] = 61093,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -42784,8 +45506,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61095},
             },
             ["ID"] = 61094,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -42807,8 +45530,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61086},
             },
             ["ID"] = 61095,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -42830,8 +45554,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61095},
             },
             ["ID"] = 61096,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -42853,8 +45578,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61096},
             },
             ["ID"] = 61097,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -42876,8 +45602,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61099},
             },
             ["ID"] = 61098,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -42900,8 +45627,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61097},
             },
             ["ID"] = 61099,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -42925,8 +45653,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61096},
             },
             ["ID"] = 61100,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -42948,8 +45677,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61100},
             },
             ["ID"] = 61101,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -42972,8 +45702,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61103},
             },
             ["ID"] = 61102,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -42995,8 +45726,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61104},
             },
             ["ID"] = 61103,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -43019,8 +45751,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61089},
             },
             ["ID"] = 61104,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -43042,8 +45775,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61087},
             },
             ["ID"] = 61105,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -43065,8 +45799,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61105},
             },
             ["ID"] = 61106,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17931
             },
@@ -43088,8 +45823,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61106},
             },
             ["ID"] = 61107,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -43112,8 +45848,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61103},
             },
             ["ID"] = 61108,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -43136,8 +45873,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61108},
             },
             ["ID"] = 61109,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -43158,8 +45896,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61109},
             },
             ["ID"] = 61110,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43180,8 +45919,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61111,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43203,8 +45943,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61116},
             },
             ["ID"] = 61112,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43226,8 +45967,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61112},
             },
             ["ID"] = 61113,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43252,8 +45994,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61126},
             },
             ["ID"] = 61114,
-            ["specID"] = 270,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [270] = "granted",
+            },
             ["conditionIDs"] = {
                 17923,
                 17925
@@ -43275,8 +46018,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61116},
             },
             ["ID"] = 61115,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43298,8 +46042,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61117},
             },
             ["ID"] = 61116,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43323,8 +46068,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61118},
             },
             ["ID"] = 61117,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -43347,8 +46093,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61100},
             },
             ["ID"] = 61118,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -43371,8 +46118,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61101},
             },
             ["ID"] = 61119,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17934
             },
@@ -43394,8 +46142,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61098},
             },
             ["ID"] = 61120,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43417,8 +46166,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61120},
             },
             ["ID"] = 61121,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43439,8 +46189,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61123},
             },
             ["ID"] = 61122,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43462,8 +46213,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61119},
             },
             ["ID"] = 61123,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43484,8 +46236,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61123},
             },
             ["ID"] = 61124,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43510,8 +46263,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61121},
             },
             ["ID"] = 61125,
-            ["specID"] = 268,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [268] = "granted",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17922,
                 17924,
@@ -43537,8 +46292,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61124},
             },
             ["ID"] = 61126,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -43561,8 +46317,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61126},
             },
             ["ID"] = 61127,
-            ["specID"] = 269,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [269] = "granted",
+            },
             ["conditionIDs"] = {
                 17921,
                 17932
@@ -43586,8 +46343,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61250},
             },
             ["ID"] = 61128,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -43612,8 +46371,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61129,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -43637,8 +46398,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61233},
             },
             ["ID"] = 61130,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17920,
                 17926
@@ -43663,8 +46426,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61131,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -43688,8 +46453,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61169},
             },
             ["ID"] = 61132,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -43713,8 +46480,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61133,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -43739,8 +46508,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61135},
             },
             ["ID"] = 61134,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -43765,8 +46536,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61133},
             },
             ["ID"] = 61135,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -43790,8 +46563,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61136,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -43816,8 +46591,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61136},
             },
             ["ID"] = 61137,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -43841,8 +46618,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61137},
             },
             ["ID"] = 61138,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -43867,8 +46646,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61138},
             },
             ["ID"] = 61139,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -43893,8 +46674,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61141},
             },
             ["ID"] = 61140,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -43920,8 +46703,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61134},
             },
             ["ID"] = 61141,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -43947,8 +46732,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61134},
             },
             ["ID"] = 61142,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -43973,8 +46760,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61169},
             },
             ["ID"] = 61143,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -43998,8 +46787,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61144,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -44023,8 +46814,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61146},
             },
             ["ID"] = 61145,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44048,8 +46841,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61147},
             },
             ["ID"] = 61146,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -44074,8 +46869,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61148},
             },
             ["ID"] = 61147,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -44099,8 +46896,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61148,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -44126,8 +46925,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61173},
             },
             ["ID"] = 61149,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -44151,8 +46952,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61151},
             },
             ["ID"] = 61150,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44177,8 +46980,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61149},
             },
             ["ID"] = 61151,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -44204,8 +47009,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61151},
             },
             ["ID"] = 61152,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44230,8 +47037,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61152},
             },
             ["ID"] = 61153,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44256,8 +47065,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61153},
             },
             ["ID"] = 61154,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44281,8 +47092,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61153},
             },
             ["ID"] = 61155,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44305,8 +47117,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61157},
             },
             ["ID"] = 61156,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44331,8 +47144,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61158},
             },
             ["ID"] = 61157,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44357,8 +47172,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61150},
             },
             ["ID"] = 61158,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44382,8 +47199,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61160},
             },
             ["ID"] = 61159,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44407,8 +47225,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61142},
             },
             ["ID"] = 61160,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44432,8 +47252,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61142},
             },
             ["ID"] = 61161,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44455,8 +47276,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61161},
             },
             ["ID"] = 61162,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44479,8 +47301,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61162},
             },
             ["ID"] = 61163,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44503,8 +47326,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61163},
             },
             ["ID"] = 61164,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44527,8 +47351,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61166},
             },
             ["ID"] = 61165,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44551,8 +47376,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61159},
             },
             ["ID"] = 61166,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44576,8 +47402,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61168},
             },
             ["ID"] = 61167,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933
             },
@@ -44602,8 +47429,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61140},
             },
             ["ID"] = 61168,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44629,8 +47458,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61139},
             },
             ["ID"] = 61169,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44656,8 +47487,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61171},
             },
             ["ID"] = 61170,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17926
@@ -44683,8 +47516,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61137},
             },
             ["ID"] = 61171,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -44710,8 +47545,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61131},
             },
             ["ID"] = 61172,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -44735,8 +47572,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61173,
-            ["specID"] = 270,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [270] = "visible",
+            },
             ["conditionIDs"] = {
                 17933,
                 17928
@@ -44760,8 +47599,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61217},
             },
             ["ID"] = 61174,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -44785,8 +47626,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61175,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -44810,8 +47653,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61176,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -44836,8 +47681,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61176},
             },
             ["ID"] = 61177,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -44861,8 +47708,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61181},
             },
             ["ID"] = 61178,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -44887,8 +47736,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61178},
             },
             ["ID"] = 61179,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -44912,8 +47763,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61181},
             },
             ["ID"] = 61180,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -44938,8 +47791,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61177},
             },
             ["ID"] = 61181,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -44963,8 +47818,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61182,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -44988,8 +47845,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61183,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45013,8 +47872,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61183},
             },
             ["ID"] = 61184,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45040,8 +47901,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61182},
             },
             ["ID"] = 61185,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45065,8 +47928,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61218},
             },
             ["ID"] = 61186,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45090,8 +47955,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61187,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45115,8 +47982,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61188,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45140,8 +48009,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61201},
             },
             ["ID"] = 61189,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45166,8 +48037,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61215},
             },
             ["ID"] = 61190,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45191,8 +48064,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61192},
             },
             ["ID"] = 61191,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45217,8 +48092,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61215},
             },
             ["ID"] = 61192,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45243,8 +48120,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61214},
             },
             ["ID"] = 61193,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45267,8 +48146,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61196},
             },
             ["ID"] = 61194,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45291,8 +48171,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61212},
             },
             ["ID"] = 61195,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45316,8 +48197,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61193},
             },
             ["ID"] = 61196,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45342,8 +48224,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61192},
             },
             ["ID"] = 61197,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45368,8 +48252,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61199},
             },
             ["ID"] = 61198,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45394,8 +48280,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61189},
             },
             ["ID"] = 61199,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45419,8 +48307,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61201},
             },
             ["ID"] = 61200,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45445,8 +48335,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61188},
             },
             ["ID"] = 61201,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45471,8 +48363,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61203},
             },
             ["ID"] = 61202,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45496,8 +48390,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61203,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45520,8 +48416,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61205},
             },
             ["ID"] = 61204,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45543,8 +48440,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61206},
             },
             ["ID"] = 61205,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45567,8 +48465,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61197},
             },
             ["ID"] = 61206,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45591,8 +48490,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61196},
             },
             ["ID"] = 61207,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45616,8 +48516,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61195},
             },
             ["ID"] = 61208,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45641,8 +48542,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61210},
             },
             ["ID"] = 61209,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45665,8 +48567,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61211},
             },
             ["ID"] = 61210,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45688,8 +48591,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61212},
             },
             ["ID"] = 61211,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45712,8 +48616,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61213},
             },
             ["ID"] = 61212,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930
             },
@@ -45737,8 +48642,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61179},
             },
             ["ID"] = 61213,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45763,8 +48670,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61180},
             },
             ["ID"] = 61214,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45790,8 +48699,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61185},
             },
             ["ID"] = 61215,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17926
@@ -45817,8 +48728,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61217},
             },
             ["ID"] = 61216,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45843,8 +48756,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61183},
             },
             ["ID"] = 61217,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928
@@ -45868,8 +48783,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61218,
-            ["specID"] = 269,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [269] = "visible",
+            },
             ["conditionIDs"] = {
                 17930,
                 17928,
@@ -45895,8 +48812,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61250},
             },
             ["ID"] = 61219,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -45921,8 +48840,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61251},
             },
             ["ID"] = 61220,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -45947,8 +48868,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61221,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -45973,8 +48896,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61222,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -45999,8 +48924,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61225},
             },
             ["ID"] = 61223,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46024,8 +48951,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61225},
             },
             ["ID"] = 61224,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46049,8 +48978,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61225,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46074,8 +49005,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61225},
             },
             ["ID"] = 61226,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46101,8 +49034,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61223},
             },
             ["ID"] = 61227,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46127,8 +49062,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61229},
             },
             ["ID"] = 61228,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17920,
                 17926
@@ -46154,8 +49091,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61230},
             },
             ["ID"] = 61229,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46179,8 +49118,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61221},
             },
             ["ID"] = 61230,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46204,8 +49145,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61230},
             },
             ["ID"] = 61231,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46230,8 +49173,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61231},
             },
             ["ID"] = 61232,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46255,8 +49200,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61230},
             },
             ["ID"] = 61233,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46280,8 +49227,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61233},
             },
             ["ID"] = 61234,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46305,8 +49254,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61236},
             },
             ["ID"] = 61235,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46331,8 +49282,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61232},
             },
             ["ID"] = 61236,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46357,8 +49310,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 61237,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46384,8 +49339,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61236},
             },
             ["ID"] = 61238,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17920,
                 17926
@@ -46411,8 +49368,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61234},
             },
             ["ID"] = 61239,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46436,8 +49395,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61241},
             },
             ["ID"] = 61240,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+            },
             ["conditionIDs"] = {
                 17920
             },
@@ -46460,8 +49420,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61257},
             },
             ["ID"] = 61241,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46485,8 +49447,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61243},
             },
             ["ID"] = 61242,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+            },
             ["conditionIDs"] = {
                 17920
             },
@@ -46509,8 +49472,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61239},
             },
             ["ID"] = 61243,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46533,8 +49498,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61243},
             },
             ["ID"] = 61244,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+            },
             ["conditionIDs"] = {
                 17920
             },
@@ -46558,8 +49524,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61246},
             },
             ["ID"] = 61245,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+            },
             ["conditionIDs"] = {
                 17920
             },
@@ -46583,8 +49550,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61235},
             },
             ["ID"] = 61246,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+            },
             ["conditionIDs"] = {
                 17920
             },
@@ -46608,8 +49576,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61248},
             },
             ["ID"] = 61247,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46634,8 +49604,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61249},
             },
             ["ID"] = 61248,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46659,8 +49631,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61250},
             },
             ["ID"] = 61249,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17920,
                 17926
@@ -46684,8 +49658,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61251},
             },
             ["ID"] = 61250,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17928,
                 17920
@@ -46709,8 +49685,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61222},
             },
             ["ID"] = 61251,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17920,
                 17928
@@ -46733,8 +49711,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61253},
             },
             ["ID"] = 61252,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+            },
             ["conditionIDs"] = {
                 17920
             },
@@ -46757,8 +49736,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61245},
             },
             ["ID"] = 61253,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+            },
             ["conditionIDs"] = {
                 17920
             },
@@ -46782,8 +49762,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61242},
             },
             ["ID"] = 61254,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+            },
             ["conditionIDs"] = {
                 17920
             },
@@ -46807,8 +49788,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61241},
             },
             ["ID"] = 61255,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+            },
             ["conditionIDs"] = {
                 17920
             },
@@ -46833,8 +49815,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61257},
             },
             ["ID"] = 61256,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17920,
                 17926
@@ -46860,8 +49844,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 61228},
             },
             ["ID"] = 61257,
-            ["specID"] = 268,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [268] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 17926,
                 17920
@@ -46886,8 +49872,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74036},
             },
             ["ID"] = 73955,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -46910,8 +49897,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73956,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -46933,8 +49922,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73957,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -46955,8 +49945,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73958,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -46979,8 +49970,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73976},
             },
             ["ID"] = 73959,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47003,8 +49996,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73960,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -47028,8 +50022,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74028},
             },
             ["ID"] = 73961,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -47052,8 +50047,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73988},
             },
             ["ID"] = 73962,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47078,8 +50075,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74001},
             },
             ["ID"] = 73963,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -47103,8 +50101,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73964,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19339
@@ -47128,8 +50128,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74001},
             },
             ["ID"] = 73965,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -47152,8 +50153,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74002},
             },
             ["ID"] = 73966,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -47178,8 +50181,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73967,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19341,
                 19344,
@@ -47204,8 +50209,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73968,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47230,8 +50237,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73982},
             },
             ["ID"] = 73969,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19344,
                 19345
@@ -47256,8 +50265,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73974},
             },
             ["ID"] = 73970,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19341,
                 19344,
@@ -47283,8 +50294,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73967},
             },
             ["ID"] = 73971,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19341,
                 19344,
@@ -47310,8 +50323,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73972,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344,
                 19341,
@@ -47338,8 +50353,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73983},
             },
             ["ID"] = 73973,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344,
                 19341,
@@ -47365,8 +50382,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73972},
             },
             ["ID"] = 73974,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344,
@@ -47392,8 +50411,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73969},
             },
             ["ID"] = 73975,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47418,8 +50439,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73985},
             },
             ["ID"] = 73976,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47445,8 +50468,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73976},
             },
             ["ID"] = 73977,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47472,8 +50497,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73979},
             },
             ["ID"] = 73978,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344,
                 19341,
@@ -47499,8 +50526,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73979,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344,
                 19341,
@@ -47527,8 +50556,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73980,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344,
                 19341,
@@ -47554,8 +50585,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73980},
             },
             ["ID"] = 73981,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344,
                 19341,
@@ -47581,8 +50614,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73981},
             },
             ["ID"] = 73982,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344,
                 19341,
@@ -47608,8 +50643,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73983,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344,
@@ -47637,8 +50674,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73981},
             },
             ["ID"] = 73984,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344,
                 19341,
@@ -47663,8 +50702,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73984},
             },
             ["ID"] = 73985,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47689,8 +50730,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74038},
             },
             ["ID"] = 73986,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47713,8 +50756,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73987,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -47739,8 +50783,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73989},
             },
             ["ID"] = 73988,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47765,8 +50811,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73978},
             },
             ["ID"] = 73989,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -47792,8 +50840,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73971},
             },
             ["ID"] = 73990,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [0] = "available",
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344,
                 19341,
@@ -47818,8 +50868,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73991,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -47843,8 +50895,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73992,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -47868,8 +50922,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73993,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -47894,8 +50950,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73956},
             },
             ["ID"] = 73994,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -47921,8 +50979,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73996},
             },
             ["ID"] = 73995,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -47946,8 +51006,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 73996,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -47972,8 +51034,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73998},
             },
             ["ID"] = 73997,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -47998,8 +51062,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73991},
             },
             ["ID"] = 73998,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -48023,8 +51089,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73998},
             },
             ["ID"] = 73999,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -48048,8 +51116,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73999},
             },
             ["ID"] = 74000,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48073,8 +51143,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74009},
             },
             ["ID"] = 74001,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48099,8 +51171,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74000},
             },
             ["ID"] = 74002,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48126,8 +51200,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73999},
             },
             ["ID"] = 74003,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48151,8 +51227,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73995},
             },
             ["ID"] = 74004,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -48176,8 +51254,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74006},
             },
             ["ID"] = 74005,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48201,8 +51281,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74004},
             },
             ["ID"] = 74006,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48227,8 +51309,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74003},
             },
             ["ID"] = 74007,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19339
@@ -48254,8 +51338,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74007},
             },
             ["ID"] = 74008,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48280,8 +51366,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74006},
             },
             ["ID"] = 74009,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48307,8 +51395,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74004},
             },
             ["ID"] = 74010,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48332,8 +51422,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73994},
             },
             ["ID"] = 74011,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -48356,8 +51448,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74015},
             },
             ["ID"] = 74012,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -48380,8 +51473,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74014},
             },
             ["ID"] = 74013,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -48405,8 +51499,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73966},
             },
             ["ID"] = 74014,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -48429,8 +51524,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74007},
             },
             ["ID"] = 74015,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48455,8 +51552,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74015},
             },
             ["ID"] = 74016,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -48478,8 +51576,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74016},
             },
             ["ID"] = 74017,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -48502,8 +51601,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74013},
             },
             ["ID"] = 74018,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -48526,8 +51626,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74018},
             },
             ["ID"] = 74019,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -48550,8 +51651,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74017},
             },
             ["ID"] = 74020,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -48574,8 +51676,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73965},
             },
             ["ID"] = 74021,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+            },
             ["conditionIDs"] = {
                 19339
             },
@@ -48598,8 +51701,10 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74022,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48623,8 +51728,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74024},
             },
             ["ID"] = 74023,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48649,8 +51756,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74010},
             },
             ["ID"] = 74024,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48674,8 +51783,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74026},
             },
             ["ID"] = 74025,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19345
@@ -48699,8 +51810,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73994},
             },
             ["ID"] = 74026,
-            ["specID"] = 581,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [581] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19339,
                 19341
@@ -48723,8 +51836,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74029},
             },
             ["ID"] = 74027,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -48748,8 +51862,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74029},
             },
             ["ID"] = 74028,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -48773,8 +51888,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74034},
             },
             ["ID"] = 74029,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -48796,8 +51912,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74029},
             },
             ["ID"] = 74030,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -48819,8 +51936,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74036},
             },
             ["ID"] = 74031,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -48844,8 +51962,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74030},
             },
             ["ID"] = 74032,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -48870,8 +51989,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74032},
             },
             ["ID"] = 74033,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -48895,8 +52015,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73975},
             },
             ["ID"] = 74034,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19344,
                 19345
@@ -48921,8 +52043,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73973},
             },
             ["ID"] = 74035,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19344,
                 19345
@@ -48947,8 +52071,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73977},
             },
             ["ID"] = 74036,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+            },
             ["conditionIDs"] = {
                 19344
             },
@@ -48972,8 +52097,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73988},
             },
             ["ID"] = 74037,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -48997,8 +52124,10 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 73973},
             },
             ["ID"] = 74038,
-            ["specID"] = 577,
-            ["specBehaviour"] = "visible",
+            ["specInfo"] = {
+                [577] = "visible",
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19345,
                 19344
@@ -49022,8 +52151,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74039,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49047,8 +52177,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74039},
             },
             ["ID"] = 74040,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49072,8 +52203,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74040},
             },
             ["ID"] = 74041,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49097,8 +52229,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74077},
             },
             ["ID"] = 74042,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49121,8 +52254,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74043,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49147,8 +52281,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74044,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49173,8 +52308,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74045,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49199,8 +52335,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74045},
             },
             ["ID"] = 74046,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49225,8 +52362,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74046},
             },
             ["ID"] = 74047,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49250,8 +52388,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74069},
             },
             ["ID"] = 74048,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49272,8 +52411,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74049,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49297,8 +52437,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74049},
             },
             ["ID"] = 74050,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49319,8 +52460,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74052},
             },
             ["ID"] = 74051,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49343,8 +52485,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74053},
             },
             ["ID"] = 74052,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49367,8 +52510,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74054},
             },
             ["ID"] = 74053,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49393,8 +52537,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74043},
             },
             ["ID"] = 74054,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49418,8 +52563,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74055,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49443,8 +52589,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74057},
             },
             ["ID"] = 74056,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49468,8 +52615,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74055},
             },
             ["ID"] = 74057,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49493,8 +52641,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74057},
             },
             ["ID"] = 74058,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
@@ -49519,8 +52668,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74056},
             },
             ["ID"] = 74059,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49542,8 +52692,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74061},
             },
             ["ID"] = 74060,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49566,8 +52717,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74059},
             },
             ["ID"] = 74061,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49589,8 +52741,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74061},
             },
             ["ID"] = 74062,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49612,8 +52765,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74062},
             },
             ["ID"] = 74063,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49634,8 +52788,9 @@ LibTalentTree.nodeData = {
 
             },
             ["ID"] = 74064,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49658,8 +52813,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74064},
             },
             ["ID"] = 74065,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49682,8 +52838,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74065},
             },
             ["ID"] = 74066,
-            ["specID"] = 581,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [581] = "granted",
+            },
             ["conditionIDs"] = {
                 19346
             },
@@ -49705,8 +52862,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74048},
             },
             ["ID"] = 74067,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49727,8 +52885,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74049},
             },
             ["ID"] = 74068,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49751,8 +52910,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74063},
             },
             ["ID"] = 74069,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49773,8 +52933,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74071},
             },
             ["ID"] = 74070,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49797,8 +52958,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74059},
             },
             ["ID"] = 74071,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49821,8 +52983,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74071},
             },
             ["ID"] = 74072,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49845,8 +53008,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74074},
             },
             ["ID"] = 74073,
-            ["specID"] = 577,
-            ["specBehaviour"] = "granted",
+            ["specInfo"] = {
+                [577] = "granted",
+            },
             ["conditionIDs"] = {
                 19343
             },
@@ -49869,8 +53033,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74050},
             },
             ["ID"] = 74074,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49892,8 +53057,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74076},
             },
             ["ID"] = 74075,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+
+            },
             ["conditionIDs"] = {
 
             },
@@ -49915,8 +53081,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74077},
             },
             ["ID"] = 74076,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49938,8 +53105,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74078},
             },
             ["ID"] = 74077,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49963,8 +53131,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74047},
             },
             ["ID"] = 74078,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19342
             },
@@ -49987,8 +53156,9 @@ LibTalentTree.nodeData = {
                 {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 74040},
             },
             ["ID"] = 74079,
-            ["specID"] = 0,
-            ["specBehaviour"] = "",
+            ["specInfo"] = {
+                [0] = "available",
+            },
             ["conditionIDs"] = {
                 19340,
                 19342
