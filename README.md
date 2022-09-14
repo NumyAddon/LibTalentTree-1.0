@@ -43,19 +43,19 @@ If C_Traits nodeInfo returns a zeroed out table, the table described below is mi
 * [table] nodeInfo
 
 ##### nodeInfo
-| Field                | Differences from C_Traits                | Extra info                                                                                                             |
-|----------------------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [number] ID          | None                                     |                                                                                                                        |
-| [number] posX        | None                                     |                                                                                                                        |
-| [number] posY        | None                                     |                                                                                                                        |
-| [number] type        | None                                     | 0: single, 1: Tiered, 2: Selection                                                                                     |
-| [number] maxRanks    | None                                     |                                                                                                                        |
-| [number] flags       | None                                     | &1: ShowMultipleIcons                                                                                                  |
-| [table] groupIDs     | None                                     | list of [number] groupIDs                                                                                              |
-| [table] visibleEdges | isActive field is missing                | list of [table] visibleEdges                                                                                           |
-| [table] specInfo     | Lib-only field                           | list of [number] specId = [string] behaviour; specId 0 means global; behaviour is 'available', 'visible', or 'granted' |
-| [table] conditionIDs | The order does not always match C_Traits | list of [number] conditionIDs                                                                                          |
-| [table] entryIDs     | None                                     | list of [number] entryIDs; generally only applies to choice nodes                                                      |
+| Field                | Differences from C_Traits                | Extra info                                                                                                              |
+|----------------------|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| [number] ID          | None                                     |                                                                                                                         |
+| [number] posX        | None                                     |                                                                                                                         |
+| [number] posY        | None                                     |                                                                                                                         |
+| [number] type        | None                                     | 0: single, 1: Tiered, 2: Selection                                                                                      |
+| [number] maxRanks    | None                                     |                                                                                                                         |
+| [number] flags       | None                                     | &1: ShowMultipleIcons                                                                                                   |
+| [table] groupIDs     | None                                     | list of [number] groupIDs                                                                                               |
+| [table] visibleEdges | isActive field is missing                | list of [table] visibleEdges                                                                                            |
+| [table] specInfo     | Lib-only field                           | table of [number] specId = [string] behaviour; specId 0 means global; behaviour is 'available', 'visible', or 'granted' |
+| [table] conditionIDs | The order does not always match C_Traits | list of [number] conditionIDs                                                                                           |
+| [table] entryIDs     | None                                     | list of [number] entryIDs; generally, choice nodes will have 2, otherwise there's just 1                                |
 
 ##### visibleEdges
 | Field                | Differences from C_Traits | Extra info                                                                                                                                               |
@@ -94,19 +94,19 @@ end
 * [table] nodeInfo
 
 ##### nodeInfo
-| Field                | Differences from C_Traits                | Extra info                                                                                                             |
-|----------------------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [number] ID          | None                                     |                                                                                                                        |
-| [number] posX        | None                                     |                                                                                                                        |
-| [number] posY        | None                                     |                                                                                                                        |
-| [number] type        | None                                     | 0: single, 1: Tiered, 2: Selection                                                                                     |
-| [number] maxRanks    | None                                     |                                                                                                                        |
-| [number] flags       | None                                     | &1: ShowMultipleIcons                                                                                                  |
-| [table] groupIDs     | None                                     | list of [number] groupIDs                                                                                              |
-| [table] visibleEdges | isActive field is missing                | list of [table] visibleEdges                                                                                           |
-| [table] specInfo     | Lib-only field                           | list of [number] specId = [string] behaviour; specId 0 means global; behaviour is 'available', 'visible', or 'granted' |
-| [table] conditionIDs | The order does not always match C_Traits | list of [number] conditionIDs                                                                                          |
-| [table] entryIDs     | None                                     | list of [number] entryIDs; generally only applies to choice nodes                                                      |
+| Field                | Differences from C_Traits                | Extra info                                                                                                              |
+|----------------------|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| [number] ID          | None                                     |                                                                                                                         |
+| [number] posX        | None                                     |                                                                                                                         |
+| [number] posY        | None                                     |                                                                                                                         |
+| [number] type        | None                                     | 0: single, 1: Tiered, 2: Selection                                                                                      |
+| [number] maxRanks    | None                                     |                                                                                                                         |
+| [number] flags       | None                                     | &1: ShowMultipleIcons                                                                                                   |
+| [table] groupIDs     | None                                     | list of [number] groupIDs                                                                                               |
+| [table] visibleEdges | isActive field is missing                | list of [table] visibleEdges                                                                                            |
+| [table] specInfo     | Lib-only field                           | table of [number] specId = [string] behaviour; specId 0 means global; behaviour is 'available', 'visible', or 'granted' |
+| [table] conditionIDs | The order does not always match C_Traits | list of [number] conditionIDs                                                                                           |
+| [table] entryIDs     | None                                     | list of [number] entryIDs; generally, choice nodes will have 2, otherwise there's just 1                                |
 
 ##### visibleEdges
 | Field                | Differences from C_Traits | Extra info                                                                                                                                               |
