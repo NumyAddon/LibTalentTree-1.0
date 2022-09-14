@@ -1,0 +1,2 @@
+externals:
+    LibStub: https://repos.wowace.com/wow/ace3/trunk/LibStub
