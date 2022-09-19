@@ -35,6 +35,7 @@ LibTalentTree.classTreeMap = {
     [6] = 750,
     [7] = 760,
     [8] = 658,
+    [9] = 720,
     [10] = 753,
     [11] = 718,
     [12] = 770,
@@ -64,7 +65,7 @@ LibTalentTree.nodeData = {
                 80139
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -114,7 +115,7 @@ LibTalentTree.nodeData = {
                 80141
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -141,7 +142,7 @@ LibTalentTree.nodeData = {
                 80142
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -167,7 +168,7 @@ LibTalentTree.nodeData = {
                 80143
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -193,7 +194,7 @@ LibTalentTree.nodeData = {
                 80144
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -218,7 +219,7 @@ LibTalentTree.nodeData = {
                 80145
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -244,7 +245,7 @@ LibTalentTree.nodeData = {
                 80146
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -271,7 +272,7 @@ LibTalentTree.nodeData = {
                 80147
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -297,7 +298,7 @@ LibTalentTree.nodeData = {
                 80148
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -323,7 +324,7 @@ LibTalentTree.nodeData = {
                 80149
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -350,7 +351,7 @@ LibTalentTree.nodeData = {
                 80150
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -376,7 +377,7 @@ LibTalentTree.nodeData = {
                 80152
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -404,7 +405,7 @@ LibTalentTree.nodeData = {
                 80153
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -431,7 +432,7 @@ LibTalentTree.nodeData = {
                 80154
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -457,7 +458,7 @@ LibTalentTree.nodeData = {
                 80155
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -484,7 +485,7 @@ LibTalentTree.nodeData = {
                 80156
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -509,7 +510,7 @@ LibTalentTree.nodeData = {
                 80157
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -535,7 +536,7 @@ LibTalentTree.nodeData = {
                 80158
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -560,7 +561,7 @@ LibTalentTree.nodeData = {
                 80159
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -587,7 +588,7 @@ LibTalentTree.nodeData = {
                 80160
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -614,7 +615,7 @@ LibTalentTree.nodeData = {
                 80161
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -641,7 +642,7 @@ LibTalentTree.nodeData = {
                 80162
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -666,7 +667,7 @@ LibTalentTree.nodeData = {
                 80164
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -692,7 +693,7 @@ LibTalentTree.nodeData = {
                 80165
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -717,7 +718,7 @@ LibTalentTree.nodeData = {
                 80166
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -742,7 +743,7 @@ LibTalentTree.nodeData = {
                 80167
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -767,7 +768,7 @@ LibTalentTree.nodeData = {
                 80168
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -945,7 +946,7 @@ LibTalentTree.nodeData = {
                 80176
             },
             ["specInfo"] = {
-                [64] = "granted",
+                [64] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -998,7 +999,7 @@ LibTalentTree.nodeData = {
                 80178
             },
             ["specInfo"] = {
-                [63] = "granted",
+                [63] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -1049,7 +1050,7 @@ LibTalentTree.nodeData = {
                 80180
             },
             ["specInfo"] = {
-                [62] = "granted",
+                [62] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -1151,7 +1152,7 @@ LibTalentTree.nodeData = {
                 80184
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -1177,7 +1178,7 @@ LibTalentTree.nodeData = {
                 80186
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -1203,7 +1204,7 @@ LibTalentTree.nodeData = {
                 80187
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -1230,7 +1231,7 @@ LibTalentTree.nodeData = {
                 80188
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -1256,7 +1257,7 @@ LibTalentTree.nodeData = {
                 80189
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -1283,8 +1284,8 @@ LibTalentTree.nodeData = {
                 80190
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1311,8 +1312,8 @@ LibTalentTree.nodeData = {
                 80191
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1339,8 +1340,8 @@ LibTalentTree.nodeData = {
                 80192
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1367,8 +1368,8 @@ LibTalentTree.nodeData = {
                 80193
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1395,8 +1396,8 @@ LibTalentTree.nodeData = {
                 80194
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1423,8 +1424,8 @@ LibTalentTree.nodeData = {
                 80195
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1451,8 +1452,8 @@ LibTalentTree.nodeData = {
                 80196
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1479,8 +1480,8 @@ LibTalentTree.nodeData = {
                 80197
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1508,8 +1509,8 @@ LibTalentTree.nodeData = {
                 80198
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1537,8 +1538,8 @@ LibTalentTree.nodeData = {
                 80200
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1566,8 +1567,8 @@ LibTalentTree.nodeData = {
                 80201
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1594,8 +1595,8 @@ LibTalentTree.nodeData = {
                 80202
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1623,8 +1624,8 @@ LibTalentTree.nodeData = {
                 80203
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1651,8 +1652,8 @@ LibTalentTree.nodeData = {
                 80204
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1678,7 +1679,7 @@ LibTalentTree.nodeData = {
                 80205
             },
             ["specInfo"] = {
-                [62] = "visible",
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1706,8 +1707,8 @@ LibTalentTree.nodeData = {
                 80206
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1735,8 +1736,8 @@ LibTalentTree.nodeData = {
                 80208
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1763,8 +1764,8 @@ LibTalentTree.nodeData = {
                 80209
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1791,8 +1792,8 @@ LibTalentTree.nodeData = {
                 80210
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1817,7 +1818,7 @@ LibTalentTree.nodeData = {
                 80211
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1844,8 +1845,8 @@ LibTalentTree.nodeData = {
                 80212
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1873,8 +1874,8 @@ LibTalentTree.nodeData = {
                 80213
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1901,8 +1902,8 @@ LibTalentTree.nodeData = {
                 80215
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1929,8 +1930,8 @@ LibTalentTree.nodeData = {
                 80216
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1959,8 +1960,8 @@ LibTalentTree.nodeData = {
                 80217
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -1987,8 +1988,8 @@ LibTalentTree.nodeData = {
                 80218
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2015,8 +2016,8 @@ LibTalentTree.nodeData = {
                 80219
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2043,8 +2044,8 @@ LibTalentTree.nodeData = {
                 80220
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2071,8 +2072,8 @@ LibTalentTree.nodeData = {
                 80221
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2099,8 +2100,8 @@ LibTalentTree.nodeData = {
                 80222
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2127,8 +2128,8 @@ LibTalentTree.nodeData = {
                 80223
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2155,8 +2156,8 @@ LibTalentTree.nodeData = {
                 80224
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2185,8 +2186,8 @@ LibTalentTree.nodeData = {
                 80225
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2213,8 +2214,8 @@ LibTalentTree.nodeData = {
                 80226
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2239,7 +2240,7 @@ LibTalentTree.nodeData = {
                 80227
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2265,7 +2266,7 @@ LibTalentTree.nodeData = {
                 80228
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2290,7 +2291,7 @@ LibTalentTree.nodeData = {
                 80229
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2318,8 +2319,8 @@ LibTalentTree.nodeData = {
                 80230
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2346,8 +2347,8 @@ LibTalentTree.nodeData = {
                 80231
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2376,8 +2377,8 @@ LibTalentTree.nodeData = {
                 80232
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2404,8 +2405,8 @@ LibTalentTree.nodeData = {
                 80234
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2434,8 +2435,8 @@ LibTalentTree.nodeData = {
                 80235
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2462,8 +2463,8 @@ LibTalentTree.nodeData = {
                 80236
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2492,8 +2493,8 @@ LibTalentTree.nodeData = {
                 80237
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2519,7 +2520,7 @@ LibTalentTree.nodeData = {
                 80239
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2544,7 +2545,7 @@ LibTalentTree.nodeData = {
                 80240
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2571,7 +2572,7 @@ LibTalentTree.nodeData = {
                 80241
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2596,7 +2597,7 @@ LibTalentTree.nodeData = {
                 80242
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2621,7 +2622,7 @@ LibTalentTree.nodeData = {
                 80243
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2646,7 +2647,7 @@ LibTalentTree.nodeData = {
                 80244
             },
             ["specInfo"] = {
-                [64] = "visible",
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2675,8 +2676,8 @@ LibTalentTree.nodeData = {
                 80245
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2703,8 +2704,8 @@ LibTalentTree.nodeData = {
                 80247
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2732,8 +2733,8 @@ LibTalentTree.nodeData = {
                 80248
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2760,8 +2761,8 @@ LibTalentTree.nodeData = {
                 80249
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2788,8 +2789,8 @@ LibTalentTree.nodeData = {
                 80250
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2816,8 +2817,8 @@ LibTalentTree.nodeData = {
                 80251
             },
             ["specInfo"] = {
-                [0] = "available",
-                [64] = "visible",
+                [0] = { 0 },
+                [64] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2844,8 +2845,8 @@ LibTalentTree.nodeData = {
                 80252
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2872,8 +2873,8 @@ LibTalentTree.nodeData = {
                 80253
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2900,8 +2901,8 @@ LibTalentTree.nodeData = {
                 80254
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2928,8 +2929,8 @@ LibTalentTree.nodeData = {
                 80255
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2957,8 +2958,8 @@ LibTalentTree.nodeData = {
                 80256
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -2984,7 +2985,7 @@ LibTalentTree.nodeData = {
                 80257
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3009,7 +3010,7 @@ LibTalentTree.nodeData = {
                 80258
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3037,8 +3038,8 @@ LibTalentTree.nodeData = {
                 80259
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3066,8 +3067,8 @@ LibTalentTree.nodeData = {
                 80260
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3094,8 +3095,8 @@ LibTalentTree.nodeData = {
                 80261
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3123,8 +3124,8 @@ LibTalentTree.nodeData = {
                 80262
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3152,8 +3153,8 @@ LibTalentTree.nodeData = {
                 80263
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3180,8 +3181,8 @@ LibTalentTree.nodeData = {
                 80265
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3208,8 +3209,8 @@ LibTalentTree.nodeData = {
                 80266
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3237,8 +3238,8 @@ LibTalentTree.nodeData = {
                 80267
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3268,8 +3269,8 @@ LibTalentTree.nodeData = {
                 80268
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3297,8 +3298,8 @@ LibTalentTree.nodeData = {
                 80270
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3325,8 +3326,8 @@ LibTalentTree.nodeData = {
                 80271
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3353,8 +3354,8 @@ LibTalentTree.nodeData = {
                 80272
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3381,8 +3382,8 @@ LibTalentTree.nodeData = {
                 80273
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3409,8 +3410,8 @@ LibTalentTree.nodeData = {
                 80274
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3439,8 +3440,8 @@ LibTalentTree.nodeData = {
                 80275
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3467,8 +3468,8 @@ LibTalentTree.nodeData = {
                 80276
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3496,8 +3497,8 @@ LibTalentTree.nodeData = {
                 80277
             },
             ["specInfo"] = {
-                [63] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3524,8 +3525,8 @@ LibTalentTree.nodeData = {
                 80278
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3553,8 +3554,8 @@ LibTalentTree.nodeData = {
                 80279
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3580,7 +3581,7 @@ LibTalentTree.nodeData = {
                 80280
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3605,7 +3606,7 @@ LibTalentTree.nodeData = {
                 80281
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3631,7 +3632,7 @@ LibTalentTree.nodeData = {
                 80282
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3657,7 +3658,7 @@ LibTalentTree.nodeData = {
                 80283
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3683,7 +3684,7 @@ LibTalentTree.nodeData = {
                 80284
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3710,7 +3711,7 @@ LibTalentTree.nodeData = {
                 80285
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3736,7 +3737,7 @@ LibTalentTree.nodeData = {
                 80286
             },
             ["specInfo"] = {
-                [63] = "visible",
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3764,8 +3765,8 @@ LibTalentTree.nodeData = {
                 80287
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3794,8 +3795,8 @@ LibTalentTree.nodeData = {
                 80288
             },
             ["specInfo"] = {
-                [0] = "available",
-                [63] = "visible",
+                [0] = { 0 },
+                [63] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3822,8 +3823,8 @@ LibTalentTree.nodeData = {
                 80290
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3851,8 +3852,8 @@ LibTalentTree.nodeData = {
                 80291
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3879,8 +3880,8 @@ LibTalentTree.nodeData = {
                 80292
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3908,8 +3909,8 @@ LibTalentTree.nodeData = {
                 80293
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3936,8 +3937,8 @@ LibTalentTree.nodeData = {
                 80294
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3963,7 +3964,7 @@ LibTalentTree.nodeData = {
                 80295
             },
             ["specInfo"] = {
-                [62] = "visible",
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -3991,8 +3992,8 @@ LibTalentTree.nodeData = {
                 80296
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4018,7 +4019,7 @@ LibTalentTree.nodeData = {
                 80297
             },
             ["specInfo"] = {
-                [62] = "visible",
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4045,7 +4046,7 @@ LibTalentTree.nodeData = {
                 80298
             },
             ["specInfo"] = {
-                [62] = "visible",
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4072,7 +4073,7 @@ LibTalentTree.nodeData = {
                 80299
             },
             ["specInfo"] = {
-                [62] = "visible",
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4100,8 +4101,8 @@ LibTalentTree.nodeData = {
                 80300
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4129,8 +4130,8 @@ LibTalentTree.nodeData = {
                 80301
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4158,8 +4159,8 @@ LibTalentTree.nodeData = {
                 80302
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4186,8 +4187,8 @@ LibTalentTree.nodeData = {
                 80303
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4214,8 +4215,8 @@ LibTalentTree.nodeData = {
                 80304
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4242,8 +4243,8 @@ LibTalentTree.nodeData = {
                 80305
             },
             ["specInfo"] = {
-                [62] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4268,7 +4269,7 @@ LibTalentTree.nodeData = {
                 80306
             },
             ["specInfo"] = {
-                [62] = "visible",
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4294,7 +4295,7 @@ LibTalentTree.nodeData = {
                 80307
             },
             ["specInfo"] = {
-                [62] = "visible",
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4321,7 +4322,7 @@ LibTalentTree.nodeData = {
                 80308
             },
             ["specInfo"] = {
-                [62] = "visible",
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4347,7 +4348,7 @@ LibTalentTree.nodeData = {
                 80309
             },
             ["specInfo"] = {
-                [62] = "visible",
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4375,8 +4376,8 @@ LibTalentTree.nodeData = {
                 80310
             },
             ["specInfo"] = {
-                [0] = "available",
-                [62] = "visible",
+                [0] = { 0 },
+                [62] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4476,7 +4477,7 @@ LibTalentTree.nodeData = {
                 87587
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -4501,7 +4502,7 @@ LibTalentTree.nodeData = {
                 87588
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -4526,7 +4527,7 @@ LibTalentTree.nodeData = {
                 87589
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -4551,7 +4552,7 @@ LibTalentTree.nodeData = {
                 87590
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4580,8 +4581,8 @@ LibTalentTree.nodeData = {
                 87591
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4609,8 +4610,8 @@ LibTalentTree.nodeData = {
                 87592
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4638,8 +4639,8 @@ LibTalentTree.nodeData = {
                 87594
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4666,8 +4667,8 @@ LibTalentTree.nodeData = {
                 87595
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4694,8 +4695,8 @@ LibTalentTree.nodeData = {
                 87596
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4722,8 +4723,8 @@ LibTalentTree.nodeData = {
                 87597
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4750,8 +4751,8 @@ LibTalentTree.nodeData = {
                 87598
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4778,8 +4779,8 @@ LibTalentTree.nodeData = {
                 87599
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4807,8 +4808,8 @@ LibTalentTree.nodeData = {
                 87600
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4836,8 +4837,8 @@ LibTalentTree.nodeData = {
                 87601
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4864,8 +4865,8 @@ LibTalentTree.nodeData = {
                 87603
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4892,8 +4893,8 @@ LibTalentTree.nodeData = {
                 87604
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4920,8 +4921,8 @@ LibTalentTree.nodeData = {
                 87605
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4948,8 +4949,8 @@ LibTalentTree.nodeData = {
                 87606
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -4978,8 +4979,8 @@ LibTalentTree.nodeData = {
                 87607
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5007,8 +5008,8 @@ LibTalentTree.nodeData = {
                 87608
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5035,8 +5036,8 @@ LibTalentTree.nodeData = {
                 87610
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5064,8 +5065,8 @@ LibTalentTree.nodeData = {
                 87611
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5090,7 +5091,7 @@ LibTalentTree.nodeData = {
                 87612
             },
             ["specInfo"] = {
-                [1468] = "visible",
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5117,7 +5118,7 @@ LibTalentTree.nodeData = {
                 87613
             },
             ["specInfo"] = {
-                [1468] = "visible",
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5145,8 +5146,8 @@ LibTalentTree.nodeData = {
                 87614
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5174,8 +5175,8 @@ LibTalentTree.nodeData = {
                 87615
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5202,8 +5203,8 @@ LibTalentTree.nodeData = {
                 87616
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5230,8 +5231,8 @@ LibTalentTree.nodeData = {
                 87617
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5260,8 +5261,8 @@ LibTalentTree.nodeData = {
                 87618
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5290,8 +5291,8 @@ LibTalentTree.nodeData = {
                 87619
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5318,8 +5319,8 @@ LibTalentTree.nodeData = {
                 87621
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5346,8 +5347,8 @@ LibTalentTree.nodeData = {
                 87622
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5375,8 +5376,8 @@ LibTalentTree.nodeData = {
                 87623
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5403,7 +5404,7 @@ LibTalentTree.nodeData = {
                 87625
             },
             ["specInfo"] = {
-                [1468] = "visible",
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5428,7 +5429,7 @@ LibTalentTree.nodeData = {
                 87626
             },
             ["specInfo"] = {
-                [1468] = "visible",
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5454,7 +5455,7 @@ LibTalentTree.nodeData = {
                 87627
             },
             ["specInfo"] = {
-                [1468] = "visible",
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5480,7 +5481,7 @@ LibTalentTree.nodeData = {
                 87628
             },
             ["specInfo"] = {
-                [1468] = "visible",
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5506,7 +5507,7 @@ LibTalentTree.nodeData = {
                 87629
             },
             ["specInfo"] = {
-                [1468] = "visible",
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5531,7 +5532,7 @@ LibTalentTree.nodeData = {
                 87630
             },
             ["specInfo"] = {
-                [1468] = "visible",
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5558,7 +5559,7 @@ LibTalentTree.nodeData = {
                 87631
             },
             ["specInfo"] = {
-                [1468] = "visible",
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5586,8 +5587,8 @@ LibTalentTree.nodeData = {
                 87632
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5615,8 +5616,8 @@ LibTalentTree.nodeData = {
                 87633
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5645,8 +5646,8 @@ LibTalentTree.nodeData = {
                 87634
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5673,8 +5674,8 @@ LibTalentTree.nodeData = {
                 87635
             },
             ["specInfo"] = {
-                [1468] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1468] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5704,8 +5705,8 @@ LibTalentTree.nodeData = {
                 87636
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5734,8 +5735,8 @@ LibTalentTree.nodeData = {
                 87638
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5764,8 +5765,8 @@ LibTalentTree.nodeData = {
                 87639
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5792,8 +5793,8 @@ LibTalentTree.nodeData = {
                 87641
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5823,8 +5824,8 @@ LibTalentTree.nodeData = {
                 87642
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5853,8 +5854,8 @@ LibTalentTree.nodeData = {
                 87644
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5881,8 +5882,8 @@ LibTalentTree.nodeData = {
                 87645
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5907,7 +5908,7 @@ LibTalentTree.nodeData = {
                 87646
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5933,7 +5934,7 @@ LibTalentTree.nodeData = {
                 87647
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5958,7 +5959,7 @@ LibTalentTree.nodeData = {
                 87648
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -5987,8 +5988,8 @@ LibTalentTree.nodeData = {
                 87649
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6016,8 +6017,8 @@ LibTalentTree.nodeData = {
                 87650
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6044,8 +6045,8 @@ LibTalentTree.nodeData = {
                 87651
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6075,8 +6076,8 @@ LibTalentTree.nodeData = {
                 87652
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6105,8 +6106,8 @@ LibTalentTree.nodeData = {
                 87653
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6136,8 +6137,8 @@ LibTalentTree.nodeData = {
                 87654
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6166,8 +6167,8 @@ LibTalentTree.nodeData = {
                 87655
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6197,8 +6198,8 @@ LibTalentTree.nodeData = {
                 87656
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6227,8 +6228,8 @@ LibTalentTree.nodeData = {
                 87657
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6257,8 +6258,8 @@ LibTalentTree.nodeData = {
                 87658
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6286,8 +6287,8 @@ LibTalentTree.nodeData = {
                 87659
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6314,8 +6315,8 @@ LibTalentTree.nodeData = {
                 87660
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6343,8 +6344,8 @@ LibTalentTree.nodeData = {
                 87661
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6373,8 +6374,8 @@ LibTalentTree.nodeData = {
                 87662
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6401,8 +6402,8 @@ LibTalentTree.nodeData = {
                 87663
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6431,8 +6432,8 @@ LibTalentTree.nodeData = {
                 87664
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6457,7 +6458,7 @@ LibTalentTree.nodeData = {
                 87665
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6483,7 +6484,7 @@ LibTalentTree.nodeData = {
                 87666
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6509,7 +6510,7 @@ LibTalentTree.nodeData = {
                 87668
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6536,7 +6537,7 @@ LibTalentTree.nodeData = {
                 87669
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6562,7 +6563,7 @@ LibTalentTree.nodeData = {
                 87670
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6588,7 +6589,7 @@ LibTalentTree.nodeData = {
                 87671
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6613,7 +6614,7 @@ LibTalentTree.nodeData = {
                 87672
             },
             ["specInfo"] = {
-                [1467] = "visible",
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6642,8 +6643,8 @@ LibTalentTree.nodeData = {
                 87673
             },
             ["specInfo"] = {
-                [1467] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [1467] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -6670,7 +6671,7 @@ LibTalentTree.nodeData = {
                 87675
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6697,7 +6698,7 @@ LibTalentTree.nodeData = {
                 87676
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6724,7 +6725,7 @@ LibTalentTree.nodeData = {
                 87677
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6751,7 +6752,7 @@ LibTalentTree.nodeData = {
                 87678
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6778,7 +6779,7 @@ LibTalentTree.nodeData = {
                 87679
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6806,7 +6807,7 @@ LibTalentTree.nodeData = {
                 87680
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6833,7 +6834,7 @@ LibTalentTree.nodeData = {
                 87682
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6860,7 +6861,7 @@ LibTalentTree.nodeData = {
                 87683
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6885,7 +6886,7 @@ LibTalentTree.nodeData = {
                 87684
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6913,7 +6914,7 @@ LibTalentTree.nodeData = {
                 87685
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6940,7 +6941,7 @@ LibTalentTree.nodeData = {
                 87686
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6967,7 +6968,7 @@ LibTalentTree.nodeData = {
                 87687
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -6994,7 +6995,7 @@ LibTalentTree.nodeData = {
                 87688
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7021,7 +7022,7 @@ LibTalentTree.nodeData = {
                 87689
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7048,7 +7049,7 @@ LibTalentTree.nodeData = {
                 87690
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7073,7 +7074,7 @@ LibTalentTree.nodeData = {
                 87691
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7123,7 +7124,7 @@ LibTalentTree.nodeData = {
                 87693
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7150,7 +7151,7 @@ LibTalentTree.nodeData = {
                 87694
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7179,7 +7180,7 @@ LibTalentTree.nodeData = {
                 87695
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7206,7 +7207,7 @@ LibTalentTree.nodeData = {
                 87696
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7231,7 +7232,7 @@ LibTalentTree.nodeData = {
                 87697
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7256,7 +7257,7 @@ LibTalentTree.nodeData = {
                 87698
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7282,7 +7283,7 @@ LibTalentTree.nodeData = {
                 87699
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7458,7 +7459,7 @@ LibTalentTree.nodeData = {
                 87706
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7485,7 +7486,7 @@ LibTalentTree.nodeData = {
                 87707
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7511,7 +7512,7 @@ LibTalentTree.nodeData = {
                 87708
             },
             ["specInfo"] = {
-                [1467] = "granted",
+                [1467] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -7613,7 +7614,7 @@ LibTalentTree.nodeData = {
                 87712
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7640,7 +7641,7 @@ LibTalentTree.nodeData = {
                 87713
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -7716,7 +7717,7 @@ LibTalentTree.nodeData = {
                 87716
             },
             ["specInfo"] = {
-                [1468] = "granted",
+                [1468] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -7743,7 +7744,7 @@ LibTalentTree.nodeData = {
                 91012
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -7768,7 +7769,7 @@ LibTalentTree.nodeData = {
                 91013
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -7793,7 +7794,7 @@ LibTalentTree.nodeData = {
                 91014
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -7821,8 +7822,8 @@ LibTalentTree.nodeData = {
                 91015
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -7849,8 +7850,8 @@ LibTalentTree.nodeData = {
                 91016
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -7877,8 +7878,8 @@ LibTalentTree.nodeData = {
                 91017
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -7905,8 +7906,8 @@ LibTalentTree.nodeData = {
                 91018
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -7936,8 +7937,8 @@ LibTalentTree.nodeData = {
                 91019
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -7965,8 +7966,8 @@ LibTalentTree.nodeData = {
                 91021
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -7995,8 +7996,8 @@ LibTalentTree.nodeData = {
                 91022
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8025,8 +8026,8 @@ LibTalentTree.nodeData = {
                 91024
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8054,8 +8055,8 @@ LibTalentTree.nodeData = {
                 91025
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8083,8 +8084,8 @@ LibTalentTree.nodeData = {
                 91026
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8111,8 +8112,8 @@ LibTalentTree.nodeData = {
                 91027
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8139,7 +8140,7 @@ LibTalentTree.nodeData = {
                 91028
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8164,7 +8165,7 @@ LibTalentTree.nodeData = {
                 91029
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8192,8 +8193,8 @@ LibTalentTree.nodeData = {
                 91030
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8221,8 +8222,8 @@ LibTalentTree.nodeData = {
                 91031
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8247,7 +8248,7 @@ LibTalentTree.nodeData = {
                 91032
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8274,8 +8275,8 @@ LibTalentTree.nodeData = {
                 91033
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8302,8 +8303,8 @@ LibTalentTree.nodeData = {
                 91034
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8331,8 +8332,8 @@ LibTalentTree.nodeData = {
                 91035
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8362,8 +8363,8 @@ LibTalentTree.nodeData = {
                 91036
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8391,8 +8392,8 @@ LibTalentTree.nodeData = {
                 91038
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8417,7 +8418,7 @@ LibTalentTree.nodeData = {
                 91039
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8444,8 +8445,8 @@ LibTalentTree.nodeData = {
                 91040
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8471,7 +8472,7 @@ LibTalentTree.nodeData = {
                 91041
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8499,8 +8500,8 @@ LibTalentTree.nodeData = {
                 91042
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8527,8 +8528,8 @@ LibTalentTree.nodeData = {
                 91043
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8555,7 +8556,7 @@ LibTalentTree.nodeData = {
                 91044
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8582,8 +8583,8 @@ LibTalentTree.nodeData = {
                 91046
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8611,8 +8612,8 @@ LibTalentTree.nodeData = {
                 91047
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8642,8 +8643,8 @@ LibTalentTree.nodeData = {
                 91049
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8671,8 +8672,8 @@ LibTalentTree.nodeData = {
                 91051
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8699,8 +8700,8 @@ LibTalentTree.nodeData = {
                 91052
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8728,8 +8729,8 @@ LibTalentTree.nodeData = {
                 91053
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8757,8 +8758,8 @@ LibTalentTree.nodeData = {
                 91055
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8785,7 +8786,7 @@ LibTalentTree.nodeData = {
                 91056
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8810,7 +8811,7 @@ LibTalentTree.nodeData = {
                 91057
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8838,8 +8839,8 @@ LibTalentTree.nodeData = {
                 91058
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8864,7 +8865,7 @@ LibTalentTree.nodeData = {
                 91059
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8891,8 +8892,8 @@ LibTalentTree.nodeData = {
                 91060
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8919,7 +8920,7 @@ LibTalentTree.nodeData = {
                 91061
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8946,8 +8947,8 @@ LibTalentTree.nodeData = {
                 91062
             },
             ["specInfo"] = {
-                [105] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -8974,7 +8975,7 @@ LibTalentTree.nodeData = {
                 91063
             },
             ["specInfo"] = {
-                [105] = "visible",
+                [105] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -9001,8 +9002,8 @@ LibTalentTree.nodeData = {
                 91065
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -9075,7 +9076,7 @@ LibTalentTree.nodeData = {
                 91068
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9100,7 +9101,7 @@ LibTalentTree.nodeData = {
                 91069
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9149,7 +9150,7 @@ LibTalentTree.nodeData = {
                 91071
             },
             ["specInfo"] = {
-                [103] = "granted",
+                [103] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -9174,7 +9175,7 @@ LibTalentTree.nodeData = {
                 91072
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9201,7 +9202,7 @@ LibTalentTree.nodeData = {
                 91073
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9228,7 +9229,7 @@ LibTalentTree.nodeData = {
                 91074
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9255,7 +9256,7 @@ LibTalentTree.nodeData = {
                 91075
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9282,7 +9283,7 @@ LibTalentTree.nodeData = {
                 91076
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9309,7 +9310,7 @@ LibTalentTree.nodeData = {
                 91077
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9337,7 +9338,7 @@ LibTalentTree.nodeData = {
                 91078
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9363,7 +9364,7 @@ LibTalentTree.nodeData = {
                 91079
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9389,7 +9390,7 @@ LibTalentTree.nodeData = {
                 91080
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9414,7 +9415,7 @@ LibTalentTree.nodeData = {
                 91082
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9439,7 +9440,7 @@ LibTalentTree.nodeData = {
                 91083
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9538,7 +9539,7 @@ LibTalentTree.nodeData = {
                 91087
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9564,7 +9565,7 @@ LibTalentTree.nodeData = {
                 91088
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9589,7 +9590,7 @@ LibTalentTree.nodeData = {
                 91089
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9617,7 +9618,7 @@ LibTalentTree.nodeData = {
                 91090
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9644,7 +9645,7 @@ LibTalentTree.nodeData = {
                 91092
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9671,7 +9672,7 @@ LibTalentTree.nodeData = {
                 91093
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9697,7 +9698,7 @@ LibTalentTree.nodeData = {
                 91094
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9724,7 +9725,7 @@ LibTalentTree.nodeData = {
                 91095
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9749,7 +9750,7 @@ LibTalentTree.nodeData = {
                 91096
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9775,7 +9776,7 @@ LibTalentTree.nodeData = {
                 91097
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9801,7 +9802,7 @@ LibTalentTree.nodeData = {
                 91098
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9829,7 +9830,7 @@ LibTalentTree.nodeData = {
                 91099
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9856,7 +9857,7 @@ LibTalentTree.nodeData = {
                 91101
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9883,7 +9884,7 @@ LibTalentTree.nodeData = {
                 91102
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -9909,9 +9910,9 @@ LibTalentTree.nodeData = {
                 91103
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [105] = "visible",
-                [103] = "visible",
+                [103] = { 1 },
+                [104] = { 1 },
+                [105] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -9937,7 +9938,7 @@ LibTalentTree.nodeData = {
                 91104
             },
             ["specInfo"] = {
-                [102] = "granted",
+                [102] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -9963,7 +9964,7 @@ LibTalentTree.nodeData = {
                 91105
             },
             ["specInfo"] = {
-                [102] = "granted",
+                [102] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -10038,7 +10039,7 @@ LibTalentTree.nodeData = {
                 91108
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -10066,7 +10067,7 @@ LibTalentTree.nodeData = {
                 91109
             },
             ["specInfo"] = {
-                [105] = "granted",
+                [105] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -10092,7 +10093,7 @@ LibTalentTree.nodeData = {
                 91110
             },
             ["specInfo"] = {
-                [105] = "granted",
+                [105] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -10142,7 +10143,7 @@ LibTalentTree.nodeData = {
                 91112
             },
             ["specInfo"] = {
-                [104] = "granted",
+                [104] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -10170,8 +10171,8 @@ LibTalentTree.nodeData = {
                 91113
             },
             ["specInfo"] = {
-                [104] = "granted",
-                [103] = "granted",
+                [103] = { 2 },
+                [104] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -10222,7 +10223,7 @@ LibTalentTree.nodeData = {
                 91115
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -10251,8 +10252,8 @@ LibTalentTree.nodeData = {
                 91116
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10277,7 +10278,7 @@ LibTalentTree.nodeData = {
                 91117
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10304,8 +10305,8 @@ LibTalentTree.nodeData = {
                 91118
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10330,7 +10331,7 @@ LibTalentTree.nodeData = {
                 91119
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10355,7 +10356,7 @@ LibTalentTree.nodeData = {
                 91120
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10384,8 +10385,8 @@ LibTalentTree.nodeData = {
                 91121
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10412,8 +10413,8 @@ LibTalentTree.nodeData = {
                 91122
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10440,8 +10441,8 @@ LibTalentTree.nodeData = {
                 91123
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10468,8 +10469,8 @@ LibTalentTree.nodeData = {
                 91124
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10498,8 +10499,8 @@ LibTalentTree.nodeData = {
                 91125
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10529,8 +10530,8 @@ LibTalentTree.nodeData = {
                 91126
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10559,8 +10560,8 @@ LibTalentTree.nodeData = {
                 91128
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10589,8 +10590,8 @@ LibTalentTree.nodeData = {
                 91129
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10617,8 +10618,8 @@ LibTalentTree.nodeData = {
                 91130
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10649,8 +10650,8 @@ LibTalentTree.nodeData = {
                 91131
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10679,8 +10680,8 @@ LibTalentTree.nodeData = {
                 91132
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10709,8 +10710,8 @@ LibTalentTree.nodeData = {
                 91133
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10740,8 +10741,8 @@ LibTalentTree.nodeData = {
                 91134
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10767,7 +10768,7 @@ LibTalentTree.nodeData = {
                 91136
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10792,7 +10793,7 @@ LibTalentTree.nodeData = {
                 91137
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10820,8 +10821,8 @@ LibTalentTree.nodeData = {
                 91138
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10848,8 +10849,8 @@ LibTalentTree.nodeData = {
                 91139
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10876,8 +10877,8 @@ LibTalentTree.nodeData = {
                 91140
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10908,8 +10909,8 @@ LibTalentTree.nodeData = {
                 91141
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10938,8 +10939,8 @@ LibTalentTree.nodeData = {
                 91142
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10968,8 +10969,8 @@ LibTalentTree.nodeData = {
                 91144
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -10996,8 +10997,8 @@ LibTalentTree.nodeData = {
                 91145
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11024,7 +11025,7 @@ LibTalentTree.nodeData = {
                 91146
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11052,8 +11053,8 @@ LibTalentTree.nodeData = {
                 91147
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11078,7 +11079,7 @@ LibTalentTree.nodeData = {
                 91148
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11104,7 +11105,7 @@ LibTalentTree.nodeData = {
                 91149
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11131,7 +11132,7 @@ LibTalentTree.nodeData = {
                 91150
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11158,7 +11159,7 @@ LibTalentTree.nodeData = {
                 91151
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11185,7 +11186,7 @@ LibTalentTree.nodeData = {
                 91152
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11212,7 +11213,7 @@ LibTalentTree.nodeData = {
                 91153
             },
             ["specInfo"] = {
-                [103] = "visible",
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11239,8 +11240,8 @@ LibTalentTree.nodeData = {
                 91154
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11269,8 +11270,8 @@ LibTalentTree.nodeData = {
                 91155
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11299,8 +11300,8 @@ LibTalentTree.nodeData = {
                 91156
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11331,8 +11332,8 @@ LibTalentTree.nodeData = {
                 91158
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11362,8 +11363,8 @@ LibTalentTree.nodeData = {
                 91159
             },
             ["specInfo"] = {
-                [0] = "available",
-                [103] = "visible",
+                [0] = { 0 },
+                [103] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11397,8 +11398,8 @@ LibTalentTree.nodeData = {
                 91161
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11432,8 +11433,8 @@ LibTalentTree.nodeData = {
                 91163
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11466,8 +11467,8 @@ LibTalentTree.nodeData = {
                 91165
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11496,7 +11497,7 @@ LibTalentTree.nodeData = {
                 91166
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11529,8 +11530,8 @@ LibTalentTree.nodeData = {
                 91167
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11563,8 +11564,8 @@ LibTalentTree.nodeData = {
                 91168
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11598,8 +11599,8 @@ LibTalentTree.nodeData = {
                 91169
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11632,8 +11633,8 @@ LibTalentTree.nodeData = {
                 91171
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11667,8 +11668,8 @@ LibTalentTree.nodeData = {
                 91172
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11701,8 +11702,8 @@ LibTalentTree.nodeData = {
                 91174
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11736,8 +11737,8 @@ LibTalentTree.nodeData = {
                 91175
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11771,8 +11772,8 @@ LibTalentTree.nodeData = {
                 91177
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11803,8 +11804,8 @@ LibTalentTree.nodeData = {
                 91178
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11836,8 +11837,8 @@ LibTalentTree.nodeData = {
                 91179
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11868,8 +11869,8 @@ LibTalentTree.nodeData = {
                 91180
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11900,8 +11901,8 @@ LibTalentTree.nodeData = {
                 91181
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11933,8 +11934,8 @@ LibTalentTree.nodeData = {
                 91182
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11966,8 +11967,8 @@ LibTalentTree.nodeData = {
                 91183
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -11999,8 +12000,8 @@ LibTalentTree.nodeData = {
                 91184
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12031,8 +12032,8 @@ LibTalentTree.nodeData = {
                 91185
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12063,8 +12064,8 @@ LibTalentTree.nodeData = {
                 91186
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12097,8 +12098,8 @@ LibTalentTree.nodeData = {
                 91187
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12128,7 +12129,7 @@ LibTalentTree.nodeData = {
                 91188
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12161,8 +12162,8 @@ LibTalentTree.nodeData = {
                 91189
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12192,7 +12193,7 @@ LibTalentTree.nodeData = {
                 91190
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12222,7 +12223,7 @@ LibTalentTree.nodeData = {
                 91191
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12251,7 +12252,7 @@ LibTalentTree.nodeData = {
                 91192
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12282,7 +12283,7 @@ LibTalentTree.nodeData = {
                 91193
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12311,7 +12312,7 @@ LibTalentTree.nodeData = {
                 91194
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12342,7 +12343,7 @@ LibTalentTree.nodeData = {
                 91195
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12372,7 +12373,7 @@ LibTalentTree.nodeData = {
                 91196
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12402,7 +12403,7 @@ LibTalentTree.nodeData = {
                 91197
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12433,7 +12434,7 @@ LibTalentTree.nodeData = {
                 91198
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12463,7 +12464,7 @@ LibTalentTree.nodeData = {
                 91200
             },
             ["specInfo"] = {
-                [104] = "visible",
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12495,8 +12496,8 @@ LibTalentTree.nodeData = {
                 91201
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12527,8 +12528,8 @@ LibTalentTree.nodeData = {
                 91202
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12559,8 +12560,8 @@ LibTalentTree.nodeData = {
                 91203
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12594,8 +12595,8 @@ LibTalentTree.nodeData = {
                 91204
             },
             ["specInfo"] = {
-                [104] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [104] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12625,8 +12626,8 @@ LibTalentTree.nodeData = {
                 91206
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12655,8 +12656,8 @@ LibTalentTree.nodeData = {
                 91207
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12685,8 +12686,8 @@ LibTalentTree.nodeData = {
                 91208
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12715,8 +12716,8 @@ LibTalentTree.nodeData = {
                 91209
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12746,8 +12747,8 @@ LibTalentTree.nodeData = {
                 91210
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12776,8 +12777,8 @@ LibTalentTree.nodeData = {
                 91212
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12805,8 +12806,8 @@ LibTalentTree.nodeData = {
                 91213
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12833,8 +12834,8 @@ LibTalentTree.nodeData = {
                 91214
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12862,8 +12863,8 @@ LibTalentTree.nodeData = {
                 91215
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12890,8 +12891,8 @@ LibTalentTree.nodeData = {
                 91216
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12922,8 +12923,8 @@ LibTalentTree.nodeData = {
                 91217
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12953,8 +12954,8 @@ LibTalentTree.nodeData = {
                 91220
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -12984,8 +12985,8 @@ LibTalentTree.nodeData = {
                 91222
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13014,8 +13015,8 @@ LibTalentTree.nodeData = {
                 91223
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13045,8 +13046,8 @@ LibTalentTree.nodeData = {
                 91224
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13073,8 +13074,8 @@ LibTalentTree.nodeData = {
                 91226
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13102,8 +13103,8 @@ LibTalentTree.nodeData = {
                 91227
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13130,8 +13131,8 @@ LibTalentTree.nodeData = {
                 91228
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13161,8 +13162,8 @@ LibTalentTree.nodeData = {
                 91229
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13191,8 +13192,8 @@ LibTalentTree.nodeData = {
                 91230
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13217,7 +13218,7 @@ LibTalentTree.nodeData = {
                 91231
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13244,7 +13245,7 @@ LibTalentTree.nodeData = {
                 91232
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13270,7 +13271,7 @@ LibTalentTree.nodeData = {
                 91233
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13295,7 +13296,7 @@ LibTalentTree.nodeData = {
                 91234
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13321,7 +13322,7 @@ LibTalentTree.nodeData = {
                 91235
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13347,7 +13348,7 @@ LibTalentTree.nodeData = {
                 91236
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13373,7 +13374,7 @@ LibTalentTree.nodeData = {
                 91237
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13398,7 +13399,7 @@ LibTalentTree.nodeData = {
                 91238
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13424,7 +13425,7 @@ LibTalentTree.nodeData = {
                 91239
             },
             ["specInfo"] = {
-                [102] = "visible",
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13451,8 +13452,8 @@ LibTalentTree.nodeData = {
                 91240
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13481,8 +13482,8 @@ LibTalentTree.nodeData = {
                 91241
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13510,8 +13511,8 @@ LibTalentTree.nodeData = {
                 91242
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13541,8 +13542,4337 @@ LibTalentTree.nodeData = {
                 91244
             },
             ["specInfo"] = {
-                [102] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [102] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+    },
+    [720] = {
+        [71915] = {
+            ["ID"] = 71915,
+            ["posX"] = 2400,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71926},
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91421
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71916] = {
+            ["ID"] = 71916,
+            ["posX"] = 4200,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71956},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91422
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71917] = {
+            ["ID"] = 71917,
+            ["posX"] = 6000,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71957},
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91424
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71918] = {
+            ["ID"] = 71918,
+            ["posX"] = 3000,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71915},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71924},
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91425
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71919] = {
+            ["ID"] = 71919,
+            ["posX"] = 4200,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71939},
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91426
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71920] = {
+            ["ID"] = 71920,
+            ["posX"] = 13799,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7817,
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72057},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91428
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71921] = {
+            ["ID"] = 71921,
+            ["posX"] = 10200,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7815,
+                7817,
+                7818,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71986},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91429
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71922] = {
+            ["ID"] = 71922,
+            ["posX"] = 5400,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71945},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91430
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71923] = {
+            ["ID"] = 71923,
+            ["posX"] = 4800,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71939},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71957},
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91431
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71924] = {
+            ["ID"] = 71924,
+            ["posX"] = 3600,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71926},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71939},
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91432
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71925] = {
+            ["ID"] = 71925,
+            ["posX"] = 4200,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71924},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71919},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71923},
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91433
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71926] = {
+            ["ID"] = 71926,
+            ["posX"] = 3000,
+            ["posY"] = 6600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91434
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71927] = {
+            ["ID"] = 71927,
+            ["posX"] = 3600,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71936},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71956},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91435
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71928] = {
+            ["ID"] = 71928,
+            ["posX"] = 3600,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71929},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71927},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71916},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91436
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71929] = {
+            ["ID"] = 71929,
+            ["posX"] = 3000,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71936},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91437
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71930] = {
+            ["ID"] = 71930,
+            ["posX"] = 3000,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71929},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91438
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71931] = {
+            ["ID"] = 71931,
+            ["posX"] = 3000,
+            ["posY"] = 1200,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71932},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71952},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91439
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71932] = {
+            ["ID"] = 71932,
+            ["posX"] = 2400,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71951},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91440
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71933] = {
+            ["ID"] = 71933,
+            ["posX"] = 4200,
+            ["posY"] = 1200,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71952},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71950},
+            },
+            ["conditionIDs"] = {
+                19161
+            },
+            ["entryIDs"] = {
+                91441
+            },
+            ["specInfo"] = {
+                [0] = { 2 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71934] = {
+            ["ID"] = 71934,
+            ["posX"] = 2400,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71935},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71929},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91442
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71935] = {
+            ["ID"] = 71935,
+            ["posX"] = 2400,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71936},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91443
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71936] = {
+            ["ID"] = 71936,
+            ["posX"] = 3000,
+            ["posY"] = 4199,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71937},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71953},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91444
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71937] = {
+            ["ID"] = 71937,
+            ["posX"] = 2400,
+            ["posY"] = 4800,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71918},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91446,
+                91445
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71938] = {
+            ["ID"] = 71938,
+            ["posX"] = 5400,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71923},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71917},
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91447
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71939] = {
+            ["ID"] = 71939,
+            ["posX"] = 4200,
+            ["posY"] = 6600,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91448,
+                91427
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71940] = {
+            ["ID"] = 71940,
+            ["posX"] = 4800,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71925},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71938},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91449
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71941] = {
+            ["ID"] = 71941,
+            ["posX"] = 6000,
+            ["posY"] = 4800,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71938},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91451,
+                91450
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71942] = {
+            ["ID"] = 71942,
+            ["posX"] = 5400,
+            ["posY"] = 4199,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71940},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71941},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91452
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71943] = {
+            ["ID"] = 71943,
+            ["posX"] = 6000,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71942},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91453
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71944] = {
+            ["ID"] = 71944,
+            ["posX"] = 6000,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71945},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71943},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91454
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71945] = {
+            ["ID"] = 71945,
+            ["posX"] = 5400,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71942},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91455
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71946] = {
+            ["ID"] = 71946,
+            ["posX"] = 4800,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71916},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71955},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71945},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91456
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71947] = {
+            ["ID"] = 71947,
+            ["posX"] = 5400,
+            ["posY"] = 2400,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71946},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71922},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71944},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91458,
+                91457
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71948] = {
+            ["ID"] = 71948,
+            ["posX"] = 6000,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71947},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91459
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71949] = {
+            ["ID"] = 71949,
+            ["posX"] = 5400,
+            ["posY"] = 1200,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71950},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71948},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91460
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71950] = {
+            ["ID"] = 71950,
+            ["posX"] = 4800,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71954},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71947},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91461
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71951] = {
+            ["ID"] = 71951,
+            ["posX"] = 3000,
+            ["posY"] = 2400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71934},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71930},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71928},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91462
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71952] = {
+            ["ID"] = 71952,
+            ["posX"] = 3600,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71951},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71954},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91463
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71953] = {
+            ["ID"] = 71953,
+            ["posX"] = 3599,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71918},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71925},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91464
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71954] = {
+            ["ID"] = 71954,
+            ["posX"] = 4200,
+            ["posY"] = 2400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71928},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71946},
+            },
+            ["conditionIDs"] = {
+
+            },
+            ["entryIDs"] = {
+                91465
+            },
+            ["specInfo"] = {
+
+            },
+            ["isClassNode"] = true,
+        },
+        [71955] = {
+            ["ID"] = 71955,
+            ["posX"] = 4800,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71956},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71942},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91466
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71956] = {
+            ["ID"] = 71956,
+            ["posX"] = 4200,
+            ["posY"] = 4200,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71953},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71940},
+            },
+            ["conditionIDs"] = {
+                19167
+            },
+            ["entryIDs"] = {
+                91468,
+                91467
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71957] = {
+            ["ID"] = 71957,
+            ["posX"] = 5400,
+            ["posY"] = 6600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7821,
+                7822,
+                7823
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19168,
+                19167
+            },
+            ["entryIDs"] = {
+                91469
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+            },
+            ["isClassNode"] = true,
+        },
+        [71958] = {
+            ["ID"] = 71958,
+            ["posX"] = 10800,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71959},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91470
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71959] = {
+            ["ID"] = 71959,
+            ["posX"] = 10800,
+            ["posY"] = 6600,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91472,
+                91471
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71960] = {
+            ["ID"] = 71960,
+            ["posX"] = 10200,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71959},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91473
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71961] = {
+            ["ID"] = 71961,
+            ["posX"] = 12000,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71972},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91474
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71962] = {
+            ["ID"] = 71962,
+            ["posX"] = 13200,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71963},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91475
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71963] = {
+            ["ID"] = 71963,
+            ["posX"] = 13200,
+            ["posY"] = 6600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91476
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71964] = {
+            ["ID"] = 71964,
+            ["posX"] = 13800,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71963},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91477
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71965] = {
+            ["ID"] = 71965,
+            ["posX"] = 11400,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71966},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91478
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71966] = {
+            ["ID"] = 71966,
+            ["posX"] = 12000,
+            ["posY"] = 6600,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91479,
+                91423
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71967] = {
+            ["ID"] = 71967,
+            ["posX"] = 12600,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71966},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91480
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71968] = {
+            ["ID"] = 71968,
+            ["posX"] = 12000,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7815,
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71965},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71967},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91481
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71969] = {
+            ["ID"] = 71969,
+            ["posX"] = 12600,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71968},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71970},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91482
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71970] = {
+            ["ID"] = 71970,
+            ["posX"] = 13200,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71967},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71962},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71964},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91483
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71971] = {
+            ["ID"] = 71971,
+            ["posX"] = 13800,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71970},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91484
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71972] = {
+            ["ID"] = 71972,
+            ["posX"] = 12000,
+            ["posY"] = 4200,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71984},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71969},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91485
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71973] = {
+            ["ID"] = 71973,
+            ["posX"] = 13200,
+            ["posY"] = 4200,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71969},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71971},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91486
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71974] = {
+            ["ID"] = 71974,
+            ["posX"] = 13800,
+            ["posY"] = 3000,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71982},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91488,
+                91487
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71975] = {
+            ["ID"] = 71975,
+            ["posX"] = 13200,
+            ["posY"] = 2400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71976},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71974},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91489
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71976] = {
+            ["ID"] = 71976,
+            ["posX"] = 12600,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71983},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71982},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91490
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71977] = {
+            ["ID"] = 71977,
+            ["posX"] = 10199,
+            ["posY"] = 4198,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72062},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91491
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71978] = {
+            ["ID"] = 71978,
+            ["posX"] = 10200,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71977},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91492
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71979] = {
+            ["ID"] = 71979,
+            ["posX"] = 12000,
+            ["posY"] = 2400,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72064},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71981},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71976},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91494,
+                91493
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71980] = {
+            ["ID"] = 71980,
+            ["posX"] = 12000,
+            ["posY"] = 1800,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71979},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91496,
+                91495
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71981] = {
+            ["ID"] = 71981,
+            ["posX"] = 12000,
+            ["posY"] = 3000,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71961},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71983},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91498,
+                91497
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71982] = {
+            ["ID"] = 71982,
+            ["posX"] = 13200,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71973},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91499
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71983] = {
+            ["ID"] = 71983,
+            ["posX"] = 12600,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71972},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71973},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91500
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71984] = {
+            ["ID"] = 71984,
+            ["posX"] = 11400,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71985},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71968},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91501
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71985] = {
+            ["ID"] = 71985,
+            ["posX"] = 10800,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71960},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71958},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71965},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91502
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71986] = {
+            ["ID"] = 71986,
+            ["posX"] = 10200,
+            ["posY"] = 6599,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7815,
+                7816,
+                7817,
+                7818
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19162,
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91503,
+                91420
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71987] = {
+            ["ID"] = 71987,
+            ["posX"] = 12600,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7818,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71988},
+            },
+            ["conditionIDs"] = {
+                19164,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91504
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71988] = {
+            ["ID"] = 71988,
+            ["posX"] = 12602,
+            ["posY"] = 6600,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7816,
+                7817,
+                7815,
+                7818
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19163,
+                19162,
+                19164
+            },
+            ["entryIDs"] = {
+                91505,
+                91419
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71989] = {
+            ["ID"] = 71989,
+            ["posX"] = 11400,
+            ["posY"] = 6599,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7818,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19164,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91506
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71990] = {
+            ["ID"] = 71990,
+            ["posX"] = 11400,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7816,
+                7817,
+                7815,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71989},
+            },
+            ["conditionIDs"] = {
+                19163,
+                19162,
+                19164
+            },
+            ["entryIDs"] = {
+                91507
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71991] = {
+            ["ID"] = 71991,
+            ["posX"] = 12000,
+            ["posY"] = 6600,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7819,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19165,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91509,
+                91508
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71992] = {
+            ["ID"] = 71992,
+            ["posX"] = 12000,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71991},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91510
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71993] = {
+            ["ID"] = 71993,
+            ["posX"] = 11399,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19165,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91511
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71994] = {
+            ["ID"] = 71994,
+            ["posX"] = 13200,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19165,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91512
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71995] = {
+            ["ID"] = 71995,
+            ["posX"] = 10200,
+            ["posY"] = 6600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19165,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91513
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71996] = {
+            ["ID"] = 71996,
+            ["posX"] = 10200,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71995},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91514
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71997] = {
+            ["ID"] = 71997,
+            ["posX"] = 10800,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71996},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72007},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71993},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91515
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71998] = {
+            ["ID"] = 71998,
+            ["posX"] = 11400,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7817,
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71997},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72030},
+            },
+            ["conditionIDs"] = {
+                19163,
+                19165
+            },
+            ["entryIDs"] = {
+                91516
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [71999] = {
+            ["ID"] = 71999,
+            ["posX"] = 10800,
+            ["posY"] = 4199,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72000},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71998},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91517
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72000] = {
+            ["ID"] = 72000,
+            ["posX"] = 10200,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71997},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91518
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72001] = {
+            ["ID"] = 72001,
+            ["posX"] = 9600,
+            ["posY"] = 4200,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7817,
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72000},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91519
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72002] = {
+            ["ID"] = 72002,
+            ["posX"] = 9600,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72001},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72003},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91520
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72003] = {
+            ["ID"] = 72003,
+            ["posX"] = 10199,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7817,
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72001},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72000},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71999},
+            },
+            ["conditionIDs"] = {
+                19163,
+                19165
+            },
+            ["entryIDs"] = {
+                91521
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72004] = {
+            ["ID"] = 72004,
+            ["posX"] = 12599,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19165,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91522
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72005] = {
+            ["ID"] = 72005,
+            ["posX"] = 13799,
+            ["posY"] = 6600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19162,
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91523
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72006] = {
+            ["ID"] = 72006,
+            ["posX"] = 13799,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72005},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91524
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72007] = {
+            ["ID"] = 72007,
+            ["posX"] = 10800,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7817,
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19162,
+                19163,
+                19165
+            },
+            ["entryIDs"] = {
+                91525
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72008] = {
+            ["ID"] = 72008,
+            ["posX"] = 13200,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7815,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72004},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71994},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72006},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91526
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72009] = {
+            ["ID"] = 72009,
+            ["posX"] = 12599,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72030},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72008},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91527
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72010] = {
+            ["ID"] = 72010,
+            ["posX"] = 14400,
+            ["posY"] = 4199,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816,
+                7817
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72011},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91528
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72011] = {
+            ["ID"] = 72011,
+            ["posX"] = 13799,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72008},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91529
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72012] = {
+            ["ID"] = 72012,
+            ["posX"] = 13200,
+            ["posY"] = 4199,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72009},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72011},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91530
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72013] = {
+            ["ID"] = 72013,
+            ["posX"] = 13800,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72012},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72011},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72010},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91531
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72014] = {
+            ["ID"] = 72014,
+            ["posX"] = 14399,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72013},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72010},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91532
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72015] = {
+            ["ID"] = 72015,
+            ["posX"] = 13799,
+            ["posY"] = 2400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72016},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72014},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91533
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72016] = {
+            ["ID"] = 72016,
+            ["posX"] = 13199,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72017},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72012},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72013},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91534
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72017] = {
+            ["ID"] = 72017,
+            ["posX"] = 12599,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72028},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72012},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91535
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72018] = {
+            ["ID"] = 72018,
+            ["posX"] = 12000,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72027},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72017},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91536
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72019] = {
+            ["ID"] = 72019,
+            ["posX"] = 11399,
+            ["posY"] = 2400,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72018},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91538,
+                91537
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72020] = {
+            ["ID"] = 72020,
+            ["posX"] = 12000,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72019},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72021},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91539
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72021] = {
+            ["ID"] = 72021,
+            ["posX"] = 12599,
+            ["posY"] = 2400,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72018},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91541,
+                91540
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72022] = {
+            ["ID"] = 72022,
+            ["posX"] = 13199,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72021},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72016},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72015},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91542
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72023] = {
+            ["ID"] = 72023,
+            ["posX"] = 12000,
+            ["posY"] = 1200,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72024},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72020},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72022},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91543
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72024] = {
+            ["ID"] = 72024,
+            ["posX"] = 10799,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72026},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72025},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72019},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91544
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72025] = {
+            ["ID"] = 72025,
+            ["posX"] = 10800,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72003},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71999},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72027},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91545
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72026] = {
+            ["ID"] = 72026,
+            ["posX"] = 10200,
+            ["posY"] = 2400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72002},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72025},
+            },
+            ["conditionIDs"] = {
+                19165
+            },
+            ["entryIDs"] = {
+                91546
+            },
+            ["specInfo"] = {
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72027] = {
+            ["ID"] = 72027,
+            ["posX"] = 11400,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71999},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72028},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91547
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72028] = {
+            ["ID"] = 72028,
+            ["posX"] = 12000,
+            ["posY"] = 4199,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71998},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72029},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72009},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91548
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72029] = {
+            ["ID"] = 72029,
+            ["posX"] = 12000,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72030},
+            },
+            ["conditionIDs"] = {
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91549
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72030] = {
+            ["ID"] = 72030,
+            ["posX"] = 12000,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7819,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71993},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71992},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72004},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19165,
+                19163
+            },
+            ["entryIDs"] = {
+                91550
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [266] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72031] = {
+            ["ID"] = 72031,
+            ["posX"] = 10800,
+            ["posY"] = 5999,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7817,
+                7816,
+                7815,
+                7818
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19163,
+                19162,
+                19164
+            },
+            ["entryIDs"] = {
+                91551
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72032] = {
+            ["ID"] = 72032,
+            ["posX"] = 11400,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7818,
+                7815,
+                7816,
+                7817
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72031},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71990},
+            },
+            ["conditionIDs"] = {
+                19164,
+                19162,
+                19163
+            },
+            ["entryIDs"] = {
+                91552
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72033] = {
+            ["ID"] = 72033,
+            ["posX"] = 13200,
+            ["posY"] = 6000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7818,
+                7817,
+                7816,
+                7815
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19164,
+                19163,
+                19162
+            },
+            ["entryIDs"] = {
+                91553
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72034] = {
+            ["ID"] = 72034,
+            ["posX"] = 12600,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7818,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71987},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72033},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19164,
+                19163
+            },
+            ["entryIDs"] = {
+                91554
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72035] = {
+            ["ID"] = 72035,
+            ["posX"] = 13200,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7817,
+                7818,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72034},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72056},
+            },
+            ["conditionIDs"] = {
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91555
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72036] = {
+            ["ID"] = 72036,
+            ["posX"] = 13200,
+            ["posY"] = 3600,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7818,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72041},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72035},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72054},
+            },
+            ["conditionIDs"] = {
+                19164,
+                19163
+            },
+            ["entryIDs"] = {
+                91557,
+                91556
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72037] = {
+            ["ID"] = 72037,
+            ["posX"] = 12000,
+            ["posY"] = 4200,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7817,
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72055},
+            },
+            ["conditionIDs"] = {
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91558
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72038] = {
+            ["ID"] = 72038,
+            ["posX"] = 13800,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72036},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72054},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91559
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72039] = {
+            ["ID"] = 72039,
+            ["posX"] = 13200,
+            ["posY"] = 2400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72040},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72038},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91560
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72040] = {
+            ["ID"] = 72040,
+            ["posX"] = 12600,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72053},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72041},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72036},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91561
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72041] = {
+            ["ID"] = 72041,
+            ["posX"] = 12600,
+            ["posY"] = 4200,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7816,
+                7818,
+                7817
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72055},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72035},
+            },
+            ["conditionIDs"] = {
+                19164,
+                19163
+            },
+            ["entryIDs"] = {
+                91562
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72042] = {
+            ["ID"] = 72042,
+            ["posX"] = 10200,
+            ["posY"] = 4199,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7817,
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72058},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72052},
+            },
+            ["conditionIDs"] = {
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91563
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72043] = {
+            ["ID"] = 72043,
+            ["posX"] = 11400,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7818,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72045},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72046},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72053},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91564
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72044] = {
+            ["ID"] = 72044,
+            ["posX"] = 10200,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72042},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72045},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91565
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72045] = {
+            ["ID"] = 72045,
+            ["posX"] = 10799,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7816,
+                7817,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72042},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72052},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72046},
+            },
+            ["conditionIDs"] = {
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91566
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72046] = {
+            ["ID"] = 72046,
+            ["posX"] = 11400,
+            ["posY"] = 4200,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7816,
+                7818,
+                7817
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72052},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72055},
+            },
+            ["conditionIDs"] = {
+                19164,
+                19163
+            },
+            ["entryIDs"] = {
+                91567
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72047] = {
+            ["ID"] = 72047,
+            ["posX"] = 10800,
+            ["posY"] = 2400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7818,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72044},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72043},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91568
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72048] = {
+            ["ID"] = 72048,
+            ["posX"] = 11400,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7818,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72047},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72051},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91569
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72049] = {
+            ["ID"] = 72049,
+            ["posX"] = 12000,
+            ["posY"] = 1200,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7818,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72048},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72050},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91570
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72050] = {
+            ["ID"] = 72050,
+            ["posX"] = 12599,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72051},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72039},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91571
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72051] = {
+            ["ID"] = 72051,
+            ["posX"] = 12000,
+            ["posY"] = 2400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7818,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72043},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72040},
+            },
+            ["conditionIDs"] = {
+                19164
+            },
+            ["entryIDs"] = {
+                91572
+            },
+            ["specInfo"] = {
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72052] = {
+            ["ID"] = 72052,
+            ["posX"] = 10800,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7818,
+                7816,
+                7817
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72058},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72032},
+            },
+            ["conditionIDs"] = {
+                19164,
+                19163
+            },
+            ["entryIDs"] = {
+                91573
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72053] = {
+            ["ID"] = 72053,
+            ["posX"] = 11999,
+            ["posY"] = 3600,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7818,
+                7816,
+                7817
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72046},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72037},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72041},
+            },
+            ["conditionIDs"] = {
+                19164,
+                19163
+            },
+            ["entryIDs"] = {
+                91575,
+                91574
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72054] = {
+            ["ID"] = 72054,
+            ["posX"] = 13799,
+            ["posY"] = 4200,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7817,
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72035},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72056},
+            },
+            ["conditionIDs"] = {
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91576
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72055] = {
+            ["ID"] = 72055,
+            ["posX"] = 12000,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7816,
+                7817,
+                7818
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72032},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72034},
+            },
+            ["conditionIDs"] = {
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91577
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72056] = {
+            ["ID"] = 72056,
+            ["posX"] = 13799,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7818,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72033},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71920},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19164,
+                19163
+            },
+            ["entryIDs"] = {
+                91578
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72057] = {
+            ["ID"] = 72057,
+            ["posX"] = 13799,
+            ["posY"] = 6600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7815,
+                7817,
+                7816,
+                7818
+            },
+            ["visibleEdges"] = {
+
+            },
+            ["conditionIDs"] = {
+                19162,
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91579
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72058] = {
+            ["ID"] = 72058,
+            ["posX"] = 10200,
+            ["posY"] = 5400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7815,
+                7817,
+                7818,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71921},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72031},
+            },
+            ["conditionIDs"] = {
+                19162,
+                19163,
+                19164
+            },
+            ["entryIDs"] = {
+                91580
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [265] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72059] = {
+            ["ID"] = 72059,
+            ["posX"] = 10800,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72060},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91581
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72060] = {
+            ["ID"] = 72060,
+            ["posX"] = 10800,
+            ["posY"] = 3600,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72061},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91582
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72061] = {
+            ["ID"] = 72061,
+            ["posX"] = 10800,
+            ["posY"] = 4200,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72062},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71984},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91583
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72062] = {
+            ["ID"] = 72062,
+            ["posX"] = 10200,
+            ["posY"] = 4800,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71985},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91584
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72063] = {
+            ["ID"] = 72063,
+            ["posX"] = 11400,
+            ["posY"] = 3596,
+            ["type"] = 0,
+            ["maxRanks"] = 2,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7817,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71972},
+            },
+            ["conditionIDs"] = {
+                19166,
+                19163
+            },
+            ["entryIDs"] = {
+                91585
+            },
+            ["specInfo"] = {
+                [0] = { 0 },
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72064] = {
+            ["ID"] = 72064,
+            ["posX"] = 11400,
+            ["posY"] = 3000,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72063},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91586
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72065] = {
+            ["ID"] = 72065,
+            ["posX"] = 10200,
+            ["posY"] = 3000,
+            ["type"] = 2,
+            ["maxRanks"] = 1,
+            ["flags"] = 1,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71978},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72060},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91588,
+                91587
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72066] = {
+            ["ID"] = 72066,
+            ["posX"] = 10800,
+            ["posY"] = 2400,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72065},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72059},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72064},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91589
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72067] = {
+            ["ID"] = 72067,
+            ["posX"] = 11400,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72066},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71979},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91590
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72068] = {
+            ["ID"] = 72068,
+            ["posX"] = 12000,
+            ["posY"] = 1200,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72067},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71980},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 72069},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91591
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
+            },
+            ["isClassNode"] = false,
+        },
+        [72069] = {
+            ["ID"] = 72069,
+            ["posX"] = 12600,
+            ["posY"] = 1800,
+            ["type"] = 0,
+            ["maxRanks"] = 1,
+            ["flags"] = 0,
+            ["groupIDs"] = {
+                7820,
+                7816
+            },
+            ["visibleEdges"] = {
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71979},
+                {["type"] = 2, ["visualStyle"] = 1, ["targetNode"] = 71975},
+            },
+            ["conditionIDs"] = {
+                19166
+            },
+            ["entryIDs"] = {
+                91592
+            },
+            ["specInfo"] = {
+                [267] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13574,8 +17904,8 @@ LibTalentTree.nodeData = {
                 96161
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13604,8 +17934,8 @@ LibTalentTree.nodeData = {
                 96162
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13633,8 +17963,8 @@ LibTalentTree.nodeData = {
                 96163
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13662,8 +17992,8 @@ LibTalentTree.nodeData = {
                 96164
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13692,8 +18022,8 @@ LibTalentTree.nodeData = {
                 96165
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13721,8 +18051,8 @@ LibTalentTree.nodeData = {
                 96166
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13750,8 +18080,8 @@ LibTalentTree.nodeData = {
                 96167
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13781,8 +18111,8 @@ LibTalentTree.nodeData = {
                 96168
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13813,8 +18143,8 @@ LibTalentTree.nodeData = {
                 96169
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13842,8 +18172,8 @@ LibTalentTree.nodeData = {
                 96170
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13872,8 +18202,8 @@ LibTalentTree.nodeData = {
                 96171
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -13970,7 +18300,7 @@ LibTalentTree.nodeData = {
                 96175
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -13995,7 +18325,7 @@ LibTalentTree.nodeData = {
                 96176
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14022,7 +18352,7 @@ LibTalentTree.nodeData = {
                 96177
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14049,7 +18379,7 @@ LibTalentTree.nodeData = {
                 96178
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14076,7 +18406,7 @@ LibTalentTree.nodeData = {
                 96179
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14101,7 +18431,7 @@ LibTalentTree.nodeData = {
                 96180
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14128,7 +18458,7 @@ LibTalentTree.nodeData = {
                 96181
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14156,7 +18486,7 @@ LibTalentTree.nodeData = {
                 96182
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14183,7 +18513,7 @@ LibTalentTree.nodeData = {
                 96183
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14210,7 +18540,7 @@ LibTalentTree.nodeData = {
                 96184
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14236,7 +18566,7 @@ LibTalentTree.nodeData = {
                 96185
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14262,7 +18592,7 @@ LibTalentTree.nodeData = {
                 96187
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14360,7 +18690,7 @@ LibTalentTree.nodeData = {
                 96191
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14385,7 +18715,7 @@ LibTalentTree.nodeData = {
                 96192
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14410,7 +18740,7 @@ LibTalentTree.nodeData = {
                 96193
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14437,7 +18767,7 @@ LibTalentTree.nodeData = {
                 96194
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14587,7 +18917,7 @@ LibTalentTree.nodeData = {
                 96200
             },
             ["specInfo"] = {
-                [250] = "granted",
+                [250] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -14611,7 +18941,7 @@ LibTalentTree.nodeData = {
                 96201
             },
             ["specInfo"] = {
-                [252] = "granted",
+                [252] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -14714,7 +19044,7 @@ LibTalentTree.nodeData = {
                 96205
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14739,7 +19069,7 @@ LibTalentTree.nodeData = {
                 96206
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14765,7 +19095,7 @@ LibTalentTree.nodeData = {
                 96207
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14793,7 +19123,7 @@ LibTalentTree.nodeData = {
                 96208
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14820,7 +19150,7 @@ LibTalentTree.nodeData = {
                 96209
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14844,7 +19174,7 @@ LibTalentTree.nodeData = {
                 96210
             },
             ["specInfo"] = {
-                [251] = "granted",
+                [251] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -14947,7 +19277,7 @@ LibTalentTree.nodeData = {
                 96214
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14972,7 +19302,7 @@ LibTalentTree.nodeData = {
                 96215
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -14998,7 +19328,7 @@ LibTalentTree.nodeData = {
                 96216
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -15025,7 +19355,7 @@ LibTalentTree.nodeData = {
                 96217
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -15054,8 +19384,8 @@ LibTalentTree.nodeData = {
                 96218
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15085,8 +19415,8 @@ LibTalentTree.nodeData = {
                 96219
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15116,8 +19446,8 @@ LibTalentTree.nodeData = {
                 96220
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15145,8 +19475,8 @@ LibTalentTree.nodeData = {
                 96221
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15176,8 +19506,8 @@ LibTalentTree.nodeData = {
                 96222
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15207,8 +19537,8 @@ LibTalentTree.nodeData = {
                 96223
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15238,8 +19568,8 @@ LibTalentTree.nodeData = {
                 96224
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15267,8 +19597,8 @@ LibTalentTree.nodeData = {
                 96225
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15297,8 +19627,8 @@ LibTalentTree.nodeData = {
                 96226
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15327,8 +19657,8 @@ LibTalentTree.nodeData = {
                 96228
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15357,8 +19687,8 @@ LibTalentTree.nodeData = {
                 96229
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15386,8 +19716,8 @@ LibTalentTree.nodeData = {
                 96230
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15417,8 +19747,8 @@ LibTalentTree.nodeData = {
                 96231
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15445,8 +19775,8 @@ LibTalentTree.nodeData = {
                 96232
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15473,8 +19803,8 @@ LibTalentTree.nodeData = {
                 96233
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15503,8 +19833,8 @@ LibTalentTree.nodeData = {
                 96234
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15534,8 +19864,8 @@ LibTalentTree.nodeData = {
                 96235
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15563,8 +19893,8 @@ LibTalentTree.nodeData = {
                 96236
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15594,8 +19924,8 @@ LibTalentTree.nodeData = {
                 96237
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15625,8 +19955,8 @@ LibTalentTree.nodeData = {
                 96238
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15655,8 +19985,8 @@ LibTalentTree.nodeData = {
                 96239
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15685,8 +20015,8 @@ LibTalentTree.nodeData = {
                 96240
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15716,8 +20046,8 @@ LibTalentTree.nodeData = {
                 96241
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15744,8 +20074,8 @@ LibTalentTree.nodeData = {
                 96242
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15772,8 +20102,8 @@ LibTalentTree.nodeData = {
                 96243
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15799,8 +20129,8 @@ LibTalentTree.nodeData = {
                 96244
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15827,8 +20157,8 @@ LibTalentTree.nodeData = {
                 96245
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15854,8 +20184,8 @@ LibTalentTree.nodeData = {
                 96246
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15882,8 +20212,8 @@ LibTalentTree.nodeData = {
                 96247
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15910,8 +20240,8 @@ LibTalentTree.nodeData = {
                 96248
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15941,8 +20271,8 @@ LibTalentTree.nodeData = {
                 96249
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -15971,8 +20301,8 @@ LibTalentTree.nodeData = {
                 96250
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16001,8 +20331,8 @@ LibTalentTree.nodeData = {
                 96252
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16032,8 +20362,8 @@ LibTalentTree.nodeData = {
                 96253
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16063,8 +20393,8 @@ LibTalentTree.nodeData = {
                 96254
             },
             ["specInfo"] = {
-                [251] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [251] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16093,8 +20423,8 @@ LibTalentTree.nodeData = {
                 96255
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16124,8 +20454,8 @@ LibTalentTree.nodeData = {
                 96256
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16152,8 +20482,8 @@ LibTalentTree.nodeData = {
                 96257
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16183,8 +20513,8 @@ LibTalentTree.nodeData = {
                 96258
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16214,8 +20544,8 @@ LibTalentTree.nodeData = {
                 96259
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16243,8 +20573,8 @@ LibTalentTree.nodeData = {
                 96260
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16272,8 +20602,8 @@ LibTalentTree.nodeData = {
                 96261
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16303,8 +20633,8 @@ LibTalentTree.nodeData = {
                 96262
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16334,8 +20664,8 @@ LibTalentTree.nodeData = {
                 96263
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16365,8 +20695,8 @@ LibTalentTree.nodeData = {
                 96264
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16397,8 +20727,8 @@ LibTalentTree.nodeData = {
                 96265
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16427,8 +20757,8 @@ LibTalentTree.nodeData = {
                 96266
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16460,8 +20790,8 @@ LibTalentTree.nodeData = {
                 96267
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16489,8 +20819,8 @@ LibTalentTree.nodeData = {
                 96268
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16518,8 +20848,8 @@ LibTalentTree.nodeData = {
                 96269
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16551,8 +20881,8 @@ LibTalentTree.nodeData = {
                 96270
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16579,8 +20909,8 @@ LibTalentTree.nodeData = {
                 96272
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16610,8 +20940,8 @@ LibTalentTree.nodeData = {
                 96273
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16639,8 +20969,8 @@ LibTalentTree.nodeData = {
                 96274
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16669,8 +20999,8 @@ LibTalentTree.nodeData = {
                 96275
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16698,8 +21028,8 @@ LibTalentTree.nodeData = {
                 96277
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16727,8 +21057,8 @@ LibTalentTree.nodeData = {
                 96278
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16756,8 +21086,8 @@ LibTalentTree.nodeData = {
                 96279
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16785,8 +21115,8 @@ LibTalentTree.nodeData = {
                 96280
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16815,8 +21145,8 @@ LibTalentTree.nodeData = {
                 96281
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16846,8 +21176,8 @@ LibTalentTree.nodeData = {
                 96283
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16877,8 +21207,8 @@ LibTalentTree.nodeData = {
                 96284
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16908,8 +21238,8 @@ LibTalentTree.nodeData = {
                 96285
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16939,8 +21269,8 @@ LibTalentTree.nodeData = {
                 96286
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -16970,8 +21300,8 @@ LibTalentTree.nodeData = {
                 96287
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17001,8 +21331,8 @@ LibTalentTree.nodeData = {
                 96288
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17032,8 +21362,8 @@ LibTalentTree.nodeData = {
                 96289
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17062,8 +21392,8 @@ LibTalentTree.nodeData = {
                 96290
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17091,8 +21421,8 @@ LibTalentTree.nodeData = {
                 96291
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17123,8 +21453,8 @@ LibTalentTree.nodeData = {
                 96292
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17152,8 +21482,8 @@ LibTalentTree.nodeData = {
                 96293
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17181,8 +21511,8 @@ LibTalentTree.nodeData = {
                 96294
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17210,8 +21540,8 @@ LibTalentTree.nodeData = {
                 96295
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17239,8 +21569,8 @@ LibTalentTree.nodeData = {
                 96296
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17270,8 +21600,8 @@ LibTalentTree.nodeData = {
                 96297
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17301,8 +21631,8 @@ LibTalentTree.nodeData = {
                 96298
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17331,8 +21661,8 @@ LibTalentTree.nodeData = {
                 96300
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17362,8 +21692,8 @@ LibTalentTree.nodeData = {
                 96301
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17391,8 +21721,8 @@ LibTalentTree.nodeData = {
                 96302
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17418,8 +21748,8 @@ LibTalentTree.nodeData = {
                 96303
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17446,8 +21776,8 @@ LibTalentTree.nodeData = {
                 96304
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17473,8 +21803,8 @@ LibTalentTree.nodeData = {
                 96305
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17501,8 +21831,8 @@ LibTalentTree.nodeData = {
                 96306
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17532,8 +21862,8 @@ LibTalentTree.nodeData = {
                 96307
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17560,8 +21890,8 @@ LibTalentTree.nodeData = {
                 96308
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17589,8 +21919,8 @@ LibTalentTree.nodeData = {
                 96309
             },
             ["specInfo"] = {
-                [0] = "available",
-                [250] = "visible",
+                [0] = { 0 },
+                [250] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17618,8 +21948,8 @@ LibTalentTree.nodeData = {
                 96310
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17650,8 +21980,8 @@ LibTalentTree.nodeData = {
                 96311
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17679,8 +22009,8 @@ LibTalentTree.nodeData = {
                 96312
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17709,8 +22039,8 @@ LibTalentTree.nodeData = {
                 96313
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17740,8 +22070,8 @@ LibTalentTree.nodeData = {
                 96314
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17770,8 +22100,8 @@ LibTalentTree.nodeData = {
                 96315
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17799,8 +22129,8 @@ LibTalentTree.nodeData = {
                 96317
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17828,8 +22158,8 @@ LibTalentTree.nodeData = {
                 96318
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17858,8 +22188,8 @@ LibTalentTree.nodeData = {
                 96319
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17887,8 +22217,8 @@ LibTalentTree.nodeData = {
                 96321
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17918,8 +22248,8 @@ LibTalentTree.nodeData = {
                 96322
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17945,8 +22275,8 @@ LibTalentTree.nodeData = {
                 96323
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -17973,8 +22303,8 @@ LibTalentTree.nodeData = {
                 96324
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18000,8 +22330,8 @@ LibTalentTree.nodeData = {
                 96325
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18028,8 +22358,8 @@ LibTalentTree.nodeData = {
                 96326
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18055,8 +22385,8 @@ LibTalentTree.nodeData = {
                 96327
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18083,8 +22413,8 @@ LibTalentTree.nodeData = {
                 96328
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18111,8 +22441,8 @@ LibTalentTree.nodeData = {
                 96329
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18140,8 +22470,8 @@ LibTalentTree.nodeData = {
                 96330
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18169,8 +22499,8 @@ LibTalentTree.nodeData = {
                 96331
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18199,8 +22529,8 @@ LibTalentTree.nodeData = {
                 96332
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18232,8 +22562,8 @@ LibTalentTree.nodeData = {
                 96333
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18263,8 +22593,8 @@ LibTalentTree.nodeData = {
                 96334
             },
             ["specInfo"] = {
-                [0] = "available",
-                [252] = "visible",
+                [0] = { 0 },
+                [252] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -18317,7 +22647,7 @@ LibTalentTree.nodeData = {
                 96533
             },
             ["specInfo"] = {
-                [269] = "granted",
+                [269] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -18349,8 +22679,8 @@ LibTalentTree.nodeData = {
                 96534
             },
             ["specInfo"] = {
-                [0] = "available",
-                [268] = "granted",
+                [0] = { 0 },
+                [268] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -18451,7 +22781,7 @@ LibTalentTree.nodeData = {
                 96538
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18476,7 +22806,7 @@ LibTalentTree.nodeData = {
                 96539
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18501,7 +22831,7 @@ LibTalentTree.nodeData = {
                 96540
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18526,7 +22856,7 @@ LibTalentTree.nodeData = {
                 96541
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18551,7 +22881,7 @@ LibTalentTree.nodeData = {
                 96542
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18578,7 +22908,7 @@ LibTalentTree.nodeData = {
                 96543
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18628,7 +22958,7 @@ LibTalentTree.nodeData = {
                 96546
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18653,7 +22983,7 @@ LibTalentTree.nodeData = {
                 96547
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18678,7 +23008,7 @@ LibTalentTree.nodeData = {
                 96548
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18705,7 +23035,7 @@ LibTalentTree.nodeData = {
                 96549
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18730,7 +23060,7 @@ LibTalentTree.nodeData = {
                 96551
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18755,7 +23085,7 @@ LibTalentTree.nodeData = {
                 96552
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18780,7 +23110,7 @@ LibTalentTree.nodeData = {
                 96553
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18805,7 +23135,7 @@ LibTalentTree.nodeData = {
                 96554
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18831,7 +23161,7 @@ LibTalentTree.nodeData = {
                 96555
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18856,7 +23186,7 @@ LibTalentTree.nodeData = {
                 96556
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18881,7 +23211,7 @@ LibTalentTree.nodeData = {
                 96557
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18908,7 +23238,7 @@ LibTalentTree.nodeData = {
                 96558
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18933,7 +23263,7 @@ LibTalentTree.nodeData = {
                 96559
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18959,7 +23289,7 @@ LibTalentTree.nodeData = {
                 96560
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -18986,7 +23316,7 @@ LibTalentTree.nodeData = {
                 96561
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -19111,7 +23441,7 @@ LibTalentTree.nodeData = {
                 96566
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -19136,7 +23466,7 @@ LibTalentTree.nodeData = {
                 96567
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -19162,7 +23492,7 @@ LibTalentTree.nodeData = {
                 96568
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -19188,7 +23518,7 @@ LibTalentTree.nodeData = {
                 96569
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -19214,7 +23544,7 @@ LibTalentTree.nodeData = {
                 96570
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -19240,7 +23570,7 @@ LibTalentTree.nodeData = {
                 96572
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -19346,7 +23676,7 @@ LibTalentTree.nodeData = {
                 96576
             },
             ["specInfo"] = {
-                [270] = "granted",
+                [270] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -19374,8 +23704,8 @@ LibTalentTree.nodeData = {
                 96577
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19402,8 +23732,8 @@ LibTalentTree.nodeData = {
                 96578
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19430,8 +23760,8 @@ LibTalentTree.nodeData = {
                 96579
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19459,8 +23789,8 @@ LibTalentTree.nodeData = {
                 96580
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19490,8 +23820,8 @@ LibTalentTree.nodeData = {
                 96581
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19517,7 +23847,7 @@ LibTalentTree.nodeData = {
                 96583
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19545,8 +23875,8 @@ LibTalentTree.nodeData = {
                 96584
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19574,8 +23904,8 @@ LibTalentTree.nodeData = {
                 96585
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19602,8 +23932,8 @@ LibTalentTree.nodeData = {
                 96586
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19630,8 +23960,8 @@ LibTalentTree.nodeData = {
                 96587
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19659,8 +23989,8 @@ LibTalentTree.nodeData = {
                 96588
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19689,8 +24019,8 @@ LibTalentTree.nodeData = {
                 96589
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19716,7 +24046,7 @@ LibTalentTree.nodeData = {
                 96590
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19742,7 +24072,7 @@ LibTalentTree.nodeData = {
                 96591
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19768,7 +24098,7 @@ LibTalentTree.nodeData = {
                 96592
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19794,7 +24124,7 @@ LibTalentTree.nodeData = {
                 96593
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19819,7 +24149,7 @@ LibTalentTree.nodeData = {
                 96594
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19845,7 +24175,7 @@ LibTalentTree.nodeData = {
                 96595
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19871,7 +24201,7 @@ LibTalentTree.nodeData = {
                 96596
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19898,8 +24228,8 @@ LibTalentTree.nodeData = {
                 96597
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19927,8 +24257,8 @@ LibTalentTree.nodeData = {
                 96598
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19956,7 +24286,7 @@ LibTalentTree.nodeData = {
                 96599
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -19985,8 +24315,8 @@ LibTalentTree.nodeData = {
                 96601
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20014,8 +24344,8 @@ LibTalentTree.nodeData = {
                 96603
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20041,7 +24371,7 @@ LibTalentTree.nodeData = {
                 96604
             },
             ["specInfo"] = {
-                [270] = "visible",
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20069,8 +24399,8 @@ LibTalentTree.nodeData = {
                 96605
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20098,8 +24428,8 @@ LibTalentTree.nodeData = {
                 96606
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20128,8 +24458,8 @@ LibTalentTree.nodeData = {
                 96607
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20156,8 +24486,8 @@ LibTalentTree.nodeData = {
                 96609
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20185,8 +24515,8 @@ LibTalentTree.nodeData = {
                 96610
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20214,8 +24544,8 @@ LibTalentTree.nodeData = {
                 96612
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20243,8 +24573,8 @@ LibTalentTree.nodeData = {
                 96613
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20271,8 +24601,8 @@ LibTalentTree.nodeData = {
                 96615
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20300,8 +24630,8 @@ LibTalentTree.nodeData = {
                 96616
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20328,8 +24658,8 @@ LibTalentTree.nodeData = {
                 96618
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20359,8 +24689,8 @@ LibTalentTree.nodeData = {
                 96619
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20387,8 +24717,8 @@ LibTalentTree.nodeData = {
                 96621
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20415,8 +24745,8 @@ LibTalentTree.nodeData = {
                 96622
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20444,8 +24774,8 @@ LibTalentTree.nodeData = {
                 96623
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20473,8 +24803,8 @@ LibTalentTree.nodeData = {
                 96625
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20501,8 +24831,8 @@ LibTalentTree.nodeData = {
                 96626
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20527,7 +24857,7 @@ LibTalentTree.nodeData = {
                 96627
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20552,7 +24882,7 @@ LibTalentTree.nodeData = {
                 96628
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20577,7 +24907,7 @@ LibTalentTree.nodeData = {
                 96629
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20603,7 +24933,7 @@ LibTalentTree.nodeData = {
                 96630
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20630,7 +24960,7 @@ LibTalentTree.nodeData = {
                 96631
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20655,7 +24985,7 @@ LibTalentTree.nodeData = {
                 96632
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20682,7 +25012,7 @@ LibTalentTree.nodeData = {
                 96633
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20708,7 +25038,7 @@ LibTalentTree.nodeData = {
                 96634
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20734,7 +25064,7 @@ LibTalentTree.nodeData = {
                 96635
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20762,8 +25092,8 @@ LibTalentTree.nodeData = {
                 96636
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20790,8 +25120,8 @@ LibTalentTree.nodeData = {
                 96637
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20819,8 +25149,8 @@ LibTalentTree.nodeData = {
                 96638
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20849,8 +25179,8 @@ LibTalentTree.nodeData = {
                 96639
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20877,7 +25207,7 @@ LibTalentTree.nodeData = {
                 96640
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20903,7 +25233,7 @@ LibTalentTree.nodeData = {
                 96641
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20929,7 +25259,7 @@ LibTalentTree.nodeData = {
                 96642
             },
             ["specInfo"] = {
-                [269] = "visible",
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20957,8 +25287,8 @@ LibTalentTree.nodeData = {
                 96643
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -20986,8 +25316,8 @@ LibTalentTree.nodeData = {
                 96644
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21014,8 +25344,8 @@ LibTalentTree.nodeData = {
                 96645
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21042,8 +25372,8 @@ LibTalentTree.nodeData = {
                 96646
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21070,8 +25400,8 @@ LibTalentTree.nodeData = {
                 96647
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21098,8 +25428,8 @@ LibTalentTree.nodeData = {
                 96648
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21127,8 +25457,8 @@ LibTalentTree.nodeData = {
                 96649
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21156,8 +25486,8 @@ LibTalentTree.nodeData = {
                 96650
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21184,8 +25514,8 @@ LibTalentTree.nodeData = {
                 96651
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21213,8 +25543,8 @@ LibTalentTree.nodeData = {
                 96652
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21242,8 +25572,8 @@ LibTalentTree.nodeData = {
                 96653
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21270,8 +25600,8 @@ LibTalentTree.nodeData = {
                 96654
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21298,8 +25628,8 @@ LibTalentTree.nodeData = {
                 96655
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21327,8 +25657,8 @@ LibTalentTree.nodeData = {
                 96656
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21356,8 +25686,8 @@ LibTalentTree.nodeData = {
                 96657
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21384,8 +25714,8 @@ LibTalentTree.nodeData = {
                 96658
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21414,8 +25744,8 @@ LibTalentTree.nodeData = {
                 96659
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21442,8 +25772,8 @@ LibTalentTree.nodeData = {
                 96660
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21471,8 +25801,8 @@ LibTalentTree.nodeData = {
                 96661
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21500,8 +25830,8 @@ LibTalentTree.nodeData = {
                 96662
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21528,8 +25858,8 @@ LibTalentTree.nodeData = {
                 96663
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21556,8 +25886,8 @@ LibTalentTree.nodeData = {
                 96664
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21586,8 +25916,8 @@ LibTalentTree.nodeData = {
                 96665
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21616,8 +25946,8 @@ LibTalentTree.nodeData = {
                 96666
             },
             ["specInfo"] = {
-                [0] = "available",
-                [269] = "visible",
+                [0] = { 0 },
+                [269] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21644,8 +25974,8 @@ LibTalentTree.nodeData = {
                 96667
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21672,8 +26002,8 @@ LibTalentTree.nodeData = {
                 96668
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21702,8 +26032,8 @@ LibTalentTree.nodeData = {
                 96669
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21730,8 +26060,8 @@ LibTalentTree.nodeData = {
                 96670
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21760,8 +26090,8 @@ LibTalentTree.nodeData = {
                 96671
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21788,8 +26118,8 @@ LibTalentTree.nodeData = {
                 96672
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21816,8 +26146,8 @@ LibTalentTree.nodeData = {
                 96673
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21846,8 +26176,8 @@ LibTalentTree.nodeData = {
                 96674
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21875,8 +26205,8 @@ LibTalentTree.nodeData = {
                 96676
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21903,8 +26233,8 @@ LibTalentTree.nodeData = {
                 96677
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21932,8 +26262,8 @@ LibTalentTree.nodeData = {
                 96678
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21960,8 +26290,8 @@ LibTalentTree.nodeData = {
                 96680
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -21988,8 +26318,8 @@ LibTalentTree.nodeData = {
                 96681
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22017,8 +26347,8 @@ LibTalentTree.nodeData = {
                 96682
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22043,7 +26373,7 @@ LibTalentTree.nodeData = {
                 96684
             },
             ["specInfo"] = {
-                [268] = "visible",
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22069,7 +26399,7 @@ LibTalentTree.nodeData = {
                 96685
             },
             ["specInfo"] = {
-                [268] = "visible",
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22094,7 +26424,7 @@ LibTalentTree.nodeData = {
                 96686
             },
             ["specInfo"] = {
-                [268] = "visible",
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22121,7 +26451,7 @@ LibTalentTree.nodeData = {
                 96687
             },
             ["specInfo"] = {
-                [268] = "visible",
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22147,7 +26477,7 @@ LibTalentTree.nodeData = {
                 96688
             },
             ["specInfo"] = {
-                [268] = "visible",
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22174,7 +26504,7 @@ LibTalentTree.nodeData = {
                 96689
             },
             ["specInfo"] = {
-                [268] = "visible",
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22199,7 +26529,7 @@ LibTalentTree.nodeData = {
                 96690
             },
             ["specInfo"] = {
-                [268] = "visible",
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22226,8 +26556,8 @@ LibTalentTree.nodeData = {
                 96691
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22255,8 +26585,8 @@ LibTalentTree.nodeData = {
                 96692
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22285,8 +26615,8 @@ LibTalentTree.nodeData = {
                 96694
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22313,8 +26643,8 @@ LibTalentTree.nodeData = {
                 96695
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22341,7 +26671,7 @@ LibTalentTree.nodeData = {
                 96696
             },
             ["specInfo"] = {
-                [268] = "visible",
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22368,8 +26698,8 @@ LibTalentTree.nodeData = {
                 96697
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22397,8 +26727,8 @@ LibTalentTree.nodeData = {
                 96698
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22426,8 +26756,8 @@ LibTalentTree.nodeData = {
                 96699
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22456,8 +26786,8 @@ LibTalentTree.nodeData = {
                 96701
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22484,8 +26814,8 @@ LibTalentTree.nodeData = {
                 96703
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22512,8 +26842,8 @@ LibTalentTree.nodeData = {
                 96704
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22541,8 +26871,8 @@ LibTalentTree.nodeData = {
                 96705
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22569,8 +26899,8 @@ LibTalentTree.nodeData = {
                 96707
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22597,8 +26927,8 @@ LibTalentTree.nodeData = {
                 96708
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22625,8 +26955,8 @@ LibTalentTree.nodeData = {
                 96709
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22653,8 +26983,8 @@ LibTalentTree.nodeData = {
                 96710
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22683,8 +27013,8 @@ LibTalentTree.nodeData = {
                 96711
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22712,8 +27042,8 @@ LibTalentTree.nodeData = {
                 96712
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22743,8 +27073,8 @@ LibTalentTree.nodeData = {
                 96713
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22773,8 +27103,8 @@ LibTalentTree.nodeData = {
                 96715
             },
             ["specInfo"] = {
-                [268] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22802,7 +27132,7 @@ LibTalentTree.nodeData = {
                 96716
             },
             ["specInfo"] = {
-                [268] = "visible",
+                [268] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22829,8 +27159,8 @@ LibTalentTree.nodeData = {
                 96718
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22858,8 +27188,8 @@ LibTalentTree.nodeData = {
                 96719
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22887,8 +27217,8 @@ LibTalentTree.nodeData = {
                 96720
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22916,8 +27246,8 @@ LibTalentTree.nodeData = {
                 96722
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22945,8 +27275,8 @@ LibTalentTree.nodeData = {
                 96723
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -22974,8 +27304,8 @@ LibTalentTree.nodeData = {
                 96725
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23003,8 +27333,8 @@ LibTalentTree.nodeData = {
                 96727
             },
             ["specInfo"] = {
-                [270] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [270] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23034,8 +27364,8 @@ LibTalentTree.nodeData = {
                 97904
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23062,8 +27392,8 @@ LibTalentTree.nodeData = {
                 97906
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23090,7 +27420,7 @@ LibTalentTree.nodeData = {
                 97907
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23118,8 +27448,8 @@ LibTalentTree.nodeData = {
                 97908
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23145,7 +27475,7 @@ LibTalentTree.nodeData = {
                 97909
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23172,7 +27502,7 @@ LibTalentTree.nodeData = {
                 97910
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23198,7 +27528,7 @@ LibTalentTree.nodeData = {
                 97911
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23225,7 +27555,7 @@ LibTalentTree.nodeData = {
                 97912
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23253,8 +27583,8 @@ LibTalentTree.nodeData = {
                 97914
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23279,7 +27609,7 @@ LibTalentTree.nodeData = {
                 97915
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23306,8 +27636,8 @@ LibTalentTree.nodeData = {
                 97916
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23334,8 +27664,8 @@ LibTalentTree.nodeData = {
                 97917
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23364,8 +27694,8 @@ LibTalentTree.nodeData = {
                 97918
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23394,8 +27724,8 @@ LibTalentTree.nodeData = {
                 97919
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23424,8 +27754,8 @@ LibTalentTree.nodeData = {
                 97920
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23456,8 +27786,8 @@ LibTalentTree.nodeData = {
                 97921
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23485,8 +27815,8 @@ LibTalentTree.nodeData = {
                 97923
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23514,8 +27844,8 @@ LibTalentTree.nodeData = {
                 97924
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23542,8 +27872,8 @@ LibTalentTree.nodeData = {
                 97925
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23569,7 +27899,7 @@ LibTalentTree.nodeData = {
                 97926
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23596,7 +27926,7 @@ LibTalentTree.nodeData = {
                 97927
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23623,7 +27953,7 @@ LibTalentTree.nodeData = {
                 97928
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23651,8 +27981,8 @@ LibTalentTree.nodeData = {
                 97929
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23679,8 +28009,8 @@ LibTalentTree.nodeData = {
                 97930
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23708,8 +28038,8 @@ LibTalentTree.nodeData = {
                 97931
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23738,8 +28068,8 @@ LibTalentTree.nodeData = {
                 97932
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23768,8 +28098,8 @@ LibTalentTree.nodeData = {
                 97933
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23798,8 +28128,8 @@ LibTalentTree.nodeData = {
                 97934
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23829,8 +28159,8 @@ LibTalentTree.nodeData = {
                 97935
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23857,8 +28187,8 @@ LibTalentTree.nodeData = {
                 97936
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23887,8 +28217,8 @@ LibTalentTree.nodeData = {
                 97937
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23915,7 +28245,7 @@ LibTalentTree.nodeData = {
                 97938
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23941,7 +28271,7 @@ LibTalentTree.nodeData = {
                 97939
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -23971,8 +28301,8 @@ LibTalentTree.nodeData = {
                 97940
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24001,8 +28331,8 @@ LibTalentTree.nodeData = {
                 97942
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24033,8 +28363,8 @@ LibTalentTree.nodeData = {
                 97943
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24061,8 +28391,8 @@ LibTalentTree.nodeData = {
                 97944
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24091,8 +28421,8 @@ LibTalentTree.nodeData = {
                 97945
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24121,8 +28451,8 @@ LibTalentTree.nodeData = {
                 97946
             },
             ["specInfo"] = {
-                [263] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [263] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24151,8 +28481,8 @@ LibTalentTree.nodeData = {
                 97947
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24181,8 +28511,8 @@ LibTalentTree.nodeData = {
                 97948
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24212,8 +28542,8 @@ LibTalentTree.nodeData = {
                 97949
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24239,7 +28569,7 @@ LibTalentTree.nodeData = {
                 97951
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24265,7 +28595,7 @@ LibTalentTree.nodeData = {
                 97952
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24291,7 +28621,7 @@ LibTalentTree.nodeData = {
                 97954
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24317,7 +28647,7 @@ LibTalentTree.nodeData = {
                 97956
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24342,7 +28672,7 @@ LibTalentTree.nodeData = {
                 97958
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24369,7 +28699,7 @@ LibTalentTree.nodeData = {
                 97959
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24394,7 +28724,7 @@ LibTalentTree.nodeData = {
                 97960
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24420,7 +28750,7 @@ LibTalentTree.nodeData = {
                 97961
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24446,7 +28776,7 @@ LibTalentTree.nodeData = {
                 97963
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24473,8 +28803,8 @@ LibTalentTree.nodeData = {
                 97964
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24502,8 +28832,8 @@ LibTalentTree.nodeData = {
                 97965
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24531,8 +28861,8 @@ LibTalentTree.nodeData = {
                 97966
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24561,8 +28891,8 @@ LibTalentTree.nodeData = {
                 97967
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24592,8 +28922,8 @@ LibTalentTree.nodeData = {
                 97968
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24622,8 +28952,8 @@ LibTalentTree.nodeData = {
                 97970
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24653,8 +28983,8 @@ LibTalentTree.nodeData = {
                 97971
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24683,8 +29013,8 @@ LibTalentTree.nodeData = {
                 97972
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24713,8 +29043,8 @@ LibTalentTree.nodeData = {
                 97973
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24741,8 +29071,8 @@ LibTalentTree.nodeData = {
                 97975
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24769,7 +29099,7 @@ LibTalentTree.nodeData = {
                 97976
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24796,8 +29126,8 @@ LibTalentTree.nodeData = {
                 97977
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24826,8 +29156,8 @@ LibTalentTree.nodeData = {
                 97978
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24856,8 +29186,8 @@ LibTalentTree.nodeData = {
                 97980
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24886,8 +29216,8 @@ LibTalentTree.nodeData = {
                 97981
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24919,8 +29249,8 @@ LibTalentTree.nodeData = {
                 97982
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24949,8 +29279,8 @@ LibTalentTree.nodeData = {
                 97984
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -24979,8 +29309,8 @@ LibTalentTree.nodeData = {
                 97985
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25010,8 +29340,8 @@ LibTalentTree.nodeData = {
                 97986
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25040,8 +29370,8 @@ LibTalentTree.nodeData = {
                 97988
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25072,8 +29402,8 @@ LibTalentTree.nodeData = {
                 97989
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25101,8 +29431,8 @@ LibTalentTree.nodeData = {
                 97991
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25130,8 +29460,8 @@ LibTalentTree.nodeData = {
                 97992
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25158,8 +29488,8 @@ LibTalentTree.nodeData = {
                 97993
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25188,8 +29518,8 @@ LibTalentTree.nodeData = {
                 97994
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25218,8 +29548,8 @@ LibTalentTree.nodeData = {
                 97995
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25250,8 +29580,8 @@ LibTalentTree.nodeData = {
                 97996
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25280,8 +29610,8 @@ LibTalentTree.nodeData = {
                 97997
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25309,8 +29639,8 @@ LibTalentTree.nodeData = {
                 97998
             },
             ["specInfo"] = {
-                [262] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [262] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25337,8 +29667,8 @@ LibTalentTree.nodeData = {
                 97999
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25364,7 +29694,7 @@ LibTalentTree.nodeData = {
                 98000
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25393,8 +29723,8 @@ LibTalentTree.nodeData = {
                 98001
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25420,7 +29750,7 @@ LibTalentTree.nodeData = {
                 98003
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25446,7 +29776,7 @@ LibTalentTree.nodeData = {
                 98004
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25472,7 +29802,7 @@ LibTalentTree.nodeData = {
                 98005
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25497,7 +29827,7 @@ LibTalentTree.nodeData = {
                 98006
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25522,7 +29852,7 @@ LibTalentTree.nodeData = {
                 98007
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25548,7 +29878,7 @@ LibTalentTree.nodeData = {
                 98008
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25575,7 +29905,7 @@ LibTalentTree.nodeData = {
                 98009
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25602,7 +29932,7 @@ LibTalentTree.nodeData = {
                 98010
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25628,7 +29958,7 @@ LibTalentTree.nodeData = {
                 98011
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25654,7 +29984,7 @@ LibTalentTree.nodeData = {
                 98012
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25680,7 +30010,7 @@ LibTalentTree.nodeData = {
                 98014
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25709,8 +30039,8 @@ LibTalentTree.nodeData = {
                 98015
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25738,8 +30068,8 @@ LibTalentTree.nodeData = {
                 98017
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25768,8 +30098,8 @@ LibTalentTree.nodeData = {
                 98018
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25799,8 +30129,8 @@ LibTalentTree.nodeData = {
                 98019
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25829,8 +30159,8 @@ LibTalentTree.nodeData = {
                 98021
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25860,8 +30190,8 @@ LibTalentTree.nodeData = {
                 98022
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25890,8 +30220,8 @@ LibTalentTree.nodeData = {
                 98023
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25919,8 +30249,8 @@ LibTalentTree.nodeData = {
                 98025
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25947,7 +30277,7 @@ LibTalentTree.nodeData = {
                 98026
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -25973,7 +30303,7 @@ LibTalentTree.nodeData = {
                 98028
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26002,8 +30332,8 @@ LibTalentTree.nodeData = {
                 98029
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26033,8 +30363,8 @@ LibTalentTree.nodeData = {
                 98030
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26065,8 +30395,8 @@ LibTalentTree.nodeData = {
                 98032
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26094,8 +30424,8 @@ LibTalentTree.nodeData = {
                 98033
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26123,8 +30453,8 @@ LibTalentTree.nodeData = {
                 98034
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26153,8 +30483,8 @@ LibTalentTree.nodeData = {
                 98035
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26182,8 +30512,8 @@ LibTalentTree.nodeData = {
                 98037
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26212,8 +30542,8 @@ LibTalentTree.nodeData = {
                 98038
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26241,8 +30571,8 @@ LibTalentTree.nodeData = {
                 98040
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26271,8 +30601,8 @@ LibTalentTree.nodeData = {
                 98041
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26302,8 +30632,8 @@ LibTalentTree.nodeData = {
                 98042
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26333,8 +30663,8 @@ LibTalentTree.nodeData = {
                 98044
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26363,8 +30693,8 @@ LibTalentTree.nodeData = {
                 98045
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26395,8 +30725,8 @@ LibTalentTree.nodeData = {
                 98046
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26425,8 +30755,8 @@ LibTalentTree.nodeData = {
                 98047
             },
             ["specInfo"] = {
-                [264] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [264] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -26552,7 +30882,7 @@ LibTalentTree.nodeData = {
                 98053
             },
             ["specInfo"] = {
-                [263] = "granted",
+                [263] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -26581,8 +30911,8 @@ LibTalentTree.nodeData = {
                 98054
             },
             ["specInfo"] = {
-                [262] = "granted",
-                [263] = "granted",
+                [262] = { 2 },
+                [263] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -26611,8 +30941,8 @@ LibTalentTree.nodeData = {
                 98055
             },
             ["specInfo"] = {
-                [262] = "granted",
-                [264] = "granted",
+                [262] = { 2 },
+                [264] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -26638,7 +30968,7 @@ LibTalentTree.nodeData = {
                 98056
             },
             ["specInfo"] = {
-                [264] = "granted",
+                [264] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -26691,7 +31021,7 @@ LibTalentTree.nodeData = {
                 98058
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -26895,7 +31225,7 @@ LibTalentTree.nodeData = {
                 98069
             },
             ["specInfo"] = {
-                [264] = "visible",
+                [264] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -26947,7 +31277,7 @@ LibTalentTree.nodeData = {
                 98071
             },
             ["specInfo"] = {
-                [262] = "visible",
+                [262] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -26998,7 +31328,7 @@ LibTalentTree.nodeData = {
                 98074
             },
             ["specInfo"] = {
-                [263] = "visible",
+                [263] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -27024,7 +31354,7 @@ LibTalentTree.nodeData = {
                 98075
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27051,7 +31381,7 @@ LibTalentTree.nodeData = {
                 98077
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27077,7 +31407,7 @@ LibTalentTree.nodeData = {
                 98078
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27104,7 +31434,7 @@ LibTalentTree.nodeData = {
                 98079
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27131,7 +31461,7 @@ LibTalentTree.nodeData = {
                 98080
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27182,7 +31512,7 @@ LibTalentTree.nodeData = {
                 98083
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27207,7 +31537,7 @@ LibTalentTree.nodeData = {
                 98084
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27233,7 +31563,7 @@ LibTalentTree.nodeData = {
                 98085
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27258,7 +31588,7 @@ LibTalentTree.nodeData = {
                 98086
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27285,7 +31615,7 @@ LibTalentTree.nodeData = {
                 98087
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27312,7 +31642,7 @@ LibTalentTree.nodeData = {
                 98089
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27340,7 +31670,7 @@ LibTalentTree.nodeData = {
                 98090
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27367,7 +31697,7 @@ LibTalentTree.nodeData = {
                 98092
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27395,7 +31725,7 @@ LibTalentTree.nodeData = {
                 98093
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27422,7 +31752,7 @@ LibTalentTree.nodeData = {
                 98094
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27450,7 +31780,7 @@ LibTalentTree.nodeData = {
                 98095
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27478,7 +31808,7 @@ LibTalentTree.nodeData = {
                 98096
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27506,7 +31836,7 @@ LibTalentTree.nodeData = {
                 98098
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27533,7 +31863,7 @@ LibTalentTree.nodeData = {
                 98100
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27560,7 +31890,7 @@ LibTalentTree.nodeData = {
                 98101
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27587,7 +31917,7 @@ LibTalentTree.nodeData = {
                 98102
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27613,7 +31943,7 @@ LibTalentTree.nodeData = {
                 98103
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27641,7 +31971,7 @@ LibTalentTree.nodeData = {
                 98104
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27668,7 +31998,7 @@ LibTalentTree.nodeData = {
                 98105
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27695,7 +32025,7 @@ LibTalentTree.nodeData = {
                 98106
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27721,7 +32051,7 @@ LibTalentTree.nodeData = {
                 98107
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -27803,8 +32133,8 @@ LibTalentTree.nodeData = {
                 98326
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -27840,8 +32170,8 @@ LibTalentTree.nodeData = {
                 98327
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -27872,8 +32202,8 @@ LibTalentTree.nodeData = {
                 98331
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -27904,8 +32234,8 @@ LibTalentTree.nodeData = {
                 98328
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -27948,8 +32278,8 @@ LibTalentTree.nodeData = {
                 98329
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -27976,7 +32306,7 @@ LibTalentTree.nodeData = {
                 98330
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28010,8 +32340,8 @@ LibTalentTree.nodeData = {
                 98333
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28045,8 +32375,8 @@ LibTalentTree.nodeData = {
                 98334
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28080,8 +32410,8 @@ LibTalentTree.nodeData = {
                 98335
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28123,8 +32453,8 @@ LibTalentTree.nodeData = {
                 98336
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28152,7 +32482,7 @@ LibTalentTree.nodeData = {
                 98337
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28177,7 +32507,7 @@ LibTalentTree.nodeData = {
                 98338
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28203,7 +32533,7 @@ LibTalentTree.nodeData = {
                 98384
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28234,8 +32564,8 @@ LibTalentTree.nodeData = {
                 98332
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28278,8 +32608,8 @@ LibTalentTree.nodeData = {
                 98340
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [71] = "granted",
+                [71] = { 2 },
+                [73] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -28308,7 +32638,7 @@ LibTalentTree.nodeData = {
                 98341
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28336,7 +32666,7 @@ LibTalentTree.nodeData = {
                 98342
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28366,8 +32696,8 @@ LibTalentTree.nodeData = {
                 98343
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28398,8 +32728,8 @@ LibTalentTree.nodeData = {
                 98344
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28430,8 +32760,8 @@ LibTalentTree.nodeData = {
                 98345
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28464,8 +32794,8 @@ LibTalentTree.nodeData = {
                 98346
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28498,8 +32828,8 @@ LibTalentTree.nodeData = {
                 98348
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28532,8 +32862,8 @@ LibTalentTree.nodeData = {
                 98350
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28565,8 +32895,8 @@ LibTalentTree.nodeData = {
                 98351
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -28598,8 +32928,8 @@ LibTalentTree.nodeData = {
                 98352
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -28626,7 +32956,7 @@ LibTalentTree.nodeData = {
                 98353
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28653,7 +32983,7 @@ LibTalentTree.nodeData = {
                 98354
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28681,7 +33011,7 @@ LibTalentTree.nodeData = {
                 98355
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28717,8 +33047,8 @@ LibTalentTree.nodeData = {
                 98356
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -28755,8 +33085,8 @@ LibTalentTree.nodeData = {
                 98357
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -28801,8 +33131,8 @@ LibTalentTree.nodeData = {
                 98359
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -28835,8 +33165,8 @@ LibTalentTree.nodeData = {
                 98361
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -28864,7 +33194,7 @@ LibTalentTree.nodeData = {
                 98363
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28893,7 +33223,7 @@ LibTalentTree.nodeData = {
                 98364
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28920,7 +33250,7 @@ LibTalentTree.nodeData = {
                 98365
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28947,7 +33277,7 @@ LibTalentTree.nodeData = {
                 98366
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -28974,7 +33304,7 @@ LibTalentTree.nodeData = {
                 98367
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29001,7 +33331,7 @@ LibTalentTree.nodeData = {
                 98368
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29029,7 +33359,7 @@ LibTalentTree.nodeData = {
                 98369
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29056,7 +33386,7 @@ LibTalentTree.nodeData = {
                 98370
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29099,8 +33429,8 @@ LibTalentTree.nodeData = {
                 98371
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -29128,7 +33458,7 @@ LibTalentTree.nodeData = {
                 98374
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29163,8 +33493,8 @@ LibTalentTree.nodeData = {
                 98375
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -29190,7 +33520,7 @@ LibTalentTree.nodeData = {
                 98377
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29216,7 +33546,7 @@ LibTalentTree.nodeData = {
                 98378
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29244,7 +33574,7 @@ LibTalentTree.nodeData = {
                 98379
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29288,8 +33618,8 @@ LibTalentTree.nodeData = {
                 98380
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -29314,7 +33644,7 @@ LibTalentTree.nodeData = {
                 98381
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29341,7 +33671,7 @@ LibTalentTree.nodeData = {
                 98382
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29368,7 +33698,7 @@ LibTalentTree.nodeData = {
                 98383
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29423,7 +33753,7 @@ LibTalentTree.nodeData = {
                 98386
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29452,7 +33782,7 @@ LibTalentTree.nodeData = {
                 98388
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29478,7 +33808,7 @@ LibTalentTree.nodeData = {
                 98389
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29632,7 +33962,7 @@ LibTalentTree.nodeData = {
                 98397
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -29664,7 +33994,7 @@ LibTalentTree.nodeData = {
                 98399
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -29700,8 +34030,8 @@ LibTalentTree.nodeData = {
                 98400
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -29737,8 +34067,8 @@ LibTalentTree.nodeData = {
                 98401
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -29776,8 +34106,8 @@ LibTalentTree.nodeData = {
                 98402
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -29811,8 +34141,8 @@ LibTalentTree.nodeData = {
                 98404
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -29848,8 +34178,8 @@ LibTalentTree.nodeData = {
                 98405
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -29885,8 +34215,8 @@ LibTalentTree.nodeData = {
                 98406
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -29923,8 +34253,8 @@ LibTalentTree.nodeData = {
                 98407
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -29960,8 +34290,8 @@ LibTalentTree.nodeData = {
                 98409
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -29996,8 +34326,8 @@ LibTalentTree.nodeData = {
                 98410
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30031,8 +34361,8 @@ LibTalentTree.nodeData = {
                 98411
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30069,8 +34399,8 @@ LibTalentTree.nodeData = {
                 98412
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30104,8 +34434,8 @@ LibTalentTree.nodeData = {
                 98413
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30139,8 +34469,8 @@ LibTalentTree.nodeData = {
                 98414
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30172,7 +34502,7 @@ LibTalentTree.nodeData = {
                 98415
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30205,7 +34535,7 @@ LibTalentTree.nodeData = {
                 98416
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30237,7 +34567,7 @@ LibTalentTree.nodeData = {
                 98417
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30273,8 +34603,8 @@ LibTalentTree.nodeData = {
                 98418
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30308,8 +34638,8 @@ LibTalentTree.nodeData = {
                 98419
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30343,8 +34673,8 @@ LibTalentTree.nodeData = {
                 98420
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30379,8 +34709,8 @@ LibTalentTree.nodeData = {
                 98421
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30414,8 +34744,8 @@ LibTalentTree.nodeData = {
                 98422
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30453,8 +34783,8 @@ LibTalentTree.nodeData = {
                 98423
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30491,8 +34821,8 @@ LibTalentTree.nodeData = {
                 98424
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30528,8 +34858,8 @@ LibTalentTree.nodeData = {
                 98426
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30563,8 +34893,8 @@ LibTalentTree.nodeData = {
                 98427
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30598,8 +34928,8 @@ LibTalentTree.nodeData = {
                 98428
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30636,8 +34966,8 @@ LibTalentTree.nodeData = {
                 98429
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30673,8 +35003,8 @@ LibTalentTree.nodeData = {
                 98430
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30710,8 +35040,8 @@ LibTalentTree.nodeData = {
                 98431
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30743,7 +35073,7 @@ LibTalentTree.nodeData = {
                 98432
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30779,8 +35109,8 @@ LibTalentTree.nodeData = {
                 98433
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30812,7 +35142,7 @@ LibTalentTree.nodeData = {
                 98434
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30845,7 +35175,7 @@ LibTalentTree.nodeData = {
                 98435
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30877,7 +35207,7 @@ LibTalentTree.nodeData = {
                 98436
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30911,7 +35241,7 @@ LibTalentTree.nodeData = {
                 98437
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30946,7 +35276,7 @@ LibTalentTree.nodeData = {
                 98438
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -30978,7 +35308,7 @@ LibTalentTree.nodeData = {
                 98439
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -31014,8 +35344,8 @@ LibTalentTree.nodeData = {
                 98440
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -31050,8 +35380,8 @@ LibTalentTree.nodeData = {
                 98441
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -31085,7 +35415,7 @@ LibTalentTree.nodeData = {
                 98442
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31120,7 +35450,7 @@ LibTalentTree.nodeData = {
                 98443
             },
             ["specInfo"] = {
-                [72] = "granted",
+                [72] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -31175,7 +35505,7 @@ LibTalentTree.nodeData = {
                 98445
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31228,7 +35558,7 @@ LibTalentTree.nodeData = {
                 98447
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -31270,8 +35600,8 @@ LibTalentTree.nodeData = {
                 98448
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31306,8 +35636,8 @@ LibTalentTree.nodeData = {
                 98449
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31333,7 +35663,7 @@ LibTalentTree.nodeData = {
                 98450
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -31363,8 +35693,8 @@ LibTalentTree.nodeData = {
                 98452
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31406,7 +35736,7 @@ LibTalentTree.nodeData = {
                 98453
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31440,8 +35770,8 @@ LibTalentTree.nodeData = {
                 98454
             },
             ["specInfo"] = {
-                [72] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [72] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31476,7 +35806,7 @@ LibTalentTree.nodeData = {
                 98455
             },
             ["specInfo"] = {
-                [72] = "visible",
+                [72] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31532,7 +35862,7 @@ LibTalentTree.nodeData = {
                 98458
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31614,7 +35944,7 @@ LibTalentTree.nodeData = {
                 98461
             },
             ["specInfo"] = {
-                [71] = "granted",
+                [71] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -31667,7 +35997,7 @@ LibTalentTree.nodeData = {
                 98463
             },
             ["specInfo"] = {
-                [73] = "granted",
+                [73] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -31734,7 +36064,7 @@ LibTalentTree.nodeData = {
                 98465
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -31774,7 +36104,7 @@ LibTalentTree.nodeData = {
                 98466
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -31818,8 +36148,8 @@ LibTalentTree.nodeData = {
                 98467
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -31861,8 +36191,8 @@ LibTalentTree.nodeData = {
                 98468
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -31904,8 +36234,8 @@ LibTalentTree.nodeData = {
                 98469
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -31949,8 +36279,8 @@ LibTalentTree.nodeData = {
                 98470
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -31994,8 +36324,8 @@ LibTalentTree.nodeData = {
                 98471
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32039,8 +36369,8 @@ LibTalentTree.nodeData = {
                 98472
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32085,8 +36415,8 @@ LibTalentTree.nodeData = {
                 98473
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32129,8 +36459,8 @@ LibTalentTree.nodeData = {
                 98474
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32172,8 +36502,8 @@ LibTalentTree.nodeData = {
                 98476
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32216,8 +36546,8 @@ LibTalentTree.nodeData = {
                 98477
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32259,8 +36589,8 @@ LibTalentTree.nodeData = {
                 98479
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32305,8 +36635,8 @@ LibTalentTree.nodeData = {
                 98480
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32346,7 +36676,7 @@ LibTalentTree.nodeData = {
                 98481
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32388,7 +36718,7 @@ LibTalentTree.nodeData = {
                 98482
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32428,7 +36758,7 @@ LibTalentTree.nodeData = {
                 98483
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32472,8 +36802,8 @@ LibTalentTree.nodeData = {
                 98484
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32517,8 +36847,8 @@ LibTalentTree.nodeData = {
                 98485
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32562,8 +36892,8 @@ LibTalentTree.nodeData = {
                 98486
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32608,8 +36938,8 @@ LibTalentTree.nodeData = {
                 98488
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32651,8 +36981,8 @@ LibTalentTree.nodeData = {
                 98489
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32694,8 +37024,8 @@ LibTalentTree.nodeData = {
                 98490
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32738,8 +37068,8 @@ LibTalentTree.nodeData = {
                 98491
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32781,8 +37111,8 @@ LibTalentTree.nodeData = {
                 98493
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32828,8 +37158,8 @@ LibTalentTree.nodeData = {
                 98494
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32869,7 +37199,7 @@ LibTalentTree.nodeData = {
                 98496
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32911,7 +37241,7 @@ LibTalentTree.nodeData = {
                 98497
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32951,7 +37281,7 @@ LibTalentTree.nodeData = {
                 98498
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -32991,7 +37321,7 @@ LibTalentTree.nodeData = {
                 98499
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33033,7 +37363,7 @@ LibTalentTree.nodeData = {
                 98500
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33075,7 +37405,7 @@ LibTalentTree.nodeData = {
                 98501
             },
             ["specInfo"] = {
-                [73] = "visible",
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33117,8 +37447,8 @@ LibTalentTree.nodeData = {
                 98502
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33162,8 +37492,8 @@ LibTalentTree.nodeData = {
                 98503
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33207,8 +37537,8 @@ LibTalentTree.nodeData = {
                 98504
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33254,8 +37584,8 @@ LibTalentTree.nodeData = {
                 98506
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33299,8 +37629,8 @@ LibTalentTree.nodeData = {
                 98507
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33344,8 +37674,8 @@ LibTalentTree.nodeData = {
                 98508
             },
             ["specInfo"] = {
-                [73] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [73] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33377,8 +37707,8 @@ LibTalentTree.nodeData = {
                 98509
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33410,8 +37740,8 @@ LibTalentTree.nodeData = {
                 98510
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33442,8 +37772,8 @@ LibTalentTree.nodeData = {
                 98511
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33473,8 +37803,8 @@ LibTalentTree.nodeData = {
                 98513
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33504,8 +37834,8 @@ LibTalentTree.nodeData = {
                 98514
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33535,8 +37865,8 @@ LibTalentTree.nodeData = {
                 98515
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33569,8 +37899,8 @@ LibTalentTree.nodeData = {
                 98516
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33602,8 +37932,8 @@ LibTalentTree.nodeData = {
                 98517
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33635,8 +37965,8 @@ LibTalentTree.nodeData = {
                 98518
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33667,8 +37997,8 @@ LibTalentTree.nodeData = {
                 98519
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33698,8 +38028,8 @@ LibTalentTree.nodeData = {
                 98521
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33727,7 +38057,7 @@ LibTalentTree.nodeData = {
                 98522
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33755,7 +38085,7 @@ LibTalentTree.nodeData = {
                 98523
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33785,8 +38115,8 @@ LibTalentTree.nodeData = {
                 98524
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33818,8 +38148,8 @@ LibTalentTree.nodeData = {
                 98525
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33847,7 +38177,7 @@ LibTalentTree.nodeData = {
                 98526
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33875,7 +38205,7 @@ LibTalentTree.nodeData = {
                 98527
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33907,8 +38237,8 @@ LibTalentTree.nodeData = {
                 98528
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33938,8 +38268,8 @@ LibTalentTree.nodeData = {
                 98529
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -33969,8 +38299,8 @@ LibTalentTree.nodeData = {
                 98530
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34003,8 +38333,8 @@ LibTalentTree.nodeData = {
                 98531
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34037,8 +38367,8 @@ LibTalentTree.nodeData = {
                 98325
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34070,8 +38400,8 @@ LibTalentTree.nodeData = {
                 98533
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34099,7 +38429,7 @@ LibTalentTree.nodeData = {
                 98534
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34129,7 +38459,7 @@ LibTalentTree.nodeData = {
                 98535
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34160,7 +38490,7 @@ LibTalentTree.nodeData = {
                 98536
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34189,7 +38519,7 @@ LibTalentTree.nodeData = {
                 98537
             },
             ["specInfo"] = {
-                [71] = "visible",
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34221,8 +38551,8 @@ LibTalentTree.nodeData = {
                 98538
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34253,8 +38583,8 @@ LibTalentTree.nodeData = {
                 98539
             },
             ["specInfo"] = {
-                [71] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [71] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34286,8 +38616,8 @@ LibTalentTree.nodeData = {
                 98742
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34316,8 +38646,8 @@ LibTalentTree.nodeData = {
                 98887
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34369,8 +38699,8 @@ LibTalentTree.nodeData = {
                 98872
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34402,8 +38732,8 @@ LibTalentTree.nodeData = {
                 98748
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34430,8 +38760,8 @@ LibTalentTree.nodeData = {
                 98749
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34460,8 +38790,8 @@ LibTalentTree.nodeData = {
                 98750
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34490,8 +38820,8 @@ LibTalentTree.nodeData = {
                 98751
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34521,8 +38851,8 @@ LibTalentTree.nodeData = {
                 98752
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34550,8 +38880,8 @@ LibTalentTree.nodeData = {
                 98753
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34576,7 +38906,7 @@ LibTalentTree.nodeData = {
                 98754
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34606,8 +38936,8 @@ LibTalentTree.nodeData = {
                 98755
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34634,8 +38964,8 @@ LibTalentTree.nodeData = {
                 98757
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34665,8 +38995,8 @@ LibTalentTree.nodeData = {
                 98758
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34695,8 +39025,8 @@ LibTalentTree.nodeData = {
                 98760
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34725,8 +39055,8 @@ LibTalentTree.nodeData = {
                 98761
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34755,8 +39085,8 @@ LibTalentTree.nodeData = {
                 98762
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34786,8 +39116,8 @@ LibTalentTree.nodeData = {
                 98763
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34816,8 +39146,8 @@ LibTalentTree.nodeData = {
                 98764
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34846,8 +39176,8 @@ LibTalentTree.nodeData = {
                 98765
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34876,8 +39206,8 @@ LibTalentTree.nodeData = {
                 98766
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34908,8 +39238,8 @@ LibTalentTree.nodeData = {
                 98767
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34936,8 +39266,8 @@ LibTalentTree.nodeData = {
                 98768
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34965,8 +39295,8 @@ LibTalentTree.nodeData = {
                 98769
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -34994,8 +39324,8 @@ LibTalentTree.nodeData = {
                 98770
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35022,7 +39352,7 @@ LibTalentTree.nodeData = {
                 98771
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35047,7 +39377,7 @@ LibTalentTree.nodeData = {
                 98772
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35075,8 +39405,8 @@ LibTalentTree.nodeData = {
                 98773
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35104,8 +39434,8 @@ LibTalentTree.nodeData = {
                 98774
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35133,8 +39463,8 @@ LibTalentTree.nodeData = {
                 98776
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35164,8 +39494,8 @@ LibTalentTree.nodeData = {
                 98777
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35194,8 +39524,8 @@ LibTalentTree.nodeData = {
                 98778
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35224,8 +39554,8 @@ LibTalentTree.nodeData = {
                 98779
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35250,7 +39580,7 @@ LibTalentTree.nodeData = {
                 98780
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35277,7 +39607,7 @@ LibTalentTree.nodeData = {
                 98781
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35304,7 +39634,7 @@ LibTalentTree.nodeData = {
                 98783
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35332,8 +39662,8 @@ LibTalentTree.nodeData = {
                 98785
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35359,7 +39689,7 @@ LibTalentTree.nodeData = {
                 98786
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35385,7 +39715,7 @@ LibTalentTree.nodeData = {
                 98788
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35410,7 +39740,7 @@ LibTalentTree.nodeData = {
                 98789
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35437,7 +39767,7 @@ LibTalentTree.nodeData = {
                 98790
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35463,7 +39793,7 @@ LibTalentTree.nodeData = {
                 98791
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35489,7 +39819,7 @@ LibTalentTree.nodeData = {
                 98792
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35515,7 +39845,7 @@ LibTalentTree.nodeData = {
                 98793
             },
             ["specInfo"] = {
-                [256] = "visible",
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35544,8 +39874,8 @@ LibTalentTree.nodeData = {
                 98794
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35573,8 +39903,8 @@ LibTalentTree.nodeData = {
                 98795
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35602,8 +39932,8 @@ LibTalentTree.nodeData = {
                 98796
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35634,8 +39964,8 @@ LibTalentTree.nodeData = {
                 98797
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35664,8 +39994,8 @@ LibTalentTree.nodeData = {
                 98799
             },
             ["specInfo"] = {
-                [0] = "available",
-                [256] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35695,8 +40025,8 @@ LibTalentTree.nodeData = {
                 98800
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35725,8 +40055,8 @@ LibTalentTree.nodeData = {
                 98802
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35756,8 +40086,8 @@ LibTalentTree.nodeData = {
                 98743
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35786,8 +40116,8 @@ LibTalentTree.nodeData = {
                 98805
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35812,7 +40142,7 @@ LibTalentTree.nodeData = {
                 98806
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35841,8 +40171,8 @@ LibTalentTree.nodeData = {
                 98807
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35871,8 +40201,8 @@ LibTalentTree.nodeData = {
                 98808
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35904,8 +40234,8 @@ LibTalentTree.nodeData = {
                 98809
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35934,8 +40264,8 @@ LibTalentTree.nodeData = {
                 98811
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35966,8 +40296,8 @@ LibTalentTree.nodeData = {
                 98812
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -35994,8 +40324,8 @@ LibTalentTree.nodeData = {
                 98814
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36023,8 +40353,8 @@ LibTalentTree.nodeData = {
                 98815
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36054,8 +40384,8 @@ LibTalentTree.nodeData = {
                 98816
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36083,8 +40413,8 @@ LibTalentTree.nodeData = {
                 98817
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36112,8 +40442,8 @@ LibTalentTree.nodeData = {
                 98818
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36140,8 +40470,8 @@ LibTalentTree.nodeData = {
                 98819
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36166,7 +40496,7 @@ LibTalentTree.nodeData = {
                 98820
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36193,7 +40523,7 @@ LibTalentTree.nodeData = {
                 98821
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36222,8 +40552,8 @@ LibTalentTree.nodeData = {
                 98822
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36251,8 +40581,8 @@ LibTalentTree.nodeData = {
                 98823
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36280,8 +40610,8 @@ LibTalentTree.nodeData = {
                 98824
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36307,7 +40637,7 @@ LibTalentTree.nodeData = {
                 98825
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36335,8 +40665,8 @@ LibTalentTree.nodeData = {
                 98826
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36363,8 +40693,8 @@ LibTalentTree.nodeData = {
                 98828
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36392,8 +40722,8 @@ LibTalentTree.nodeData = {
                 98829
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36423,8 +40753,8 @@ LibTalentTree.nodeData = {
                 98830
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36453,8 +40783,8 @@ LibTalentTree.nodeData = {
                 98831
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36479,7 +40809,7 @@ LibTalentTree.nodeData = {
                 98832
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36505,7 +40835,7 @@ LibTalentTree.nodeData = {
                 98833
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36532,7 +40862,7 @@ LibTalentTree.nodeData = {
                 98834
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36559,7 +40889,7 @@ LibTalentTree.nodeData = {
                 98835
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36586,8 +40916,8 @@ LibTalentTree.nodeData = {
                 98837
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36613,7 +40943,7 @@ LibTalentTree.nodeData = {
                 98838
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36641,7 +40971,7 @@ LibTalentTree.nodeData = {
                 98839
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36666,7 +40996,7 @@ LibTalentTree.nodeData = {
                 98841
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36693,7 +41023,7 @@ LibTalentTree.nodeData = {
                 98842
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36719,7 +41049,7 @@ LibTalentTree.nodeData = {
                 98843
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36745,7 +41075,7 @@ LibTalentTree.nodeData = {
                 98844
             },
             ["specInfo"] = {
-                [257] = "visible",
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36774,8 +41104,8 @@ LibTalentTree.nodeData = {
                 98845
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36802,8 +41132,8 @@ LibTalentTree.nodeData = {
                 98847
             },
             ["specInfo"] = {
-                [257] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [257] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36833,8 +41163,8 @@ LibTalentTree.nodeData = {
                 98848
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36863,8 +41193,8 @@ LibTalentTree.nodeData = {
                 98850
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36893,8 +41223,8 @@ LibTalentTree.nodeData = {
                 98851
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36922,8 +41252,8 @@ LibTalentTree.nodeData = {
                 98852
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36950,8 +41280,8 @@ LibTalentTree.nodeData = {
                 98853
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -36978,8 +41308,8 @@ LibTalentTree.nodeData = {
                 98854
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37010,8 +41340,8 @@ LibTalentTree.nodeData = {
                 98855
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37040,8 +41370,8 @@ LibTalentTree.nodeData = {
                 98857
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37069,7 +41399,7 @@ LibTalentTree.nodeData = {
                 98858
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37095,7 +41425,7 @@ LibTalentTree.nodeData = {
                 98860
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37121,7 +41451,7 @@ LibTalentTree.nodeData = {
                 98861
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37147,7 +41477,7 @@ LibTalentTree.nodeData = {
                 98863
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37178,8 +41508,8 @@ LibTalentTree.nodeData = {
                 98746
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37208,8 +41538,8 @@ LibTalentTree.nodeData = {
                 98865
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37237,8 +41567,8 @@ LibTalentTree.nodeData = {
                 98866
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37266,7 +41596,7 @@ LibTalentTree.nodeData = {
                 98747
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37294,8 +41624,8 @@ LibTalentTree.nodeData = {
                 98868
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37321,7 +41651,7 @@ LibTalentTree.nodeData = {
                 98869
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37349,8 +41679,8 @@ LibTalentTree.nodeData = {
                 98871
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37377,8 +41707,8 @@ LibTalentTree.nodeData = {
                 98873
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37403,7 +41733,7 @@ LibTalentTree.nodeData = {
                 98874
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37429,7 +41759,7 @@ LibTalentTree.nodeData = {
                 98875
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37454,7 +41784,7 @@ LibTalentTree.nodeData = {
                 98876
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37481,7 +41811,7 @@ LibTalentTree.nodeData = {
                 98877
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37506,7 +41836,7 @@ LibTalentTree.nodeData = {
                 98878
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37534,7 +41864,7 @@ LibTalentTree.nodeData = {
                 98879
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37560,7 +41890,7 @@ LibTalentTree.nodeData = {
                 98881
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37587,8 +41917,8 @@ LibTalentTree.nodeData = {
                 98882
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37616,8 +41946,8 @@ LibTalentTree.nodeData = {
                 98883
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37646,8 +41976,8 @@ LibTalentTree.nodeData = {
                 98885
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37676,8 +42006,8 @@ LibTalentTree.nodeData = {
                 98886
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -37704,7 +42034,7 @@ LibTalentTree.nodeData = {
                 98888
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -37731,7 +42061,7 @@ LibTalentTree.nodeData = {
                 98889
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -37758,7 +42088,7 @@ LibTalentTree.nodeData = {
                 98890
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -37785,7 +42115,7 @@ LibTalentTree.nodeData = {
                 98891
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -37812,7 +42142,7 @@ LibTalentTree.nodeData = {
                 98892
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -37839,7 +42169,7 @@ LibTalentTree.nodeData = {
                 98893
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -37868,7 +42198,7 @@ LibTalentTree.nodeData = {
                 98894
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -37895,7 +42225,7 @@ LibTalentTree.nodeData = {
                 98896
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -37925,8 +42255,8 @@ LibTalentTree.nodeData = {
                 98897
             },
             ["specInfo"] = {
-                [258] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [258] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -37954,7 +42284,7 @@ LibTalentTree.nodeData = {
                 98899
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -37985,9 +42315,9 @@ LibTalentTree.nodeData = {
                 98900
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [0] = "available",
-                [257] = "visible",
+                [0] = { 0 },
+                [256] = { 1 },
+                [257] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -38012,7 +42342,7 @@ LibTalentTree.nodeData = {
                 98902
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38039,7 +42369,7 @@ LibTalentTree.nodeData = {
                 98903
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38067,7 +42397,7 @@ LibTalentTree.nodeData = {
                 98905
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38094,7 +42424,7 @@ LibTalentTree.nodeData = {
                 98906
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38122,7 +42452,7 @@ LibTalentTree.nodeData = {
                 98907
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38147,7 +42477,7 @@ LibTalentTree.nodeData = {
                 98908
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38172,7 +42502,7 @@ LibTalentTree.nodeData = {
                 98909
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38197,7 +42527,7 @@ LibTalentTree.nodeData = {
                 98910
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38224,7 +42554,7 @@ LibTalentTree.nodeData = {
                 98911
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38250,7 +42580,7 @@ LibTalentTree.nodeData = {
                 98912
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38301,7 +42631,7 @@ LibTalentTree.nodeData = {
                 98914
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38327,7 +42657,7 @@ LibTalentTree.nodeData = {
                 98915
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38352,7 +42682,7 @@ LibTalentTree.nodeData = {
                 98916
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38379,7 +42709,7 @@ LibTalentTree.nodeData = {
                 98917
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38404,7 +42734,7 @@ LibTalentTree.nodeData = {
                 98918
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38431,7 +42761,7 @@ LibTalentTree.nodeData = {
                 98919
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38554,7 +42884,7 @@ LibTalentTree.nodeData = {
                 98924
             },
             ["specInfo"] = {
-                [258] = "visible",
+                [258] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -38579,8 +42909,8 @@ LibTalentTree.nodeData = {
                 98925
             },
             ["specInfo"] = {
-                [256] = "visible",
-                [257] = "visible",
+                [256] = { 1 },
+                [257] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -38683,7 +43013,7 @@ LibTalentTree.nodeData = {
                 98931
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -38759,7 +43089,7 @@ LibTalentTree.nodeData = {
                 98934
             },
             ["specInfo"] = {
-                [258] = "granted",
+                [258] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -38785,8 +43115,8 @@ LibTalentTree.nodeData = {
                 98935
             },
             ["specInfo"] = {
-                [256] = "granted",
-                [258] = "granted",
+                [256] = { 2 },
+                [258] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -38891,8 +43221,8 @@ LibTalentTree.nodeData = {
                 98939
             },
             ["specInfo"] = {
-                [257] = "granted",
-                [256] = "granted",
+                [256] = { 2 },
+                [257] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -38918,7 +43248,7 @@ LibTalentTree.nodeData = {
                 98940
             },
             ["specInfo"] = {
-                [257] = "granted",
+                [257] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -38994,7 +43324,7 @@ LibTalentTree.nodeData = {
                 98943
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -39023,8 +43353,8 @@ LibTalentTree.nodeData = {
                 99521
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -39049,7 +43379,7 @@ LibTalentTree.nodeData = {
                 99527
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -39077,8 +43407,8 @@ LibTalentTree.nodeData = {
                 99528
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -39106,8 +43436,8 @@ LibTalentTree.nodeData = {
                 99529
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -39134,8 +43464,8 @@ LibTalentTree.nodeData = {
                 99530
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -39163,8 +43493,8 @@ LibTalentTree.nodeData = {
                 99523
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -39192,8 +43522,8 @@ LibTalentTree.nodeData = {
                 99532
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -39223,9 +43553,9 @@ LibTalentTree.nodeData = {
                 99533
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -39255,9 +43585,9 @@ LibTalentTree.nodeData = {
                 99534
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39284,8 +43614,8 @@ LibTalentTree.nodeData = {
                 99535
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39314,8 +43644,8 @@ LibTalentTree.nodeData = {
                 99536
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39343,8 +43673,8 @@ LibTalentTree.nodeData = {
                 99538
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39372,8 +43702,8 @@ LibTalentTree.nodeData = {
                 99539
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39400,8 +43730,8 @@ LibTalentTree.nodeData = {
                 99540
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39430,8 +43760,8 @@ LibTalentTree.nodeData = {
                 99541
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39458,8 +43788,8 @@ LibTalentTree.nodeData = {
                 99543
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39486,8 +43816,8 @@ LibTalentTree.nodeData = {
                 99544
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39516,8 +43846,8 @@ LibTalentTree.nodeData = {
                 99545
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39545,8 +43875,8 @@ LibTalentTree.nodeData = {
                 99546
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39577,9 +43907,9 @@ LibTalentTree.nodeData = {
                 99547
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39609,9 +43939,9 @@ LibTalentTree.nodeData = {
                 99548
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39642,9 +43972,9 @@ LibTalentTree.nodeData = {
                 99550
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39672,8 +44002,8 @@ LibTalentTree.nodeData = {
                 99551
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39703,9 +44033,9 @@ LibTalentTree.nodeData = {
                 99552
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39734,9 +44064,9 @@ LibTalentTree.nodeData = {
                 99553
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39766,9 +44096,9 @@ LibTalentTree.nodeData = {
                 99554
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39797,9 +44127,9 @@ LibTalentTree.nodeData = {
                 99555
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39828,9 +44158,9 @@ LibTalentTree.nodeData = {
                 99556
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39860,9 +44190,9 @@ LibTalentTree.nodeData = {
                 99557
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39891,9 +44221,9 @@ LibTalentTree.nodeData = {
                 99559
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39922,9 +44252,9 @@ LibTalentTree.nodeData = {
                 99560
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39955,9 +44285,9 @@ LibTalentTree.nodeData = {
                 99561
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -39986,9 +44316,9 @@ LibTalentTree.nodeData = {
                 99562
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40017,9 +44347,9 @@ LibTalentTree.nodeData = {
                 99563
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40049,9 +44379,9 @@ LibTalentTree.nodeData = {
                 99564
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40082,9 +44412,9 @@ LibTalentTree.nodeData = {
                 99565
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40114,9 +44444,9 @@ LibTalentTree.nodeData = {
                 99566
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40145,9 +44475,9 @@ LibTalentTree.nodeData = {
                 99567
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40177,9 +44507,9 @@ LibTalentTree.nodeData = {
                 99568
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40208,9 +44538,9 @@ LibTalentTree.nodeData = {
                 99570
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40240,9 +44570,9 @@ LibTalentTree.nodeData = {
                 99571
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40272,9 +44602,9 @@ LibTalentTree.nodeData = {
                 99572
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40307,9 +44637,9 @@ LibTalentTree.nodeData = {
                 99573
             },
             ["specInfo"] = {
-                [70] = "granted",
-                [66] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -40339,9 +44669,9 @@ LibTalentTree.nodeData = {
                 99574
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -40374,9 +44704,9 @@ LibTalentTree.nodeData = {
                 99575
             },
             ["specInfo"] = {
-                [70] = "granted",
-                [66] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -40407,9 +44737,9 @@ LibTalentTree.nodeData = {
                 99576
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -40449,10 +44779,10 @@ LibTalentTree.nodeData = {
                 99577
             },
             ["specInfo"] = {
-                [66] = "granted",
-                [70] = "visible",
-                [73] = "granted",
-                [65] = "granted",
+                [65] = { 1, 2 },
+                [66] = { 1, 2 },
+                [70] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -40481,9 +44811,9 @@ LibTalentTree.nodeData = {
                 99578
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40512,9 +44842,9 @@ LibTalentTree.nodeData = {
                 99579
             },
             ["specInfo"] = {
-                [0] = "available",
-                [66] = "visible",
-                [73] = "granted",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40544,9 +44874,9 @@ LibTalentTree.nodeData = {
                 99580
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [73] = "granted",
-                [0] = "available",
+                [0] = { 0 },
+                [66] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = false,
         },
@@ -40573,8 +44903,8 @@ LibTalentTree.nodeData = {
                 99581
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40602,8 +44932,8 @@ LibTalentTree.nodeData = {
                 99582
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40630,8 +44960,8 @@ LibTalentTree.nodeData = {
                 99584
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40657,7 +44987,7 @@ LibTalentTree.nodeData = {
                 99585
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40682,7 +45012,7 @@ LibTalentTree.nodeData = {
                 99586
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40707,7 +45037,7 @@ LibTalentTree.nodeData = {
                 99587
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40734,7 +45064,7 @@ LibTalentTree.nodeData = {
                 99588
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40760,7 +45090,7 @@ LibTalentTree.nodeData = {
                 99589
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40787,8 +45117,8 @@ LibTalentTree.nodeData = {
                 99590
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40815,8 +45145,8 @@ LibTalentTree.nodeData = {
                 99591
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40843,7 +45173,7 @@ LibTalentTree.nodeData = {
                 99592
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40871,8 +45201,8 @@ LibTalentTree.nodeData = {
                 99593
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40899,8 +45229,8 @@ LibTalentTree.nodeData = {
                 99594
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40928,8 +45258,8 @@ LibTalentTree.nodeData = {
                 99595
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40959,8 +45289,8 @@ LibTalentTree.nodeData = {
                 99597
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -40988,8 +45318,8 @@ LibTalentTree.nodeData = {
                 99599
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41016,8 +45346,8 @@ LibTalentTree.nodeData = {
                 99600
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41044,8 +45374,8 @@ LibTalentTree.nodeData = {
                 99601
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41072,8 +45402,8 @@ LibTalentTree.nodeData = {
                 99602
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41098,7 +45428,7 @@ LibTalentTree.nodeData = {
                 99603
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41125,8 +45455,8 @@ LibTalentTree.nodeData = {
                 99604
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41153,7 +45483,7 @@ LibTalentTree.nodeData = {
                 99605
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41180,8 +45510,8 @@ LibTalentTree.nodeData = {
                 99606
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41208,8 +45538,8 @@ LibTalentTree.nodeData = {
                 99607
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41239,8 +45569,8 @@ LibTalentTree.nodeData = {
                 99608
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41268,8 +45598,8 @@ LibTalentTree.nodeData = {
                 99610
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41296,8 +45626,8 @@ LibTalentTree.nodeData = {
                 99611
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41325,8 +45655,8 @@ LibTalentTree.nodeData = {
                 99612
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41353,8 +45683,8 @@ LibTalentTree.nodeData = {
                 99614
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41381,8 +45711,8 @@ LibTalentTree.nodeData = {
                 99615
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41410,8 +45740,8 @@ LibTalentTree.nodeData = {
                 99616
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41438,8 +45768,8 @@ LibTalentTree.nodeData = {
                 99617
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41466,8 +45796,8 @@ LibTalentTree.nodeData = {
                 99618
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41496,8 +45826,8 @@ LibTalentTree.nodeData = {
                 99619
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41526,8 +45856,8 @@ LibTalentTree.nodeData = {
                 99620
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41556,8 +45886,8 @@ LibTalentTree.nodeData = {
                 99622
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41586,8 +45916,8 @@ LibTalentTree.nodeData = {
                 99624
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41615,7 +45945,7 @@ LibTalentTree.nodeData = {
                 99625
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41641,7 +45971,7 @@ LibTalentTree.nodeData = {
                 99627
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41668,7 +45998,7 @@ LibTalentTree.nodeData = {
                 99628
             },
             ["specInfo"] = {
-                [70] = "visible",
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41696,8 +46026,8 @@ LibTalentTree.nodeData = {
                 99629
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41724,8 +46054,8 @@ LibTalentTree.nodeData = {
                 99631
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41753,8 +46083,8 @@ LibTalentTree.nodeData = {
                 99632
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [70] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41781,8 +46111,8 @@ LibTalentTree.nodeData = {
                 99633
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41808,7 +46138,7 @@ LibTalentTree.nodeData = {
                 99634
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41834,7 +46164,7 @@ LibTalentTree.nodeData = {
                 99525
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41863,8 +46193,8 @@ LibTalentTree.nodeData = {
                 99636
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41893,8 +46223,8 @@ LibTalentTree.nodeData = {
                 99638
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41922,7 +46252,7 @@ LibTalentTree.nodeData = {
                 99526
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41948,7 +46278,7 @@ LibTalentTree.nodeData = {
                 99640
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -41974,7 +46304,7 @@ LibTalentTree.nodeData = {
                 99641
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42002,7 +46332,7 @@ LibTalentTree.nodeData = {
                 99642
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42029,8 +46359,8 @@ LibTalentTree.nodeData = {
                 99644
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42058,8 +46388,8 @@ LibTalentTree.nodeData = {
                 99645
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42084,7 +46414,7 @@ LibTalentTree.nodeData = {
                 99646
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42109,7 +46439,7 @@ LibTalentTree.nodeData = {
                 99647
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42136,8 +46466,8 @@ LibTalentTree.nodeData = {
                 99648
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42165,8 +46495,8 @@ LibTalentTree.nodeData = {
                 99649
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42195,8 +46525,8 @@ LibTalentTree.nodeData = {
                 99650
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42223,8 +46553,8 @@ LibTalentTree.nodeData = {
                 99652
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42252,8 +46582,8 @@ LibTalentTree.nodeData = {
                 99653
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42282,8 +46612,8 @@ LibTalentTree.nodeData = {
                 99654
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42309,7 +46639,7 @@ LibTalentTree.nodeData = {
                 99655
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42338,8 +46668,8 @@ LibTalentTree.nodeData = {
                 99656
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42367,8 +46697,8 @@ LibTalentTree.nodeData = {
                 99657
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42395,8 +46725,8 @@ LibTalentTree.nodeData = {
                 99659
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42424,8 +46754,8 @@ LibTalentTree.nodeData = {
                 99660
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42453,8 +46783,8 @@ LibTalentTree.nodeData = {
                 99661
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42481,8 +46811,8 @@ LibTalentTree.nodeData = {
                 99662
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42509,8 +46839,8 @@ LibTalentTree.nodeData = {
                 99663
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42535,7 +46865,7 @@ LibTalentTree.nodeData = {
                 99664
             },
             ["specInfo"] = {
-                [65] = "visible",
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42563,8 +46893,8 @@ LibTalentTree.nodeData = {
                 99524
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42592,8 +46922,8 @@ LibTalentTree.nodeData = {
                 99665
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42620,8 +46950,8 @@ LibTalentTree.nodeData = {
                 99666
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42648,8 +46978,8 @@ LibTalentTree.nodeData = {
                 99667
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42677,8 +47007,8 @@ LibTalentTree.nodeData = {
                 99668
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42705,8 +47035,8 @@ LibTalentTree.nodeData = {
                 99669
             },
             ["specInfo"] = {
-                [65] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42735,8 +47065,8 @@ LibTalentTree.nodeData = {
                 99670
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42765,8 +47095,8 @@ LibTalentTree.nodeData = {
                 99522
             },
             ["specInfo"] = {
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -42799,10 +47129,10 @@ LibTalentTree.nodeData = {
                 99672
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -42833,10 +47163,10 @@ LibTalentTree.nodeData = {
                 99674
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -42867,10 +47197,10 @@ LibTalentTree.nodeData = {
                 99675
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -42901,9 +47231,9 @@ LibTalentTree.nodeData = {
                 99676
             },
             ["specInfo"] = {
-                [66] = "visible",
-                [70] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -42935,10 +47265,10 @@ LibTalentTree.nodeData = {
                 99677
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -42969,10 +47299,10 @@ LibTalentTree.nodeData = {
                 99678
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43003,10 +47333,10 @@ LibTalentTree.nodeData = {
                 99679
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43037,10 +47367,10 @@ LibTalentTree.nodeData = {
                 99680
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43070,9 +47400,9 @@ LibTalentTree.nodeData = {
                 99681
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43104,10 +47434,10 @@ LibTalentTree.nodeData = {
                 99682
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43139,10 +47469,10 @@ LibTalentTree.nodeData = {
                 99683
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43173,10 +47503,10 @@ LibTalentTree.nodeData = {
                 99684
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43209,10 +47539,10 @@ LibTalentTree.nodeData = {
                 99685
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43245,10 +47575,10 @@ LibTalentTree.nodeData = {
                 99687
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43280,10 +47610,10 @@ LibTalentTree.nodeData = {
                 99688
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43314,9 +47644,9 @@ LibTalentTree.nodeData = {
                 99689
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43347,9 +47677,9 @@ LibTalentTree.nodeData = {
                 99691
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43380,10 +47710,10 @@ LibTalentTree.nodeData = {
                 99692
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43414,10 +47744,10 @@ LibTalentTree.nodeData = {
                 99693
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43449,10 +47779,10 @@ LibTalentTree.nodeData = {
                 99694
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43485,10 +47815,10 @@ LibTalentTree.nodeData = {
                 99695
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43521,10 +47851,10 @@ LibTalentTree.nodeData = {
                 99697
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43555,10 +47885,10 @@ LibTalentTree.nodeData = {
                 99699
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43590,10 +47920,10 @@ LibTalentTree.nodeData = {
                 99700
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43624,10 +47954,10 @@ LibTalentTree.nodeData = {
                 99702
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43658,10 +47988,10 @@ LibTalentTree.nodeData = {
                 99703
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43692,10 +48022,10 @@ LibTalentTree.nodeData = {
                 99704
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43727,10 +48057,10 @@ LibTalentTree.nodeData = {
                 99705
             },
             ["specInfo"] = {
-                [0] = "available",
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43762,10 +48092,10 @@ LibTalentTree.nodeData = {
                 99706
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43798,10 +48128,10 @@ LibTalentTree.nodeData = {
                 99707
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43834,10 +48164,10 @@ LibTalentTree.nodeData = {
                 99708
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [0] = "available",
-                [65] = "visible",
+                [0] = { 0 },
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43868,9 +48198,9 @@ LibTalentTree.nodeData = {
                 99709
             },
             ["specInfo"] = {
-                [70] = "visible",
-                [66] = "visible",
-                [65] = "visible",
+                [65] = { 1 },
+                [66] = { 1 },
+                [70] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -43910,10 +48240,10 @@ LibTalentTree.nodeData = {
                 99711
             },
             ["specInfo"] = {
-                [66] = "granted",
-                [70] = "visible",
-                [73] = "granted",
-                [65] = "granted",
+                [65] = { 1, 2 },
+                [66] = { 1, 2 },
+                [70] = { 1 },
+                [73] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -43940,7 +48270,7 @@ LibTalentTree.nodeData = {
                 99850
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -43967,8 +48297,8 @@ LibTalentTree.nodeData = {
                 99851
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44043,8 +48373,8 @@ LibTalentTree.nodeData = {
                 99856
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44069,7 +48399,7 @@ LibTalentTree.nodeData = {
                 99857
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44096,7 +48426,7 @@ LibTalentTree.nodeData = {
                 99858
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44123,8 +48453,8 @@ LibTalentTree.nodeData = {
                 99859
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44152,7 +48482,7 @@ LibTalentTree.nodeData = {
                 99860
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44180,8 +48510,8 @@ LibTalentTree.nodeData = {
                 99862
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44206,7 +48536,7 @@ LibTalentTree.nodeData = {
                 99864
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44234,8 +48564,8 @@ LibTalentTree.nodeData = {
                 99865
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44264,8 +48594,8 @@ LibTalentTree.nodeData = {
                 99866
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44292,8 +48622,8 @@ LibTalentTree.nodeData = {
                 99867
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44321,8 +48651,8 @@ LibTalentTree.nodeData = {
                 99868
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44351,8 +48681,8 @@ LibTalentTree.nodeData = {
                 99869
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44381,8 +48711,8 @@ LibTalentTree.nodeData = {
                 99870
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44411,8 +48741,8 @@ LibTalentTree.nodeData = {
                 99871
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44442,8 +48772,8 @@ LibTalentTree.nodeData = {
                 99872
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44472,8 +48802,8 @@ LibTalentTree.nodeData = {
                 99873
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44501,8 +48831,8 @@ LibTalentTree.nodeData = {
                 99874
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44530,8 +48860,8 @@ LibTalentTree.nodeData = {
                 99875
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44560,8 +48890,8 @@ LibTalentTree.nodeData = {
                 99876
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44591,8 +48921,8 @@ LibTalentTree.nodeData = {
                 99877
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44622,8 +48952,8 @@ LibTalentTree.nodeData = {
                 99878
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44652,8 +48982,8 @@ LibTalentTree.nodeData = {
                 99880
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44682,8 +49012,8 @@ LibTalentTree.nodeData = {
                 99881
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44712,8 +49042,8 @@ LibTalentTree.nodeData = {
                 99882
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44743,8 +49073,8 @@ LibTalentTree.nodeData = {
                 99883
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44774,8 +49104,8 @@ LibTalentTree.nodeData = {
                 99885
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44802,8 +49132,8 @@ LibTalentTree.nodeData = {
                 99886
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44831,8 +49161,8 @@ LibTalentTree.nodeData = {
                 99887
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44858,7 +49188,7 @@ LibTalentTree.nodeData = {
                 99888
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44886,8 +49216,8 @@ LibTalentTree.nodeData = {
                 99890
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44915,8 +49245,8 @@ LibTalentTree.nodeData = {
                 99891
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44946,8 +49276,8 @@ LibTalentTree.nodeData = {
                 99892
             },
             ["specInfo"] = {
-                [0] = "available",
-                [577] = "visible",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -44974,8 +49304,8 @@ LibTalentTree.nodeData = {
                 99893
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45002,8 +49332,8 @@ LibTalentTree.nodeData = {
                 99894
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45030,8 +49360,8 @@ LibTalentTree.nodeData = {
                 99895
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45059,8 +49389,8 @@ LibTalentTree.nodeData = {
                 99896
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45089,8 +49419,8 @@ LibTalentTree.nodeData = {
                 99897
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45118,8 +49448,8 @@ LibTalentTree.nodeData = {
                 99898
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45146,8 +49476,8 @@ LibTalentTree.nodeData = {
                 99900
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45175,8 +49505,8 @@ LibTalentTree.nodeData = {
                 99901
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45203,8 +49533,8 @@ LibTalentTree.nodeData = {
                 99902
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45231,8 +49561,8 @@ LibTalentTree.nodeData = {
                 99903
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45259,8 +49589,8 @@ LibTalentTree.nodeData = {
                 99904
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45288,8 +49618,8 @@ LibTalentTree.nodeData = {
                 99905
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45318,8 +49648,8 @@ LibTalentTree.nodeData = {
                 99906
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45346,8 +49676,8 @@ LibTalentTree.nodeData = {
                 99907
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45374,8 +49704,8 @@ LibTalentTree.nodeData = {
                 99908
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45402,8 +49732,8 @@ LibTalentTree.nodeData = {
                 99909
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45431,8 +49761,8 @@ LibTalentTree.nodeData = {
                 99910
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45461,8 +49791,8 @@ LibTalentTree.nodeData = {
                 99911
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45490,8 +49820,8 @@ LibTalentTree.nodeData = {
                 99912
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45520,8 +49850,8 @@ LibTalentTree.nodeData = {
                 99913
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45548,8 +49878,8 @@ LibTalentTree.nodeData = {
                 99914
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45576,7 +49906,7 @@ LibTalentTree.nodeData = {
                 99915
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45602,7 +49932,7 @@ LibTalentTree.nodeData = {
                 99916
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45627,7 +49957,7 @@ LibTalentTree.nodeData = {
                 99917
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45655,8 +49985,8 @@ LibTalentTree.nodeData = {
                 99918
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45683,7 +50013,7 @@ LibTalentTree.nodeData = {
                 99919
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45709,7 +50039,7 @@ LibTalentTree.nodeData = {
                 99920
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45735,7 +50065,7 @@ LibTalentTree.nodeData = {
                 99921
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45761,7 +50091,7 @@ LibTalentTree.nodeData = {
                 99922
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45787,7 +50117,7 @@ LibTalentTree.nodeData = {
                 99923
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45812,7 +50142,7 @@ LibTalentTree.nodeData = {
                 99924
             },
             ["specInfo"] = {
-                [581] = "visible",
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45839,8 +50169,8 @@ LibTalentTree.nodeData = {
                 99925
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45867,8 +50197,8 @@ LibTalentTree.nodeData = {
                 99926
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45896,8 +50226,8 @@ LibTalentTree.nodeData = {
                 99927
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45924,8 +50254,8 @@ LibTalentTree.nodeData = {
                 99928
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45952,8 +50282,8 @@ LibTalentTree.nodeData = {
                 99929
             },
             ["specInfo"] = {
-                [581] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [581] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -45980,7 +50310,7 @@ LibTalentTree.nodeData = {
                 99930
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46007,7 +50337,7 @@ LibTalentTree.nodeData = {
                 99931
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46034,7 +50364,7 @@ LibTalentTree.nodeData = {
                 99932
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46059,7 +50389,7 @@ LibTalentTree.nodeData = {
                 99933
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46084,7 +50414,7 @@ LibTalentTree.nodeData = {
                 99934
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46109,7 +50439,7 @@ LibTalentTree.nodeData = {
                 99935
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46137,7 +50467,7 @@ LibTalentTree.nodeData = {
                 99936
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46165,8 +50495,8 @@ LibTalentTree.nodeData = {
                 99937
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46194,8 +50524,8 @@ LibTalentTree.nodeData = {
                 99938
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46222,7 +50552,7 @@ LibTalentTree.nodeData = {
                 99939
             },
             ["specInfo"] = {
-                [577] = "visible",
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46250,8 +50580,8 @@ LibTalentTree.nodeData = {
                 99940
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46278,8 +50608,8 @@ LibTalentTree.nodeData = {
                 99941
             },
             ["specInfo"] = {
-                [577] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [577] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -46306,7 +50636,7 @@ LibTalentTree.nodeData = {
                 99942
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46333,7 +50663,7 @@ LibTalentTree.nodeData = {
                 99943
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46361,7 +50691,7 @@ LibTalentTree.nodeData = {
                 99944
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46386,7 +50716,7 @@ LibTalentTree.nodeData = {
                 99946
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46414,7 +50744,7 @@ LibTalentTree.nodeData = {
                 99852
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46442,7 +50772,7 @@ LibTalentTree.nodeData = {
                 99948
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46470,7 +50800,7 @@ LibTalentTree.nodeData = {
                 99950
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46497,7 +50827,7 @@ LibTalentTree.nodeData = {
                 99952
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46525,7 +50855,7 @@ LibTalentTree.nodeData = {
                 99953
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46652,7 +50982,7 @@ LibTalentTree.nodeData = {
                 99958
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46679,7 +51009,7 @@ LibTalentTree.nodeData = {
                 99959
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46707,7 +51037,7 @@ LibTalentTree.nodeData = {
                 99961
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46734,7 +51064,7 @@ LibTalentTree.nodeData = {
                 99962
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46761,7 +51091,7 @@ LibTalentTree.nodeData = {
                 99963
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46788,7 +51118,7 @@ LibTalentTree.nodeData = {
                 99964
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46815,7 +51145,7 @@ LibTalentTree.nodeData = {
                 99965
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46842,7 +51172,7 @@ LibTalentTree.nodeData = {
                 99966
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46868,7 +51198,7 @@ LibTalentTree.nodeData = {
                 99967
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46893,7 +51223,7 @@ LibTalentTree.nodeData = {
                 99969
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -46918,7 +51248,7 @@ LibTalentTree.nodeData = {
                 99970
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -47019,7 +51349,7 @@ LibTalentTree.nodeData = {
                 99974
             },
             ["specInfo"] = {
-                [581] = "granted",
+                [581] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -47144,7 +51474,7 @@ LibTalentTree.nodeData = {
                 99979
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -47170,7 +51500,7 @@ LibTalentTree.nodeData = {
                 99980
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -47196,7 +51526,7 @@ LibTalentTree.nodeData = {
                 99981
             },
             ["specInfo"] = {
-                [577] = "granted",
+                [577] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -47272,7 +51602,7 @@ LibTalentTree.nodeData = {
                 99984
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -47297,7 +51627,7 @@ LibTalentTree.nodeData = {
                 99985
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -47324,7 +51654,7 @@ LibTalentTree.nodeData = {
                 99986
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -47351,7 +51681,7 @@ LibTalentTree.nodeData = {
                 99987
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -47378,7 +51708,7 @@ LibTalentTree.nodeData = {
                 100163
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -47403,7 +51733,7 @@ LibTalentTree.nodeData = {
                 100168
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -47429,7 +51759,7 @@ LibTalentTree.nodeData = {
                 100169
             },
             ["specInfo"] = {
-                [259] = "visible",
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47456,8 +51786,8 @@ LibTalentTree.nodeData = {
                 100170
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47484,8 +51814,8 @@ LibTalentTree.nodeData = {
                 100171
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47512,8 +51842,8 @@ LibTalentTree.nodeData = {
                 100172
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47542,8 +51872,8 @@ LibTalentTree.nodeData = {
                 100173
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47572,8 +51902,8 @@ LibTalentTree.nodeData = {
                 100174
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47600,8 +51930,8 @@ LibTalentTree.nodeData = {
                 100175
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47630,8 +51960,8 @@ LibTalentTree.nodeData = {
                 100176
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47658,8 +51988,8 @@ LibTalentTree.nodeData = {
                 100177
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47686,8 +52016,8 @@ LibTalentTree.nodeData = {
                 100178
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47716,8 +52046,8 @@ LibTalentTree.nodeData = {
                 100179
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47746,8 +52076,8 @@ LibTalentTree.nodeData = {
                 100180
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47775,8 +52105,8 @@ LibTalentTree.nodeData = {
                 100181
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47805,8 +52135,8 @@ LibTalentTree.nodeData = {
                 100182
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47833,8 +52163,8 @@ LibTalentTree.nodeData = {
                 100183
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47862,8 +52192,8 @@ LibTalentTree.nodeData = {
                 100184
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47892,8 +52222,8 @@ LibTalentTree.nodeData = {
                 100185
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47923,8 +52253,8 @@ LibTalentTree.nodeData = {
                 100186
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47953,8 +52283,8 @@ LibTalentTree.nodeData = {
                 100187
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -47983,8 +52313,8 @@ LibTalentTree.nodeData = {
                 100188
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48014,8 +52344,8 @@ LibTalentTree.nodeData = {
                 100165
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48042,8 +52372,8 @@ LibTalentTree.nodeData = {
                 100190
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48070,8 +52400,8 @@ LibTalentTree.nodeData = {
                 100191
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48099,8 +52429,8 @@ LibTalentTree.nodeData = {
                 100192
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48129,8 +52459,8 @@ LibTalentTree.nodeData = {
                 100193
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48157,8 +52487,8 @@ LibTalentTree.nodeData = {
                 100194
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48184,7 +52514,7 @@ LibTalentTree.nodeData = {
                 100195
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48211,8 +52541,8 @@ LibTalentTree.nodeData = {
                 100196
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48238,7 +52568,7 @@ LibTalentTree.nodeData = {
                 100197
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48266,8 +52596,8 @@ LibTalentTree.nodeData = {
                 100198
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48296,8 +52626,8 @@ LibTalentTree.nodeData = {
                 100199
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48326,8 +52656,8 @@ LibTalentTree.nodeData = {
                 100200
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48356,8 +52686,8 @@ LibTalentTree.nodeData = {
                 100201
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48384,8 +52714,8 @@ LibTalentTree.nodeData = {
                 100202
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48410,7 +52740,7 @@ LibTalentTree.nodeData = {
                 100203
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48437,8 +52767,8 @@ LibTalentTree.nodeData = {
                 100204
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48467,8 +52797,8 @@ LibTalentTree.nodeData = {
                 100205
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48497,8 +52827,8 @@ LibTalentTree.nodeData = {
                 100206
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48527,8 +52857,8 @@ LibTalentTree.nodeData = {
                 100207
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48558,8 +52888,8 @@ LibTalentTree.nodeData = {
                 100166
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48587,8 +52917,8 @@ LibTalentTree.nodeData = {
                 100209
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48615,8 +52945,8 @@ LibTalentTree.nodeData = {
                 100210
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48643,8 +52973,8 @@ LibTalentTree.nodeData = {
                 100211
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48672,8 +53002,8 @@ LibTalentTree.nodeData = {
                 100212
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48700,8 +53030,8 @@ LibTalentTree.nodeData = {
                 100213
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48726,7 +53056,7 @@ LibTalentTree.nodeData = {
                 100214
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48753,8 +53083,8 @@ LibTalentTree.nodeData = {
                 100215
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48781,8 +53111,8 @@ LibTalentTree.nodeData = {
                 100216
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48809,8 +53139,8 @@ LibTalentTree.nodeData = {
                 100217
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48838,8 +53168,8 @@ LibTalentTree.nodeData = {
                 100218
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48868,8 +53198,8 @@ LibTalentTree.nodeData = {
                 100219
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48896,7 +53226,7 @@ LibTalentTree.nodeData = {
                 100220
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48921,7 +53251,7 @@ LibTalentTree.nodeData = {
                 100221
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48948,7 +53278,7 @@ LibTalentTree.nodeData = {
                 100222
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48974,7 +53304,7 @@ LibTalentTree.nodeData = {
                 100223
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -48999,7 +53329,7 @@ LibTalentTree.nodeData = {
                 100224
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49026,7 +53356,7 @@ LibTalentTree.nodeData = {
                 100225
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49052,7 +53382,7 @@ LibTalentTree.nodeData = {
                 100226
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49077,7 +53407,7 @@ LibTalentTree.nodeData = {
                 100227
             },
             ["specInfo"] = {
-                [260] = "visible",
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49105,8 +53435,8 @@ LibTalentTree.nodeData = {
                 100228
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49133,8 +53463,8 @@ LibTalentTree.nodeData = {
                 100229
             },
             ["specInfo"] = {
-                [260] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [260] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49163,8 +53493,8 @@ LibTalentTree.nodeData = {
                 100230
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49189,7 +53519,7 @@ LibTalentTree.nodeData = {
                 100231
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49216,8 +53546,8 @@ LibTalentTree.nodeData = {
                 100232
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49244,8 +53574,8 @@ LibTalentTree.nodeData = {
                 100233
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49270,7 +53600,7 @@ LibTalentTree.nodeData = {
                 100234
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49299,8 +53629,8 @@ LibTalentTree.nodeData = {
                 100235
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49329,8 +53659,8 @@ LibTalentTree.nodeData = {
                 100236
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49359,8 +53689,8 @@ LibTalentTree.nodeData = {
                 100237
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49387,8 +53717,8 @@ LibTalentTree.nodeData = {
                 100238
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49415,8 +53745,8 @@ LibTalentTree.nodeData = {
                 100239
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49443,8 +53773,8 @@ LibTalentTree.nodeData = {
                 100240
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49473,8 +53803,8 @@ LibTalentTree.nodeData = {
                 100241
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49503,8 +53833,8 @@ LibTalentTree.nodeData = {
                 100242
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49533,8 +53863,8 @@ LibTalentTree.nodeData = {
                 100243
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49562,8 +53892,8 @@ LibTalentTree.nodeData = {
                 100244
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49592,8 +53922,8 @@ LibTalentTree.nodeData = {
                 100245
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49620,8 +53950,8 @@ LibTalentTree.nodeData = {
                 100246
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49647,7 +53977,7 @@ LibTalentTree.nodeData = {
                 100247
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49673,7 +54003,7 @@ LibTalentTree.nodeData = {
                 100248
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49701,8 +54031,8 @@ LibTalentTree.nodeData = {
                 100249
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49730,8 +54060,8 @@ LibTalentTree.nodeData = {
                 100250
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49758,8 +54088,8 @@ LibTalentTree.nodeData = {
                 100251
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49786,8 +54116,8 @@ LibTalentTree.nodeData = {
                 100252
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49816,8 +54146,8 @@ LibTalentTree.nodeData = {
                 100253
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49846,8 +54176,8 @@ LibTalentTree.nodeData = {
                 100254
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49876,8 +54206,8 @@ LibTalentTree.nodeData = {
                 100255
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49904,8 +54234,8 @@ LibTalentTree.nodeData = {
                 100256
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49934,8 +54264,8 @@ LibTalentTree.nodeData = {
                 100257
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49962,8 +54292,8 @@ LibTalentTree.nodeData = {
                 100258
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -49992,8 +54322,8 @@ LibTalentTree.nodeData = {
                 100259
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50020,7 +54350,7 @@ LibTalentTree.nodeData = {
                 100260
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50045,7 +54375,7 @@ LibTalentTree.nodeData = {
                 100261
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50070,7 +54400,7 @@ LibTalentTree.nodeData = {
                 100262
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50096,7 +54426,7 @@ LibTalentTree.nodeData = {
                 100263
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50123,8 +54453,8 @@ LibTalentTree.nodeData = {
                 100264
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50151,7 +54481,7 @@ LibTalentTree.nodeData = {
                 100265
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50176,7 +54506,7 @@ LibTalentTree.nodeData = {
                 100266
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50202,7 +54532,7 @@ LibTalentTree.nodeData = {
                 100267
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50228,7 +54558,7 @@ LibTalentTree.nodeData = {
                 100268
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50254,7 +54584,7 @@ LibTalentTree.nodeData = {
                 100269
             },
             ["specInfo"] = {
-                [261] = "visible",
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50281,8 +54611,8 @@ LibTalentTree.nodeData = {
                 100270
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50310,8 +54640,8 @@ LibTalentTree.nodeData = {
                 100271
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50339,8 +54669,8 @@ LibTalentTree.nodeData = {
                 100272
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50368,8 +54698,8 @@ LibTalentTree.nodeData = {
                 100273
             },
             ["specInfo"] = {
-                [261] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [261] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50396,8 +54726,8 @@ LibTalentTree.nodeData = {
                 100274
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50423,7 +54753,7 @@ LibTalentTree.nodeData = {
                 100275
             },
             ["specInfo"] = {
-                [259] = "visible",
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50452,8 +54782,8 @@ LibTalentTree.nodeData = {
                 100276
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50478,7 +54808,7 @@ LibTalentTree.nodeData = {
                 100277
             },
             ["specInfo"] = {
-                [259] = "visible",
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50504,7 +54834,7 @@ LibTalentTree.nodeData = {
                 100278
             },
             ["specInfo"] = {
-                [259] = "visible",
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50531,8 +54861,8 @@ LibTalentTree.nodeData = {
                 100279
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50561,8 +54891,8 @@ LibTalentTree.nodeData = {
                 100280
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50591,8 +54921,8 @@ LibTalentTree.nodeData = {
                 100281
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50617,7 +54947,7 @@ LibTalentTree.nodeData = {
                 100282
             },
             ["specInfo"] = {
-                [259] = "visible",
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50644,8 +54974,8 @@ LibTalentTree.nodeData = {
                 100283
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50672,7 +55002,7 @@ LibTalentTree.nodeData = {
                 100284
             },
             ["specInfo"] = {
-                [259] = "visible",
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50701,8 +55031,8 @@ LibTalentTree.nodeData = {
                 100285
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50729,7 +55059,7 @@ LibTalentTree.nodeData = {
                 100286
             },
             ["specInfo"] = {
-                [259] = "visible",
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50755,7 +55085,7 @@ LibTalentTree.nodeData = {
                 100287
             },
             ["specInfo"] = {
-                [259] = "visible",
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50780,7 +55110,7 @@ LibTalentTree.nodeData = {
                 100288
             },
             ["specInfo"] = {
-                [259] = "visible",
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50809,8 +55139,8 @@ LibTalentTree.nodeData = {
                 100289
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50838,8 +55168,8 @@ LibTalentTree.nodeData = {
                 100290
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50867,8 +55197,8 @@ LibTalentTree.nodeData = {
                 100291
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50895,8 +55225,8 @@ LibTalentTree.nodeData = {
                 100292
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50926,8 +55256,8 @@ LibTalentTree.nodeData = {
                 100167
             },
             ["specInfo"] = {
-                [259] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [259] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -50953,7 +55283,7 @@ LibTalentTree.nodeData = {
                 100294
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -50980,7 +55310,7 @@ LibTalentTree.nodeData = {
                 100295
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51007,7 +55337,7 @@ LibTalentTree.nodeData = {
                 100296
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51034,7 +55364,7 @@ LibTalentTree.nodeData = {
                 100297
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51060,7 +55390,7 @@ LibTalentTree.nodeData = {
                 100298
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51087,7 +55417,7 @@ LibTalentTree.nodeData = {
                 100299
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51114,7 +55444,7 @@ LibTalentTree.nodeData = {
                 100300
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51141,7 +55471,7 @@ LibTalentTree.nodeData = {
                 100301
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51168,7 +55498,7 @@ LibTalentTree.nodeData = {
                 100302
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51195,7 +55525,7 @@ LibTalentTree.nodeData = {
                 100303
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51222,7 +55552,7 @@ LibTalentTree.nodeData = {
                 100304
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51271,7 +55601,7 @@ LibTalentTree.nodeData = {
                 100306
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51297,7 +55627,7 @@ LibTalentTree.nodeData = {
                 100307
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51324,7 +55654,7 @@ LibTalentTree.nodeData = {
                 100308
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51351,7 +55681,7 @@ LibTalentTree.nodeData = {
                 100309
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51376,7 +55706,7 @@ LibTalentTree.nodeData = {
                 100310
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51425,7 +55755,7 @@ LibTalentTree.nodeData = {
                 100312
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51452,7 +55782,7 @@ LibTalentTree.nodeData = {
                 100313
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51478,7 +55808,7 @@ LibTalentTree.nodeData = {
                 100162
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51505,7 +55835,7 @@ LibTalentTree.nodeData = {
                 100315
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51532,7 +55862,7 @@ LibTalentTree.nodeData = {
                 100316
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51557,7 +55887,7 @@ LibTalentTree.nodeData = {
                 100317
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51584,7 +55914,7 @@ LibTalentTree.nodeData = {
                 100318
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51609,7 +55939,7 @@ LibTalentTree.nodeData = {
                 100319
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51634,7 +55964,7 @@ LibTalentTree.nodeData = {
                 100320
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51684,7 +56014,7 @@ LibTalentTree.nodeData = {
                 100322
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51735,7 +56065,7 @@ LibTalentTree.nodeData = {
                 100324
             },
             ["specInfo"] = {
-                [259] = "granted",
+                [259] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -51811,7 +56141,7 @@ LibTalentTree.nodeData = {
                 100327
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51837,7 +56167,7 @@ LibTalentTree.nodeData = {
                 100328
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51862,7 +56192,7 @@ LibTalentTree.nodeData = {
                 100329
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -51912,7 +56242,7 @@ LibTalentTree.nodeData = {
                 100331
             },
             ["specInfo"] = {
-                [261] = "granted",
+                [261] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -51989,7 +56319,7 @@ LibTalentTree.nodeData = {
                 100334
             },
             ["specInfo"] = {
-                [260] = "granted",
+                [260] = { 2 },
             },
             ["isClassNode"] = true,
         },
@@ -52047,8 +56377,8 @@ LibTalentTree.nodeData = {
                 100511
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52075,7 +56405,7 @@ LibTalentTree.nodeData = {
                 100513
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -52102,7 +56432,7 @@ LibTalentTree.nodeData = {
                 100514
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -52131,8 +56461,8 @@ LibTalentTree.nodeData = {
                 100515
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52161,8 +56491,8 @@ LibTalentTree.nodeData = {
                 100517
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52190,7 +56520,7 @@ LibTalentTree.nodeData = {
                 100518
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -52216,7 +56546,7 @@ LibTalentTree.nodeData = {
                 100520
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -52244,7 +56574,7 @@ LibTalentTree.nodeData = {
                 100521
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -52297,8 +56627,8 @@ LibTalentTree.nodeData = {
                 100524
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52327,8 +56657,8 @@ LibTalentTree.nodeData = {
                 100527
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52357,8 +56687,8 @@ LibTalentTree.nodeData = {
                 100528
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52387,8 +56717,8 @@ LibTalentTree.nodeData = {
                 100529
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52416,8 +56746,8 @@ LibTalentTree.nodeData = {
                 100530
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52444,8 +56774,8 @@ LibTalentTree.nodeData = {
                 100531
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52472,8 +56802,8 @@ LibTalentTree.nodeData = {
                 100532
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52502,8 +56832,8 @@ LibTalentTree.nodeData = {
                 100533
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52532,8 +56862,8 @@ LibTalentTree.nodeData = {
                 100534
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52561,8 +56891,8 @@ LibTalentTree.nodeData = {
                 100535
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52587,7 +56917,7 @@ LibTalentTree.nodeData = {
                 100536
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -52612,7 +56942,7 @@ LibTalentTree.nodeData = {
                 100537
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -52639,7 +56969,7 @@ LibTalentTree.nodeData = {
                 100538
             },
             ["specInfo"] = {
-                [254] = "granted",
+                [254] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -52664,7 +56994,7 @@ LibTalentTree.nodeData = {
                 100539
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -52690,7 +57020,7 @@ LibTalentTree.nodeData = {
                 100540
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -52716,7 +57046,7 @@ LibTalentTree.nodeData = {
                 100543
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -52741,7 +57071,7 @@ LibTalentTree.nodeData = {
                 100541
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -52768,7 +57098,7 @@ LibTalentTree.nodeData = {
                 100542
             },
             ["specInfo"] = {
-                [255] = "granted",
+                [255] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -52797,8 +57127,8 @@ LibTalentTree.nodeData = {
                 100544
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52826,8 +57156,8 @@ LibTalentTree.nodeData = {
                 100545
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52854,7 +57184,7 @@ LibTalentTree.nodeData = {
                 100546
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52882,8 +57212,8 @@ LibTalentTree.nodeData = {
                 100547
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52911,8 +57241,8 @@ LibTalentTree.nodeData = {
                 100548
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52939,7 +57269,7 @@ LibTalentTree.nodeData = {
                 100549
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52966,8 +57296,8 @@ LibTalentTree.nodeData = {
                 100550
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -52994,7 +57324,7 @@ LibTalentTree.nodeData = {
                 100551
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53023,8 +57353,8 @@ LibTalentTree.nodeData = {
                 100552
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53050,7 +57380,7 @@ LibTalentTree.nodeData = {
                 100554
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53078,8 +57408,8 @@ LibTalentTree.nodeData = {
                 100555
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53106,8 +57436,8 @@ LibTalentTree.nodeData = {
                 100556
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53136,8 +57466,8 @@ LibTalentTree.nodeData = {
                 100557
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53164,8 +57494,8 @@ LibTalentTree.nodeData = {
                 100558
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53195,8 +57525,8 @@ LibTalentTree.nodeData = {
                 100559
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53222,7 +57552,7 @@ LibTalentTree.nodeData = {
                 100560
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53250,8 +57580,8 @@ LibTalentTree.nodeData = {
                 100561
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53277,7 +57607,7 @@ LibTalentTree.nodeData = {
                 100562
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53306,8 +57636,8 @@ LibTalentTree.nodeData = {
                 100563
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53334,7 +57664,7 @@ LibTalentTree.nodeData = {
                 100564
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53360,7 +57690,7 @@ LibTalentTree.nodeData = {
                 100565
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53388,8 +57718,8 @@ LibTalentTree.nodeData = {
                 100566
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53414,7 +57744,7 @@ LibTalentTree.nodeData = {
                 100567
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53441,7 +57771,7 @@ LibTalentTree.nodeData = {
                 100568
             },
             ["specInfo"] = {
-                [255] = "visible",
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53471,8 +57801,8 @@ LibTalentTree.nodeData = {
                 100510
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53503,8 +57833,8 @@ LibTalentTree.nodeData = {
                 100570
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53533,8 +57863,8 @@ LibTalentTree.nodeData = {
                 100571
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53562,8 +57892,8 @@ LibTalentTree.nodeData = {
                 100572
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53593,8 +57923,8 @@ LibTalentTree.nodeData = {
                 100573
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53623,8 +57953,8 @@ LibTalentTree.nodeData = {
                 100574
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53653,8 +57983,8 @@ LibTalentTree.nodeData = {
                 100575
             },
             ["specInfo"] = {
-                [255] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [255] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53679,7 +58009,7 @@ LibTalentTree.nodeData = {
                 100576
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53706,8 +58036,8 @@ LibTalentTree.nodeData = {
                 100577
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53734,7 +58064,7 @@ LibTalentTree.nodeData = {
                 100578
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53763,8 +58093,8 @@ LibTalentTree.nodeData = {
                 100579
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53792,8 +58122,8 @@ LibTalentTree.nodeData = {
                 100580
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53823,8 +58153,8 @@ LibTalentTree.nodeData = {
                 100581
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53851,7 +58181,7 @@ LibTalentTree.nodeData = {
                 100582
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53878,8 +58208,8 @@ LibTalentTree.nodeData = {
                 100583
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53905,7 +58235,7 @@ LibTalentTree.nodeData = {
                 100584
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53931,7 +58261,7 @@ LibTalentTree.nodeData = {
                 100585
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53959,8 +58289,8 @@ LibTalentTree.nodeData = {
                 100586
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -53990,8 +58320,8 @@ LibTalentTree.nodeData = {
                 100587
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54019,8 +58349,8 @@ LibTalentTree.nodeData = {
                 100588
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54049,8 +58379,8 @@ LibTalentTree.nodeData = {
                 100589
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54079,8 +58409,8 @@ LibTalentTree.nodeData = {
                 100590
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54108,8 +58438,8 @@ LibTalentTree.nodeData = {
                 100591
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54138,8 +58468,8 @@ LibTalentTree.nodeData = {
                 100592
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54166,7 +58496,7 @@ LibTalentTree.nodeData = {
                 100593
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54193,8 +58523,8 @@ LibTalentTree.nodeData = {
                 100594
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54223,8 +58553,8 @@ LibTalentTree.nodeData = {
                 100595
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54252,8 +58582,8 @@ LibTalentTree.nodeData = {
                 100596
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54280,8 +58610,8 @@ LibTalentTree.nodeData = {
                 100597
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54307,7 +58637,7 @@ LibTalentTree.nodeData = {
                 100598
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54336,8 +58666,8 @@ LibTalentTree.nodeData = {
                 100599
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54364,7 +58694,7 @@ LibTalentTree.nodeData = {
                 100600
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54393,8 +58723,8 @@ LibTalentTree.nodeData = {
                 100601
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54422,8 +58752,8 @@ LibTalentTree.nodeData = {
                 100602
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54448,7 +58778,7 @@ LibTalentTree.nodeData = {
                 100604
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54477,8 +58807,8 @@ LibTalentTree.nodeData = {
                 100605
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54504,7 +58834,7 @@ LibTalentTree.nodeData = {
                 100606
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54533,8 +58863,8 @@ LibTalentTree.nodeData = {
                 100607
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54564,8 +58894,8 @@ LibTalentTree.nodeData = {
                 100608
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54597,8 +58927,8 @@ LibTalentTree.nodeData = {
                 100610
             },
             ["specInfo"] = {
-                [254] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54626,7 +58956,7 @@ LibTalentTree.nodeData = {
                 100613
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54653,7 +58983,7 @@ LibTalentTree.nodeData = {
                 100615
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54705,7 +59035,7 @@ LibTalentTree.nodeData = {
                 100617
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54732,7 +59062,7 @@ LibTalentTree.nodeData = {
                 100618
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54757,7 +59087,7 @@ LibTalentTree.nodeData = {
                 100619
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54783,7 +59113,7 @@ LibTalentTree.nodeData = {
                 100620
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54811,7 +59141,7 @@ LibTalentTree.nodeData = {
                 100622
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54837,7 +59167,7 @@ LibTalentTree.nodeData = {
                 100624
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = true,
         },
@@ -54866,7 +59196,7 @@ LibTalentTree.nodeData = {
                 100625
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54894,7 +59224,7 @@ LibTalentTree.nodeData = {
                 100526
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54920,7 +59250,7 @@ LibTalentTree.nodeData = {
                 100627
             },
             ["specInfo"] = {
-                [254] = "visible",
+                [254] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54948,7 +59278,7 @@ LibTalentTree.nodeData = {
                 100628
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -54973,7 +59303,7 @@ LibTalentTree.nodeData = {
                 100630
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -54999,7 +59329,7 @@ LibTalentTree.nodeData = {
                 100631
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55024,7 +59354,7 @@ LibTalentTree.nodeData = {
                 100632
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55050,7 +59380,7 @@ LibTalentTree.nodeData = {
                 100633
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55106,7 +59436,7 @@ LibTalentTree.nodeData = {
                 100635
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55132,7 +59462,7 @@ LibTalentTree.nodeData = {
                 100636
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55209,7 +59539,7 @@ LibTalentTree.nodeData = {
                 100639
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55234,7 +59564,7 @@ LibTalentTree.nodeData = {
                 100640
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55287,7 +59617,7 @@ LibTalentTree.nodeData = {
                 100642
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55365,7 +59695,7 @@ LibTalentTree.nodeData = {
                 100645
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55391,7 +59721,7 @@ LibTalentTree.nodeData = {
                 100646
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55416,7 +59746,7 @@ LibTalentTree.nodeData = {
                 100647
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55443,7 +59773,7 @@ LibTalentTree.nodeData = {
                 100648
             },
             ["specInfo"] = {
-                [253] = "granted",
+                [253] = { 1, 2 },
             },
             ["isClassNode"] = true,
         },
@@ -55495,7 +59825,7 @@ LibTalentTree.nodeData = {
                 100650
             },
             ["specInfo"] = {
-                [0] = "available",
+                [0] = { 0 },
             },
             ["isClassNode"] = true,
         },
@@ -55524,8 +59854,8 @@ LibTalentTree.nodeData = {
                 100652
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55550,7 +59880,7 @@ LibTalentTree.nodeData = {
                 100653
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55579,8 +59909,8 @@ LibTalentTree.nodeData = {
                 100654
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55608,8 +59938,8 @@ LibTalentTree.nodeData = {
                 100655
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55637,8 +59967,8 @@ LibTalentTree.nodeData = {
                 100656
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55666,8 +59996,8 @@ LibTalentTree.nodeData = {
                 100525
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55693,7 +60023,7 @@ LibTalentTree.nodeData = {
                 100658
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55719,7 +60049,7 @@ LibTalentTree.nodeData = {
                 100659
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55749,8 +60079,8 @@ LibTalentTree.nodeData = {
                 100612
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55776,7 +60106,7 @@ LibTalentTree.nodeData = {
                 100661
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55802,7 +60132,7 @@ LibTalentTree.nodeData = {
                 100662
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55829,7 +60159,7 @@ LibTalentTree.nodeData = {
                 100663
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55856,8 +60186,8 @@ LibTalentTree.nodeData = {
                 100664
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55884,8 +60214,8 @@ LibTalentTree.nodeData = {
                 100665
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55913,8 +60243,8 @@ LibTalentTree.nodeData = {
                 100666
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55944,8 +60274,8 @@ LibTalentTree.nodeData = {
                 100667
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -55973,8 +60303,8 @@ LibTalentTree.nodeData = {
                 100668
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56003,8 +60333,8 @@ LibTalentTree.nodeData = {
                 100669
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56031,7 +60361,7 @@ LibTalentTree.nodeData = {
                 100670
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56056,7 +60386,7 @@ LibTalentTree.nodeData = {
                 100671
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56081,7 +60411,7 @@ LibTalentTree.nodeData = {
                 100672
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56109,8 +60439,8 @@ LibTalentTree.nodeData = {
                 100673
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56140,8 +60470,8 @@ LibTalentTree.nodeData = {
                 100674
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56171,8 +60501,8 @@ LibTalentTree.nodeData = {
                 100675
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56202,8 +60532,8 @@ LibTalentTree.nodeData = {
                 100516
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56230,8 +60560,8 @@ LibTalentTree.nodeData = {
                 100678
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56260,8 +60590,8 @@ LibTalentTree.nodeData = {
                 100679
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56292,8 +60622,8 @@ LibTalentTree.nodeData = {
                 100680
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56320,8 +60650,8 @@ LibTalentTree.nodeData = {
                 100681
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56350,8 +60680,8 @@ LibTalentTree.nodeData = {
                 100682
             },
             ["specInfo"] = {
-                [253] = "visible",
-                [0] = "available",
+                [0] = { 0 },
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },
@@ -56377,7 +60707,7 @@ LibTalentTree.nodeData = {
                 100683
             },
             ["specInfo"] = {
-                [253] = "visible",
+                [253] = { 1 },
             },
             ["isClassNode"] = false,
         },

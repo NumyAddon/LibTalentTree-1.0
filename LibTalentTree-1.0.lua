@@ -25,11 +25,6 @@ function deepCopy(original)
     return copy;
 end
 
----@alias specBehaviour
----| '"available"'
----| '"visible"'
----| '"granted"'
-
 ---@alias edgeType
 ---| 0 # VisualOnly
 ---| 1 # DeprecatedRankConnection
@@ -64,7 +59,7 @@ end
 ---@field flags: nodeFlags
 ---@field groupIDs: number[]
 ---@field visibleEdges: visibleEdge[] # The order does not always match C_Traits
----@field specInfo: table<number, specBehaviour> # specId: behaviour
+---@field specInfo: table<number, number[]> # specId: conditionType[] see Enum.TraitConditionType
 ---@field isClassNode: boolean
 ---@field conditionIDs: number[]
 ---@field entryIDs: number[] # TraitEntryID - generally, choice nodes will have 2, otherwise there's just 1
@@ -116,17 +111,31 @@ function LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)
 
     if not nodeInfo then return false; end
 
-    local visible = true;
-    for id, behaviour in pairs(nodeInfo.specInfo) do
-        if (id ~= specId and behaviour == 'visible') then
-            visible = false;
+    if (nodeInfo.specInfo[specId]) then
+        for _, conditionType in pairs(nodeInfo.specInfo[specId]) do
+            if (conditionType == Enum.TraitConditionType.Visible or conditionType == Enum.TraitConditionType.Granted) then
+                return true;
+            end
         end
     end
-    if (nodeInfo.specInfo[specId] == 'visible' or nodeInfo.specInfo[specId] == 'granted') then
-        visible = true;
+    if (nodeInfo.specInfo[0]) then
+        for _, conditionType in pairs(nodeInfo.specInfo[0]) do
+            if (conditionType == Enum.TraitConditionType.Visible or conditionType == Enum.TraitConditionType.Granted) then
+                return true;
+            end
+        end
+    end
+    for id, conditionTypes in pairs(nodeInfo.specInfo) do
+        if (id ~= specId) then
+            for _, conditionType in pairs(conditionTypes) do
+                if (conditionType == Enum.TraitConditionType.Visible) then
+                    return false
+                end
+            end
+        end
     end
 
-    return visible;
+    return true;
 end
 
 --- @public
@@ -138,7 +147,15 @@ function LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)
     local treeId = self:GetClassTreeId(class);
     local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
 
-    return nodeInfo and nodeInfo.specInfo[specId] == 'granted';
+    if (nodeInfo and nodeInfo.specInfo[specId]) then
+        for _, conditionType in pairs(nodeInfo.specInfo[specId]) do
+            if (conditionType == Enum.TraitConditionType.Granted) then
+                return true;
+            end
+        end
+    end
+
+    return false;
 end
 
 --- @public
