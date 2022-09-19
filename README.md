@@ -15,8 +15,26 @@ Blizzard's C_Traits API fails to provide any information for spec specific nodes
 
 > This library is not in it's final state, and until it is, the mayor is LibTalentTree-0.1
 
+### Quick reference
+ * `treeId = LibTalentTree:GetClassTreeId(classId | classFileName)` [#GetClassTreeId](#getclasstreeid)
+   * Returns the treeId for a given class.
+ * `isVisible = LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)` [#IsNodeVisibleForSpec](#isnodevisibleforspec)
+   * Returns whether or not a node is visible for a given spec.
+ * `isGranted = LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)` [#IsNodeGrantedForSpec](#isnodegrantedforspec)
+   * Returns whether or not a node is granted by default for a given spec.
+ * `posX, posY = LibTalentTree:GetNodePosition(treeId, nodeId)` [#GetNodePosition](#getnodeposition)
+   * Returns the position of a node in a given tree.
+ * `isClassNode = LibTalentTree:IsClassNode(treeId, nodeId)` [#IsClassNode](#isclassnode)
+   * Returns whether a node is a class node, or a spec node.
+ * `edges = LibTalentTree:GetNodeEdges(treeId, nodeId)` [#GetNodeEdges](#getnodeedges)
+   * Returns a list of edges for a given node.
+ * `nodeInfo = LibTalentTree:GetNodeInfo(treeId, nodeId)` [#GetNodeInfo](#getnodeinfo)
+   * Returns a table containing all the information for a given node, enriched with C_Traits data if available.
+ * `nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId)` [#GetLibNodeInfo](#getlibnodeinfo)
+   * Returns a table containing all the information for a given node, without any C_Traits data.
 
-### Getting the TreeId for a class
+### GetClassTreeId
+Get the TreeId for a class
 #### Syntax
 `treeId = LibTalentTree:GetClassTreeId(classId | classFileName)`
 #### Arguments
@@ -37,7 +55,8 @@ local nodes = C_Traits.GetTreeNodes(treeId)
 ```
 
 
-### Get node visibility
+### IsNodeVisibleForSpec
+Get node visibility
 #### Syntax
 `isVisible = LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)`
 #### Arguments
@@ -55,7 +74,8 @@ local isVisible = LibTalentTree:IsNodeVisibleForSpec(65, 12345)
 ```
 
 
-### Check if a node is granted by default
+### IsNodeGrantedForSpec
+Check if a node is granted by default
 #### Syntax
 `isGranted = LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)`
 #### Arguments
@@ -73,7 +93,7 @@ local isGranted = LibTalentTree:IsNodeGrantedForSpec(65, 12345)
 ```
 
 
-### Get node position
+### GetNodePosition
 #### Syntax
 `posX, posY = LibTalentTree:GetNodePosition(treeId, nodeId)`
 #### Arguments
@@ -93,7 +113,8 @@ local posX, posY = LibTalentTree:GetNodePosition(treeId, 12345)
 ```
 
 
-### Check if a node is part of the class or spec trees
+### IsClassNode
+Check if a node is part of the class or spec tree
 #### Syntax
 `isClassNode = LibTalentTree:IsClassNode(treeId, nodeId)`
 #### Arguments
@@ -112,7 +133,7 @@ local isClassNode = LibTalentTree:IsClassNode(treeId, 12345)
 ```
 
 
-### Get node edges
+### GetNodeEdges
 > The order of node edges is not guaranteed to be consistent with C_Traits info.
 #### Syntax
 `edges = LibTalentTree:GetNodeEdges(treeId, nodeId)`
@@ -141,7 +162,7 @@ end
 ```
 
 
-### Get node info
+### GetNodeInfo
 if available, C_Traits nodeInfo is used instead, and specInfo is mixed in.
 If C_Traits nodeInfo returns a zeroed out table, the table described below is mixed in.
 #### Syntax
@@ -190,8 +211,8 @@ end
 ```
 
 
-### Get node info as stored in the library
-> This function is likely to change, and may even disappear from the public interface.
+### GetLibNodeInfo
+Get node info as stored in the library
 #### Syntax
 `nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId)`
 #### Arguments
