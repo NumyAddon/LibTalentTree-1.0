@@ -9,6 +9,7 @@ Blizzard's C_Traits API fails to provide any information for spec specific nodes
  * The visibleEdges list is not in the same order as it is when fetched through C_Traits.
    * This seems to be mostly unimportant for most use cases.
  * Some trees might have minor issues, unique to the specific tree.
+ * Some nodes on PTR are broken, and not related to any talent; these nodes are still part of C_Traits.GetTreeNodes, and therefore also included in the library for posterity.
 
 ## Usage
 
@@ -23,7 +24,7 @@ Blizzard's C_Traits API fails to provide any information for spec specific nodes
 * [string] classFile - Locale-independent name, e.g. `"WARRIOR"`.
 
 #### Returns
-* [number] treeId - TraitTreeID for the class' talent tree.
+* [number|nil] treeId - TraitTreeID for the class' talent tree, nil for invalid arguments.
 
 #### Example
 
@@ -53,6 +54,7 @@ local LibTalentTree = LibStub("LibTalentTree-0.1")
 local isVisible = LibTalentTree:IsNodeVisibleForSpec(65, 12345)
 ```
 
+
 ### Check if a node is granted by default
 #### Syntax
 `isGranted = LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)`
@@ -79,8 +81,8 @@ local isGranted = LibTalentTree:IsNodeGrantedForSpec(65, 12345)
 * [number] nodeId - TraitNodeID
 
 #### Returns
-* [number] posX - X position of the node, some trees have a global offset
-* [number] posY - Y position of the node, some trees have a global offset
+* [number|nil] posX - X position of the node, some trees have a global offset
+* [number|nil] posY - Y position of the node, some trees have a global offset
 
 #### Example
 
@@ -88,6 +90,25 @@ local isGranted = LibTalentTree:IsNodeGrantedForSpec(65, 12345)
 local LibTalentTree = LibStub("LibTalentTree-0.1")
 local treeId = LibTalentTree:GetClassTreeId('PALADIN');
 local posX, posY = LibTalentTree:GetNodePosition(treeId, 12345)
+```
+
+
+### Check if a node is part of the class or spec trees
+#### Syntax
+`isClassNode = LibTalentTree:IsClassNode(treeId, nodeId)`
+#### Arguments
+* [number] treeId - TraitTreeID
+* [number] nodeId - TraitNodeID
+
+#### Returns
+* [boolean|nil] isClassNode - Whether the node is part of the class tree, or the spec tree.
+
+#### Example
+
+```lua
+local LibTalentTree = LibStub("LibTalentTree-0.1")
+local treeId = LibTalentTree:GetClassTreeId('PALADIN');
+local isClassNode = LibTalentTree:IsClassNode(treeId, 12345)
 ```
 
 
@@ -133,19 +154,20 @@ If C_Traits nodeInfo returns a zeroed out table, the table described below is mi
 * [table] nodeInfo
 
 ##### nodeInfo
-| Field                | Differences from C_Traits                | Extra info                                                                                                                                                                   |
-|----------------------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [number] ID          | None                                     |                                                                                                                                                                              |
-| [number] posX        | None                                     | some class trees have a global offset                                                                                                                                        |
-| [number] posY        | None                                     | some class trees have a global offset                                                                                                                                        |
-| [number] type        | None                                     | 0: single, 1: Tiered, 2: Selection                                                                                                                                           |
-| [number] maxRanks    | None                                     |                                                                                                                                                                              |
-| [number] flags       | None                                     | &1: ShowMultipleIcons                                                                                                                                                        |
-| [table] groupIDs     | None                                     | list of [number] groupIDs                                                                                                                                                    |
-| [table] visibleEdges | isActive field is missing                | list of [table] visibleEdges                                                                                                                                                 |
-| [table] specInfo     | Lib-only field                           | table of [number] [specId](https://wowpedia.fandom.com/wiki/SpecializationID) = [string] behaviour; specId 0 means global; behaviour is 'available', 'visible', or 'granted' |
-| [table] conditionIDs | The order does not always match C_Traits | list of [number] conditionIDs                                                                                                                                                |
-| [table] entryIDs     | None                                     | list of [number] entryIDs; generally, choice nodes will have 2, otherwise there's just 1                                                                                     |
+| Field                 | Differences from C_Traits                                           | Extra info                                                                                                                                                                   |
+|-----------------------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [number] ID           | None                                                                |                                                                                                                                                                              |
+| [number] posX         | None                                                                | some class trees have a global offset                                                                                                                                        |
+| [number] posY         | None                                                                | some class trees have a global offset                                                                                                                                        |
+| [number] type         | None                                                                | 0: single, 1: Tiered, 2: Selection                                                                                                                                           |
+| [number] maxRanks     | None                                                                |                                                                                                                                                                              |
+| [number] flags        | None                                                                | &1: ShowMultipleIcons                                                                                                                                                        |
+| [table] groupIDs      | None                                                                | list of [number] groupIDs                                                                                                                                                    |
+| [table] visibleEdges  | isActive field is missing, the order does not always match C_Traits | list of [table] visibleEdges                                                                                                                                                 |
+| [table] conditionIDs  | None                                                                | list of [number] conditionIDs                                                                                                                                                |
+| [table] entryIDs      | None                                                                | list of [number] entryIDs; generally, choice nodes will have 2, otherwise there's just 1                                                                                     |
+| [table] specInfo      | Lib-only field                                                      | table of [number] [specId](https://wowpedia.fandom.com/wiki/SpecializationID) = [string] behaviour; specId 0 means global; behaviour is 'available', 'visible', or 'granted' |
+| [boolean] isClassNode | Lib-only field                                                      | whether the node is part of the class tree or spec tree                                                                                                                      |
 
 ##### visibleEdges
 | Field                | Differences from C_Traits | Extra info                                                                                                                                               |
@@ -177,22 +199,23 @@ end
 * [number] nodeId - The TraitNodeID of the node you want to get the info for.
 
 #### Returns
-* [table] nodeInfo
+* [table|nil] nodeInfo, nil if not found
 
 ##### nodeInfo
-| Field                | Differences from C_Traits                | Extra info                                                                                                                                                                   |
-|----------------------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [number] ID          | None                                     |                                                                                                                                                                              |
-| [number] posX        | None                                     | some class trees have a global offset                                                                                                                                        |
-| [number] posY        | None                                     | some class trees have a global offset                                                                                                                                        |
-| [number] type        | None                                     | 0: single, 1: Tiered, 2: Selection                                                                                                                                           |
-| [number] maxRanks    | None                                     |                                                                                                                                                                              |
-| [number] flags       | None                                     | &1: ShowMultipleIcons                                                                                                                                                        |
-| [table] groupIDs     | None                                     | list of [number] groupIDs                                                                                                                                                    |
-| [table] visibleEdges | isActive field is missing                | list of [table] visibleEdges                                                                                                                                                 |
-| [table] specInfo     | Lib-only field                           | table of [number] [specId](https://wowpedia.fandom.com/wiki/SpecializationID) = [string] behaviour; specId 0 means global; behaviour is 'available', 'visible', or 'granted' |
-| [table] conditionIDs | The order does not always match C_Traits | list of [number] conditionIDs                                                                                                                                                |
-| [table] entryIDs     | None                                     | list of [number] entryIDs; generally, choice nodes will have 2, otherwise there's just 1                                                                                     |
+| Field                 | Differences from C_Traits                                           | Extra info                                                                                                                                                                   |
+|-----------------------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [number] ID           | None                                                                |                                                                                                                                                                              |
+| [number] posX         | None                                                                | some class trees have a global offset                                                                                                                                        |
+| [number] posY         | None                                                                | some class trees have a global offset                                                                                                                                        |
+| [number] type         | None                                                                | 0: single, 1: Tiered, 2: Selection                                                                                                                                           |
+| [number] maxRanks     | None                                                                |                                                                                                                                                                              |
+| [number] flags        | None                                                                | &1: ShowMultipleIcons                                                                                                                                                        |
+| [table] groupIDs      | None                                                                | list of [number] groupIDs                                                                                                                                                    |
+| [table] visibleEdges  | isActive field is missing, the order does not always match C_Traits | list of [table] visibleEdges                                                                                                                                                 |
+| [table] conditionIDs  | None                                                                | list of [number] conditionIDs                                                                                                                                                |
+| [table] entryIDs      | None                                                                | list of [number] entryIDs; generally, choice nodes will have 2, otherwise there's just 1                                                                                     |
+| [table] specInfo      | Lib-only field                                                      | table of [number] [specId](https://wowpedia.fandom.com/wiki/SpecializationID) = [string] behaviour; specId 0 means global; behaviour is 'available', 'visible', or 'granted' |
+| [boolean] isClassNode | Lib-only field                                                      | whether the node is part of the class tree or spec tree                                                                                                                      |
 
 ##### visibleEdges
 | Field                | Differences from C_Traits | Extra info                                                                                                                                               |
