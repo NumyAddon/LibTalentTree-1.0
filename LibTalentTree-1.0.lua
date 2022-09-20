@@ -79,6 +79,9 @@ end
 --- @param nodeId number # TraitNodeID
 --- @return ( libNodeInfo | nil )
 function LibTalentTree:GetLibNodeInfo(treeId, nodeId)
+    assert(type(treeId) == 'number', 'treeId must be a number');
+    assert(type(nodeId) == 'number', 'nodeId must be a number');
+
     return self.nodeData[treeId] and self.nodeData[treeId][nodeId] and deepCopy(self.nodeData[treeId][nodeId]) or nil;
 end
 
@@ -87,6 +90,9 @@ end
 --- @param nodeId number # TraitNodeID
 --- @return ( libNodeInfo ) # libNodeInfo is enriched and overwritten by C_Traits information if possible
 function LibTalentTree:GetNodeInfo(treeId, nodeId)
+    assert(type(treeId) == 'number', 'treeId must be a number');
+    assert(type(nodeId) == 'number', 'nodeId must be a number');
+
     local cNodeInfo = C_Traits.GetNodeInfo(C_ClassTalents.GetActiveConfigID(), nodeId);
     local libNodeInfo = self:GetLibNodeInfo(treeId, nodeId);
 
@@ -105,6 +111,8 @@ end
 --- @param class (string | number) # ClassID or ClassFilename - e.g. "DEATHKNIGHT" or 6 - See https://wowpedia.fandom.com/wiki/ClassId
 --- @return ( number | nil ) # TraitTreeID
 function LibTalentTree:GetClassTreeId(class)
+    assert(type(class) == 'string' or type(class) == 'number', 'class must be a string or number');
+
     local classId = self.classFileMap[class] or class;
 
     return self.classTreeMap[classId] or nil;
@@ -115,6 +123,9 @@ end
 --- @param nodeId number # TraitNodeID
 --- @return boolean # whether the node is visible for the given spec
 function LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)
+    assert(type(specId) == 'number', 'specId must be a number');
+    assert(type(nodeId) == 'number', 'nodeId must be a number');
+
     local class = select(6, GetSpecializationInfoByID(specId));
     local treeId = self:GetClassTreeId(class);
     local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
@@ -153,6 +164,9 @@ end
 --- @param nodeId number # TraitNodeID
 --- @return boolean # whether the node is granted by default for the given spec
 function LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)
+    assert(type(specId) == 'number', 'specId must be a number');
+    assert(type(nodeId) == 'number', 'nodeId must be a number');
+
     local class = select(6, GetSpecializationInfoByID(specId));
     local treeId = self:GetClassTreeId(class);
     local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
@@ -173,6 +187,9 @@ end
 --- @param nodeId number # TraitNodeID
 --- @return ( number|nil, number|nil) # posX, posY - some trees have a global offset
 function LibTalentTree:GetNodePosition(treeId, nodeId)
+    assert(type(treeId) == 'number', 'treeId must be a number');
+    assert(type(nodeId) == 'number', 'nodeId must be a number');
+
     local nodeInfo = self:GetNodeInfo(treeId, nodeId);
     if (not nodeInfo) then return nil, nil; end
 
@@ -184,6 +201,9 @@ end
 --- @param nodeId number # TraitNodeID
 --- @return ( nil | visibleEdge[] ) # The order might not match C_Traits
 function LibTalentTree:GetNodeEdges(treeId, nodeId)
+    assert(type(treeId) == 'number', 'treeId must be a number');
+    assert(type(nodeId) == 'number', 'nodeId must be a number');
+
     local nodeInfo = self:GetNodeInfo(treeId, nodeId);
     if (not nodeInfo) then return nil; end
 
@@ -195,6 +215,9 @@ end
 --- @param nodeId number # TraitNodeID
 --- @return ( boolean | nil ) # true if the node is a class node, false for spec nodes, nil if unknown
 function LibTalentTree:IsClassNode(treeId, nodeId)
+    assert(type(treeId) == 'number', 'treeId must be a number');
+    assert(type(nodeId) == 'number', 'nodeId must be a number');
+
     local nodeInfo = self:GetNodeInfo(treeId, nodeId);
     if (not nodeInfo) then return nil; end
 
@@ -202,11 +225,17 @@ function LibTalentTree:IsClassNode(treeId, nodeId)
 end
 
 local gateCache = {}
+local roundingFactor = 100;
+local function round(coordinate)
+    return math.floor((coordinate / roundingFactor) + 0.5) * roundingFactor;
+end
 
 --- @public
 --- @param specId number # See https://wowpedia.fandom.com/wiki/SpecializationID
 --- @return ( gateInfo[] ) # list of gates for the given spec, sorted by spending required
 function LibTalentTree:GetGates(specId)
+    assert(type(specId) == 'number', 'specId must be a number');
+
     if (gateCache[specId]) then return deepCopy(gateCache[specId]); end
     local class = select(6, GetSpecializationInfoByID(specId));
     local treeId = self:GetClassTreeId(class);
@@ -226,10 +255,6 @@ function LibTalentTree:GetGates(specId)
         end
     end
 
-    local rounding = 100;
-    local function round(coordinate)
-        return math.floor((coordinate / rounding) + 0.5) * rounding;
-    end
     for conditionId, gateInfo in pairs(conditions) do
         local nodes = nodesByConditions[conditionId];
         if (nodes) then
@@ -259,7 +284,7 @@ function LibTalentTree:GetGates(specId)
     table.sort(gates, function(a, b)
         return a.spentAmountRequired < b.spentAmountRequired;
     end);
-    gateCache[specId] = deepCopy(gates);
+    gateCache[specId] = gates;
 
-    return gates;
+    return deepCopy(gates);
 end
