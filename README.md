@@ -16,6 +16,10 @@ Blizzard's C_Traits API fails to provide any information for spec specific nodes
 > This library is not in it's final state, and until it is, the mayor is LibTalentTree-0.1
 
 ### Quick reference
+ * `nodeInfo = LibTalentTree:GetNodeInfo(treeId, nodeId)` [#GetNodeInfo](#getnodeinfo)
+   * Returns a table containing all the information for a given node, enriched with C_Traits data if available.
+ * `nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId)` [#GetLibNodeInfo](#getlibnodeinfo)
+   * Returns a table containing all the information for a given node, without any C_Traits data.
  * `treeId = LibTalentTree:GetClassTreeId(classId | classFileName)` [#GetClassTreeId](#getclasstreeid)
    * Returns the treeId for a given class.
  * `isVisible = LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)` [#IsNodeVisibleForSpec](#isnodevisibleforspec)
@@ -28,10 +32,8 @@ Blizzard's C_Traits API fails to provide any information for spec specific nodes
    * Returns whether a node is a class node, or a spec node.
  * `edges = LibTalentTree:GetNodeEdges(treeId, nodeId)` [#GetNodeEdges](#getnodeedges)
    * Returns a list of edges for a given node.
- * `nodeInfo = LibTalentTree:GetNodeInfo(treeId, nodeId)` [#GetNodeInfo](#getnodeinfo)
-   * Returns a table containing all the information for a given node, enriched with C_Traits data if available.
- * `nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId)` [#GetLibNodeInfo](#getlibnodeinfo)
-   * Returns a table containing all the information for a given node, without any C_Traits data.
+ * `gates = LibTalentTree:GetGates(specId)` [#GetGates](#getgates)
+   * Returns a list of gates for a given spec.
 
 ### GetClassTreeId
 Get the TreeId for a class
@@ -258,3 +260,21 @@ for _, nodeId in ipairs(nodes) do
 end
 ```
 
+### GetGates
+Returns a list of gates for a given spec.
+The data is similar to C_Traits.GetTreeInfo and C_Traits.GetConditionInfo, essentially aiming to supplement both APIs.
+#### Syntax
+`gates = LibTalentTree:GetGates(specId)`
+#### Arguments
+* [number] specId - The [specId](https://wowpedia.fandom.com/wiki/SpecializationID) of the spec you want to get the gates for.
+
+#### Returns
+* [table] gates - list of [table] gateInfo - the order is not guaranteed to be the same as C_Traits.GetTreeInfo, but is will always be sorted by spentAmountRequired
+
+##### gateInfo
+| Field                        | Differences from C_Traits                                                                                  | Extra info                                                                                                     |
+|------------------------------|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| [number] topLeftNodeID       | (TraitGateInfo) None                                                                                       | The UI uses this node to anchor the Gate UI element to                                                         |
+| [number] conditionID         | (TraitGateInfo) None                                                                                       |                                                                                                                |
+| [number] spentAmountRequired | (TraitCondInfo) Always gives the **total** spending required, rather than [ totalRequired - alreadySpent ] | Especially useful for finding out the real gate cost when you're already spend points in your character's tree |
+| [number] traitCurrencyID     | (TraitCondInfo) None                                                                                       |                                                                                                                |

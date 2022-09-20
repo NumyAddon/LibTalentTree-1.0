@@ -24,7 +24,7 @@ LibTalentTree.classFileMap = {
 -------- generated dump after this line --------
 
 
--- Dumped at 2022-09-19 (10.0.0 - 45570)
+-- Dumped at 2022-09-20 (10.0.0 - 45570)
 LibTalentTree.build = 45570;
 LibTalentTree.classTreeMap = {
     [1] = 762,
@@ -60711,5 +60711,85 @@ LibTalentTree.nodeData = {
             },
             ["isClassNode"] = false,
         },
+    },
+};
+LibTalentTree.gateData = {
+    [658] = {
+        [18033] = { currencyId = 2516, spentAmountRequired = 8 },
+        [18038] = { currencyId = 2516, spentAmountRequired = 8 },
+        [18042] = { currencyId = 2516, spentAmountRequired = 20 },
+        [18031] = { currencyId = 2517, spentAmountRequired = 8 },
+        [18034] = { currencyId = 2517, spentAmountRequired = 20 },
+    },
+    [701] = {
+        [18823] = { currencyId = 2628, spentAmountRequired = 8 },
+        [18821] = { currencyId = 2628, spentAmountRequired = 20 },
+        [18819] = { currencyId = 2629, spentAmountRequired = 8 },
+        [18824] = { currencyId = 2629, spentAmountRequired = 20 },
+    },
+    [718] = {
+        [19143] = { currencyId = 2660, spentAmountRequired = 8 },
+        [19148] = { currencyId = 2660, spentAmountRequired = 20 },
+        [19140] = { currencyId = 2661, spentAmountRequired = 8 },
+        [19136] = { currencyId = 2661, spentAmountRequired = 20 },
+    },
+    [720] = {
+        [19163] = { currencyId = 2664, spentAmountRequired = 8 },
+        [19162] = { currencyId = 2664, spentAmountRequired = 20 },
+        [19167] = { currencyId = 2665, spentAmountRequired = 8 },
+        [19168] = { currencyId = 2665, spentAmountRequired = 20 },
+    },
+    [750] = {
+        [19529] = { currencyId = 2723, spentAmountRequired = 8 },
+        [19535] = { currencyId = 2723, spentAmountRequired = 20 },
+        [19531] = { currencyId = 2724, spentAmountRequired = 8 },
+        [19528] = { currencyId = 2724, spentAmountRequired = 20 },
+    },
+    [753] = {
+        [19563] = { currencyId = 2727, spentAmountRequired = 8 },
+        [19564] = { currencyId = 2727, spentAmountRequired = 20 },
+        [19567] = { currencyId = 2728, spentAmountRequired = 8 },
+        [19558] = { currencyId = 2728, spentAmountRequired = 20 },
+    },
+    [760] = {
+        [19689] = { currencyId = 2741, spentAmountRequired = 8 },
+        [19691] = { currencyId = 2741, spentAmountRequired = 20 },
+        [19685] = { currencyId = 2742, spentAmountRequired = 8 },
+        [19679] = { currencyId = 2742, spentAmountRequired = 20 },
+    },
+    [762] = {
+        [19755] = { currencyId = 2745, spentAmountRequired = 8 },
+        [19756] = { currencyId = 2745, spentAmountRequired = 20 },
+        [19761] = { currencyId = 2746, spentAmountRequired = 8 },
+        [19757] = { currencyId = 2746, spentAmountRequired = 20 },
+    },
+    [764] = {
+        [19795] = { currencyId = 2749, spentAmountRequired = 8 },
+        [19791] = { currencyId = 2749, spentAmountRequired = 20 },
+        [19800] = { currencyId = 2750, spentAmountRequired = 8 },
+        [19798] = { currencyId = 2750, spentAmountRequired = 20 },
+    },
+    [768] = {
+        [19869] = { currencyId = 2757, spentAmountRequired = 8 },
+        [19888] = { currencyId = 2757, spentAmountRequired = 20 },
+        [19876] = { currencyId = 2758, spentAmountRequired = 8 },
+        [19870] = { currencyId = 2758, spentAmountRequired = 20 },
+    },
+    [770] = {
+        [19904] = { currencyId = 2761, spentAmountRequired = 8 },
+        [19900] = { currencyId = 2761, spentAmountRequired = 20 },
+        [19901] = { currencyId = 2762, spentAmountRequired = 8 },
+        [19899] = { currencyId = 2762, spentAmountRequired = 20 },
+    },
+    [772] = {
+        [19921] = { currencyId = 2765, spentAmountRequired = 8 },
+        [19922] = { currencyId = 2765, spentAmountRequired = 20 },
+        [19925] = { currencyId = 2766, spentAmountRequired = 8 },
+        [19924] = { currencyId = 2766, spentAmountRequired = 20 },
+    },
+    [774] = {
+        [19963] = { currencyId = 2769, spentAmountRequired = 8 },
+        [19961] = { currencyId = 2769, spentAmountRequired = 20 },
+        [19946] = { currencyId = 2770, spentAmountRequired = 8 },
     },
 };

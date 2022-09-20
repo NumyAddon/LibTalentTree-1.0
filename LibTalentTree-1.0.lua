@@ -8,23 +8,6 @@ if not LibTalentTree then return end -- No upgrade needed
 
 LibTalentTree.MINOR = MINOR
 
-local deepCopy;
-function deepCopy(original)
-    local originalType = type(original);
-    local copy;
-    if (originalType == 'table') then
-        copy = {};
-        for key, value in next, original, nil do
-            copy[deepCopy(key)] = deepCopy(value);
-        end
-        setmetatable(copy, deepCopy(getmetatable(original)));
-    else
-        copy = original;
-    end
-
-    return copy;
-end
-
 ---@alias edgeType
 ---| 0 # VisualOnly
 ---| 1 # DeprecatedRankConnection
@@ -63,6 +46,33 @@ end
 ---@field isClassNode: boolean
 ---@field conditionIDs: number[]
 ---@field entryIDs: number[] # TraitEntryID - generally, choice nodes will have 2, otherwise there's just 1
+
+---@class gateInfo
+---@field topLeftNodeID number # TraitNodeID - the node that is the top left corner of the gate
+---@field conditionID number # TraitConditionID
+---@field spentAmountRequired number # the total amount of currency required to unlock the gate
+---@field traitCurrencyID number # TraitCurrencyID
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+local deepCopy;
+function deepCopy(original)
+    local originalType = type(original);
+    local copy;
+    if (originalType == 'table') then
+        copy = {};
+        for key, value in next, original, nil do
+            copy[deepCopy(key)] = deepCopy(value);
+        end
+        setmetatable(copy, deepCopy(getmetatable(original)));
+    else
+        copy = original;
+    end
+
+    return copy;
+end
+
 
 --- @public
 --- @param treeId number # TraitTreeID
@@ -189,4 +199,67 @@ function LibTalentTree:IsClassNode(treeId, nodeId)
     if (not nodeInfo) then return nil; end
 
     return nodeInfo.isClassNode;
+end
+
+local gateCache = {}
+
+--- @public
+--- @param specId number # See https://wowpedia.fandom.com/wiki/SpecializationID
+--- @return ( gateInfo[] ) # list of gates for the given spec, sorted by spending required
+function LibTalentTree:GetGates(specId)
+    if (gateCache[specId]) then return deepCopy(gateCache[specId]); end
+    local class = select(6, GetSpecializationInfoByID(specId));
+    local treeId = self:GetClassTreeId(class);
+    local gates = {};
+
+    local nodesByConditions = {};
+    local conditions = self.gateData[treeId];
+
+    for nodeId, nodeInfo in pairs(self.nodeData[treeId]) do
+        if (#nodeInfo.conditionIDs > 0 and self:IsNodeVisibleForSpec(specId, nodeId)) then
+            for _, conditionId in pairs(nodeInfo.conditionIDs) do
+                if conditions[conditionId] then
+                    nodesByConditions[conditionId] = nodesByConditions[conditionId] or {};
+                    nodesByConditions[conditionId][nodeId] = nodeInfo;
+                end
+            end
+        end
+    end
+
+    local rounding = 100;
+    local function round(coordinate)
+        return math.floor((coordinate / rounding) + 0.5) * rounding;
+    end
+    for conditionId, gateInfo in pairs(conditions) do
+        local nodes = nodesByConditions[conditionId];
+        if (nodes) then
+            local minX, minY, topLeftNode = 9999999, 9999999, nil;
+            for nodeId, nodeInfo in pairs(nodes) do
+                local roundedX, roundedY = round(nodeInfo.posX), round(nodeInfo.posY);
+
+                if (roundedY < minY) then
+                    minY = roundedY;
+                    minX = roundedX;
+                    topLeftNode = nodeId
+                elseif (roundedY == minY and roundedX < minX) then
+                    minX = roundedX;
+                    topLeftNode = nodeId
+                end
+            end
+            if (topLeftNode) then
+                table.insert(gates, {
+                    topLeftNodeID = topLeftNode,
+                    conditionID = conditionId,
+                    spentAmountRequired = gateInfo.spentAmountRequired,
+                    traitCurrencyID = gateInfo.currencyId,
+                });
+            end
+        end
+    end
+    table.sort(gates, function(a, b)
+        return a.spentAmountRequired < b.spentAmountRequired;
+    end);
+    gateCache[specId] = deepCopy(gates);
+
+    return gates;
 end
