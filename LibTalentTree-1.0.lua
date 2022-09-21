@@ -82,7 +82,10 @@ function LibTalentTree:GetLibNodeInfo(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    return self.nodeData[treeId] and self.nodeData[treeId][nodeId] and deepCopy(self.nodeData[treeId][nodeId]) or nil;
+    local nodeInfo = self.nodeData[treeId] and self.nodeData[treeId][nodeId] and deepCopy(self.nodeData[treeId][nodeId]) or nil;
+    if (nodeInfo) then nodeInfo.ID = nodeId; end
+
+    return nodeInfo;
 end
 
 --- @public
