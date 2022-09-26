@@ -1,6 +1,6 @@
 -- the data for LibTalentTree resides in LibTalentTree-1.0_data.lua
 
-local MAJOR, MINOR = "LibTalentTree-0.1", 2
+local MAJOR, MINOR = "LibTalentTree-0.1", 3
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
@@ -103,6 +103,7 @@ function LibTalentTree:GetNodeInfo(treeId, nodeId)
 
     if cNodeInfo.ID == nodeId then
         cNodeInfo.specInfo = libNodeInfo.specInfo;
+        cNodeInfo.isClassNode = libNodeInfo.isClassNode;
 
         return cNodeInfo;
     end
@@ -193,7 +194,7 @@ function LibTalentTree:GetNodePosition(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local nodeInfo = self:GetNodeInfo(treeId, nodeId);
+    local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
     if (not nodeInfo) then return nil, nil; end
 
     return nodeInfo.posX, nodeInfo.posY;
@@ -207,7 +208,7 @@ function LibTalentTree:GetNodeEdges(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local nodeInfo = self:GetNodeInfo(treeId, nodeId);
+    local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
     if (not nodeInfo) then return nil; end
 
     return nodeInfo.visibleEdges;
@@ -221,7 +222,7 @@ function LibTalentTree:IsClassNode(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local nodeInfo = self:GetNodeInfo(treeId, nodeId);
+    local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
     if (not nodeInfo) then return nil; end
 
     return nodeInfo.isClassNode;

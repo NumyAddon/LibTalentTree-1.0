@@ -1,4 +1,4 @@
-local MAJOR, MINOR = "LibTalentTree-0.1", 2
+local MAJOR, MINOR = "LibTalentTree-0.1", 3
 
 --- @type LibTalentTree
 local LibTalentTree = LibStub:GetLibrary(MAJOR)
