@@ -1,6 +1,6 @@
 -- the data for LibTalentTree resides in LibTalentTree-1.0_data.lua
 
-local MAJOR, MINOR = "LibTalentTree-0.1", 3
+local MAJOR, MINOR = "LibTalentTree-0.1", 4
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
