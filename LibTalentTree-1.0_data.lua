@@ -1,9 +1,8 @@
-local MAJOR, MINOR = "LibTalentTree-0.1", 4
-
 --- @type LibTalentTree
-local LibTalentTree = LibStub:GetLibrary(MAJOR)
+local LibTalentTree = LibStub:GetLibrary("LibTalentTree-1.0");
+local dataVersion = 1664486206;
 
-if LibTalentTree.MINOR > MINOR then return end -- No upgrade needed
+if LibTalentTree.dataVersion > dataVersion then return; end -- No upgrade needed
 
 LibTalentTree.classFileMap = {
     ["WARRIOR"] = 1,
@@ -19,6 +18,22 @@ LibTalentTree.classFileMap = {
     ["DRUID"] = 11,
     ["DEMONHUNTER"] = 12,
     ["EVOKER"] = 13,
+};
+
+LibTalentTree.specMap = {
+    [71] = 1, [72] = 1, [73] = 1, [1446] = 1,
+    [65] = 2, [66] = 2, [70] = 2, [1451] = 2,
+    [253] = 3, [254] = 3, [255] = 3, [1448] = 3,
+    [259] = 4, [260] = 4, [261] = 4, [1453] = 4,
+    [256] = 5, [257] = 5, [258] = 5, [1452] = 5,
+    [250] = 6, [251] = 6, [252] = 6, [1455] = 6,
+    [262] = 7, [263] = 7, [264] = 7, [1444] = 7,
+    [62] = 8, [63] = 8, [64] = 8, [1449] = 8,
+    [265] = 9, [266] = 9, [267] = 9, [1454] = 9,
+    [268] = 10, [270] = 10, [269] = 10, [1450] = 10,
+    [102] = 11, [103] = 11, [104] = 11, [105] = 11, [1447] = 11,
+    [577] = 12, [581] = 12, [1456] = 12,
+    [1467] = 13, [1468] = 13, [1465] = 13,
 };
 
 -------- generated dump after this line --------

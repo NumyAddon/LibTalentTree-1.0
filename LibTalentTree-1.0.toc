@@ -1,6 +1,6 @@
 ## Interface: 100000
 
-## Title: Lib: LibTalentTree-0.1
+## Title: Lib: LibTalentTree-1.0
 ## Notes: Library for retrieving class and spec talent tree information
 ## Author: Numy
 ## Version: @project-version@

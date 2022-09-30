@@ -1,12 +1,12 @@
 -- the data for LibTalentTree resides in LibTalentTree-1.0_data.lua
 
-local MAJOR, MINOR = "LibTalentTree-0.1", 4
+local MAJOR, MINOR = "LibTalentTree-1.0", 1
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not LibTalentTree then return end -- No upgrade needed
 
-LibTalentTree.MINOR = MINOR
+LibTalentTree.dataVersion = 0 -- overwritten in LibTalentTree-1.0_data.lua
 
 ---@alias edgeType
 ---| 0 # VisualOnly
@@ -27,25 +27,28 @@ LibTalentTree.MINOR = MINOR
 
 ---@alias nodeFlags
 ---| 1 # ShowMultipleIcons
+---| 2 # NeverPurchasable
+---| 4 # TestPositionLocked
+---| 8 # TestGridPositioned
 
 ---@class visibleEdge
----@field type edgeType
----@field visualStyle visualStyle
+---@field type edgeType # see Enum.TraitNodeEdgeType
+---@field visualStyle visualStyle # see Enum.TraitEdgeVisualStyle
 ---@field targetNode number # TraitNodeID
 
 ---@class libNodeInfo
 ---@field ID: number # TraitNodeID
----@field posX: number # some class trees have a global offset
----@field posY: number # some class trees have a global offset
----@field type: nodeType
+---@field posX: number
+---@field posY: number
+---@field type: nodeType # see Enum.TraitNodeType
 ---@field maxRanks: number
----@field flags: nodeFlags
+---@field flags: nodeFlags # see Enum.TraitNodeFlag
 ---@field groupIDs: number[]
 ---@field visibleEdges: visibleEdge[] # The order does not always match C_Traits
----@field specInfo: table<number, number[]> # specId: conditionType[] see Enum.TraitConditionType
----@field isClassNode: boolean
 ---@field conditionIDs: number[]
 ---@field entryIDs: number[] # TraitEntryID - generally, choice nodes will have 2, otherwise there's just 1
+---@field specInfo: table<number, number[]> # specId: conditionType[] see Enum.TraitConditionType
+---@field isClassNode: boolean
 
 ---@class gateInfo
 ---@field topLeftNodeID number # TraitNodeID - the node that is the top left corner of the gate
@@ -130,7 +133,9 @@ function LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)
     assert(type(specId) == 'number', 'specId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local class = select(6, GetSpecializationInfoByID(specId));
+    local class = LibTalentTree.specMap[specId];
+    assert(class, 'Unknown specId: ' .. specId);
+
     local treeId = self:GetClassTreeId(class);
     local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
 
@@ -171,7 +176,9 @@ function LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)
     assert(type(specId) == 'number', 'specId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local class = select(6, GetSpecializationInfoByID(specId));
+    local class = LibTalentTree.specMap[specId];
+    assert(class, 'Unknown specId: ' .. specId);
+
     local treeId = self:GetClassTreeId(class);
     local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
 
@@ -241,7 +248,9 @@ function LibTalentTree:GetGates(specId)
     assert(type(specId) == 'number', 'specId must be a number');
 
     if (gateCache[specId]) then return deepCopy(gateCache[specId]); end
-    local class = select(6, GetSpecializationInfoByID(specId));
+    local class = LibTalentTree.specMap[specId];
+    assert(class, 'Unknown specId: ' .. specId);
+
     local treeId = self:GetClassTreeId(class);
     local gates = {};
 

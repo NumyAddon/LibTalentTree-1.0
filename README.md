@@ -8,14 +8,11 @@ Blizzard's C_Traits API fails to provide any information for spec specific nodes
 ## Known issues
  * The visibleEdges list is not in the same order as it is when fetched through C_Traits.
    * This seems to be mostly unimportant for most use cases.
- * Some trees might have minor issues, unique to the specific tree.
- * Some nodes on PTR are broken, and not related to any talent; these nodes are still part of C_Traits.GetTreeNodes, and therefore also included in the library for posterity.
 
 ## Usage
 
-> This library is not in it's final state, and until it is, the mayor is LibTalentTree-0.1
-
 ### Quick reference
+Most of the information returned, has up-to-date documentation on [wowpedia C_Traits](https://wowpedia.fandom.com/wiki/Category:API_namespaces/C_Traits).
  * `nodeInfo = LibTalentTree:GetNodeInfo(treeId, nodeId)` [#GetNodeInfo](#getnodeinfo)
    * Returns a table containing all the information for a given node, enriched with C_Traits data if available.
  * `nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId)` [#GetLibNodeInfo](#getlibnodeinfo)
@@ -49,7 +46,7 @@ Get the TreeId for a class
 #### Example
 
 ```lua
-local LibTalentTree = LibStub("LibTalentTree-0.1")
+local LibTalentTree = LibStub("LibTalentTree-1.0")
 -- the following 2 lines are equivalent
 local treeId = LibTalentTree:GetClassTreeId(2)
 local treeId = LibTalentTree:GetClassTreeId('PALADIN')
@@ -71,7 +68,7 @@ Get node visibility
 #### Example
 
 ```lua
-local LibTalentTree = LibStub("LibTalentTree-0.1")
+local LibTalentTree = LibStub("LibTalentTree-1.0")
 local isVisible = LibTalentTree:IsNodeVisibleForSpec(65, 12345)
 ```
 
@@ -90,7 +87,7 @@ Check if a node is granted by default
 #### Example
 
 ```lua
-local LibTalentTree = LibStub("LibTalentTree-0.1")
+local LibTalentTree = LibStub("LibTalentTree-1.0")
 local isGranted = LibTalentTree:IsNodeGrantedForSpec(65, 12345)
 ```
 
@@ -109,7 +106,7 @@ local isGranted = LibTalentTree:IsNodeGrantedForSpec(65, 12345)
 #### Example
 
 ```lua
-local LibTalentTree = LibStub("LibTalentTree-0.1")
+local LibTalentTree = LibStub("LibTalentTree-1.0")
 local treeId = LibTalentTree:GetClassTreeId('PALADIN');
 local posX, posY = LibTalentTree:GetNodePosition(treeId, 12345)
 ```
@@ -129,7 +126,7 @@ Check if a node is part of the class or spec tree
 #### Example
 
 ```lua
-local LibTalentTree = LibStub("LibTalentTree-0.1")
+local LibTalentTree = LibStub("LibTalentTree-1.0")
 local treeId = LibTalentTree:GetClassTreeId('PALADIN');
 local isClassNode = LibTalentTree:IsClassNode(treeId, 12345)
 ```
@@ -155,7 +152,7 @@ local isClassNode = LibTalentTree:IsClassNode(treeId, 12345)
 #### Example
 
 ```lua
-local LibTalentTree = LibStub("LibTalentTree-0.1")
+local LibTalentTree = LibStub("LibTalentTree-1.0")
 local treeId = LibTalentTree:GetClassTreeId('PALADIN');
 local edges = LibTalentTree:GetNodeEdges(treeId, 12345)
 for _, edge in ipairs(edges) do
@@ -202,7 +199,7 @@ If C_Traits nodeInfo returns a zeroed out table, the table described below is mi
 #### Example
 
 ```lua
-local LibTalentTree = LibStub("LibTalentTree-0.1");
+local LibTalentTree = LibStub("LibTalentTree-1.0");
 local treeId = LibTalentTree:GetClassTreeId('PALADIN');
 local nodes = C_Traits.GetTreeNodes(treeId);
 local configId = C_ClassTalents.GetActiveConfigID();
@@ -250,7 +247,7 @@ Get node info as stored in the library
 #### Example
 
 ```lua
-local LibTalentTree = LibStub("LibTalentTree-0.1");
+local LibTalentTree = LibStub("LibTalentTree-1.0");
 local treeId = LibTalentTree:GetClassTreeId('PALADIN');
 local nodes = C_Traits.GetTreeNodes(treeId);
 local configId = C_ClassTalents.GetActiveConfigID();
