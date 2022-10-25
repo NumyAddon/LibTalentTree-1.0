@@ -1,5 +1,4 @@
-## Interface: 100000
-
+## Interface: @toc-version-retail@
 ## Title: Lib: LibTalentTree-1.0
 ## Notes: Library for retrieving class and spec talent tree information
 ## Author: Numy
