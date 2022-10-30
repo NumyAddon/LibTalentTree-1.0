@@ -1,6 +1,6 @@
 -- the data for LibTalentTree resides in LibTalentTree-1.0_data.lua
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 1
+local MAJOR, MINOR = "LibTalentTree-1.0", 2
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
@@ -55,6 +55,11 @@ LibTalentTree.dataVersion = 0 -- overwritten in LibTalentTree-1.0_data.lua
 ---@field conditionID number # TraitConditionID
 ---@field spentAmountRequired number # the total amount of currency required to unlock the gate
 ---@field traitCurrencyID number # TraitCurrencyID
+
+---@class starterBuildEntryInfo
+---@field nodeID number # TraitNodeID
+---@field entryID number|nil # TraitEntryID - only present in case of choice nodes
+---@field numPoints number # the number of points to spend in this node
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -300,4 +305,25 @@ function LibTalentTree:GetGates(specId)
     gateCache[specId] = gates;
 
     return deepCopy(gates);
+end
+
+--- @public
+--- @param specId number # See https://wowpedia.fandom.com/wiki/SpecializationID
+--- @return starterBuildEntryInfo[]|nil # list of starter build entries for the given spec, sorted by suggested spending order; nil if no starter build is available
+function LibTalentTree:GetStarterBuildBySpec(specId)
+    assert(type(specId) == 'number', 'specId must be a number');
+
+    local starterBuild = self.starterBuilds[specId];
+    if not starterBuild then return nil end
+
+    local entries = {};
+    for _, entry in pairs(starterBuild) do
+        table.insert(entries, {
+            nodeID = entry.node,
+            entryID = entry.entry or nil,
+            numPoints = entry.points or 1,
+        });
+    end
+
+    return entries;
 end

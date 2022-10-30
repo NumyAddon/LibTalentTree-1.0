@@ -7,12 +7,25 @@ Blizzard's C_Traits API fails to provide any information for spec specific nodes
 
 ## Known issues
  * The visibleEdges list is not in the same order as it is when fetched through C_Traits.
-   * This seems to be mostly unimportant for most use cases.
+   * This seems to be mostly unimportant for most use cases, and cannot be fixed.
+ * The starter build info might not be fully accurate for all specs.
 
 ## Usage
 
+### Distributing the library with your addon
+If you want to distribute the library with your addon, you can do so by including the following entry in your .pkgmeta file (this is just an example!):
+```
+externals:
+    libs/LibStub: https://repos.wowace.com/wow/ace3/trunk/LibStub
+    libs/LibTalentTree-1.0:
+        url: https://github.com/Numynum/LibTalentTree-1.0
+        curse-slug: libtalenttree
+```
+Add `libs\LibTalentTree-1.0\LibTalentTree-1.0.xml` as well as LibStub to your toc file, and you're good to go!
+Full permission is granted to distribute unmodified version of this library with your addon.
+
 ### Quick reference
-Most of the information returned, has up-to-date documentation on [wowpedia C_Traits](https://wowpedia.fandom.com/wiki/Category:API_namespaces/C_Traits).
+Most of the information returned matches the in-game C_Traits API, which has up-to-date documentation on [wowpedia C_Traits](https://wowpedia.fandom.com/wiki/Category:API_namespaces/C_Traits).
  * `nodeInfo = LibTalentTree:GetNodeInfo(treeId, nodeId)` [#GetNodeInfo](#getnodeinfo)
    * Returns a table containing all the information for a given node, enriched with C_Traits data if available.
  * `nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId)` [#GetLibNodeInfo](#getlibnodeinfo)
@@ -31,6 +44,8 @@ Most of the information returned, has up-to-date documentation on [wowpedia C_Tr
    * Returns a list of edges for a given node.
  * `gates = LibTalentTree:GetGates(specId)` [#GetGates](#getgates)
    * Returns a list of gates for a given spec.
+ * `gates = LibTalentTree:GetStarterBuildBySpec(specId)` [#GetStarterBuildBySpec](#getStarterBuildBySpec)
+   * Returns a list of starter build entries for the given spec, sorted by suggested spending order.
 
 ### GetClassTreeId
 Get the TreeId for a class
@@ -275,3 +290,35 @@ The data is similar to C_Traits.GetTreeInfo and C_Traits.GetConditionInfo, essen
 | [number] conditionID         | (TraitGateInfo) None                                                                                       |                                                                                                                |
 | [number] spentAmountRequired | (TraitCondInfo) Always gives the **total** spending required, rather than [ totalRequired - alreadySpent ] | Especially useful for finding out the real gate cost when you're already spend points in your character's tree |
 | [number] traitCurrencyID     | (TraitCondInfo) None                                                                                       |                                                                                                                |
+
+
+### GetStarterBuildBySpec
+Returns Starter Build information for a given spec.
+The data returned is similar to what you'd get from `C_ClassTalents.GetNextStarterBuildPurchase()`, but has no iteration logic.
+#### Syntax
+`starterBuild = LibTalentTree:GetStarterBuildBySpec(specId)`
+#### Arguments
+* [number] specId - The [specId](https://wowpedia.fandom.com/wiki/SpecializationID) of the spec you want to get the starter build info for.
+
+#### Returns
+* [table | nil] starterBuild - list of [table] starterBuildEntryInfo - ordered by suggested spending order; nil if no starter build is available.
+
+##### starterBuildEntryInfo
+| Field              | Extra info                                          |
+|--------------------|-----------------------------------------------------|
+| [number] nodeID    | TraitNodeID                                         |
+| [?number] entryID  | TraitEntryID - only present in case of choice nodes |
+| [number] numPoints | The number of points to spend in this node          |
+
+#### Example
+
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0");
+local specId = 65; -- Holy Paladin
+local starterBuild = LibTalentTree:GetStarterBuildBySpec(specId);
+if starterBuild then
+    for _, entry in ipairs(starterBuild) do
+        purchaseNode(entry.nodeID, entry.entryID, entry.numPoints);
+    end
+end
+```
