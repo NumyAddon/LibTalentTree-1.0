@@ -44,7 +44,7 @@ Most of the information returned matches the in-game C_Traits API, which has up-
    * Returns a list of edges for a given node.
  * `gates = LibTalentTree:GetGates(specId)` [#GetGates](#getgates)
    * Returns a list of gates for a given spec.
- * `gates = LibTalentTree:GetStarterBuildBySpec(specId)` [#GetStarterBuildBySpec](#getStarterBuildBySpec)
+ * `starterBuild = LibTalentTree:GetStarterBuildBySpec(specId)` [#GetStarterBuildBySpec](#getStarterBuildBySpec)
    * Returns a list of starter build entries for the given spec, sorted by suggested spending order.
 
 ### GetClassTreeId
