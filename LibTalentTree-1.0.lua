@@ -1,6 +1,6 @@
 -- the data for LibTalentTree resides in LibTalentTree-1.0_data.lua
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 2
+local MAJOR, MINOR = "LibTalentTree-1.0", 3
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
@@ -49,6 +49,13 @@ LibTalentTree.dataVersion = 0 -- overwritten in LibTalentTree-1.0_data.lua
 ---@field entryIDs: number[] # TraitEntryID - generally, choice nodes will have 2, otherwise there's just 1
 ---@field specInfo: table<number, number[]> # specId: conditionType[] see Enum.TraitConditionType
 ---@field isClassNode: boolean
+
+---@class entryInfo
+---@field definitionID number # TraitDefinitionID
+---@field type number # see Enum.TraitNodeEntryType
+---@field maxRanks number
+---@field isAvailable boolean # LibTalentTree always returns true
+---@field conditionIDs number[] # list of TraitConditionID, LibTalentTree always returns an empty table
 
 ---@class gateInfo
 ---@field topLeftNodeID number # TraitNodeID - the node that is the top left corner of the gate
@@ -117,6 +124,23 @@ function LibTalentTree:GetNodeInfo(treeId, nodeId)
     end
 
     return Mixin(cNodeInfo, libNodeInfo);
+end
+
+--- @public
+--- @param treeId number # TraitTreeID
+--- @param entryId number # TraitEntryID
+--- @return ( entryInfo | nil )
+function LibTalentTree:GetEntryInfo(treeId, entryId)
+    assert(type(treeId) == 'number', 'treeId must be a number');
+    assert(type(entryId) == 'number', 'entryId must be a number');
+
+    local entryInfo = self.entryData[treeId] and self.entryData[treeId][entryId] and deepCopy(self.entryData[treeId][entryId]) or nil;
+    if (entryInfo) then
+        entryInfo.isAvailable = true;
+        entryInfo.conditionIDs = {};
+    end
+
+    return entryInfo;
 end
 
 --- @public
