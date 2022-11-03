@@ -1,6 +1,6 @@
 -- the data for LibTalentTree resides in LibTalentTree-1.0_data.lua
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 3
+local MAJOR, MINOR = "LibTalentTree-1.0", 4
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
@@ -111,10 +111,11 @@ function LibTalentTree:GetNodeInfo(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local cNodeInfo = C_Traits.GetNodeInfo(C_ClassTalents.GetActiveConfigID(), nodeId);
+    local cNodeInfo = C_ClassTalents.GetActiveConfigID() and C_Traits.GetNodeInfo(C_ClassTalents.GetActiveConfigID(), nodeId) or nil;
     local libNodeInfo = self:GetLibNodeInfo(treeId, nodeId);
 
     if (not libNodeInfo) then return cNodeInfo; end
+    if (not cNodeInfo) then cNodeInfo = {}; end
 
     if cNodeInfo.ID == nodeId then
         cNodeInfo.specInfo = libNodeInfo.specInfo;
