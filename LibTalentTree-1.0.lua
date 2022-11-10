@@ -1,6 +1,6 @@
 -- the data for LibTalentTree resides in LibTalentTree-1.0_data.lua
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 4
+local MAJOR, MINOR = "LibTalentTree-1.0", 5
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
@@ -214,6 +214,14 @@ function LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)
 
     if (nodeInfo and nodeInfo.specInfo[specId]) then
         for _, conditionType in pairs(nodeInfo.specInfo[specId]) do
+            if (conditionType == Enum.TraitConditionType.Granted) then
+                return true;
+            end
+        end
+    end
+
+    if (nodeInfo and nodeInfo.specInfo[0]) then
+        for _, conditionType in pairs(nodeInfo.specInfo[0]) do
             if (conditionType == Enum.TraitConditionType.Granted) then
                 return true;
             end
