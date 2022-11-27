@@ -1,4 +1,5 @@
 -- the data for LibTalentTree resides in LibTalentTree-1.0_data.lua
+-- @curseforge-project-slug: libtalenttree@
 
 local MAJOR, MINOR = "LibTalentTree-1.0", 5
 --- @class LibTalentTree
