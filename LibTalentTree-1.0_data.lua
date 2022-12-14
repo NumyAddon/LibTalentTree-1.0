@@ -1,6 +1,6 @@
 --- @type LibTalentTree
 local LibTalentTree = LibStub:GetLibrary("LibTalentTree-1.0");
-local dataVersion = 1669635348;
+local dataVersion = 1671040735;
 
 if LibTalentTree.dataVersion > dataVersion then return; end -- No upgrade needed
 
@@ -39,8 +39,8 @@ LibTalentTree.specMap = {
 -------- generated dump after this line --------
 
 
--- Dumped at 2022-11-28 (10.0.2 - 46801)
-LibTalentTree.build = 46801;
+-- Dumped at 2022-12-14 (10.0.2 - 47067)
+LibTalentTree.build = 47067;
 LibTalentTree.classTreeMap = {
     [1] = 850,
     [2] = 790,
