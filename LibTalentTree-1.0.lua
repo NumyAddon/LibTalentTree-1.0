@@ -2,7 +2,7 @@
 -- as of 10.1.0, most data will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 6
+local MAJOR, MINOR = "LibTalentTree-1.0", 7
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
@@ -335,19 +335,19 @@ function LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)
     end
 
     -- < 10.1.0
+    if (nodeInfo.specInfo[specId]) then
+        for _, conditionType in pairs(nodeInfo.specInfo[specId]) do
+            if (conditionType == Enum.TraitConditionType.Visible or conditionType == Enum.TraitConditionType.Granted) then
+                return true;
+            end
+        end
+    end
     for id, conditionTypes in pairs(nodeInfo.specInfo) do
         if (id ~= specId) then
             for _, conditionType in pairs(conditionTypes) do
                 if (conditionType == Enum.TraitConditionType.Visible) then
                     return false
                 end
-            end
-        end
-    end
-    if (nodeInfo.specInfo[specId]) then
-        for _, conditionType in pairs(nodeInfo.specInfo[specId]) do
-            if (conditionType == Enum.TraitConditionType.Visible or conditionType == Enum.TraitConditionType.Granted) then
-                return true;
             end
         end
     end
