@@ -2,7 +2,7 @@
 -- as of 10.1.0, most data will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 7
+local MAJOR, MINOR = "LibTalentTree-1.0", 8
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
@@ -113,6 +113,20 @@ local function round(coordinate)
     return math.floor((coordinate / roundingFactor) + 0.5) * roundingFactor;
 end
 
+local function getGridLineFromCoordinate(start, spacing, halfwayEnabled, coordinate)
+    local bucketSpacing = halfwayEnabled and (spacing / 4) or (spacing / 2);
+    -- breaks out at 25, which is well above the expected max
+    for testLine = 1, 25, (halfwayEnabled and 0.5 or 1) do
+        local bucketStart = (start - spacing) + (spacing * testLine) - bucketSpacing;
+        local bucketEnd = bucketStart + (bucketSpacing * 2);
+        if coordinate >= bucketStart and coordinate < bucketEnd then
+            return testLine;
+        end
+    end
+
+    return nil;
+end
+
 local function buildCache()
     local level = 70;
     local configID = Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID;
@@ -149,7 +163,6 @@ local function buildCache()
             nodes = nodes or C_Traits.GetTreeNodes(treeID);
             local treeCurrencyInfo = C_Traits.GetTreeCurrencyInfo(configID, treeID, true);
             local classCurrencyID = treeCurrencyInfo[1].traitCurrencyID;
-            local specCurrencyID = treeCurrencyInfo[2].traitCurrencyID;
 
             local treeInfo = C_Traits.GetTreeInfo(configID, treeID);
             for _, gateInfo in ipairs(treeInfo.gates) do
@@ -232,9 +245,8 @@ if C_ClassTalents and C_ClassTalents.InitializeViewLoadout then
     useCache = true;
 end
 
-function ExposeLTT()
-    return LibTalentTree;
-end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 --- @public
 --- @param treeId number # TraitTreeID
@@ -311,6 +323,23 @@ function LibTalentTree:GetClassTreeId(class)
     local classId = classFileMap[class] or class;
 
     return classTreeMap[classId] or nil;
+end
+
+--- @public
+--- @param treeId (number) # a class' TraitTreeID
+--- @return (number | nil) # ClassID or nil - See https://wowpedia.fandom.com/wiki/ClassId
+function LibTalentTree:GetClassIdByTreeId(treeId)
+    treeId = tonumber(treeId);
+
+    if not self.inverseClassMap then
+        local classTreeMap = useCache and self.cache.classTreeMap or self.classTreeMap;
+        self.inverseClassMap = {};
+        for classId, mappedTreeId in pairs(classTreeMap) do
+            self.inverseClassMap[mappedTreeId] = classId;
+        end
+    end
+
+    return self.inverseClassMap[treeId];
 end
 
 --- @public
@@ -404,7 +433,7 @@ end
 --- @public
 --- @param treeId number # TraitTreeID
 --- @param nodeId number # TraitNodeID
---- @return ( number|nil, number|nil) # posX, posY - some trees have a global offset
+--- @return ( number|nil, number|nil ) # posX, posY - some trees have a global offset
 function LibTalentTree:GetNodePosition(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
@@ -413,6 +442,64 @@ function LibTalentTree:GetNodePosition(treeId, nodeId)
     if (not nodeInfo) then return nil, nil; end
 
     return nodeInfo.posX, nodeInfo.posY;
+end
+
+local gridPositionCache = {};
+
+--- @public
+--- Returns an abstraction of the node positions into a grid of columns and rows.
+--- Some specs may have nodes that sit between 2 columns, these columns end in ".5". This happens for example in the Druid tree.
+---
+--- The top row is 1, the bottom row is 10
+--- The first class column is 1, the last class column is 9
+--- The first spec column is 10
+---
+--- @param treeId number # TraitTreeID
+--- @param nodeId number # TraitNodeID
+--- @return ( number|nil, number|nil ) # column, row
+function LibTalentTree:GetNodeGridPosition(treeId, nodeId)
+    assert(type(treeId) == 'number', 'treeId must be a number');
+    assert(type(nodeId) == 'number', 'nodeId must be a number');
+
+    local classId = self:GetClassIdByTreeId(treeId);
+    if not classId then return nil, nil end
+
+    gridPositionCache[treeId] = gridPositionCache[treeId] or {};
+    if gridPositionCache[treeId][nodeId] then
+        return unpack(gridPositionCache[treeId][nodeId]);
+    end
+
+    local posX, posY = self:GetNodePosition(treeId, nodeId);
+    if (not posX or not posY) then return nil, nil; end
+
+    local offsetX = self.initialBasePanOffsetX - (self.classIDToOffsets[classId] and self.classIDToOffsets[classId].extraOffsetX or 0);
+    local offsetY = self.initialBasePanOffsetY - (self.classIDToOffsets[classId] and self.classIDToOffsets[classId].extraOffsetY or 0);
+
+    posX = (round(posX) / 10) - offsetX;
+    posY = (round(posY) / 10) - offsetY;
+
+    local colStart = 176;
+    local colSpacing = 60;
+    local halfColEnabled = true;
+    local classColEnd = 656;
+    local specColStart = 956;
+    local classSpecGap = specColStart - classColEnd;
+
+    if (posX > (classColEnd + (classSpecGap / 2))) then
+        -- remove the gap between the class and spec trees
+        posX = posX - classSpecGap + colSpacing;
+    end
+    local col = getGridLineFromCoordinate(colStart, colSpacing, halfColEnabled, posX);
+
+    local rowStart = 151;
+    local rowSpacing = 60;
+    local halfRowEnabled = false;
+
+    local row = getGridLineFromCoordinate(rowStart, rowSpacing, halfRowEnabled, posY);
+
+    gridPositionCache[treeId][nodeId] = {col, row};
+
+    return col, row;
 end
 
 --- @public

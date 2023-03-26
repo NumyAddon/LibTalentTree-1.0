@@ -1,8 +1,26 @@
 --- @type LibTalentTree
 local LibTalentTree = LibStub:GetLibrary("LibTalentTree-1.0");
-local dataVersion = 1679478671;
+local dataVersion = 1679478672;
 
 if LibTalentTree.dataVersion > dataVersion then return; end -- No upgrade needed
+
+LibTalentTree.classIDToOffsets = {
+    [1] = { extraOffsetX = 30, extraOffsetY = 31, }, -- Warrior
+    [2] = { extraOffsetX = -60, extraOffsetY = -29, }, -- Paladin
+    [3] = { extraOffsetX = 0, extraOffsetY = -29, }, -- Hunter
+    [4] = { extraOffsetX = 30, extraOffsetY = -29, }, -- Rogue
+    [5] = { extraOffsetX = -30, extraOffsetY = -29, }, -- Priest
+    [6] = { extraOffsetX = 0, extraOffsetY = 1, }, -- DK
+    [7] = { extraOffsetX = 0, extraOffsetY = 1, }, -- Shaman
+    [8] = { extraOffsetX = 30, extraOffsetY = -29, }, -- Mage
+    [9] = { extraOffsetX = 0, extraOffsetY = 1, }, -- Warlock
+    [10] = { extraOffsetX = 0, extraOffsetY = -29, }, -- Monk
+    [11] = { extraOffsetX = 30, extraOffsetY = -29, }, -- Druid
+    [12] = { extraOffsetX = 30, extraOffsetY = -29, }, -- Demon Hunter
+    [13] = { extraOffsetX = 30, extraOffsetY = -29, }, -- Evoker
+}
+LibTalentTree.initialBasePanOffsetX = 4
+LibTalentTree.initialBasePanOffsetY = -30
 
 LibTalentTree.classFileMap = {
     ["WARRIOR"] = 1,
