@@ -2,12 +2,13 @@
 -- as of 10.1.0, most data will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 8
+local MAJOR, MINOR = "LibTalentTree-1.0", 9
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not LibTalentTree then return end -- No upgrade needed
 
+local MAX_LEVEL = 70;
 LibTalentTree.dataVersion = 0 -- overwritten in LibTalentTree-1.0_data.lua
 
 ---@alias edgeType
@@ -128,7 +129,7 @@ local function getGridLineFromCoordinate(start, spacing, halfwayEnabled, coordin
 end
 
 local function buildCache()
-    local level = 70;
+    local level = MAX_LEVEL;
     local configID = Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID;
 
     LibTalentTree.cache = {};
@@ -350,7 +351,8 @@ function LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)
     assert(type(specId) == 'number', 'specId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local class = LibTalentTree.specMap[specId];
+    local specMap = useCache and self.cache.specMap or self.specMap;
+    local class = specMap[specId];
     assert(class, 'Unknown specId: ' .. specId);
 
     local treeId = self:GetClassTreeId(class);
@@ -399,7 +401,8 @@ function LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)
     assert(type(specId) == 'number', 'specId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local class = LibTalentTree.specMap[specId];
+    local specMap = useCache and self.cache.specMap or self.specMap;
+    local class = specMap[specId];
     assert(class, 'Unknown specId: ' .. specId);
 
     local treeId = self:GetClassTreeId(class);
@@ -540,16 +543,20 @@ function LibTalentTree:GetGates(specId)
     assert(type(specId) == 'number', 'specId must be a number');
 
     if (gateCache[specId]) then return deepCopy(gateCache[specId]); end
-    local class = LibTalentTree.specMap[specId];
+    local specMap = useCache and self.cache.specMap or self.specMap;
+    local class = specMap[specId];
     assert(class, 'Unknown specId: ' .. specId);
 
     local treeId = self:GetClassTreeId(class);
     local gates = {};
 
     local nodesByConditions = {};
-    local conditions = self.gateData[treeId];
+    local gateData = useCache and self.cache.gateData or self.gateData;
+    local conditions = gateData[treeId];
 
-    for nodeId, nodeInfo in pairs(self.nodeData[treeId]) do
+    local nodeData = useCache and self.cache.nodeData or self.nodeData;
+
+    for nodeId, nodeInfo in pairs(nodeData[treeId]) do
         if (#nodeInfo.conditionIDs > 0 and self:IsNodeVisibleForSpec(specId, nodeId)) then
             for _, conditionId in pairs(nodeInfo.conditionIDs) do
                 if conditions[conditionId] then
