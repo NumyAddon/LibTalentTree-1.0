@@ -137,6 +137,8 @@ local function buildCache()
     cache.classFileMap = {};
     cache.specMap = {};
     cache.classTreeMap = {};
+    cache.nodeTreeMap = {};
+    cache.entryTreeMap = {};
     cache.nodeData = {};
     cache.gateData = {};
     cache.entryData = {};
@@ -176,6 +178,7 @@ local function buildCache()
             end
 
             for _, nodeID in ipairs(nodes) do
+                cache.nodeTreeMap[nodeID] = treeID;
                 local nodeInfo = C_Traits.GetNodeInfo(configID, nodeID);
                 nodeData[nodeID] = nodeData[nodeID] or {};
                 local data = nodeData[nodeID];
@@ -208,6 +211,7 @@ local function buildCache()
                         end
                     end
                     for _, entryID in ipairs(nodeInfo.entryIDs) do
+                        cache.entryTreeMap[entryID] = treeID;
                         if not entryData[entryID] then
                             local entryInfo = C_Traits.GetEntryInfo(configID, entryID);
                             entryData[entryID] = {
@@ -240,24 +244,46 @@ local function buildCache()
     end
 end
 
-local useCache = false;
 if C_ClassTalents and C_ClassTalents.InitializeViewLoadout then
     buildCache();
-    useCache = true;
+else
+    error('LibTalentTree requires C_ClassTalents.InitializeViewLoadout to be available');
 end
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
 --- @public
---- @param treeId number # TraitTreeID
 --- @param nodeId number # TraitNodeID
+--- @return ( number | nil ) # TraitTreeID
+function LibTalentTree:GetTreeIdForNode(nodeId)
+    assert(type(nodeId) == 'number', 'nodeId must be a number');
+
+    return self.cache.nodeTreeMap[nodeId];
+end
+
+--- @public
+--- @param entryId number # TraitEntryID
+--- @return ( number | nil ) # TraitTreeID
+function LibTalentTree:GetTreeIdForEntry(entryId)
+    assert(type(entryId) == 'number', 'entryId must be a number');
+
+    return self.cache.entryTreeMap[entryId];
+end
+
+--- @public
+--- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd argument nil
+--- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( libNodeInfo | nil )
 function LibTalentTree:GetLibNodeInfo(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
+    if not nodeId then
+        nodeId = treeId;
+        treeId = self:GetTreeIdForNode(nodeId);
+    end
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local nodeData = useCache and self.cache.nodeData or self.nodeData;
+    local nodeData = self.cache.nodeData;
 
     local nodeInfo = nodeData[treeId] and nodeData[treeId][nodeId] and deepCopy(nodeData[treeId][nodeId]) or nil;
     if (nodeInfo) then nodeInfo.ID = nodeId; end
@@ -266,11 +292,15 @@ function LibTalentTree:GetLibNodeInfo(treeId, nodeId)
 end
 
 --- @public
---- @param treeId number # TraitTreeID
---- @param nodeId number # TraitNodeID
+--- @param treeId number # TraitTreeID, or TraitEntryID, if leaving the 2nd argument nil
+--- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( libNodeInfo ) # libNodeInfo is enriched and overwritten by C_Traits information if possible
 function LibTalentTree:GetNodeInfo(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
+    if not nodeId then
+        nodeId = treeId;
+        treeId = self:GetTreeIdForNode(nodeId);
+    end
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
     local cNodeInfo = C_ClassTalents.GetActiveConfigID()
@@ -294,14 +324,18 @@ function LibTalentTree:GetNodeInfo(treeId, nodeId)
 end
 
 --- @public
---- @param treeId number # TraitTreeID
---- @param entryId number # TraitEntryID
+--- @param treeId number # TraitTreeID, or TraitEntryID, if leaving the 2nd argument nil
+--- @param entryId number # TraitEntryID, can be omitted, by passing the entryId as the first argument, the treeId is automatically determined
 --- @return ( entryInfo | nil )
 function LibTalentTree:GetEntryInfo(treeId, entryId)
     assert(type(treeId) == 'number', 'treeId must be a number');
+    if not entryId then
+        entryId = treeId;
+        treeId = self:GetTreeIdForEntry(entryId);
+    end
     assert(type(entryId) == 'number', 'entryId must be a number');
 
-    local entryData = useCache and self.cache.entryData or self.entryData;
+    local entryData = self.cache.entryData;
 
     local entryInfo = entryData[treeId] and entryData[treeId][entryId] and deepCopy(entryData[treeId][entryId]) or nil;
     if (entryInfo) then
@@ -318,8 +352,8 @@ end
 function LibTalentTree:GetClassTreeId(class)
     assert(type(class) == 'string' or type(class) == 'number', 'class must be a string or number');
 
-    local classFileMap = useCache and self.cache.classFileMap or self.classFileMap;
-    local classTreeMap = useCache and self.cache.classTreeMap or self.classTreeMap;
+    local classFileMap = self.cache.classFileMap;
+    local classTreeMap = self.cache.classTreeMap;
 
     local classId = classFileMap[class] or class;
 
@@ -333,7 +367,7 @@ function LibTalentTree:GetClassIdByTreeId(treeId)
     treeId = tonumber(treeId);
 
     if not self.inverseClassMap then
-        local classTreeMap = useCache and self.cache.classTreeMap or self.classTreeMap;
+        local classTreeMap = self.cache.classTreeMap;
         self.inverseClassMap = {};
         for classId, mappedTreeId in pairs(classTreeMap) do
             self.inverseClassMap[mappedTreeId] = classId;
@@ -351,7 +385,7 @@ function LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)
     assert(type(specId) == 'number', 'specId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local specMap = useCache and self.cache.specMap or self.specMap;
+    local specMap = self.cache.specMap;
     local class = specMap[specId];
     assert(class, 'Unknown specId: ' .. specId);
 
@@ -401,7 +435,7 @@ function LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)
     assert(type(specId) == 'number', 'specId must be a number');
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
-    local specMap = useCache and self.cache.specMap or self.specMap;
+    local specMap = self.cache.specMap;
     local class = specMap[specId];
     assert(class, 'Unknown specId: ' .. specId);
 
@@ -434,11 +468,15 @@ function LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)
 end
 
 --- @public
---- @param treeId number # TraitTreeID
---- @param nodeId number # TraitNodeID
+--- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
+--- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( number|nil, number|nil ) # posX, posY - some trees have a global offset
 function LibTalentTree:GetNodePosition(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
+    if not nodeId then
+        nodeId = treeId;
+        treeId = self:GetTreeIdForNode(nodeId);
+    end
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
     local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
@@ -451,17 +489,21 @@ local gridPositionCache = {};
 
 --- @public
 --- Returns an abstraction of the node positions into a grid of columns and rows.
---- Some specs may have nodes that sit between 2 columns, these columns end in ".5". This happens for example in the Druid tree.
+--- Some specs may have nodes that sit between 2 columns, these columns end in ".5". This happens for example in the Druid and Demon Hunter trees.
 ---
 --- The top row is 1, the bottom row is 10
 --- The first class column is 1, the last class column is 9
 --- The first spec column is 10
 ---
---- @param treeId number # TraitTreeID
---- @param nodeId number # TraitNodeID
+--- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
+--- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( number|nil, number|nil ) # column, row
 function LibTalentTree:GetNodeGridPosition(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
+    if not nodeId then
+        nodeId = treeId;
+        treeId = self:GetTreeIdForNode(nodeId);
+    end
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
     local classId = self:GetClassIdByTreeId(treeId);
@@ -506,11 +548,15 @@ function LibTalentTree:GetNodeGridPosition(treeId, nodeId)
 end
 
 --- @public
---- @param treeId number # TraitTreeID
---- @param nodeId number # TraitNodeID
+--- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
+--- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( nil | visibleEdge[] ) # The order might not match C_Traits
 function LibTalentTree:GetNodeEdges(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
+    if not nodeId then
+        nodeId = treeId;
+        treeId = self:GetTreeIdForNode(nodeId);
+    end
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
     local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
@@ -520,11 +566,15 @@ function LibTalentTree:GetNodeEdges(treeId, nodeId)
 end
 
 --- @public
---- @param treeId number # TraitTreeID
---- @param nodeId number # TraitNodeID
+--- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
+--- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( boolean | nil ) # true if the node is a class node, false for spec nodes, nil if unknown
 function LibTalentTree:IsClassNode(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
+    if not nodeId then
+        nodeId = treeId;
+        treeId = self:GetTreeIdForNode(nodeId);
+    end
     assert(type(nodeId) == 'number', 'nodeId must be a number');
 
     local nodeInfo = self:GetLibNodeInfo(treeId, nodeId);
@@ -543,7 +593,7 @@ function LibTalentTree:GetGates(specId)
     assert(type(specId) == 'number', 'specId must be a number');
 
     if (gateCache[specId]) then return deepCopy(gateCache[specId]); end
-    local specMap = useCache and self.cache.specMap or self.specMap;
+    local specMap = self.cache.specMap;
     local class = specMap[specId];
     assert(class, 'Unknown specId: ' .. specId);
 
@@ -551,10 +601,10 @@ function LibTalentTree:GetGates(specId)
     local gates = {};
 
     local nodesByConditions = {};
-    local gateData = useCache and self.cache.gateData or self.gateData;
+    local gateData = self.cache.gateData;
     local conditions = gateData[treeId];
 
-    local nodeData = useCache and self.cache.nodeData or self.nodeData;
+    local nodeData = self.cache.nodeData;
 
     for nodeId, nodeInfo in pairs(nodeData[treeId]) do
         if (#nodeInfo.conditionIDs > 0 and self:IsNodeVisibleForSpec(specId, nodeId)) then
@@ -604,7 +654,9 @@ end
 --- @public
 --- @param specId number # See https://wowpedia.fandom.com/wiki/SpecializationID
 --- @return starterBuildEntryInfo[]|nil # list of starter build entries for the given spec, sorted by suggested spending order; nil if no starter build is available
+--- @deprecated # This function is deprecated, and will be removed in a future version. There is no replacement. This is due to the fact that no reliable way was found to collect the starter build data.
 function LibTalentTree:GetStarterBuildBySpec(specId)
+    geterrorhandler()('LibTalentTree:GetStarterBuildBySpec is deprecated, and will be removed in a future version.')
     assert(type(specId) == 'number', 'specId must be a number');
 
     local starterBuild = self.starterBuilds[specId];

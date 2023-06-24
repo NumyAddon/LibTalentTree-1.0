@@ -2,13 +2,15 @@
 
 LibTalentTree-1.0 is a library that provides an interface for accessing talent trees and talent node information.
 
-Blizzard's C_Traits API fails to provide any information for spec specific nodes, and there is no API to retrieve the TreeID for any particular class. This library aims to resolve both those problems, by providing a few basic functions. 
-> If you're interested in using the library, but have questions or feedback, I would love to hear from you :)
+Blizzard's C_Traits API isn't always easy to use, and getting talent information for other classes/specs can be tedious. This library aims to make your life easier.
+> If you're interested in using the library, but have questions or feedback, I would love to hear from you!
 
 ## Known issues
- * The visibleEdges list is not in the same order as it is when fetched through C_Traits.
-   * This seems to be mostly unimportant for most use cases, and cannot be fixed.
- * The starter build info might not be fully accurate for all specs.
+ * LibTalentTree:GetStarterBuildBySpec is returns inaccurate data, has been deprecated, and will be removed in a future version.
+
+## License
+Full permission is granted to publish, distribute, or otherwise share **unmodified** versions of this library with your addon.
+All other rights are reserved.
 
 ## Usage
 
@@ -21,170 +23,55 @@ externals:
         url: https://github.com/Numynum/LibTalentTree-1.0
         curse-slug: libtalenttree
 ```
-Add `libs\LibTalentTree-1.0\LibTalentTree-1.0.xml` as well as LibStub to your toc file, and you're good to go!
-Full permission is granted to distribute unmodified version of this library with your addon.
+Add `libs\LibTalentTree-1.0\LibTalentTree-1.0.xml`, as well as LibStub, to your toc file, and you're good to go!
 
 ### Quick reference
 Most of the information returned matches the in-game C_Traits API, which has up-to-date documentation on [wowpedia C_Traits](https://wowpedia.fandom.com/wiki/Category:API_namespaces/C_Traits).
- * `nodeInfo = LibTalentTree:GetNodeInfo(treeId, nodeId)` [#GetNodeInfo](#getnodeinfo)
+ * `nodeInfo = LibTalentTree:GetNodeInfo(nodeId)` [#GetNodeInfo](#getnodeinfo)
    * Returns a table containing all the information for a given node, enriched with C_Traits data if available.
- * `nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId)` [#GetLibNodeInfo](#getlibnodeinfo)
+ * `nodeInfo = LibTalentTree:GetLibNodeInfo(nodeId)` [#GetLibNodeInfo](#getlibnodeinfo)
    * Returns a table containing all the information for a given node, without any C_Traits data.
+ * `entryInfo = LibTalentTree:GetEntryInfo(entryId)` [#GetEntryInfo](#getentryinfo)
+   * Returns a table containing all the information for a given node entry.
+ * `treeId = LibTalentTree:GetTreeIdForNode(nodeId)` [#GetTreeIdForNode](#gettreeidfornode)
+   * Returns the treeId for a given node.
+ * `treeId = LibTalentTree:GetTreeIdForEntry(entryId)` [#GetTreeIdForEntry](#gettreeidforentry)
+   * Returns the treeId for a given NodeEntry.
  * `treeId = LibTalentTree:GetClassTreeId(classId | classFileName)` [#GetClassTreeId](#getclasstreeid)
    * Returns the treeId for a given class.
+ * `classId = LibTalentTree:GetClassIdByTreeId(treeId)` [#GetClassIdByTreeId](#getclassidbytreeid)
+   * Returns the classId for a given tree.
  * `isVisible = LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)` [#IsNodeVisibleForSpec](#isnodevisibleforspec)
    * Returns whether or not a node is visible for a given spec.
  * `isGranted = LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)` [#IsNodeGrantedForSpec](#isnodegrantedforspec)
    * Returns whether or not a node is granted by default for a given spec.
- * `posX, posY = LibTalentTree:GetNodePosition(treeId, nodeId)` [#GetNodePosition](#getnodeposition)
+ * `posX, posY = LibTalentTree:GetNodePosition(nodeId)` [#GetNodePosition](#getnodeposition)
    * Returns the position of a node in a given tree.
- * `isClassNode = LibTalentTree:IsClassNode(treeId, nodeId)` [#IsClassNode](#isclassnode)
+ * `column, row = LibTalentTree:GetNodeGridPosition(nodeId)` [#GetNodeGridPosition](#getnodegridposition)
+   * Returns an abstracted grid position of a node in a given tree.
+ * `isClassNode = LibTalentTree:IsClassNode(nodeId)` [#IsClassNode](#isclassnode)
    * Returns whether a node is a class node, or a spec node.
- * `edges = LibTalentTree:GetNodeEdges(treeId, nodeId)` [#GetNodeEdges](#getnodeedges)
+ * `edges = LibTalentTree:GetNodeEdges(nodeId)` [#GetNodeEdges](#getnodeedges)
    * Returns a list of edges for a given node.
  * `gates = LibTalentTree:GetGates(specId)` [#GetGates](#getgates)
    * Returns a list of gates for a given spec.
- * `starterBuild = LibTalentTree:GetStarterBuildBySpec(specId)` [#GetStarterBuildBySpec](#getStarterBuildBySpec)
+ * **DEPRECATED** `starterBuild = LibTalentTree:GetStarterBuildBySpec(specId)` [#GetStarterBuildBySpec](#getStarterBuildBySpec)
    * Returns a list of starter build entries for the given spec, sorted by suggested spending order.
-
-### GetClassTreeId
-Get the TreeId for a class
-#### Syntax
-`treeId = LibTalentTree:GetClassTreeId(classId | classFileName)`
-#### Arguments
-* [number] classId - The [ClassId](https://wowpedia.fandom.com/wiki/ClassId) of the class you want to get the TraitTreeID for.
-* [string] classFile - Locale-independent name, e.g. `"WARRIOR"`.
-
-#### Returns
-* [number|nil] treeId - TraitTreeID for the class' talent tree, nil for invalid arguments.
-
-#### Example
-
-```lua
-local LibTalentTree = LibStub("LibTalentTree-1.0")
--- the following 2 lines are equivalent
-local treeId = LibTalentTree:GetClassTreeId(2)
-local treeId = LibTalentTree:GetClassTreeId('PALADIN')
-local nodes = C_Traits.GetTreeNodes(treeId)
-```
-
-
-### IsNodeVisibleForSpec
-Get node visibility
-#### Syntax
-`isVisible = LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)`
-#### Arguments
-* [number] specId - [SpecializationID](https://wowpedia.fandom.com/wiki/SpecializationID)
-* [number] nodeId - TraitNodeID
-
-#### Returns
-* [boolean] isVisible - Whether the node is visible for the given spec.
-
-#### Example
-
-```lua
-local LibTalentTree = LibStub("LibTalentTree-1.0")
-local isVisible = LibTalentTree:IsNodeVisibleForSpec(65, 12345)
-```
-
-
-### IsNodeGrantedForSpec
-Check if a node is granted by default
-#### Syntax
-`isGranted = LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)`
-#### Arguments
-* [number] specId - [SpecializationID](https://wowpedia.fandom.com/wiki/SpecializationID)
-* [number] nodeId - TraitNodeID
-
-#### Returns
-* [boolean] isGranted - Whether the node is granted by default for the given spec.
-
-#### Example
-
-```lua
-local LibTalentTree = LibStub("LibTalentTree-1.0")
-local isGranted = LibTalentTree:IsNodeGrantedForSpec(65, 12345)
-```
-
-
-### GetNodePosition
-#### Syntax
-`posX, posY = LibTalentTree:GetNodePosition(treeId, nodeId)`
-#### Arguments
-* [number] treeId - TraitTreeID
-* [number] nodeId - TraitNodeID
-
-#### Returns
-* [number|nil] posX - X position of the node, some trees have a global offset
-* [number|nil] posY - Y position of the node, some trees have a global offset
-
-#### Example
-
-```lua
-local LibTalentTree = LibStub("LibTalentTree-1.0")
-local treeId = LibTalentTree:GetClassTreeId('PALADIN');
-local posX, posY = LibTalentTree:GetNodePosition(treeId, 12345)
-```
-
-
-### IsClassNode
-Check if a node is part of the class or spec tree
-#### Syntax
-`isClassNode = LibTalentTree:IsClassNode(treeId, nodeId)`
-#### Arguments
-* [number] treeId - TraitTreeID
-* [number] nodeId - TraitNodeID
-
-#### Returns
-* [boolean|nil] isClassNode - Whether the node is part of the class tree, or the spec tree.
-
-#### Example
-
-```lua
-local LibTalentTree = LibStub("LibTalentTree-1.0")
-local treeId = LibTalentTree:GetClassTreeId('PALADIN');
-local isClassNode = LibTalentTree:IsClassNode(treeId, 12345)
-```
-
-
-### GetNodeEdges
-> The order of node edges is not guaranteed to be consistent with C_Traits info.
-#### Syntax
-`edges = LibTalentTree:GetNodeEdges(treeId, nodeId)`
-#### Arguments
-* [number] treeId - TraitTreeID
-* [number] nodeId - TraitNodeID
-
-#### Returns
-* [table] edges - A list of visibleEdges.
-##### visibleEdges
-| Field                | Differences from C_Traits | Extra info                                                                                                                                               |
-|----------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [number] type        | None                      | 0: VisualOnly, 1: DeprecatedRankConnection, 2: SufficientForAvailability, 3: RequiredForAvailability, 4: MutuallyExclusive, 5: DeprecatedSelectionOption |
-| [number] visualStyle | None                      | 0: None, 1: Straight                                                                                                                                     |
-| [number] targetNode  | None                      | TraitNodeID                                                                                                                                              |
-
-#### Example
-
-```lua
-local LibTalentTree = LibStub("LibTalentTree-1.0")
-local treeId = LibTalentTree:GetClassTreeId('PALADIN');
-local edges = LibTalentTree:GetNodeEdges(treeId, 12345)
-for _, edge in ipairs(edges) do
-  print(edge.targetNode)
-end
-```
-
 
 ### GetNodeInfo
 if available, C_Traits nodeInfo is used instead, and specInfo is mixed in.
 If C_Traits nodeInfo returns a zeroed out table, the table described below is mixed in.
 #### Syntax
-`nodeInfo = LibTalentTree:GetNodeInfo(treeId, nodeId)`
+```
+nodeInfo = LibTalentTree:GetNodeInfo(nodeId)
+nodeInfo = LibTalentTree:GetNodeInfo(treeId, nodeId)
+```
 #### Arguments
-* [number] treeId - TraitTreeID
-* [number] nodeId - TraitNodeID
+* [number] nodeId - The TraitNodeID of the node you want to get the info for.
 
+For backwards compatibility, the following syntax is also supported: 
+* [number] treeId - TraitTreeID
+* [number] nodeId - The TraitNodeID of the node you want to get the info for.
 #### Returns
 * [table] nodeInfo
 
@@ -210,7 +97,6 @@ If C_Traits nodeInfo returns a zeroed out table, the table described below is mi
 | [number] type        | None                      | 0: VisualOnly, 1: DeprecatedRankConnection, 2: SufficientForAvailability, 3: RequiredForAvailability, 4: MutuallyExclusive, 5: DeprecatedSelectionOption |
 | [number] visualStyle | None                      | 0: None, 1: Straight                                                                                                                                     |
 | [number] targetNode  | None                      | TraitNodeID                                                                                                                                              |
-
 #### Example
 
 ```lua
@@ -219,7 +105,7 @@ local treeId = LibTalentTree:GetClassTreeId('PALADIN');
 local nodes = C_Traits.GetTreeNodes(treeId);
 local configId = C_ClassTalents.GetActiveConfigID();
 for _, nodeId in ipairs(nodes) do
-    local nodeInfo = LibTalentTree:GetNodeInfo(treeId, nodeId);
+    local nodeInfo = LibTalentTree:GetNodeInfo(nodeId);
     local entryInfo = C_Traits.GetEntryInfo(configId, nodeInfo.entryIDs[1]);
 end
 ```
@@ -228,14 +114,18 @@ end
 ### GetLibNodeInfo
 Get node info as stored in the library
 #### Syntax
-`nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId)`
+```
+nodeInfo = LibTalentTree:GetLibNodeInfo(nodeId)
+nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId)
+```
 #### Arguments
-* [number] treeId - The TraitTreeID of the tree you want to get the node info for.
 * [number] nodeId - The TraitNodeID of the node you want to get the info for.
 
+For backwards compatibility, the following syntax is also supported:
+* [number] treeId - The TraitTreeID of the tree you want to get the node info for.
+* [number] nodeId - The TraitNodeID of the node you want to get the info for.
 #### Returns
 * [table|nil] nodeInfo, nil if not found
-
 ##### nodeInfo
 | Field                 | Differences from C_Traits                                           | Extra info                                                                                                                                                         |
 |-----------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -258,19 +148,235 @@ Get node info as stored in the library
 | [number] type        | None                      | 0: VisualOnly, 1: DeprecatedRankConnection, 2: SufficientForAvailability, 3: RequiredForAvailability, 4: MutuallyExclusive, 5: DeprecatedSelectionOption |
 | [number] visualStyle | None                      | 0: None, 1: Straight                                                                                                                                     |
 | [number] targetNode  | None                      | TraitNodeID                                                                                                                                              |
-
 #### Example
-
 ```lua
 local LibTalentTree = LibStub("LibTalentTree-1.0");
 local treeId = LibTalentTree:GetClassTreeId('PALADIN');
 local nodes = C_Traits.GetTreeNodes(treeId);
 local configId = C_ClassTalents.GetActiveConfigID();
 for _, nodeId in ipairs(nodes) do
-    local nodeInfo = LibTalentTree:GetLibNodeInfo(treeId, nodeId);
+    local nodeInfo = LibTalentTree:GetLibNodeInfo(nodeId);
     local entryInfo = C_Traits.GetEntryInfo(configId, nodeInfo.entryIDs[1]);
 end
 ```
+
+
+### GetEntryInfo
+Get the entry info for a node entry
+#### Syntax
+```
+entryInfo = LibTalentTree:GetEntryInfo(entryId)
+entryInfo = LibTalentTree:GetEntryInfo(treeId, entryId)
+```
+#### Arguments
+* [number] entryId - The TraitEntryID of the node entry you want to get the info for.
+
+For backwards compatibility, the following syntax is also supported:
+* [number] treeId - The TraitTreeID of the tree you want to get the node entry info for.
+* [number] entryId - The TraitEntryID of the node entry you want to get the info for.
+#### Returns
+* [table|nil] entryInfo, nil if not found
+##### entryInfo
+| Field                 | Differences from C_Traits         | Extra info                                                        |
+|-----------------------|-----------------------------------|-------------------------------------------------------------------|
+| [number] definitionID | None                              |                                                                   |
+| [number] type         | None                              | see Enum.TraitNodeEntryType                                       |
+| [number] maxRanks     | None                              |                                                                   |
+| [boolean] isAvailable | LibTalentTree always returns true |                                                                   |
+| [table] conditionIDs  | LibTalentTree always returns {}   | talent node entries generally have no conditions attached to them |
+#### Example
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0");
+local entryInfo = LibTalentTree:GetEntryInfo(123);
+local definitionInfo = entryInfo and C_Traits.GetDefinitionInfo(entryInfo.definitionID);
+local spellID = definitionInfo and definitionInfo.spellID;
+```
+
+
+### GetTreeIdForNode
+Get the TreeId for a node
+#### Syntax
+`treeId = LibTalentTree:GetTreeIdForNode(nodeId)`
+#### Arguments
+* [number] nodeId - The TraitNodeID of the node you want to get the TraitTreeID for.
+#### Returns
+* [number|nil] treeId - TraitTreeID for the node, nil if not found.
+
+
+### GetTreeIdForEntry
+Get the TreeId for a node entry
+#### Syntax
+`treeId = LibTalentTree:GetTreeIdForEntry(entryId)`
+#### Arguments
+* [number] entryId - The TraitEntryID of the node entry you want to get the TraitTreeID for.
+#### Returns
+* [number|nil] treeId - TraitTreeID for the node entry, nil if not found.
+
+
+### GetClassTreeId
+Get the TreeId for a class
+#### Syntax
+`treeId = LibTalentTree:GetClassTreeId(classId | classFileName)`
+#### Arguments
+* [number] classId - The [ClassId](https://wowpedia.fandom.com/wiki/ClassId) of the class you want to get the TraitTreeID for.
+* [string] classFile - Locale-independent name, e.g. `"WARRIOR"`.
+#### Returns
+* [number|nil] treeId - TraitTreeID for the class' talent tree, nil for invalid arguments.
+#### Example
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0")
+-- the following 2 lines are equivalent
+local treeId = LibTalentTree:GetClassTreeId(2)
+local treeId = LibTalentTree:GetClassTreeId('PALADIN')
+local nodes = C_Traits.GetTreeNodes(treeId)
+```
+
+
+### GetClassIdByTreeId
+Get the ClassId for a tree
+#### Syntax
+`classId = LibTalentTree:GetClassIdByTreeId(treeId)`
+#### Arguments
+* [number] treeId - The TraitTreeID of the tree you want to get the ClassId for.
+#### Returns
+* [number|nil] classId - [ClassId](https://wowpedia.fandom.com/wiki/ClassId) for the tree, nil if not found.
+
+
+### IsNodeVisibleForSpec
+Get node visibility
+#### Syntax
+`isVisible = LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)`
+#### Arguments
+* [number] specId - [SpecializationID](https://wowpedia.fandom.com/wiki/SpecializationID)
+* [number] nodeId - TraitNodeID
+#### Returns
+* [boolean] isVisible - Whether the node is visible for the given spec.
+#### Example
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0")
+local isVisible = LibTalentTree:IsNodeVisibleForSpec(65, 12345)
+```
+
+
+### IsNodeGrantedForSpec
+Check if a node is granted by default
+#### Syntax
+`isGranted = LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)`
+#### Arguments
+* [number] specId - [SpecializationID](https://wowpedia.fandom.com/wiki/SpecializationID)
+* [number] nodeId - TraitNodeID
+#### Returns
+* [boolean] isGranted - Whether the node is granted by default for the given spec.
+#### Example
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0")
+local isGranted = LibTalentTree:IsNodeGrantedForSpec(65, 12345)
+```
+
+
+### GetNodePosition
+Returns the x / y position of a node. Note that some trees have a global offset.
+#### Syntax
+```
+posX, posY = LibTalentTree:GetNodePosition(nodeId)
+posX, posY = LibTalentTree:GetNodePosition(treeId, nodeId)
+```
+#### Arguments
+* [number] nodeId - TraitNodeID
+
+For backwards compatibility, the following syntax is also supported:
+* [number] treeId - TraitTreeID
+* [number] nodeId - TraitNodeID
+#### Returns
+* [number|nil] posX - X position of the node
+* [number|nil] posY - Y position of the node
+#### Example
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0")
+local posX, posY = LibTalentTree:GetNodePosition(12345)
+```
+
+
+### GetNodeGridPosition
+Returns an abstraction of the node positions into a grid of columns and rows.\
+Some specs may have nodes that sit between 2 columns, these columns end in ".5". This happens for example in the Druid and Demon Hunter trees.\
+\
+The top row is 1, the bottom row is 10\
+The first class column is 1, the last class column is 9\
+The first spec column is 10
+#### Syntax
+```
+column, row = LibTalentTree:GetNodeGridPosition(nodeId)
+column, row = LibTalentTree:GetNodeGridPosition(treeId, nodeId)
+```
+#### Arguments
+* [number] nodeId - TraitNodeID
+
+For backwards compatibility, the following syntax is also supported:
+* [number] treeId - TraitTreeID
+* [number] nodeId - TraitNodeID
+#### Returns
+* [number|nil] column - Column of the node, nil if not found. Can be a decimal with .5 for nodes that sit between 2 columns.
+* [number|nil] row - Row of the node, nil if not found
+#### Example
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0")
+local column, row = LibTalentTree:GetNodeGridPosition(12345)
+```
+
+
+### IsClassNode
+Check if a node is part of the class or spec tree
+#### Syntax
+```
+isClassNode = LibTalentTree:IsClassNode(nodeId)
+isClassNode = LibTalentTree:IsClassNode(treeId, nodeId)
+```
+#### Arguments
+* [number] nodeId - TraitNodeID
+
+For backwards compatibility, the following syntax is also supported:
+* [number] treeId - TraitTreeID
+* [number] nodeId - TraitNodeID
+#### Returns
+* [boolean|nil] isClassNode - Whether the node is part of the class tree, or the spec tree.
+#### Example
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0")
+local isClassNode = LibTalentTree:IsClassNode(12345)
+```
+
+
+### GetNodeEdges
+#### Syntax
+```
+edges = LibTalentTree:GetNodeEdges(nodeId)
+edges = LibTalentTree:GetNodeEdges(treeId, nodeId)
+```
+#### Arguments
+* [number] nodeId - TraitNodeID
+
+For backwards compatibility, the following syntax is also supported:
+* [number] treeId - TraitTreeID
+* [number] nodeId - TraitNodeID
+#### Returns
+* [table] edges - A list of visibleEdges.
+##### visibleEdges
+| Field                | Differences from C_Traits | Extra info                                                                                                                                               |
+|----------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [number] type        | None                      | 0: VisualOnly, 1: DeprecatedRankConnection, 2: SufficientForAvailability, 3: RequiredForAvailability, 4: MutuallyExclusive, 5: DeprecatedSelectionOption |
+| [number] visualStyle | None                      | 0: None, 1: Straight                                                                                                                                     |
+| [number] targetNode  | None                      | TraitNodeID                                                                                                                                              |
+
+#### Example
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0")
+local edges = LibTalentTree:GetNodeEdges(12345)
+for _, edge in ipairs(edges) do
+  print(edge.targetNode)
+end
+```
+
 
 ### GetGates
 Returns a list of gates for a given spec.
@@ -279,10 +385,8 @@ The data is similar to C_Traits.GetTreeInfo and C_Traits.GetConditionInfo, essen
 `gates = LibTalentTree:GetGates(specId)`
 #### Arguments
 * [number] specId - The [specId](https://wowpedia.fandom.com/wiki/SpecializationID) of the spec you want to get the gates for.
-
 #### Returns
 * [table] gates - list of [table] gateInfo - the order is not guaranteed to be the same as C_Traits.GetTreeInfo, but is will always be sorted by spentAmountRequired
-
 ##### gateInfo
 | Field                        | Differences from C_Traits                                                                                  | Extra info                                                                                                     |
 |------------------------------|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -293,13 +397,14 @@ The data is similar to C_Traits.GetTreeInfo and C_Traits.GetConditionInfo, essen
 
 
 ### GetStarterBuildBySpec
+> This function has been deprecated, due to inaccurate data. No replacement exists.
+
 Returns Starter Build information for a given spec.
 The data returned is similar to what you'd get from `C_ClassTalents.GetNextStarterBuildPurchase()`, but has no iteration logic.
 #### Syntax
 `starterBuild = LibTalentTree:GetStarterBuildBySpec(specId)`
 #### Arguments
 * [number] specId - The [specId](https://wowpedia.fandom.com/wiki/SpecializationID) of the spec you want to get the starter build info for.
-
 #### Returns
 * [table | nil] starterBuild - list of [table] starterBuildEntryInfo - ordered by suggested spending order; nil if no starter build is available.
 
@@ -311,7 +416,6 @@ The data returned is similar to what you'd get from `C_ClassTalents.GetNextStart
 | [number] numPoints | The number of points to spend in this node          |
 
 #### Example
-
 ```lua
 local LibTalentTree = LibStub("LibTalentTree-1.0");
 local specId = 65; -- Holy Paladin
@@ -322,3 +426,4 @@ if starterBuild then
     end
 end
 ```
+
