@@ -1,15 +1,32 @@
--- the data for LibTalentTree resides in LibTalentTree-1.0_data.lua
--- as of 10.1.0, most data will be loaded (and cached) from blizzard's APIs when the Lib loads
+-- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 9
+local MAJOR, MINOR = "LibTalentTree-1.0", 10;
 --- @class LibTalentTree
-local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR)
+local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
 if not LibTalentTree then return end -- No upgrade needed
 
 local MAX_LEVEL = 70;
-LibTalentTree.dataVersion = 0 -- overwritten in LibTalentTree-1.0_data.lua
+-- taken from ClassTalentUtil.GetVisualsForClassID
+local CLASS_OFFSETS = {
+    [1] = { x = 30, y = 31, }, -- Warrior
+    [2] = { x = -60, y = -29, }, -- Paladin
+    [3] = { x = 0, y = -29, }, -- Hunter
+    [4] = { x = 30, y = -29, }, -- Rogue
+    [5] = { x = -30, y = -29, }, -- Priest
+    [6] = { x = 0, y = 1, }, -- DK
+    [7] = { x = 0, y = 1, }, -- Shaman
+    [8] = { x = 30, y = -29, }, -- Mage
+    [9] = { x = 0, y = 1, }, -- Warlock
+    [10] = { x = 0, y = -29, }, -- Monk
+    [11] = { x = 30, y = -29, }, -- Druid
+    [12] = { x = 30, y = -29, }, -- Demon Hunter
+    [13] = { x = 30, y = -29, }, -- Evoker
+};
+-- taken from ClassTalentTalentsTabTemplate XML
+local BASE_PAN_OFFSET_X = 4;
+local BASE_PAN_OFFSET_Y = -30;
 
 ---@alias edgeType
 ---| 0 # VisualOnly
@@ -67,11 +84,6 @@ LibTalentTree.dataVersion = 0 -- overwritten in LibTalentTree-1.0_data.lua
 ---@field conditionID number # TraitConditionID
 ---@field spentAmountRequired number # the total amount of currency required to unlock the gate
 ---@field traitCurrencyID number # TraitCurrencyID
-
----@class starterBuildEntryInfo
----@field nodeID number # TraitNodeID
----@field entryID number|nil # TraitEntryID - only present in case of choice nodes
----@field numPoints number # the number of points to spend in this node
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -517,8 +529,8 @@ function LibTalentTree:GetNodeGridPosition(treeId, nodeId)
     local posX, posY = self:GetNodePosition(treeId, nodeId);
     if (not posX or not posY) then return nil, nil; end
 
-    local offsetX = self.initialBasePanOffsetX - (self.classIDToOffsets[classId] and self.classIDToOffsets[classId].extraOffsetX or 0);
-    local offsetY = self.initialBasePanOffsetY - (self.classIDToOffsets[classId] and self.classIDToOffsets[classId].extraOffsetY or 0);
+    local offsetX = BASE_PAN_OFFSET_X - (CLASS_OFFSETS[classId] and CLASS_OFFSETS[classId].x or 0);
+    local offsetY = BASE_PAN_OFFSET_Y - (CLASS_OFFSETS[classId] and CLASS_OFFSETS[classId].y or 0);
 
     posX = (round(posX) / 10) - offsetX;
     posY = (round(posY) / 10) - offsetY;
@@ -649,27 +661,4 @@ function LibTalentTree:GetGates(specId)
     gateCache[specId] = gates;
 
     return deepCopy(gates);
-end
-
---- @public
---- @param specId number # See https://wowpedia.fandom.com/wiki/SpecializationID
---- @return starterBuildEntryInfo[]|nil # list of starter build entries for the given spec, sorted by suggested spending order; nil if no starter build is available
---- @deprecated # This function is deprecated, and will be removed in a future version. There is no replacement. This is due to the fact that no reliable way was found to collect the starter build data.
-function LibTalentTree:GetStarterBuildBySpec(specId)
-    geterrorhandler()('LibTalentTree:GetStarterBuildBySpec is deprecated, and will be removed in a future version.')
-    assert(type(specId) == 'number', 'specId must be a number');
-
-    local starterBuild = self.starterBuilds[specId];
-    if not starterBuild then return nil end
-
-    local entries = {};
-    for _, entry in pairs(starterBuild) do
-        table.insert(entries, {
-            nodeID = entry.node,
-            entryID = entry.entry or nil,
-            numPoints = entry.points or 1,
-        });
-    end
-
-    return entries;
 end

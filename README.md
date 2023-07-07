@@ -6,7 +6,7 @@ Blizzard's C_Traits API isn't always easy to use, and getting talent information
 > If you're interested in using the library, but have questions or feedback, I would love to hear from you!
 
 ## Known issues
- * LibTalentTree:GetStarterBuildBySpec is returns inaccurate data, has been deprecated, and will be removed in a future version.
+ * None, let me know if you find any!
 
 ## License
 Full permission is granted to publish, distribute, or otherwise share **unmodified** versions of this library with your addon.
@@ -55,8 +55,6 @@ Most of the information returned matches the in-game C_Traits API, which has up-
    * Returns a list of edges for a given node.
  * `gates = LibTalentTree:GetGates(specId)` [#GetGates](#getgates)
    * Returns a list of gates for a given spec.
- * **DEPRECATED** `starterBuild = LibTalentTree:GetStarterBuildBySpec(specId)` [#GetStarterBuildBySpec](#getStarterBuildBySpec)
-   * Returns a list of starter build entries for the given spec, sorted by suggested spending order.
 
 ### GetNodeInfo
 if available, C_Traits nodeInfo is used instead, and specInfo is mixed in.
@@ -394,36 +392,3 @@ The data is similar to C_Traits.GetTreeInfo and C_Traits.GetConditionInfo, essen
 | [number] conditionID         | (TraitGateInfo) None                                                                                       |                                                                                                                |
 | [number] spentAmountRequired | (TraitCondInfo) Always gives the **total** spending required, rather than [ totalRequired - alreadySpent ] | Especially useful for finding out the real gate cost when you're already spend points in your character's tree |
 | [number] traitCurrencyID     | (TraitCondInfo) None                                                                                       |                                                                                                                |
-
-
-### GetStarterBuildBySpec
-> This function has been deprecated, due to inaccurate data. No replacement exists.
-
-Returns Starter Build information for a given spec.
-The data returned is similar to what you'd get from `C_ClassTalents.GetNextStarterBuildPurchase()`, but has no iteration logic.
-#### Syntax
-`starterBuild = LibTalentTree:GetStarterBuildBySpec(specId)`
-#### Arguments
-* [number] specId - The [specId](https://wowpedia.fandom.com/wiki/SpecializationID) of the spec you want to get the starter build info for.
-#### Returns
-* [table | nil] starterBuild - list of [table] starterBuildEntryInfo - ordered by suggested spending order; nil if no starter build is available.
-
-##### starterBuildEntryInfo
-| Field              | Extra info                                          |
-|--------------------|-----------------------------------------------------|
-| [number] nodeID    | TraitNodeID                                         |
-| [?number] entryID  | TraitEntryID - only present in case of choice nodes |
-| [number] numPoints | The number of points to spend in this node          |
-
-#### Example
-```lua
-local LibTalentTree = LibStub("LibTalentTree-1.0");
-local specId = 65; -- Holy Paladin
-local starterBuild = LibTalentTree:GetStarterBuildBySpec(specId);
-if starterBuild then
-    for _, entry in ipairs(starterBuild) do
-        purchaseNode(entry.nodeID, entry.entryID, entry.numPoints);
-    end
-end
-```
-
