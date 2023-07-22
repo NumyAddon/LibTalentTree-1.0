@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 10;
+local MAJOR, MINOR = "LibTalentTree-1.0", 11;
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -318,7 +318,7 @@ function LibTalentTree:GetNodeInfo(treeId, nodeId)
     local cNodeInfo = C_ClassTalents.GetActiveConfigID()
             and C_Traits.GetNodeInfo(C_ClassTalents.GetActiveConfigID(), nodeId)
             or C_Traits.GetNodeInfo(Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID or -3, nodeId);
-    local libNodeInfo = self:GetLibNodeInfo(treeId, nodeId);
+    local libNodeInfo = treeId and self:GetLibNodeInfo(treeId, nodeId);
 
     if (not libNodeInfo) then return cNodeInfo; end
     if (not cNodeInfo) then cNodeInfo = {}; end
