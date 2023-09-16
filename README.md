@@ -20,7 +20,7 @@ If you want to distribute the library with your addon, you can do so by includin
 externals:
     libs/LibStub: https://repos.wowace.com/wow/ace3/trunk/LibStub
     libs/LibTalentTree-1.0:
-        url: https://github.com/Numynum/LibTalentTree-1.0
+        url: https://github.com/NumyAddon/LibTalentTree-1.0
         curse-slug: libtalenttree
 ```
 Add `libs\LibTalentTree-1.0\LibTalentTree-1.0.xml`, as well as LibStub, to your toc file, and you're good to go!
