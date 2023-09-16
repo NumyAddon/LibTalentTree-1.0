@@ -7,6 +7,10 @@ local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
 if not LibTalentTree then return end -- No upgrade needed
 
+if not C_ClassTalents or not C_ClassTalents.InitializeViewLoadout then
+    error('LibTalentTree requires C_ClassTalents.InitializeViewLoadout to be available');
+end
+
 local MAX_LEVEL = 70;
 -- taken from ClassTalentUtil.GetVisualsForClassID
 local CLASS_OFFSETS = {
@@ -256,11 +260,7 @@ local function buildCache()
     end
 end
 
-if C_ClassTalents and C_ClassTalents.InitializeViewLoadout then
-    buildCache();
-else
-    error('LibTalentTree requires C_ClassTalents.InitializeViewLoadout to be available');
-end
+buildCache();
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
