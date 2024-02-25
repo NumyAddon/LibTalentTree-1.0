@@ -1,14 +1,20 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 11;
+local MAJOR, MINOR = "LibTalentTree-1.0", 12;
 --- @class LibTalentTree
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
 if not LibTalentTree then return end -- No upgrade needed
 
 if not C_ClassTalents or not C_ClassTalents.InitializeViewLoadout then
-    error('LibTalentTree requires C_ClassTalents.InitializeViewLoadout to be available');
+    setmetatable(LibTalentTree, {
+        __index = function()
+            error('LibTalentTree requires C_ClassTalents.InitializeViewLoadout to be available');
+        end,
+    });
+
+    return;
 end
 
 local MAX_LEVEL = 70;
