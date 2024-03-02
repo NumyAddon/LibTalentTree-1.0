@@ -10,6 +10,7 @@ Blizzard's C_Traits API isn't always easy to use, and getting talent information
 
 ## License
 Full permission is granted to publish, distribute, or otherwise share **unmodified** versions of this library with your addon.
+All API functions and other data objects exposed by this library, may be freely used by your addon, without restriction.
 All other rights are reserved.
 
 ## Usage
@@ -26,7 +27,7 @@ externals:
 Add `libs\LibTalentTree-1.0\LibTalentTree-1.0.xml`, as well as LibStub, to your toc file, and you're good to go!
 
 ### Quick reference
-Most of the information returned matches the in-game C_Traits API, which has up-to-date documentation on [wowpedia C_Traits](https://wowpedia.fandom.com/wiki/Category:API_namespaces/C_Traits).
+Most of the information returned matches the in-game C_Traits API, which has up-to-date documentation on [wiki C_Traits](https://warcraft.wiki.gg/wiki/Category:API_namespaces/C_Traits).
  * `nodeInfo = LibTalentTree:GetNodeInfo(nodeId)` [#GetNodeInfo](#getnodeinfo)
    * Returns a table containing all the information for a given node, enriched with C_Traits data if available.
  * `nodeInfo = LibTalentTree:GetLibNodeInfo(nodeId)` [#GetLibNodeInfo](#getlibnodeinfo)
@@ -88,7 +89,7 @@ For backwards compatibility, the following syntax is also supported:
 | [table] visibleEdges  | isActive field is missing, the order does not always match C_Traits | list of [table] visibleEdges                                                                                                                                       |
 | [table] conditionIDs  | None                                                                | list of [number] conditionIDs                                                                                                                                      |
 | [table] entryIDs      | None                                                                | list of [number] entryIDs; generally, choice nodes will have 2, otherwise there's just 1                                                                           |
-| [table] specInfo      | Lib-only field                                                      | table of [number] [specId](https://wowpedia.fandom.com/wiki/SpecializationID) = [table] list of conditionTypes; specId 0 means global; see Enum.TraitConditionType |
+| [table] specInfo      | Lib-only field                                                      | table of [number] [specId](https://warcraft.wiki.gg/wiki/SpecializationID) = [table] list of conditionTypes; specId 0 means global; see Enum.TraitConditionType |
 | [boolean] isClassNode | Lib-only field                                                      | whether the node is part of the class tree or spec tree                                                                                                            |
 
 ##### visibleEdges
@@ -139,7 +140,7 @@ For backwards compatibility, the following syntax is also supported:
 | [table] visibleEdges  | isActive field is missing, the order does not always match C_Traits | list of [table] visibleEdges                                                                                                                                       |
 | [table] conditionIDs  | None                                                                | list of [number] conditionIDs                                                                                                                                      |
 | [table] entryIDs      | None                                                                | list of [number] entryIDs; generally, choice nodes will have 2, otherwise there's just 1                                                                           |
-| [table] specInfo      | Lib-only field                                                      | table of [number] [specId](https://wowpedia.fandom.com/wiki/SpecializationID) = [table] list of conditionTypes; specId 0 means global; see Enum.TraitConditionType |
+| [table] specInfo      | Lib-only field                                                      | table of [number] [specId](https://warcraft.wiki.gg/wiki/SpecializationID) = [table] list of conditionTypes; specId 0 means global; see Enum.TraitConditionType |
 | [boolean] isClassNode | Lib-only field                                                      | whether the node is part of the class tree or spec tree                                                                                                            |
 
 ##### visibleEdges
@@ -218,7 +219,7 @@ Get the TreeId for a class
 #### Syntax
 `treeId = LibTalentTree:GetClassTreeId(classId | classFileName)`
 #### Arguments
-* [number] classId - The [ClassId](https://wowpedia.fandom.com/wiki/ClassId) of the class you want to get the TraitTreeID for.
+* [number] classId - The [ClassId](https://warcraft.wiki.gg/wiki/ClassId) of the class you want to get the TraitTreeID for.
 * [string] classFile - Locale-independent name, e.g. `"WARRIOR"`.
 #### Returns
 * [number|nil] treeId - TraitTreeID for the class' talent tree, nil for invalid arguments.
@@ -239,7 +240,7 @@ Get the ClassId for a tree
 #### Arguments
 * [number] treeId - The TraitTreeID of the tree you want to get the ClassId for.
 #### Returns
-* [number|nil] classId - [ClassId](https://wowpedia.fandom.com/wiki/ClassId) for the tree, nil if not found.
+* [number|nil] classId - [ClassId](https://warcraft.wiki.gg/wiki/ClassId) for the tree, nil if not found.
 
 
 ### IsNodeVisibleForSpec
@@ -247,7 +248,7 @@ Get node visibility
 #### Syntax
 `isVisible = LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)`
 #### Arguments
-* [number] specId - [SpecializationID](https://wowpedia.fandom.com/wiki/SpecializationID)
+* [number] specId - [SpecializationID](https://warcraft.wiki.gg/wiki/SpecializationID)
 * [number] nodeId - TraitNodeID
 #### Returns
 * [boolean] isVisible - Whether the node is visible for the given spec.
@@ -263,7 +264,7 @@ Check if a node is granted by default
 #### Syntax
 `isGranted = LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)`
 #### Arguments
-* [number] specId - [SpecializationID](https://wowpedia.fandom.com/wiki/SpecializationID)
+* [number] specId - [SpecializationID](https://warcraft.wiki.gg/wiki/SpecializationID)
 * [number] nodeId - TraitNodeID
 #### Returns
 * [boolean] isGranted - Whether the node is granted by default for the given spec.
@@ -384,7 +385,7 @@ The data is similar to C_Traits.GetTreeInfo and C_Traits.GetConditionInfo, essen
 #### Syntax
 `gates = LibTalentTree:GetGates(specId)`
 #### Arguments
-* [number] specId - The [specId](https://wowpedia.fandom.com/wiki/SpecializationID) of the spec you want to get the gates for.
+* [number] specId - The [specId](https://warcraft.wiki.gg/wiki/SpecializationID) of the spec you want to get the gates for.
 #### Returns
 * [table] gates - list of [table] gateInfo - the order is not guaranteed to be the same as C_Traits.GetTreeInfo, but is will always be sorted by spentAmountRequired
 ##### gateInfo

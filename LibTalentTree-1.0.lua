@@ -370,7 +370,7 @@ function LibTalentTree:GetEntryInfo(treeId, entryId)
 end
 
 --- @public
---- @param class (string | number) # ClassID or ClassFilename - e.g. "DEATHKNIGHT" or 6 - See https://wowpedia.fandom.com/wiki/ClassId
+--- @param class (string | number) # ClassID or ClassFilename - e.g. "DEATHKNIGHT" or 6 - See https://warcraft.wiki.gg/wiki/ClassId
 --- @return ( number | nil ) # TraitTreeID
 function LibTalentTree:GetClassTreeId(class)
     assert(type(class) == 'string' or type(class) == 'number', 'class must be a string or number');
@@ -385,7 +385,7 @@ end
 
 --- @public
 --- @param treeId (number) # a class' TraitTreeID
---- @return (number | nil) # ClassID or nil - See https://wowpedia.fandom.com/wiki/ClassId
+--- @return (number | nil) # ClassID or nil - See https://warcraft.wiki.gg/wiki/ClassId
 function LibTalentTree:GetClassIdByTreeId(treeId)
     treeId = tonumber(treeId);
 
@@ -401,7 +401,7 @@ function LibTalentTree:GetClassIdByTreeId(treeId)
 end
 
 --- @public
---- @param specId number # See https://wowpedia.fandom.com/wiki/SpecializationID
+--- @param specId number # See https://warcraft.wiki.gg/wiki/SpecializationID
 --- @param nodeId number # TraitNodeID
 --- @return boolean # whether the node is visible for the given spec
 function LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)
@@ -451,7 +451,7 @@ function LibTalentTree:IsNodeVisibleForSpec(specId, nodeId)
 end
 
 --- @public
---- @param specId number # See https://wowpedia.fandom.com/wiki/SpecializationID
+--- @param specId number # See https://warcraft.wiki.gg/wiki/SpecializationID
 --- @param nodeId number # TraitNodeID
 --- @return boolean # whether the node is granted by default for the given spec
 function LibTalentTree:IsNodeGrantedForSpec(specId, nodeId)
@@ -609,7 +609,7 @@ end
 local gateCache = {}
 
 --- @public
---- @param specId number # See https://wowpedia.fandom.com/wiki/SpecializationID
+--- @param specId number # See https://warcraft.wiki.gg/wiki/SpecializationID
 --- @return ( gateInfo[] ) # list of gates for the given spec, sorted by spending required
 function LibTalentTree:GetGates(specId)
     -- an optimization step is likely trivial in 10.1.0, but well.. effort, and this also works fine still :)
