@@ -1,11 +1,16 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 12;
---- @class LibTalentTree
+local MAJOR, MINOR = "LibTalentTree-1.0", 13;
+--- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
 if not LibTalentTree then return end -- No upgrade needed
+
+--- Whether the current game version is compatible with this library. This is generally always true on retail, and always false on classic.
+function LibTalentTree:IsCompatible()
+    return C_ClassTalents and C_ClassTalents.InitializeViewLoadout and true or false;
+end
 
 if not C_ClassTalents or not C_ClassTalents.InitializeViewLoadout then
     setmetatable(LibTalentTree, {

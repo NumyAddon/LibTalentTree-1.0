@@ -55,6 +55,8 @@ Most of the information returned matches the in-game C_Traits API, which has up-
    * Returns a list of edges for a given node.
  * `gates = LibTalentTree:GetGates(specId)` [#GetGates](#getgates)
    * Returns a list of gates for a given spec.
+ * `isCompatible = LibTalentTree:IsCompatible()` [#IsCompatible](#iscompatible)
+   * Returns the library is compatible with the current game version.
 
 ### GetNodeInfo
 if available, C_Traits nodeInfo is used instead, and specInfo is mixed in.
@@ -392,3 +394,12 @@ The data is similar to C_Traits.GetTreeInfo and C_Traits.GetConditionInfo, essen
 | [number] conditionID         | (TraitGateInfo) None                                                                                       |                                                                                                                |
 | [number] spentAmountRequired | (TraitCondInfo) Always gives the **total** spending required, rather than [ totalRequired - alreadySpent ] | Especially useful for finding out the real gate cost when you're already spend points in your character's tree |
 | [number] traitCurrencyID     | (TraitCondInfo) None                                                                                       |                                                                                                                |
+
+
+### IsCompatible
+Returns whether the library is compatible with the current game version.
+This is generally always true for Retail, and always false for Classic.
+#### Syntax
+` [boolean] isCompatible = LibTalentTree:IsCompatible()`
+#### Returns
+* [boolean] isCompatible - Whether the library is compatible with the current game version.
