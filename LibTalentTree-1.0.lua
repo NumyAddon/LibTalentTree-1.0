@@ -298,6 +298,7 @@ end
 --- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd argument nil
 --- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( libNodeInfo | nil )
+--- @overload fun(nodeId: number): libNodeInfo | nil
 function LibTalentTree:GetLibNodeInfo(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     if not nodeId then
@@ -318,6 +319,7 @@ end
 --- @param treeId number # TraitTreeID, or TraitEntryID, if leaving the 2nd argument nil
 --- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( libNodeInfo ) # libNodeInfo is enriched and overwritten by C_Traits information if possible
+--- @overload fun(nodeId: number): libNodeInfo
 function LibTalentTree:GetNodeInfo(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     if not nodeId then
@@ -350,6 +352,7 @@ end
 --- @param treeId number # TraitTreeID, or TraitEntryID, if leaving the 2nd argument nil
 --- @param entryId number # TraitEntryID, can be omitted, by passing the entryId as the first argument, the treeId is automatically determined
 --- @return ( entryInfo | nil )
+--- @overload fun(entryId: number): entryInfo | nil
 function LibTalentTree:GetEntryInfo(treeId, entryId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     if not entryId then
@@ -494,6 +497,7 @@ end
 --- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
 --- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( number|nil, number|nil ) # posX, posY - some trees have a global offset
+--- @overload fun(nodeId: number): (number|nil, number|nil)
 function LibTalentTree:GetNodePosition(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     if not nodeId then
@@ -521,6 +525,7 @@ local gridPositionCache = {};
 --- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
 --- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( number|nil, number|nil ) # column, row
+--- @overload fun(nodeId: number): (number|nil, number|nil)
 function LibTalentTree:GetNodeGridPosition(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     if not nodeId then
@@ -574,6 +579,7 @@ end
 --- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
 --- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( nil | visibleEdge[] ) # The order might not match C_Traits
+--- @overload fun(nodeId: number): nil | visibleEdge[]
 function LibTalentTree:GetNodeEdges(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     if not nodeId then
@@ -592,6 +598,7 @@ end
 --- @param treeId number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
 --- @param nodeId number # TraitNodeID, can be omitted, by passing the nodeId as the first argument, the treeId is automatically determined
 --- @return ( boolean | nil ) # true if the node is a class node, false for spec nodes, nil if unknown
+--- @overload fun(nodeId: number): boolean | nil
 function LibTalentTree:IsClassNode(treeId, nodeId)
     assert(type(treeId) == 'number', 'treeId must be a number');
     if not nodeId then
