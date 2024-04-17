@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 13;
+local MAJOR, MINOR = "LibTalentTree-1.0", 14;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -227,16 +227,6 @@ local function buildCache()
 
                     data.groupIDs = data.groupIDs or {}
                     mergeTables(data.groupIDs, nodeInfo.groupIDs);
-
-                    if data.isClassNode == nil then
-                        data.isClassNode = false;
-                        for _, cost in ipairs(C_Traits.GetNodeCost(configID, nodeID)) do
-                            if cost.ID == classCurrencyID then
-                                data.isClassNode = true;
-                                break;
-                            end
-                        end
-                    end
                     for _, entryID in ipairs(nodeInfo.entryIDs) do
                         cache.entryTreeMap[entryID] = treeID;
                         if not entryData[entryID] then
@@ -253,6 +243,20 @@ local function buildCache()
                         local cInfo = C_Traits.GetConditionInfo(configID, conditionID)
                         if cInfo and cInfo.isMet and cInfo.ranksGranted and cInfo.ranksGranted > 0 then
                             data.grantedForSpecs[specID] = true;
+                        end
+                    end
+
+                    if nil == data.isClassNode then
+                        data.isClassNode = false;
+                        local nodeCost = C_Traits.GetNodeCost(configID, nodeID);
+                        if not next(nodeCost) and data.grantedForSpecs[specID] then
+                            data.isClassNode = true;
+                        end
+                        for _, cost in ipairs(nodeCost) do
+                            if cost.ID == classCurrencyID then
+                                data.isClassNode = true;
+                                break;
+                            end
                         end
                     end
                 end
