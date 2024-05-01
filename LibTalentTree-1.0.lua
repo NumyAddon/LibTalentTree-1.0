@@ -103,11 +103,9 @@ local BASE_PAN_OFFSET_Y = -30;
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
-local deepCopy;
-function deepCopy(original)
-    local originalType = type(original);
+local function deepCopy(original)
     local copy;
-    if (originalType == 'table') then
+    if (type(original) == 'table') then
         copy = {};
         for key, value in next, original, nil do
             copy[deepCopy(key)] = deepCopy(value);
