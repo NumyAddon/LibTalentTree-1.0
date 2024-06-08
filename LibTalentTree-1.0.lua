@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 14;
+local MAJOR, MINOR = "LibTalentTree-1.0", 15;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -22,7 +22,9 @@ if not C_ClassTalents or not C_ClassTalents.InitializeViewLoadout then
     return;
 end
 
-local MAX_LEVEL = 70;
+local MAX_LEVEL = 100; -- seems to not break if set too high, but can break things when set too low
+local MAX_SUB_TREE_CURRENCY = 10; -- blizzard incorrectly reports 20 when asking for the maxQuantity of the currency
+
 -- taken from ClassTalentUtil.GetVisualsForClassID
 local CLASS_OFFSETS = {
     [1] = { x = 30, y = 31, }, -- Warrior
@@ -107,9 +109,12 @@ local function buildCache()
     cache.classTreeMap = {};
     cache.nodeTreeMap = {};
     cache.entryTreeMap = {};
+    cache.specSubTreeMap = {};
+    cache.subTreeNodesMap = {};
     cache.nodeData = {};
     cache.gateData = {};
     cache.entryData = {};
+    cache.subTreeData = {};
     for classID = 1, GetNumClasses() do
         cache.classFileMap[select(2, GetClassInfo(classID))] = classID;
 
@@ -145,6 +150,21 @@ local function buildCache()
                 };
             end
 
+            if C_ClassTalents.GetHeroTalentSpecsForClassSpec then
+                local subTreeIDs, requiredPlayerLevel = C_ClassTalents.GetHeroTalentSpecsForClassSpec(configID, specID);
+                if subTreeIDs then
+                    cache.specSubTreeMap[specID] = subTreeIDs;
+                    for _, subTreeID in ipairs(subTreeIDs) do
+                        local subTreeInfo = C_Traits.GetSubTreeInfo(configID, subTreeID);
+                        if subTreeInfo then
+                            subTreeInfo.requiredPlayerLevel = requiredPlayerLevel;
+                            subTreeInfo.maxCurrency = MAX_SUB_TREE_CURRENCY;
+                            cache.subTreeData[subTreeID] = subTreeInfo;
+                        end
+                    end
+                end
+            end
+
             for _, nodeID in ipairs(nodes) do
                 cache.nodeTreeMap[nodeID] = treeID;
                 local nodeInfo = C_Traits.GetNodeInfo(configID, nodeID);
@@ -159,6 +179,7 @@ local function buildCache()
                     data.maxRanks = nodeInfo.maxRanks;
                     data.flags = nodeInfo.flags;
                     data.entryIDs = nodeInfo.entryIDs;
+                    data.subTreeID = nodeInfo.subTreeID;
 
                     data.visibleEdges = data.visibleEdges or {}
                     mergeTables(data.visibleEdges, nodeInfo.visibleEdges, 'targetNode');
@@ -204,8 +225,13 @@ local function buildCache()
                 data.visibleForSpecs = data.visibleForSpecs or {};
                 data.visibleForSpecs[specID] = nodeInfo.isVisible;
 
-                if lastSpec and not data.posX then
-                    nodeData[nodeID] = nil;
+                if lastSpec then
+                	if not data.posX then
+                        nodeData[nodeID] = nil;
+                    elseif data.subTreeID then
+                        cache.subTreeNodesMap[data.subTreeID] = cache.subTreeNodesMap[data.subTreeID] or {};
+                        table.insert(cache.subTreeNodesMap[data.subTreeID], nodeID);
+                    end
                 end
             end
         end
