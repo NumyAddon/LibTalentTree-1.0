@@ -1,5 +1,13 @@
 -- this file contains some of the type definitions used in this library
 
+---@class treeCurrencyInfo
+---@field traitCurrencyID number
+---@field quantity number
+---@field maxQuantity number?
+---@field spent number
+---@field isClassCurrency boolean? # true if the currency is a class currency, nil otherwise
+---@field isSpecCurrency boolean? # true if the currency is a spec currency, nil otherwise
+---@field subTreeID number? # the sub tree ID that the currency is associated with if any, nil otherwise
 
 ---@alias edgeType
 ---| 0 # VisualOnly
@@ -44,6 +52,8 @@
 ---@field visibleForSpecs table<number, boolean> # specId: true/false, true if a node is visible for a spec; added in 10.1.0
 ---@field grantedForSpecs table<number, boolean> # specId: true/false, true if a node is granted for free, for a spec; added in 10.1.0
 ---@field isClassNode boolean
+---@field subTreeID number? # the sub tree ID that the node is associated with if any, nil otherwise; added in 11.0.0
+---@field isSubTreeSelection boolean? # true if the node is a sub tree selection node, nil otherwise; added in 11.0.0
 
 ---@class entryInfo
 ---@field definitionID number # TraitDefinitionID
@@ -57,3 +67,16 @@
 ---@field conditionID number # TraitConditionID
 ---@field spentAmountRequired number # the total amount of currency required to unlock the gate
 ---@field traitCurrencyID number # TraitCurrencyID
+
+---@class subTreeInfo
+---@field ID number # SubTreeID
+---@field name string # localized name
+---@field description string # localized description
+---@field iconElementID string # icon atlas
+---@field maxCurrency number # the maximum amount of currency that can be spent in this sub tree
+---@field posX number
+---@field posY number
+---@field requiredPlayerLevel number
+---@field traitCurrencyID number # TraitCurrencyID spent when learning talents in this sub tree
+---@field subTreeSelectionNodeIDs number[] # TraitNodeID - the selection nodes that specify whether the sub tree is selected
+---@field isActive boolean # hardcoded to false

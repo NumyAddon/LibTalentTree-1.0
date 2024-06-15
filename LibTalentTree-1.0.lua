@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 15;
+local MAJOR, MINOR = "LibTalentTree-1.0", 16;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -111,6 +111,7 @@ local function buildCache()
     cache.entryTreeMap = {};
     cache.specSubTreeMap = {};
     cache.subTreeNodesMap = {};
+    cache.treeCurrencyMap = {};
     cache.nodeData = {};
     cache.gateData = {};
     cache.entryData = {};
@@ -130,6 +131,7 @@ local function buildCache()
             local specID = GetSpecializationInfoForClassID(classID, specIndex);
             cache.specMap[specID] = classID;
 
+            --- @type number
             treeID = treeID or C_ClassTalents.GetTraitTreeForSpec(specID);
             cache.classTreeMap[classID] = treeID;
 
@@ -139,6 +141,12 @@ local function buildCache()
             nodes = nodes or C_Traits.GetTreeNodes(treeID);
             local treeCurrencyInfo = C_Traits.GetTreeCurrencyInfo(configID, treeID, true);
             local classCurrencyID = treeCurrencyInfo[1].traitCurrencyID;
+            cache.treeCurrencyMap[treeID] = cache.treeCurrencyMap[treeID] or treeCurrencyInfo;
+            cache.treeCurrencyMap[treeID][1].isClassCurrency = true;
+            cache.treeCurrencyMap[treeID][2].isSpecCurrency = true;
+            for _, currencyInfo in ipairs(treeCurrencyInfo) do
+                cache.treeCurrencyMap[treeID][currencyInfo.traitCurrencyID] = cache.treeCurrencyMap[treeID][currencyInfo.traitCurrencyID] or currencyInfo;
+            end
 
             local treeInfo = C_Traits.GetTreeInfo(configID, treeID);
             for _, gateInfo in ipairs(treeInfo.gates) do
@@ -159,7 +167,11 @@ local function buildCache()
                         if subTreeInfo then
                             subTreeInfo.requiredPlayerLevel = requiredPlayerLevel;
                             subTreeInfo.maxCurrency = MAX_SUB_TREE_CURRENCY;
+                            subTreeInfo.isActive = false;
                             cache.subTreeData[subTreeID] = subTreeInfo;
+                            cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID].subTreeID = subTreeID;
+                            cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID].quantity = MAX_SUB_TREE_CURRENCY;
+                            cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID].maxQuantity = MAX_SUB_TREE_CURRENCY;
                         end
                     end
                 end
@@ -180,6 +192,7 @@ local function buildCache()
                     data.flags = nodeInfo.flags;
                     data.entryIDs = nodeInfo.entryIDs;
                     data.subTreeID = nodeInfo.subTreeID;
+                    data.isSubTreeSelection = nodeInfo.type == Enum.TraitNodeType.SubTreeSelection;
 
                     data.visibleEdges = data.visibleEdges or {}
                     mergeTables(data.visibleEdges, nodeInfo.visibleEdges, 'targetNode');
@@ -197,6 +210,7 @@ local function buildCache()
                                 definitionID = entryInfo.definitionID,
                                 type = entryInfo.type,
                                 maxRanks = entryInfo.maxRanks,
+                                subTreeID = entryInfo.subTreeID,
                             }
                         end
                     end
@@ -650,4 +664,40 @@ function LibTalentTree:GetGates(specId)
     gateCache[specId] = gates;
 
     return deepCopy(gates);
+end
+
+--- @public
+--- @param treeId number # TraitTreeID
+--- @return treeCurrencyInfo[] # list of currencies for the given tree, first entry is class currency, second is spec currency, the rest are sub tree currencies. The list is additionally indexed by the traitCurrencyID.
+function LibTalentTree:GetTreeCurrencies(treeId)
+    assert(type(treeId) == 'number', 'treeId must be a number');
+
+    return deepCopy(self.cache.treeCurrencyMap[treeId]);
+end
+
+--- @public
+--- @param subTreeId number # TraitSubTreeID
+--- @return number[] # list of TraitNodeIDs that belong to the given sub tree
+function LibTalentTree:GetSubTreeNodeIds(subTreeId)
+    assert(type(subTreeId) == 'number', 'subTreeId must be a number');
+
+    return deepCopy(self.cache.subTreeNodesMap[subTreeId]);
+end
+
+--- @public
+--- @param specId number # See https://warcraft.wiki.gg/wiki/SpecializationID
+--- @return number[] # list of TraitSubTreeIDs that belong to the given spec
+function LibTalentTree:GetSubTreeIdsForSpecId(specId)
+    assert(type(specId) == 'number', 'specId must be a number');
+
+    return deepCopy(self.cache.specSubTreeMap[specId]);
+end
+
+--- @public
+--- @param subTreeId number # TraitSubTreeID
+--- @return ( subTreeInfo | nil )
+function LibTalentTree:GetSubTreeInfo(subTreeId)
+    assert(type(subTreeId) == 'number', 'subTreeId must be a number');
+
+    return deepCopy(self.cache.subTreeData[subTreeId]);
 end
