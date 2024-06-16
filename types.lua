@@ -48,9 +48,9 @@
 ---@field visibleEdges visibleEdge[] # The order does not always match C_Traits
 ---@field conditionIDs number[]
 ---@field entryIDs number[] # TraitEntryID - generally, choice nodes will have 2, otherwise there's just 1
----@field specInfo table<number, number[]> # specId: conditionType[] Deprecated, will be removed in 10.1.0; see Enum.TraitConditionType
----@field visibleForSpecs table<number, boolean> # specId: true/false, true if a node is visible for a spec; added in 10.1.0
----@field grantedForSpecs table<number, boolean> # specId: true/false, true if a node is granted for free, for a spec; added in 10.1.0
+---@field specInfo table<number, number[]> # specID: conditionType[] Deprecated, will be removed in 10.1.0; see Enum.TraitConditionType
+---@field visibleForSpecs table<number, boolean> # specID: true/false, true if a node is visible for a spec; added in 10.1.0
+---@field grantedForSpecs table<number, boolean> # specID: true/false, true if a node is granted for free, for a spec; added in 10.1.0
 ---@field isClassNode boolean
 ---@field subTreeID number? # the sub tree ID that the node is associated with if any, nil otherwise; added in 11.0.0
 ---@field isSubTreeSelection boolean? # true if the node is a sub tree selection node, nil otherwise; added in 11.0.0
