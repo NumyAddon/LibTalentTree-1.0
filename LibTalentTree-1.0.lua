@@ -110,6 +110,7 @@ local function buildCache()
     cache.classTreeMap = {};
     cache.nodeTreeMap = {};
     cache.entryTreeMap = {};
+    cache.entryNodeMap = {};
     cache.specSubTreeMap = {};
     cache.subTreeNodesMap = {};
     cache.treeCurrencyMap = {};
@@ -206,6 +207,7 @@ local function buildCache()
                     mergeTables(data.groupIDs, nodeInfo.groupIDs);
                     for _, entryID in ipairs(nodeInfo.entryIDs) do
                         cache.entryTreeMap[entryID] = treeID;
+                        cache.entryNodeMap[entryID] = nodeID;
                         if not entryData[entryID] then
                             local entryInfo = C_Traits.GetEntryInfo(configID, entryID);
                             entryData[entryID] = {
@@ -282,6 +284,15 @@ function LibTalentTree:GetTreeIDForEntry(entryID)
     return self.cache.entryTreeMap[entryID];
 end
 LibTalentTree.GetTreeIdForEntry = LibTalentTree.GetTreeIDForEntry;
+
+--- @public
+--- @param entryID number # TraitEntryID
+--- @return ( number | nil ) # TraitNodeID
+function LibTalentTree:GetNodeIDForEntry(entryID)
+    assert(type(entryID) == 'number', 'entryID must be a number');
+
+    return self.cache.entryNodeMap[entryID];
+end
 
 --- @public
 --- @param treeID number # TraitTreeID, or TraitNodeID, if leaving the 2nd argument nil
