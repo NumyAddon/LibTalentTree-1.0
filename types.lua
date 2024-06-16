@@ -74,8 +74,8 @@
 ---@field description string # localized description
 ---@field iconElementID string # icon atlas
 ---@field maxCurrency number # the maximum amount of currency that can be spent in this sub tree
----@field posX number
----@field posY number
+---@field posX number # generally corresponds to posX of the top center node (generally the initial starting node)
+---@field posY number # generally corresponds to posY of the top center node (generally the initial starting node)
 ---@field requiredPlayerLevel number
 ---@field traitCurrencyID number # TraitCurrencyID spent when learning talents in this sub tree
 ---@field subTreeSelectionNodeIDs number[] # TraitNodeID - the selection nodes that specify whether the sub tree is selected

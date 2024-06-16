@@ -24,6 +24,7 @@ end
 
 local MAX_LEVEL = 100; -- seems to not break if set too high, but can break things when set too low
 local MAX_SUB_TREE_CURRENCY = 10; -- blizzard incorrectly reports 20 when asking for the maxQuantity of the currency
+local HAS_SUB_TREE_SUPPORT = false;
 
 -- taken from ClassTalentUtil.GetVisualsForClassID
 local CLASS_OFFSETS = {
@@ -159,6 +160,7 @@ local function buildCache()
             end
 
             if C_ClassTalents.GetHeroTalentSpecsForClassSpec then
+                HAS_SUB_TREE_SUPPORT = true;
                 local subTreeIDs, requiredPlayerLevel = C_ClassTalents.GetHeroTalentSpecsForClassSpec(configID, specID);
                 if subTreeIDs then
                     cache.specSubTreeMap[specID] = subTreeIDs;
@@ -324,12 +326,7 @@ function LibTalentTree:GetNodeInfo(treeID, nodeID)
     if (not cNodeInfo) then cNodeInfo = {}; end
 
     if cNodeInfo.ID == nodeID then
-        cNodeInfo.specInfo = libNodeInfo.specInfo;
-        cNodeInfo.isClassNode = libNodeInfo.isClassNode;
-        cNodeInfo.visibleForSpecs = libNodeInfo.visibleForSpecs;
-        cNodeInfo.grantedForSpecs = libNodeInfo.grantedForSpecs;
-
-        return cNodeInfo;
+        return Mixin(libNodeInfo, cNodeInfo);
     end
 
     return Mixin(cNodeInfo, libNodeInfo);
@@ -507,9 +504,14 @@ local gridPositionCache = {};
 --- Returns an abstraction of the node positions into a grid of columns and rows.
 --- Some specs may have nodes that sit between 2 columns, these columns end in ".5". This happens for example in the Druid and Demon Hunter trees.
 ---
---- The top row is 1, the bottom row is 10
---- The first class column is 1, the last class column is 9
---- The first spec column is 10
+--- The top row is 1, the bottom row is 10.
+--- The first class column is 1, the last class column is 9.
+--- The first spec column is 13. (if the client supports sub trees, otherwise it's 10)
+---
+--- Hero talents are placed in between the class and spec trees, in columns 10, 11, 12.
+--- Hero talent subTrees are stacked to overlap, all subTrees on rows 1 - 5. You're responsible for adjusting this yourself.
+---
+--- The Hero talent selection node, is hardcoded to row 5.5 and column 10. Making it sit right underneath the sub trees themselves.
 ---
 --- @param treeID number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
 --- @param nodeID number # TraitNodeID, can be omitted, by passing the nodeID as the first argument, the treeID is automatically determined
@@ -537,27 +539,57 @@ function LibTalentTree:GetNodeGridPosition(treeID, nodeID)
     local offsetX = BASE_PAN_OFFSET_X - (CLASS_OFFSETS[classID] and CLASS_OFFSETS[classID].x or 0);
     local offsetY = BASE_PAN_OFFSET_Y - (CLASS_OFFSETS[classID] and CLASS_OFFSETS[classID].y or 0);
 
+    local rawX, rawY = posX, posY;
+
     posX = (round(posX) / 10) - offsetX;
     posY = (round(posY) / 10) - offsetY;
-
-    local colStart = 176;
     local colSpacing = 60;
-    local halfColEnabled = true;
-    local classColEnd = 656;
-    local specColStart = 956;
-    local classSpecGap = specColStart - classColEnd;
 
-    if (posX > (classColEnd + (classSpecGap / 2))) then
-        -- remove the gap between the class and spec trees
-        posX = posX - classSpecGap + colSpacing;
+    local row, col;
+    local nodeInfo = HAS_SUB_TREE_SUPPORT and self:GetLibNodeInfo(treeID, nodeID);
+    local subTreeID = nodeInfo and nodeInfo.subTreeID;
+
+    if subTreeID then
+        local subTreeInfo = self:GetSubTreeInfo(subTreeID);
+        if subTreeInfo then
+            local topCenterPosX = subTreeInfo.posX;
+            local topCenterPosY = subTreeInfo.posY;
+            local offsetFromCenterX = rawX - topCenterPosX;
+            if (offsetFromCenterX > colSpacing) then
+                col = 12;
+            elseif (offsetFromCenterX < -colSpacing) then
+                col = 10;
+            else
+                col = 11;
+            end
+
+            local rowStart = topCenterPosY;
+            local rowSpacing = 2400 / 4; -- 2400 is generally the height of a sub tree, 4 is number of "gaps" between 5 rows
+            local halfRowEnabled = false;
+            row = getGridLineFromCoordinate(rowStart, rowSpacing, halfRowEnabled, rawY) or 0;
+        end
+    elseif nodeInfo and nodeInfo.isSubTreeSelection then
+        col = 10;
+        row = 5.5;
     end
-    local col = getGridLineFromCoordinate(colStart, colSpacing, halfColEnabled, posX);
+    if not row or not col then
+        local colStart = 176;
+        local halfColEnabled = true;
+        local classColEnd = 656;
+        local specColStart = 956;
+        local subTreeOffset = HAS_SUB_TREE_SUPPORT and (3 * colSpacing) or 0;
+        local classSpecGap = (specColStart - classColEnd) - subTreeOffset;
+        if (posX > (classColEnd + (classSpecGap / 2))) then
+            -- remove the gap between the class and spec trees
+            posX = posX - classSpecGap + colSpacing;
+        end
+        col = getGridLineFromCoordinate(colStart, colSpacing, halfColEnabled, posX);
 
-    local rowStart = 151;
-    local rowSpacing = 60;
-    local halfRowEnabled = false;
-
-    local row = getGridLineFromCoordinate(rowStart, rowSpacing, halfRowEnabled, posY);
+        local rowStart = 151;
+        local rowSpacing = 60;
+        local halfRowEnabled = false;
+        row = getGridLineFromCoordinate(rowStart, rowSpacing, halfRowEnabled, posY);
+    end
 
     gridPositionCache[treeID][nodeID] = {col, row};
 
@@ -685,7 +717,7 @@ end
 function LibTalentTree:GetSubTreeNodeIDs(subTreeID)
     assert(type(subTreeID) == 'number', 'subTreeID must be a number');
 
-    return deepCopy(self.cache.subTreeNodesMap[subTreeID]);
+    return deepCopy(self.cache.subTreeNodesMap[subTreeID]) or {};
 end
 LibTalentTree.GetSubTreeNodeIds = LibTalentTree.GetSubTreeNodeIDs;
 
@@ -695,7 +727,7 @@ LibTalentTree.GetSubTreeNodeIds = LibTalentTree.GetSubTreeNodeIDs;
 function LibTalentTree:GetSubTreeIDsForSpecID(specID)
     assert(type(specID) == 'number', 'specID must be a number');
 
-    return deepCopy(self.cache.specSubTreeMap[specID]);
+    return deepCopy(self.cache.specSubTreeMap[specID]) or {};
 end
 LibTalentTree.GetSubTreeIdsForSpecId = LibTalentTree.GetSubTreeIDsForSpecID;
 
