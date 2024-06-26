@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 17;
+local MAJOR, MINOR = "LibTalentTree-1.0", 18;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -99,6 +99,112 @@ local function getGridLineFromCoordinate(start, spacing, halfwayEnabled, coordin
     return nil;
 end
 
+local data = {
+    -- subTree mapping isn't available until later, hardcoding a map for any addon that wants it on initial load
+    -- the relevant data is then grabbed from the API when it becomes available, updating LTT's internal cache
+    subTreeIDsMap =  {
+        [62] = {40,39},
+        [63] = {41,39},
+        [64] = {41,40},
+        [65] = {50,49},
+        [66] = {49,48},
+        [70] = {50,48},
+        [71] = {62,60},
+        [72] = {61,60},
+        [73] = {62,61},
+        [102] = {24,23},
+        [103] = {21,22},
+        [104] = {21,24},
+        [105] = {23,22},
+        [250] = {33,31},
+        [251] = {33,32},
+        [252] = {32,31},
+        [253] = {44,43},
+        [254] = {44,42},
+        [255] = {43,42},
+        [256] = {20,18},
+        [257] = {20,19},
+        [258] = {19,18},
+        [259] = {53,52},
+        [260] = {52,51},
+        [261] = {53,51},
+        [262] = {56,55},
+        [263] = {55,54},
+        [264] = {56,54},
+        [265] = {58,57},
+        [266] = {59,57},
+        [267] = {59,58},
+        [268] = {66,65},
+        [269] = {64,65},
+        [270] = {64,66},
+        [577] = {35,34},
+        [581] = {35,34},
+        [1467] = {37,36},
+        [1468] = {38,37},
+        [1473] = {38,36},
+    },
+};
+
+local deferSubTreeDataRefresh;
+do
+    local function tryRefreshSubTreeData()
+        local level = MAX_LEVEL;
+        local configID = Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID;
+        local cache = LibTalentTree.cache;
+        for specID, classID in pairs(cache.specMap) do
+            local treeID = cache.classTreeMap[classID];
+            C_ClassTalents.InitializeViewLoadout(specID, level);
+            C_ClassTalents.ViewLoadout({});
+
+            local subTreeIDs, requiredPlayerLevel = C_ClassTalents.GetHeroTalentSpecsForClassSpec(configID, specID);
+            if not subTreeIDs then
+                return false;
+            end
+            cache.specSubTreeMap[specID] = subTreeIDs;
+            for _, subTreeID in ipairs(subTreeIDs) do
+                local subTreeInfo = C_Traits.GetSubTreeInfo(configID, subTreeID);
+                if subTreeInfo then
+                    subTreeInfo.requiredPlayerLevel = requiredPlayerLevel;
+                    subTreeInfo.maxCurrency = MAX_SUB_TREE_CURRENCY;
+                    subTreeInfo.isActive = false;
+                    cache.subTreeData[subTreeID] = subTreeInfo;
+                    cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID].subTreeID = subTreeID;
+                    cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID].quantity = MAX_SUB_TREE_CURRENCY;
+                    cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID].maxQuantity = MAX_SUB_TREE_CURRENCY;
+                end
+            end
+        end
+
+        return true;
+    end
+    local isSubTreeDataRefreshScheduled = false;
+    deferSubTreeDataRefresh = function()
+        if isSubTreeDataRefreshScheduled then return; end
+        isSubTreeDataRefreshScheduled = true;
+
+        local frame = CreateFrame('FRAME');
+        -- I'm having some trouble pinpointing exactly when the data is available
+        frame:RegisterEvent('PLAYER_TALENT_UPDATE');
+        frame:RegisterEvent('PLAYER_ENTERING_WORLD');
+        frame:SetScript('OnEvent', function(_, event)
+            frame:UnregisterEvent(event);
+            local success = tryRefreshSubTreeData();
+            if success then
+                frame:SetScript('OnEvent', nil);
+                frame:SetScript('OnUpdate', nil);
+            else
+                frame:SetScript('OnUpdate', function()
+                    local success = tryRefreshSubTreeData();
+                    if success then
+                        frame:SetScript('OnEvent', nil);
+                        frame:SetScript('OnUpdate', nil);
+                    end
+                end);
+            end
+        end);
+    end
+end
+
 local function buildCache()
     local level = MAX_LEVEL;
     local configID = Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID;
@@ -163,6 +269,10 @@ local function buildCache()
             if C_ClassTalents.GetHeroTalentSpecsForClassSpec then
                 HAS_SUB_TREE_SUPPORT = true;
                 local subTreeIDs, requiredPlayerLevel = C_ClassTalents.GetHeroTalentSpecsForClassSpec(configID, specID);
+                if not subTreeIDs then
+                    deferSubTreeDataRefresh();
+                    subTreeIDs = data.subTreeIDsMap[specID];
+                end
                 if subTreeIDs then
                     cache.specSubTreeMap[specID] = subTreeIDs;
                     for _, subTreeID in ipairs(subTreeIDs) do
