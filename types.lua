@@ -61,6 +61,7 @@
 ---@field maxRanks number
 ---@field isAvailable boolean # LibTalentTree always returns true
 ---@field conditionIDs number[] # list of TraitConditionID, LibTalentTree always returns an empty table
+---@field subTreeID number? # the sub tree ID that the entry will select if any, nil otherwise; added in 11.0.0
 
 ---@class gateInfo
 ---@field topLeftNodeID number # TraitNodeID - the node that is the top left corner of the gate

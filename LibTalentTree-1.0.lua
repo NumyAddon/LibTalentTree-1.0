@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 18;
+local MAJOR, MINOR = "LibTalentTree-1.0", 19;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -859,4 +859,29 @@ function LibTalentTree:GetSubTreeInfo(subTreeID)
     assert(type(subTreeID) == 'number', 'subTreeID must be a number');
 
     return deepCopy(self.cache.subTreeData[subTreeID]);
+end
+
+--- @public
+--- @param specID number # See https://warcraft.wiki.gg/wiki/SpecializationID
+--- @param subTreeID number # TraitSubTreeID
+--- @return number?, number? # TraitNodeID, TraitEntryID; or nil if not found
+function LibTalentTree:GetSubTreeSelectionNodeIDAndEntryIDBySpecID(specID, subTreeID)
+    assert(type(specID) == 'number', 'specID must be a number');
+    assert(type(subTreeID) == 'number', 'subTreeID must be a number');
+
+    local subTreeInfo = self:GetSubTreeInfo(subTreeID);
+    for _, selectionNodeID in ipairs(subTreeInfo and subTreeInfo.subTreeSelectionNodeIDs or {}) do
+        if self:IsNodeVisibleForSpec(specID, selectionNodeID) then
+            local nodeInfo = self:GetLibNodeInfo(selectionNodeID);
+            for _, entryID in ipairs(nodeInfo and nodeInfo.entryIDs or {}) do
+                local entryInfo = self:GetEntryInfo(entryID);
+                if entryInfo and entryInfo.subTreeID == subTreeID then
+                    return selectionNodeID, entryID;
+                end
+            end
+            break;
+        end
+    end
+
+    return nil;
 end
