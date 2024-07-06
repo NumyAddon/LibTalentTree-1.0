@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 19;
+local MAJOR, MINOR = "LibTalentTree-1.0", 20;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -370,7 +370,14 @@ local function buildCache()
     end
 end
 
-buildCache();
+do
+    -- buildCache results in a significant amount of pointless taintlog entries when it's set to log level 11
+    -- so we just disable it temporarily
+    local backup = C_CVar.GetCVar('taintLog');
+    if backup and backup == '11' then C_CVar.SetCVar('taintLog', 0); end
+    buildCache();
+    if backup and backup == '11' then C_CVar.SetCVar('taintLog', backup); end
+end
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
