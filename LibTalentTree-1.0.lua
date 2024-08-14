@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 21;
+local MAJOR, MINOR = "LibTalentTree-1.0", 22;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -118,6 +118,21 @@ local function buildCache()
     cache.gateData = {};
     cache.entryData = {};
     cache.subTreeData = {};
+    local initialSpecs = {
+        [1] = 1446,
+        [2] = 1451,
+        [3] = 1448,
+        [4] = 1453,
+        [5] = 1452,
+        [6] = 1455,
+        [7] = 1444,
+        [8] = 1449,
+        [9] = 1454,
+        [10] = 1450,
+        [11] = 1447,
+        [12] = 1456,
+        [13] = 1465,
+    };
     for classID = 1, GetNumClasses() do
         cache.classFileMap[select(2, GetClassInfo(classID))] = classID;
 
@@ -128,9 +143,9 @@ local function buildCache()
         local treeID;
 
         local numSpecs = GetNumSpecializationsForClassID(classID);
-        for specIndex = 1, numSpecs do
-            local lastSpec = specIndex == numSpecs;
-            local specID = GetSpecializationInfoForClassID(classID, specIndex);
+        for specIndex = 1, (numSpecs + 1) do
+            local lastSpec = specIndex == (numSpecs + 1);
+            local specID = GetSpecializationInfoForClassID(classID, specIndex) or initialSpecs[classID];
             cache.specMap[specID] = classID;
 
             --- @type number
@@ -673,7 +688,7 @@ function LibTalentTree:GetGates(specID)
     local nodeData = self.cache.nodeData;
 
     for nodeID, nodeInfo in pairs(nodeData[treeID]) do
-        if (#nodeInfo.conditionIDs > 0 and self:IsNodeVisibleForSpec(specID, nodeID)) then
+        if (nodeInfo.conditionIDs and #nodeInfo.conditionIDs > 0 and self:IsNodeVisibleForSpec(specID, nodeID)) then
             for _, conditionID in pairs(nodeInfo.conditionIDs) do
                 if conditions[conditionID] then
                     nodesByConditions[conditionID] = nodesByConditions[conditionID] or {};
