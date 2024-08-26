@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 22;
+local MAJOR, MINOR = "LibTalentTree-1.0", 23;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -112,6 +112,7 @@ local function buildCache()
     cache.entryTreeMap = {};
     cache.entryNodeMap = {};
     cache.specSubTreeMap = {};
+    cache.subTreeSpecMap = {};
     cache.subTreeNodesMap = {};
     cache.treeCurrencyMap = {};
     cache.nodeData = {};
@@ -215,6 +216,8 @@ local function buildCache()
                             if entryInfo.subTreeID then
                                 cache.specSubTreeMap[specID] = cache.specSubTreeMap[specID] or {};
                                 cache.specSubTreeMap[specID][entryIndex] = entryInfo.subTreeID;
+                                cache.subTreeSpecMap[entryInfo.subTreeID] = cache.subTreeSpecMap[entryInfo.subTreeID] or {};
+                                cache.subTreeSpecMap[entryInfo.subTreeID][specID] = true;
                                 -- I previously used C_ClassTalents.GetHeroTalentSpecsForClassSpec, but it returns nil on initial load
                                 -- it's not actually required to retrieve the data though
                                 local subTreeInfo = C_Traits.GetSubTreeInfo(configID, entryInfo.subTreeID);
@@ -262,6 +265,14 @@ local function buildCache()
                         cache.subTreeNodesMap[data.subTreeID] = cache.subTreeNodesMap[data.subTreeID] or {};
                         table.insert(cache.subTreeNodesMap[data.subTreeID], nodeID);
                     end
+                end
+            end
+        end
+        for _, nodeInfo in pairs(nodeData) do
+            -- some subtree nodes incorrectly suggest they are visible for all specs, so we just correct that
+            if nodeInfo.subTreeID then
+                for specID, _ in pairs(nodeInfo.visibleForSpecs) do
+                    nodeInfo.visibleForSpecs[specID] = cache.subTreeSpecMap[nodeInfo.subTreeID][specID] or false;
                 end
             end
         end
