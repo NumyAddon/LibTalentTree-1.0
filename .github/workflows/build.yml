@@ -30,7 +30,7 @@ jobs:
           {
             echo 'CHANGELOG<<EOF'
             cat .release/*/CHANGELOG.md
-            echo EOF
+            printf '\nEOF'
           } >> "$GITHUB_OUTPUT"
 
       - name: Notify Discord webhook
