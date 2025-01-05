@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 23;
+local MAJOR, MINOR = "LibTalentTree-1.0", 24;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -99,26 +99,52 @@ local function getGridLineFromCoordinate(start, spacing, halfwayEnabled, coordin
     return nil;
 end
 
-local function buildCache()
+LibTalentTree.cacheWarmupRegistery = LibTalentTree.cacheWarmupRegistery or {};
+
+local forceBuildCache;
+local cacheWarmedUp = false;
+do
+    local function initCache()
+        LibTalentTree.cache = {
+            --- @type table<string, number> # className -> classID
+            classFileMap = {},
+            --- @type table<number, number> # specID -> classID
+            specMap = {},
+            --- @type table<number, number> # classID -> treeID
+            classTreeMap = {},
+            --- @type table<number, number> # nodeID -> treeID
+            nodeTreeMap = {},
+            --- @type table<number, number> # entryID -> treeID
+            entryTreeMap = {},
+            --- @type table<number, number> # entryID -> nodeID
+            entryNodeMap = {},
+            --- @type table<number, table<number, number>> # specID -> {entryIndex -> subTreeID}
+            specSubTreeMap = {},
+            --- @type table<number, table<number, boolean>> # subTreeID -> {specID -> true}
+            subTreeSpecMap = {},
+            --- @type table<number, number[]> # subTreeID -> nodeID[]
+            subTreeNodesMap = {},
+            --- @type table<number, treeCurrencyInfo[]> # treeID -> {currencyIndex|currencyID -> currencyInfo}
+            treeCurrencyMap = {},
+            --- @type table<number, libNodeInfo[]> # treeID -> {nodeID -> nodeInfo}
+            nodeData = {},
+            --- @type table<number, table<number, gateInfo>> # treeID -> {conditionID -> gateInfo}
+            gateData = {},
+            --- @type table<number, entryInfo[]> # treeID -> {entryID -> entryData}
+            entryData = {},
+            --- @type table<number, subTreeInfo> # subTreeID -> subTreeInfo
+            subTreeData = {},
+        };
+        for classID = 1, GetNumClasses() do
+            LibTalentTree.cache.classFileMap[select(2, GetClassInfo(classID))] = classID;
+
+            local specID = GetSpecializationInfoForClassID(classID, 1);
+            LibTalentTree.cache.classTreeMap[classID] = C_ClassTalents.GetTraitTreeForSpec(specID);
+        end
+    end
+
     local level = MAX_LEVEL;
     local configID = Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID;
-
-    LibTalentTree.cache = {};
-    local cache = LibTalentTree.cache;
-    cache.classFileMap = {};
-    cache.specMap = {};
-    cache.classTreeMap = {};
-    cache.nodeTreeMap = {};
-    cache.entryTreeMap = {};
-    cache.entryNodeMap = {};
-    cache.specSubTreeMap = {};
-    cache.subTreeSpecMap = {};
-    cache.subTreeNodesMap = {};
-    cache.treeCurrencyMap = {};
-    cache.nodeData = {};
-    cache.gateData = {};
-    cache.entryData = {};
-    cache.subTreeData = {};
     local initialSpecs = {
         [1] = 1446,
         [2] = 1451,
@@ -134,24 +160,23 @@ local function buildCache()
         [12] = 1456,
         [13] = 1465,
     };
-    for classID = 1, GetNumClasses() do
-        cache.classFileMap[select(2, GetClassInfo(classID))] = classID;
+    local function buildPartialCache(classID)
+        local cache = LibTalentTree.cache;
 
         local nodes;
+        local treeID = cache.classTreeMap[classID];
         local nodeData = {};
         local entryData = {};
         local gateData = {};
-        local treeID;
+        cache.nodeData[treeID] = nodeData;
+        cache.entryData[treeID] = entryData;
+        cache.gateData[treeID] = gateData;
 
         local numSpecs = GetNumSpecializationsForClassID(classID);
         for specIndex = 1, (numSpecs + 1) do
             local lastSpec = specIndex == (numSpecs + 1);
             local specID = GetSpecializationInfoForClassID(classID, specIndex) or initialSpecs[classID];
             cache.specMap[specID] = classID;
-
-            --- @type number
-            treeID = treeID or C_ClassTalents.GetTraitTreeForSpec(specID);
-            cache.classTreeMap[classID] = treeID;
 
             C_ClassTalents.InitializeViewLoadout(specID, level);
             C_ClassTalents.ViewLoadout({});
@@ -176,7 +201,7 @@ local function buildCache()
                 };
             end
 
-            for _, nodeID in ipairs(nodes) do
+            for _, nodeID in pairs(nodes) do
                 cache.nodeTreeMap[nodeID] = treeID;
                 local nodeInfo = C_Traits.GetNodeInfo(configID, nodeID);
                 nodeData[nodeID] = nodeData[nodeID] or {};
@@ -201,7 +226,7 @@ local function buildCache()
 
                     data.groupIDs = data.groupIDs or {}
                     mergeTables(data.groupIDs, nodeInfo.groupIDs);
-                    for entryIndex, entryID in ipairs(nodeInfo.entryIDs) do
+                    for entryIndex, entryID in pairs(nodeInfo.entryIDs) do
                         cache.entryTreeMap[entryID] = treeID;
                         cache.entryNodeMap[entryID] = nodeID;
                         if not entryData[entryID] then
@@ -234,7 +259,7 @@ local function buildCache()
                         end
                     end
 
-                    for _, conditionID in ipairs(data.conditionIDs) do
+                    for _, conditionID in pairs(data.conditionIDs) do
                         local cInfo = C_Traits.GetConditionInfo(configID, conditionID)
                         if cInfo and cInfo.isMet and cInfo.ranksGranted and cInfo.ranksGranted > 0 then
                             data.grantedForSpecs[specID] = true;
@@ -247,7 +272,7 @@ local function buildCache()
                         if not next(nodeCost) and data.grantedForSpecs[specID] then
                             data.isClassNode = true;
                         end
-                        for _, cost in ipairs(nodeCost) do
+                        for _, cost in pairs(nodeCost) do
                             if cost.ID == classCurrencyID then
                                 data.isClassNode = true;
                                 break;
@@ -259,7 +284,7 @@ local function buildCache()
                 data.visibleForSpecs[specID] = nodeInfo.isVisible;
 
                 if lastSpec then
-                	if not data.posX then
+                    if not data.posX then
                         nodeData[nodeID] = nil;
                     elseif data.subTreeID then
                         cache.subTreeNodesMap[data.subTreeID] = cache.subTreeNodesMap[data.subTreeID] or {};
@@ -276,30 +301,76 @@ local function buildCache()
                 end
             end
         end
-
-        cache.nodeData[treeID] = nodeData;
-        cache.entryData[treeID] = entryData;
-        cache.gateData[treeID] = gateData;
     end
-end
 
-do
-    -- buildCache results in a significant amount of pointless taintlog entries when it's set to log level 11
-    -- so we just disable it temporarily
-    local backup = C_CVar.GetCVar('taintLog');
-    if backup and backup == '11' then C_CVar.SetCVar('taintLog', 0); end
-    buildCache();
-    if backup and backup == '11' then C_CVar.SetCVar('taintLog', backup); end
+    local frame = CreateFrame("Frame");
+    local function onCacheCompleted()
+        frame:SetScript("OnUpdate", nil);
+        forceBuildCache = nil;
+        cacheWarmedUp = true;
+        for _, callback in ipairs(LibTalentTree.cacheWarmupRegistery) do
+            securecallfunction(callback);
+        end
+        LibTalentTree.cacheWarmupRegistery = nil;
+    end
+
+    frame.currentClassID = 0;
+    frame.numClasses = GetNumClasses();
+    frame:SetScript("OnUpdate", function()
+        local _, latestMinor = LibStub:GetLibrary(MAJOR);
+        if latestMinor ~= MINOR then
+            frame:SetScript("OnUpdate", nil);
+            return;
+        end
+        local classID = frame.currentClassID + 1;
+        if classID == 1 then
+            initCache();
+        elseif classID > frame.numClasses then
+            onCacheCompleted();
+            return;
+        end
+        frame.currentClassID = classID;
+
+        -- buildPartialCache results in a significant amount of pointless taintlog entries when it's set to log level 11
+        -- so we just disable it temporarily
+        local backup = C_CVar.GetCVar('taintLog');
+        if backup and backup == '11' then C_CVar.SetCVar('taintLog', 0); end
+        buildPartialCache(classID);
+        if backup and backup == '11' then C_CVar.SetCVar('taintLog', backup); end
+    end);
+
+    forceBuildCache = function()
+        for classID = frame.currentClassID + 1, frame.numClasses do
+            buildPartialCache(classID);
+        end
+        onCacheCompleted();
+    end
 end
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
 --- @public
+--- Register a callback to be called when the cache is fully built.
+--- If you register the callback after the cache is built, it will be called immediately.
+--- Using a function that requires the cache to be present, will force load the cache, which might result in a slight ms spike
+--- @param callback fun() # called when all data is ready
+function LibTalentTree:RegisterOnCacheWarmup(callback)
+    assert(type(callback) == 'function', 'callback must be a function');
+
+    if cacheWarmedUp then
+        securecallfunction(callback);
+    else
+        table.insert(self.cacheWarmupRegistery, callback);
+    end
+end
+
+--- @public
 --- @param nodeID number # TraitNodeID
 --- @return ( number | nil ) # TraitTreeID
 function LibTalentTree:GetTreeIDForNode(nodeID)
     assert(type(nodeID) == 'number', 'nodeID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     return self.cache.nodeTreeMap[nodeID];
 end
@@ -310,6 +381,7 @@ LibTalentTree.GetTreeIdForNode = LibTalentTree.GetTreeIDForNode;
 --- @return ( number | nil ) # TraitTreeID
 function LibTalentTree:GetTreeIDForEntry(entryID)
     assert(type(entryID) == 'number', 'entryID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     return self.cache.entryTreeMap[entryID];
 end
@@ -320,6 +392,7 @@ LibTalentTree.GetTreeIdForEntry = LibTalentTree.GetTreeIDForEntry;
 --- @return ( number | nil ) # TraitNodeID
 function LibTalentTree:GetNodeIDForEntry(entryID)
     assert(type(entryID) == 'number', 'entryID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     return self.cache.entryNodeMap[entryID];
 end
@@ -333,9 +406,11 @@ function LibTalentTree:GetLibNodeInfo(treeID, nodeID)
     assert(type(treeID) == 'number', 'treeID must be a number');
     if not nodeID then
         nodeID = treeID;
-        treeID = self:GetTreeIDForNode(nodeID);
+        --- @type number
+        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
     end
     assert(type(nodeID) == 'number', 'nodeID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     local nodeData = self.cache.nodeData;
 
@@ -354,9 +429,11 @@ function LibTalentTree:GetNodeInfo(treeID, nodeID)
     assert(type(treeID) == 'number', 'treeID must be a number');
     if not nodeID then
         nodeID = treeID;
-        treeID = self:GetTreeIDForNode(nodeID);
+        --- @type number
+        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
     end
     assert(type(nodeID) == 'number', 'nodeID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     local cNodeInfo = C_ClassTalents.GetActiveConfigID()
             and C_Traits.GetNodeInfo(C_ClassTalents.GetActiveConfigID(), nodeID)
@@ -382,9 +459,11 @@ function LibTalentTree:GetEntryInfo(treeID, entryID)
     assert(type(treeID) == 'number', 'treeID must be a number');
     if not entryID then
         entryID = treeID;
-        treeID = self:GetTreeIDForEntry(entryID);
+        --- @type number
+        treeID = self:GetTreeIDForEntry(entryID); ---@diagnostic disable-line: assign-type-mismatch
     end
     assert(type(entryID) == 'number', 'entryID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     local entryData = self.cache.entryData;
 
@@ -416,7 +495,7 @@ LibTalentTree.GetClassTreeId = LibTalentTree.GetClassTreeID;
 --- @param treeID (number) # a class' TraitTreeID
 --- @return (number | nil) # ClassID or nil - See https://warcraft.wiki.gg/wiki/ClassID
 function LibTalentTree:GetClassIDByTreeID(treeID)
-    treeID = tonumber(treeID);
+    treeID = tonumber(treeID); ---@diagnostic disable-line: cast-local-type
 
     if not self.inverseClassMap then
         local classTreeMap = self.cache.classTreeMap;
@@ -437,6 +516,7 @@ LibTalentTree.GetClassIdByTreeId = LibTalentTree.GetClassIDByTreeID;
 function LibTalentTree:IsNodeVisibleForSpec(specID, nodeID)
     assert(type(specID) == 'number', 'specID must be a number');
     assert(type(nodeID) == 'number', 'nodeID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     local specMap = self.cache.specMap;
     local class = specMap[specID];
@@ -447,37 +527,7 @@ function LibTalentTree:IsNodeVisibleForSpec(specID, nodeID)
 
     if not nodeInfo then return false; end
 
-    -- >= 10.1.0
-    if nodeInfo.visibleForSpecs then
-        return nodeInfo.visibleForSpecs[specID];
-    end
-
-    -- < 10.1.0
-    if (nodeInfo.specInfo[specID]) then
-        for _, conditionType in pairs(nodeInfo.specInfo[specID]) do
-            if (conditionType == Enum.TraitConditionType.Visible or conditionType == Enum.TraitConditionType.Granted) then
-                return true;
-            end
-        end
-    end
-    for id, conditionTypes in pairs(nodeInfo.specInfo) do
-        if (id ~= specID) then
-            for _, conditionType in pairs(conditionTypes) do
-                if (conditionType == Enum.TraitConditionType.Visible) then
-                    return false
-                end
-            end
-        end
-    end
-    if (nodeInfo.specInfo[0]) then
-        for _, conditionType in pairs(nodeInfo.specInfo[0]) do
-            if (conditionType == Enum.TraitConditionType.Visible or conditionType == Enum.TraitConditionType.Granted) then
-                return true;
-            end
-        end
-    end
-
-    return true;
+    return nodeInfo.visibleForSpecs[specID];
 end
 
 --- @public
@@ -487,37 +537,18 @@ end
 function LibTalentTree:IsNodeGrantedForSpec(specID, nodeID)
     assert(type(specID) == 'number', 'specID must be a number');
     assert(type(nodeID) == 'number', 'nodeID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     local specMap = self.cache.specMap;
     local class = specMap[specID];
     assert(class, 'Unknown specID: ' .. specID);
 
     local treeID = self:GetClassTreeID(class);
-    local nodeInfo = self:GetLibNodeInfo(treeID, nodeID);
+    local nodeInfo = self:GetLibNodeInfo(treeID --[[@as number]], nodeID);
 
-    -- >= 10.1.0
-    if nodeInfo and nodeInfo.grantedForSpecs then
-        return nodeInfo.grantedForSpecs[specID];
-    end
+    if not nodeInfo then return false; end
 
-    -- < 10.1.0
-    if (nodeInfo and nodeInfo.specInfo[specID]) then
-        for _, conditionType in pairs(nodeInfo.specInfo[specID]) do
-            if (conditionType == Enum.TraitConditionType.Granted) then
-                return true;
-            end
-        end
-    end
-
-    if (nodeInfo and nodeInfo.specInfo[0]) then
-        for _, conditionType in pairs(nodeInfo.specInfo[0]) do
-            if (conditionType == Enum.TraitConditionType.Granted) then
-                return true;
-            end
-        end
-    end
-
-    return false;
+    return nodeInfo.grantedForSpecs[specID];
 end
 
 --- @public
@@ -529,7 +560,8 @@ function LibTalentTree:GetNodePosition(treeID, nodeID)
     assert(type(treeID) == 'number', 'treeID must be a number');
     if not nodeID then
         nodeID = treeID;
-        treeID = self:GetTreeIDForNode(nodeID);
+        --- @type number
+        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
     end
     assert(type(nodeID) == 'number', 'nodeID must be a number');
 
@@ -562,7 +594,8 @@ function LibTalentTree:GetNodeGridPosition(treeID, nodeID)
     assert(type(treeID) == 'number', 'treeID must be a number');
     if not nodeID then
         nodeID = treeID;
-        treeID = self:GetTreeIDForNode(nodeID);
+        --- @type number
+        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
     end
     assert(type(nodeID) == 'number', 'nodeID must be a number');
 
@@ -646,7 +679,8 @@ function LibTalentTree:GetNodeEdges(treeID, nodeID)
     assert(type(treeID) == 'number', 'treeID must be a number');
     if not nodeID then
         nodeID = treeID;
-        treeID = self:GetTreeIDForNode(nodeID);
+        --- @type number
+        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
     end
     assert(type(nodeID) == 'number', 'nodeID must be a number');
 
@@ -665,7 +699,8 @@ function LibTalentTree:IsClassNode(treeID, nodeID)
     assert(type(treeID) == 'number', 'treeID must be a number');
     if not nodeID then
         nodeID = treeID;
-        treeID = self:GetTreeIDForNode(nodeID);
+        --- @type number
+        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
     end
     assert(type(nodeID) == 'number', 'nodeID must be a number');
 
@@ -683,6 +718,7 @@ local gateCache = {}
 function LibTalentTree:GetGates(specID)
     -- an optimization step is likely trivial in 10.1.0, but well.. effort, and this also works fine still :)
     assert(type(specID) == 'number', 'specID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     if (gateCache[specID]) then return deepCopy(gateCache[specID]); end
     local specMap = self.cache.specMap;
@@ -748,6 +784,7 @@ end
 --- @return treeCurrencyInfo[] # list of currencies for the given tree, first entry is class currency, second is spec currency, the rest are sub tree currencies. The list is additionally indexed by the traitCurrencyID.
 function LibTalentTree:GetTreeCurrencies(treeID)
     assert(type(treeID) == 'number', 'treeID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     return deepCopy(self.cache.treeCurrencyMap[treeID]);
 end
@@ -757,6 +794,7 @@ end
 --- @return number[] # list of TraitNodeIDs that belong to the given sub tree
 function LibTalentTree:GetSubTreeNodeIDs(subTreeID)
     assert(type(subTreeID) == 'number', 'subTreeID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     return deepCopy(self.cache.subTreeNodesMap[subTreeID]) or {};
 end
@@ -767,6 +805,7 @@ LibTalentTree.GetSubTreeNodeIds = LibTalentTree.GetSubTreeNodeIDs;
 --- @return number[] # list of TraitSubTreeIDs that belong to the given spec
 function LibTalentTree:GetSubTreeIDsForSpecID(specID)
     assert(type(specID) == 'number', 'specID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     return deepCopy(self.cache.specSubTreeMap[specID]) or {};
 end
@@ -777,6 +816,7 @@ LibTalentTree.GetSubTreeIdsForSpecId = LibTalentTree.GetSubTreeIDsForSpecID;
 --- @return ( subTreeInfo | nil )
 function LibTalentTree:GetSubTreeInfo(subTreeID)
     assert(type(subTreeID) == 'number', 'subTreeID must be a number');
+    if forceBuildCache then forceBuildCache(); end;
 
     return deepCopy(self.cache.subTreeData[subTreeID]);
 end

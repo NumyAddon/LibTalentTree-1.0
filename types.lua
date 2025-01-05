@@ -1,3 +1,4 @@
+--- @meta _
 -- this file contains some of the type definitions used in this library
 
 ---@class treeCurrencyInfo
