@@ -6,6 +6,14 @@
 ## Version: @project-version@
 ## X-Licence: Permission is granted to use and redistribute this library in any way you see fit, including but not limited to, embedding it in your own addons.
 ## X-Curse-Project-ID: 676405
+## Category: Development Tools
+## Category-deDE: Entwicklungstools
+## Category-esES: Herramientas de Desarrollo
+## Category-esMX: Herramientas de Desarrollo
+## Category-frFR: Outils de Développement
+## Category-ptBR: Ferramentas de Desenvolvimento
+## Category-ruRU: Инструменты разработки
+## Category-zhCN: 开发工具
 
 LibStub\LibStub.lua
 LibTalentTree-1.0.xml
