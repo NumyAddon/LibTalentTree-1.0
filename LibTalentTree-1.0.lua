@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 25;
+local MAJOR, MINOR = "LibTalentTree-1.0", 26;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -341,6 +341,9 @@ do
 
     forceBuildCache = function()
         for classID = frame.currentClassID + 1, frame.numClasses do
+            if classID == 1 then
+                initCache();
+            end
             buildPartialCache(classID);
         end
         onCacheCompleted();
