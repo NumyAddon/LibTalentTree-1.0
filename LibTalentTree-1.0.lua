@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 24;
+local MAJOR, MINOR = "LibTalentTree-1.0", 25;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -481,6 +481,7 @@ end
 --- @return ( number | nil ) # TraitTreeID
 function LibTalentTree:GetClassTreeID(class)
     assert(type(class) == 'string' or type(class) == 'number', 'class must be a string or number');
+    if forceBuildCache then forceBuildCache(); end;
 
     local classFileMap = self.cache.classFileMap;
     local classTreeMap = self.cache.classTreeMap;
@@ -496,6 +497,7 @@ LibTalentTree.GetClassTreeId = LibTalentTree.GetClassTreeID;
 --- @return (number | nil) # ClassID or nil - See https://warcraft.wiki.gg/wiki/ClassID
 function LibTalentTree:GetClassIDByTreeID(treeID)
     treeID = tonumber(treeID); ---@diagnostic disable-line: cast-local-type
+    if forceBuildCache then forceBuildCache(); end;
 
     if not self.inverseClassMap then
         local classTreeMap = self.cache.classTreeMap;
