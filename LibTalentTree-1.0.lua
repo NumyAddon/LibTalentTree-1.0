@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 26;
+local MAJOR, MINOR = "LibTalentTree-1.0", 27;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -574,7 +574,7 @@ function LibTalentTree:GetNodeGridPosition(nodeID)
         return unpack(gridPositionCache[treeID][nodeID]);
     end
 
-    local posX, posY = self:GetNodePosition(treeID, nodeID);
+    local posX, posY = self:GetNodePosition(nodeID);
     if (not posX or not posY) then return nil, nil; end
 
     local offsetX = BASE_PAN_OFFSET_X - (CLASS_OFFSETS[classID] and CLASS_OFFSETS[classID].x or 0);
