@@ -367,29 +367,27 @@ end
 
 --- @public
 --- @param nodeID number # TraitNodeID
---- @return ( number | nil ) # TraitTreeID
+--- @return number|nil treeID # TraitTreeID
 function LibTalentTree:GetTreeIDForNode(nodeID)
     assert(type(nodeID) == 'number', 'nodeID must be a number');
     if forceBuildCache then forceBuildCache(); end;
 
     return self.cache.nodeTreeMap[nodeID];
 end
-LibTalentTree.GetTreeIdForNode = LibTalentTree.GetTreeIDForNode;
 
 --- @public
 --- @param entryID number # TraitEntryID
---- @return ( number | nil ) # TraitTreeID
+--- @return number|nil treeID # TraitTreeID
 function LibTalentTree:GetTreeIDForEntry(entryID)
     assert(type(entryID) == 'number', 'entryID must be a number');
     if forceBuildCache then forceBuildCache(); end;
 
     return self.cache.entryTreeMap[entryID];
 end
-LibTalentTree.GetTreeIdForEntry = LibTalentTree.GetTreeIDForEntry;
 
 --- @public
 --- @param entryID number # TraitEntryID
---- @return ( number | nil ) # TraitNodeID
+--- @return number|nil nodeID # TraitNodeID
 function LibTalentTree:GetNodeIDForEntry(entryID)
     assert(type(entryID) == 'number', 'entryID must be a number');
     if forceBuildCache then forceBuildCache(); end;
@@ -398,50 +396,38 @@ function LibTalentTree:GetNodeIDForEntry(entryID)
 end
 
 --- @public
---- @param treeID number # TraitTreeID, or TraitNodeID, if leaving the 2nd argument nil
---- @param nodeID number # TraitNodeID, can be omitted, by passing the nodeID as the first argument, the treeID is automatically determined
---- @return ( libNodeInfo | nil )
---- @overload fun(self: LibTalentTree-1.0, nodeID: number): libNodeInfo | nil
-function LibTalentTree:GetLibNodeInfo(treeID, nodeID)
-    assert(type(treeID) == 'number', 'treeID must be a number');
-    if not nodeID then
-        nodeID = treeID;
-        --- @type number
-        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
-    end
+--- @param nodeID number # TraitNodeID
+--- @return libNodeInfo|nil nodeInfo
+function LibTalentTree:GetLibNodeInfo(nodeID)
     assert(type(nodeID) == 'number', 'nodeID must be a number');
     if forceBuildCache then forceBuildCache(); end;
 
+    local treeID = self:GetTreeIDForNode(nodeID);
     local nodeData = self.cache.nodeData;
 
     local nodeInfo = nodeData[treeID] and nodeData[treeID][nodeID] and deepCopy(nodeData[treeID][nodeID]) or nil;
-    if (nodeInfo) then nodeInfo.ID = nodeID; end
+    if nodeInfo then nodeInfo.ID = nodeID; end
 
     return nodeInfo;
 end
 
 --- @public
---- @param treeID number # TraitTreeID, or TraitEntryID, if leaving the 2nd argument nil
---- @param nodeID number # TraitNodeID, can be omitted, by passing the nodeID as the first argument, the treeID is automatically determined
---- @return ( libNodeInfo ) # libNodeInfo is enriched and overwritten by C_Traits information if possible
---- @overload fun(self: LibTalentTree-1.0, nodeID: number): libNodeInfo
-function LibTalentTree:GetNodeInfo(treeID, nodeID)
-    assert(type(treeID) == 'number', 'treeID must be a number');
-    if not nodeID then
-        nodeID = treeID;
-        --- @type number
-        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
-    end
+--- @param nodeID number # TraitNodeID
+--- @return libNodeInfo|TraitNodeInfo nodeInfo # libNodeInfo is enriched and overwritten by C_Traits information if possible
+function LibTalentTree:GetNodeInfo(nodeID)
     assert(type(nodeID) == 'number', 'nodeID must be a number');
     if forceBuildCache then forceBuildCache(); end;
 
-    local cNodeInfo = C_ClassTalents.GetActiveConfigID()
-            and C_Traits.GetNodeInfo(C_ClassTalents.GetActiveConfigID(), nodeID)
-            or C_Traits.GetNodeInfo(Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID or -3, nodeID);
-    local libNodeInfo = treeID and self:GetLibNodeInfo(treeID, nodeID);
+    local cNodeInfo = C_Traits.GetNodeInfo(
+        C_ClassTalents.GetActiveConfigID() or Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID or -3,
+        nodeID
+    )
+    local libNodeInfo = self:GetLibNodeInfo(nodeID);
 
-    if (not libNodeInfo) then return cNodeInfo; end
-    if (not cNodeInfo) then cNodeInfo = {}; end
+    if not libNodeInfo then return cNodeInfo; end
+
+    ---@diagnostic disable-next-line: missing-fields
+    if not cNodeInfo then cNodeInfo = {}; end
 
     if cNodeInfo.ID == nodeID then
         return Mixin(libNodeInfo, cNodeInfo);
@@ -451,20 +437,13 @@ function LibTalentTree:GetNodeInfo(treeID, nodeID)
 end
 
 --- @public
---- @param treeID number # TraitTreeID, or TraitEntryID, if leaving the 2nd argument nil
---- @param entryID number # TraitEntryID, can be omitted, by passing the entryID as the first argument, the treeID is automatically determined
---- @return ( entryInfo | nil )
---- @overload fun(self: LibTalentTree-1.0, entryID: number): entryInfo | nil
-function LibTalentTree:GetEntryInfo(treeID, entryID)
-    assert(type(treeID) == 'number', 'treeID must be a number');
-    if not entryID then
-        entryID = treeID;
-        --- @type number
-        treeID = self:GetTreeIDForEntry(entryID); ---@diagnostic disable-line: assign-type-mismatch
-    end
+--- @param entryID number # TraitEntryID
+--- @return entryInfo|nil entryInfo
+function LibTalentTree:GetEntryInfo(entryID)
     assert(type(entryID) == 'number', 'entryID must be a number');
     if forceBuildCache then forceBuildCache(); end;
 
+    local treeID = self:GetTreeIDForEntry(entryID);
     local entryData = self.cache.entryData;
 
     local entryInfo = entryData[treeID] and entryData[treeID][entryID] and deepCopy(entryData[treeID][entryID]) or nil;
@@ -477,8 +456,8 @@ function LibTalentTree:GetEntryInfo(treeID, entryID)
 end
 
 --- @public
---- @param class (string | number) # ClassID or ClassFilename - e.g. "DEATHKNIGHT" or 6 - See https://warcraft.wiki.gg/wiki/ClassID
---- @return ( number | nil ) # TraitTreeID
+--- @param class string|number # ClassID or ClassFilename - e.g. "DEATHKNIGHT" or 6 - See https://warcraft.wiki.gg/wiki/ClassID
+--- @return number|nil treeID # TraitTreeID
 function LibTalentTree:GetClassTreeID(class)
     assert(type(class) == 'string' or type(class) == 'number', 'class must be a string or number');
     if forceBuildCache then forceBuildCache(); end;
@@ -490,11 +469,10 @@ function LibTalentTree:GetClassTreeID(class)
 
     return classTreeMap[classID] or nil;
 end
-LibTalentTree.GetClassTreeId = LibTalentTree.GetClassTreeID;
 
 --- @public
---- @param treeID (number) # a class' TraitTreeID
---- @return (number | nil) # ClassID or nil - See https://warcraft.wiki.gg/wiki/ClassID
+--- @param treeID number # a class' TraitTreeID
+--- @return number|nil classID # ClassID or nil - See https://warcraft.wiki.gg/wiki/ClassID
 function LibTalentTree:GetClassIDByTreeID(treeID)
     treeID = tonumber(treeID); ---@diagnostic disable-line: cast-local-type
     if forceBuildCache then forceBuildCache(); end;
@@ -509,12 +487,11 @@ function LibTalentTree:GetClassIDByTreeID(treeID)
 
     return self.inverseClassMap[treeID];
 end
-LibTalentTree.GetClassIdByTreeId = LibTalentTree.GetClassIDByTreeID;
 
 --- @public
 --- @param specID number # See https://warcraft.wiki.gg/wiki/SpecializationID
 --- @param nodeID number # TraitNodeID
---- @return boolean # whether the node is visible for the given spec
+--- @return boolean isVisible # whether the node is visible for the given spec
 function LibTalentTree:IsNodeVisibleForSpec(specID, nodeID)
     assert(type(specID) == 'number', 'specID must be a number');
     assert(type(nodeID) == 'number', 'nodeID must be a number');
@@ -524,8 +501,7 @@ function LibTalentTree:IsNodeVisibleForSpec(specID, nodeID)
     local class = specMap[specID];
     assert(class, 'Unknown specID: ' .. specID);
 
-    local treeID = self:GetClassTreeID(class);
-    local nodeInfo = self:GetLibNodeInfo(treeID, nodeID);
+    local nodeInfo = self:GetLibNodeInfo(nodeID);
 
     if not nodeInfo then return false; end
 
@@ -535,7 +511,7 @@ end
 --- @public
 --- @param specID number # See https://warcraft.wiki.gg/wiki/SpecializationID
 --- @param nodeID number # TraitNodeID
---- @return boolean # whether the node is granted by default for the given spec
+--- @return boolean isGranted # whether the node is granted by default for the given spec
 function LibTalentTree:IsNodeGrantedForSpec(specID, nodeID)
     assert(type(specID) == 'number', 'specID must be a number');
     assert(type(nodeID) == 'number', 'nodeID must be a number');
@@ -545,8 +521,7 @@ function LibTalentTree:IsNodeGrantedForSpec(specID, nodeID)
     local class = specMap[specID];
     assert(class, 'Unknown specID: ' .. specID);
 
-    local treeID = self:GetClassTreeID(class);
-    local nodeInfo = self:GetLibNodeInfo(treeID --[[@as number]], nodeID);
+    local nodeInfo = self:GetLibNodeInfo(nodeID);
 
     if not nodeInfo then return false; end
 
@@ -554,21 +529,14 @@ function LibTalentTree:IsNodeGrantedForSpec(specID, nodeID)
 end
 
 --- @public
---- @param treeID number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
---- @param nodeID number # TraitNodeID, can be omitted, by passing the nodeID as the first argument, the treeID is automatically determined
---- @return ( number|nil, number|nil ) # posX, posY - some trees have a global offset
---- @overload fun(self: LibTalentTree-1.0, nodeID: number): (number|nil, number|nil)
-function LibTalentTree:GetNodePosition(treeID, nodeID)
-    assert(type(treeID) == 'number', 'treeID must be a number');
-    if not nodeID then
-        nodeID = treeID;
-        --- @type number
-        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
-    end
+--- @param nodeID number # TraitNodeID
+--- @return number|nil posX # some trees have a global offset
+--- @return number|nil posY # some trees have a global offset
+function LibTalentTree:GetNodePosition(nodeID)
     assert(type(nodeID) == 'number', 'nodeID must be a number');
 
-    local nodeInfo = self:GetLibNodeInfo(treeID, nodeID);
-    if (not nodeInfo) then return nil, nil; end
+    local nodeInfo = self:GetLibNodeInfo(nodeID);
+    if not nodeInfo then return nil, nil; end
 
     return nodeInfo.posX, nodeInfo.posY;
 end
@@ -588,21 +556,15 @@ local gridPositionCache = {};
 ---
 --- The Hero talent selection node, is hardcoded to row 5.5 and column 10. Making it sit right underneath the sub trees themselves.
 ---
---- @param treeID number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
---- @param nodeID number # TraitNodeID, can be omitted, by passing the nodeID as the first argument, the treeID is automatically determined
---- @return ( number|nil, number|nil ) # column, row
---- @overload fun(self: LibTalentTree-1.0, nodeID: number): (number|nil, number|nil)
-function LibTalentTree:GetNodeGridPosition(treeID, nodeID)
-    assert(type(treeID) == 'number', 'treeID must be a number');
-    if not nodeID then
-        nodeID = treeID;
-        --- @type number
-        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
-    end
+--- @param nodeID number # TraitNodeID
+--- @return number|nil column # some nodes sit between 2 columns, these columns end in ".5"
+--- @return number|nil row
+function LibTalentTree:GetNodeGridPosition(nodeID)
     assert(type(nodeID) == 'number', 'nodeID must be a number');
 
-    local classID = self:GetClassIDByTreeID(treeID);
-    if not classID then return nil, nil end
+    local treeID = self:GetTreeIDForNode(nodeID);
+    local classID = treeID and self:GetClassIDByTreeID(treeID);
+    if not classID or not treeID then return nil, nil end
 
     gridPositionCache[treeID] = gridPositionCache[treeID] or {};
     if gridPositionCache[treeID][nodeID] then
@@ -622,7 +584,7 @@ function LibTalentTree:GetNodeGridPosition(treeID, nodeID)
     local colSpacing = 60;
 
     local row, col;
-    local nodeInfo = self:GetLibNodeInfo(treeID, nodeID);
+    local nodeInfo = self:GetLibNodeInfo(nodeID);
     local subTreeID = nodeInfo and nodeInfo.subTreeID;
 
     if subTreeID then
@@ -673,41 +635,25 @@ function LibTalentTree:GetNodeGridPosition(treeID, nodeID)
 end
 
 --- @public
---- @param treeID number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
---- @param nodeID number # TraitNodeID, can be omitted, by passing the nodeID as the first argument, the treeID is automatically determined
---- @return ( nil | visibleEdge[] ) # The order might not match C_Traits
---- @overload fun(self: LibTalentTree-1.0, nodeID: number): nil | visibleEdge[]
-function LibTalentTree:GetNodeEdges(treeID, nodeID)
-    assert(type(treeID) == 'number', 'treeID must be a number');
-    if not nodeID then
-        nodeID = treeID;
-        --- @type number
-        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
-    end
+--- @param nodeID number # TraitNodeID
+--- @return nil|visibleEdge[] edges
+function LibTalentTree:GetNodeEdges(nodeID)
     assert(type(nodeID) == 'number', 'nodeID must be a number');
 
-    local nodeInfo = self:GetLibNodeInfo(treeID, nodeID);
-    if (not nodeInfo) then return nil; end
+    local nodeInfo = self:GetLibNodeInfo(nodeID);
+    if not nodeInfo then return nil; end
 
     return nodeInfo.visibleEdges;
 end
 
 --- @public
---- @param treeID number # TraitTreeID, or TraitNodeID, if leaving the 2nd parameter nil
---- @param nodeID number # TraitNodeID, can be omitted, by passing the nodeID as the first argument, the treeID is automatically determined
---- @return ( boolean | nil ) # true if the node is a class node, false for spec nodes, nil if unknown
---- @overload fun(self: LibTalentTree-1.0, nodeID: number): boolean | nil
-function LibTalentTree:IsClassNode(treeID, nodeID)
-    assert(type(treeID) == 'number', 'treeID must be a number');
-    if not nodeID then
-        nodeID = treeID;
-        --- @type number
-        treeID = self:GetTreeIDForNode(nodeID); ---@diagnostic disable-line: assign-type-mismatch
-    end
+--- @param nodeID number # TraitNodeID
+--- @return boolean|nil isClassNode # true if the node is a class node, false otherwise; nil if the node isn't found
+function LibTalentTree:IsClassNode(nodeID)
     assert(type(nodeID) == 'number', 'nodeID must be a number');
 
-    local nodeInfo = self:GetLibNodeInfo(treeID, nodeID);
-    if (not nodeInfo) then return nil; end
+    local nodeInfo = self:GetLibNodeInfo(nodeID);
+    if not nodeInfo then return nil; end
 
     return nodeInfo.isClassNode;
 end
@@ -716,13 +662,14 @@ local gateCache = {}
 
 --- @public
 --- @param specID number # See https://warcraft.wiki.gg/wiki/SpecializationID
---- @return ( gateInfo[] ) # list of gates for the given spec, sorted by spending required
+--- @return gateInfo[] gates # list of gates for the given spec, sorted by spending required
 function LibTalentTree:GetGates(specID)
     -- an optimization step is likely trivial in 10.1.0, but well.. effort, and this also works fine still :)
+    -- 1 expansion later, and now I wish I wrote down what the trivial optimization was :D
     assert(type(specID) == 'number', 'specID must be a number');
     if forceBuildCache then forceBuildCache(); end;
 
-    if (gateCache[specID]) then return deepCopy(gateCache[specID]); end
+    if gateCache[specID] then return deepCopy(gateCache[specID]); end
     local specMap = self.cache.specMap;
     local class = specMap[specID];
     assert(class, 'Unknown specID: ' .. specID);
@@ -783,7 +730,7 @@ end
 
 --- @public
 --- @param treeID number # TraitTreeID
---- @return treeCurrencyInfo[] # list of currencies for the given tree, first entry is class currency, second is spec currency, the rest are sub tree currencies. The list is additionally indexed by the traitCurrencyID.
+--- @return treeCurrencyInfo[] treeCurrencies # list of currencies for the given tree, first entry is class currency, second is spec currency, the rest are sub tree currencies. The list is additionally indexed by the traitCurrencyID.
 function LibTalentTree:GetTreeCurrencies(treeID)
     assert(type(treeID) == 'number', 'treeID must be a number');
     if forceBuildCache then forceBuildCache(); end;
@@ -793,29 +740,27 @@ end
 
 --- @public
 --- @param subTreeID number # TraitSubTreeID
---- @return number[] # list of TraitNodeIDs that belong to the given sub tree
+--- @return number[] subTreeNodes # list of TraitNodeIDs that belong to the given sub tree
 function LibTalentTree:GetSubTreeNodeIDs(subTreeID)
     assert(type(subTreeID) == 'number', 'subTreeID must be a number');
     if forceBuildCache then forceBuildCache(); end;
 
     return deepCopy(self.cache.subTreeNodesMap[subTreeID]) or {};
 end
-LibTalentTree.GetSubTreeNodeIds = LibTalentTree.GetSubTreeNodeIDs;
 
 --- @public
 --- @param specID number # See https://warcraft.wiki.gg/wiki/SpecializationID
---- @return number[] # list of TraitSubTreeIDs that belong to the given spec
+--- @return number[] subTrees # list of TraitSubTreeIDs that belong to the given spec
 function LibTalentTree:GetSubTreeIDsForSpecID(specID)
     assert(type(specID) == 'number', 'specID must be a number');
     if forceBuildCache then forceBuildCache(); end;
 
     return deepCopy(self.cache.specSubTreeMap[specID]) or {};
 end
-LibTalentTree.GetSubTreeIdsForSpecId = LibTalentTree.GetSubTreeIDsForSpecID;
 
 --- @public
 --- @param subTreeID number # TraitSubTreeID
---- @return ( subTreeInfo | nil )
+--- @return subTreeInfo|nil subTreeInfo
 function LibTalentTree:GetSubTreeInfo(subTreeID)
     assert(type(subTreeID) == 'number', 'subTreeID must be a number');
     if forceBuildCache then forceBuildCache(); end;
@@ -826,7 +771,8 @@ end
 --- @public
 --- @param specID number # See https://warcraft.wiki.gg/wiki/SpecializationID
 --- @param subTreeID number # TraitSubTreeID
---- @return number?, number? # TraitNodeID, TraitEntryID; or nil if not found
+--- @return number? nodeID # TraitNodeID; or nil if not found
+--- @return number? entryID # TraitEntryID; or nil if not found
 function LibTalentTree:GetSubTreeSelectionNodeIDAndEntryIDBySpecID(specID, subTreeID)
     assert(type(specID) == 'number', 'specID must be a number');
     assert(type(subTreeID) == 'number', 'subTreeID must be a number');

@@ -49,12 +49,11 @@
 ---@field visibleEdges visibleEdge[] # The order does not always match C_Traits
 ---@field conditionIDs number[]
 ---@field entryIDs number[] # TraitEntryID - generally, choice nodes will have 2, otherwise there's just 1
----@field specInfo table<number, number[]> # specID: conditionType[] Deprecated, will be removed in 10.1.0; see Enum.TraitConditionType
----@field visibleForSpecs table<number, boolean> # specID: true/false, true if a node is visible for a spec; added in 10.1.0
----@field grantedForSpecs table<number, boolean> # specID: true/false, true if a node is granted for free, for a spec; added in 10.1.0
+---@field visibleForSpecs table<number, boolean> # specID: true/false, true if a node is visible for a spec
+---@field grantedForSpecs table<number, boolean> # specID: true/false, true if a node is granted for free, for a spec
 ---@field isClassNode boolean
----@field subTreeID number? # the sub tree ID that the node is associated with if any, nil otherwise; added in 11.0.0
----@field isSubTreeSelection boolean? # true if the node is a sub tree selection node, nil otherwise; added in 11.0.0
+---@field subTreeID number? # the sub tree ID that the node is associated with if any, nil otherwise
+---@field isSubTreeSelection boolean? # true if the node is a sub tree selection node, nil otherwise
 
 ---@class entryInfo
 ---@field definitionID number # TraitDefinitionID
@@ -62,7 +61,7 @@
 ---@field maxRanks number
 ---@field isAvailable boolean # LibTalentTree always returns true
 ---@field conditionIDs number[] # list of TraitConditionID, LibTalentTree always returns an empty table
----@field subTreeID number? # the sub tree ID that the entry will select if any, nil otherwise; added in 11.0.0
+---@field subTreeID number? # the sub tree ID that the entry will select if any, nil otherwise
 
 ---@class gateInfo
 ---@field topLeftNodeID number # TraitNodeID - the node that is the top left corner of the gate
