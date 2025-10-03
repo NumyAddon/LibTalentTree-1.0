@@ -172,7 +172,7 @@ do
         cache.entryData[treeID] = entryData;
         cache.gateData[treeID] = gateData;
 
-        local numSpecs = GetNumSpecializationsForClassID(classID);
+        local numSpecs = C_SpecializationInfo.GetNumSpecializationsForClassID(classID);
         for specIndex = 1, (numSpecs + 1) do
             local lastSpec = specIndex == (numSpecs + 1);
             local specID = GetSpecializationInfoForClassID(classID, specIndex) or initialSpecs[classID];
