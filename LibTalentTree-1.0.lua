@@ -1,7 +1,7 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 27;
+local MAJOR, MINOR = "LibTalentTree-1.0", 28;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -22,8 +22,10 @@ if not C_ClassTalents or not C_ClassTalents.InitializeViewLoadout then
     return;
 end
 
+local isMidnight = select(4, GetBuildInfo()) >= 120000;
+
 local MAX_LEVEL = 100; -- seems to not break if set too high, but can break things when set too low
-local MAX_SUB_TREE_CURRENCY = 10; -- blizzard incorrectly reports 20 when asking for the maxQuantity of the currency
+local MAX_SUB_TREE_CURRENCY = isMidnight and 13 or 10; -- blizzard incorrectly reports 20 when asking for the maxQuantity of the currency
 local HERO_TREE_REQUIRED_LEVEL = 71; -- while `C_ClassTalents.GetHeroTalentSpecsForClassSpec` returns this info, it's not immediately available on initial load
 
 -- taken from ClassTalentUtil.GetVisualsForClassID
@@ -195,7 +197,7 @@ do
             for _, gateInfo in ipairs(treeInfo.gates) do
                 local conditionID = gateInfo.conditionID;
                 local conditionInfo = C_Traits.GetConditionInfo(configID, conditionID);
-                gateData[conditionID] = {
+                gateData[conditionID] = conditionInfo and {
                     currencyID = conditionInfo.traitCurrencyID,
                     spentAmountRequired = conditionInfo.spentAmountRequired,
                 };
@@ -552,9 +554,10 @@ local gridPositionCache = {};
 ---
 --- The top row is 1, the bottom row is 10.
 --- The first class column is 1, the last class column is 9.
---- The first spec column is 13. (if the client supports sub trees, otherwise it's 10)
+--- The first spec column is 13. In Midnight this is 14 instead.
 ---
 --- Hero talents are placed in between the class and spec trees, in columns 10, 11, 12.
+--- Midnight adds another column to the hero talents, making them sit in columns 10 - 13.
 --- Hero talent subTrees are stacked to overlap, all subTrees on rows 1 - 5. You're responsible for adjusting this yourself.
 ---
 --- The Hero talent selection node, is hardcoded to row 5.5 and column 10. Making it sit right underneath the sub trees themselves.
@@ -585,6 +588,8 @@ function LibTalentTree:GetNodeGridPosition(nodeID)
     posX = (round(posX) / 10) - offsetX;
     posY = (round(posY) / 10) - offsetY;
     local colSpacing = 60;
+    local subTreeColSpacing = colSpacing * 10
+    local subTreeColOffset = 9;
 
     local row, col;
     local nodeInfo = self:GetLibNodeInfo(nodeID);
@@ -595,14 +600,10 @@ function LibTalentTree:GetNodeGridPosition(nodeID)
         if subTreeInfo then
             local topCenterPosX = subTreeInfo.posX;
             local topCenterPosY = subTreeInfo.posY;
-            local offsetFromCenterX = rawX - topCenterPosX;
-            if (offsetFromCenterX > colSpacing) then
-                col = 12;
-            elseif (offsetFromCenterX < -colSpacing) then
-                col = 10;
-            else
-                col = 11;
-            end
+
+            local colStart = topCenterPosX - (subTreeColSpacing * (isMidnight and 1.5 or 1));
+            local halfColEnabled = true;
+            col = subTreeColOffset + getGridLineFromCoordinate(colStart, subTreeColSpacing, halfColEnabled, rawX);
 
             local rowStart = topCenterPosY;
             local rowSpacing = 2400 / 4; -- 2400 is generally the height of a sub tree, 4 is number of "gaps" between 5 rows
@@ -618,7 +619,7 @@ function LibTalentTree:GetNodeGridPosition(nodeID)
         local halfColEnabled = true;
         local classColEnd = 656;
         local specColStart = 956;
-        local subTreeOffset = 3 * colSpacing;
+        local subTreeOffset = (isMidnight and 4 or 3) * colSpacing;
         local classSpecGap = (specColStart - classColEnd) - subTreeOffset;
         if (posX > (classColEnd + (classSpecGap / 2))) then
             -- remove the gap between the class and spec trees
@@ -632,7 +633,7 @@ function LibTalentTree:GetNodeGridPosition(nodeID)
         row = getGridLineFromCoordinate(rowStart, rowSpacing, halfRowEnabled, posY);
     end
 
-    gridPositionCache[treeID][nodeID] = {col, row};
+    gridPositionCache[treeID][nodeID] = { col, row };
 
     return col, row;
 end
