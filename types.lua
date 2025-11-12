@@ -8,7 +8,8 @@
 ---@field spent number
 ---@field isClassCurrency boolean? # true if the currency is a class currency, nil otherwise
 ---@field isSpecCurrency boolean? # true if the currency is a spec currency, nil otherwise
----@field subTreeID number? # the sub tree ID that the currency is associated with if any, nil otherwise
+---@field subTreeID number? # DEPRECATED the sub tree ID that the currency is associated with if any, nil otherwise
+---@field subTreeIDs number[]? # list of sub trees that the currency is associated with if any, nil otherwise
 
 ---@alias edgeType
 ---| 0 # VisualOnly

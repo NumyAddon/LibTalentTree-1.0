@@ -409,15 +409,16 @@ The data is similar to `C_Traits.GetTreeCurrencyInfo`, but enriched with more in
 #### Returns
 * `table` treeCurrencies - list of `table` treeCurrencyInfo - first entry is class currency, second is spec currency, the rest are sub tree currencies. The list is additionally indexed by the traitCurrencyID
 ##### treeCurrencyInfo
-| Field                      | Differences from C_Traits                | Extra info                                                        |
-|----------------------------|------------------------------------------|-------------------------------------------------------------------|
-| `number` traitCurrencyID   | None                                     |                                                                   |
-| `number` quantity          | Always matches maxQuantity for max level |                                                                   |
-| `number?` maxQuantity      | Always matches maxQuantity for max level |                                                                   |
-| `number` spent             | Always 0                                 |                                                                   |
-| `boolean?` isClassCurrency | Lib-Only                                 | true if the currency is a class tree currency, nil otherwise      |
-| `boolean?` isSpecCurrency  | Lib-Only                                 | true if the currency is a spec tree currency, nil otherwise       |
-| `number?` subTreeID        | Lib-Only                                 | the subTreeID that the currency is used for if any, nil otherwise |
+| Field                      | Differences from C_Traits                | Extra info                                                                            |
+|----------------------------|------------------------------------------|---------------------------------------------------------------------------------------|
+| `number` traitCurrencyID   | None                                     |                                                                                       |
+| `number` quantity          | Always matches maxQuantity for max level |                                                                                       |
+| `number?` maxQuantity      | Always matches maxQuantity for max level |                                                                                       |
+| `number` spent             | Always 0                                 |                                                                                       |
+| `boolean?` isClassCurrency | Lib-Only                                 | true if the currency is a class tree currency, nil otherwise                          |
+| `boolean?` isSpecCurrency  | Lib-Only                                 | true if the currency is a spec tree currency, nil otherwise                           |
+| `number?` subTreeID        | Lib-Only                                 | DEPRECATED! one of the subTreeIDs that the currency is used for if any, nil otherwise |
+| `number[]?` subTreeIDs     | Lib-Only                                 | the subTreeIDs that the currency is used for if any, nil otherwise                    |
 #### Example
 ```lua
 local LibTalentTree = LibStub("LibTalentTree-1.0")

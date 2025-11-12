@@ -253,9 +253,12 @@ do
                                     subTreeInfo.maxCurrency = MAX_SUB_TREE_CURRENCY;
                                     subTreeInfo.isActive = false;
                                     cache.subTreeData[entryInfo.subTreeID] = subTreeInfo;
-                                    cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID].subTreeID = entryInfo.subTreeID;
-                                    cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID].quantity = MAX_SUB_TREE_CURRENCY;
-                                    cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID].maxQuantity = MAX_SUB_TREE_CURRENCY;
+                                    local currencyInfo = cache.treeCurrencyMap[treeID][subTreeInfo.traitCurrencyID];
+                                    currencyInfo.quantity = MAX_SUB_TREE_CURRENCY;
+                                    currencyInfo.maxQuantity = MAX_SUB_TREE_CURRENCY;
+                                    currencyInfo.subTreeID = entryInfo.subTreeID;
+                                    currencyInfo.subTreeIDs = currencyInfo.subTreeIDs or {};
+                                    table.insert(currencyInfo.subTreeIDs, entryInfo.subTreeID);
                                 end
                             end
                         end
