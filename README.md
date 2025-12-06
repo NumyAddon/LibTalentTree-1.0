@@ -152,23 +152,25 @@ nodeInfo = LibTalentTree:GetLibNodeInfo(nodeID)
 #### Returns
 * `table|nil` nodeInfo, nil if not found
 ##### nodeInfo
-| Field                        | Differences from C_Traits | Extra info                                                                               |
-|------------------------------|---------------------------|------------------------------------------------------------------------------------------|
-| `number` ID                  | None                      |                                                                                          |
-| `number` posX                | None                      | some class trees have a global offset                                                    |
-| `number` posY                | None                      | some class trees have a global offset                                                    |
-| `number` type                | None                      | see Enum.TraitNodeType                                                                   |
-| `number` maxRanks            | None                      |                                                                                          |
-| `number` flags               | None                      | see Enum.TraitNodeFlag                                                                   |
-| `number[]` groupIDs          | None                      | list of `number` groupIDs                                                                |
-| `table` visibleEdges         | isActive field is missing | list of `table` visibleEdges                                                             |
-| `number[]` conditionIDs      | None                      | list of `number` conditionIDs                                                            |
-| `number[]` entryIDs          | None                      | list of `number` entryIDs; generally, choice nodes will have 2, otherwise there's just 1 |
-| `number?` subTreeID          | None                      | hero spec / subTree ID if applicable, nil otherwise                                      |
-| `table` visibleForSpecs      | Lib-only field            | `specID` = true/false - true if a node is visible for a spec                             |
-| `table` grantedForSpecs      | Lib-only field            | `specID` = true/false - true if a node is granted for free, for a spec                   |
-| `boolean` isClassNode        | Lib-only field            | true if the node is part of the class tree, false if it's a spec or hero spec node       |
-| `boolean` isSubTreeSelection | Lib-only field            | true for sub tree selection nodes                                                        |
+| Field                         | Differences from C_Traits | Extra info                                                                                                                 |
+|-------------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `number` ID                   | None                      |                                                                                                                            |
+| `number` posX                 | None                      | some class trees have a global offset                                                                                      |
+| `number` posY                 | None                      | some class trees have a global offset                                                                                      |
+| `number` type                 | None                      | see Enum.TraitNodeType                                                                                                     |
+| `number` maxRanks             | None                      |                                                                                                                            |
+| `number` flags                | None                      | see Enum.TraitNodeFlag                                                                                                     |
+| `number[]` groupIDs           | None                      | list of `number` groupIDs                                                                                                  |
+| `table` visibleEdges          | isActive field is missing | list of `table` visibleEdges                                                                                               |
+| `number[]` conditionIDs       | None                      | list of `number` conditionIDs                                                                                              |
+| `number[]` entryIDs           | None                      | list of `number` entryIDs; generally, choice nodes will have 2, otherwise there's just 1                                   |
+| `number?` subTreeID           | None                      | hero spec / subTree ID if applicable, nil otherwise                                                                        |
+| `table` visibleForSpecs       | Lib-only field            | `specID` = true/false - true if a node is visible for a spec                                                               |
+| `table` grantedForSpecs       | Lib-only field            | `specID` = true/false - true if a node is granted for free, for a spec                                                     |
+| `boolean` isClassNode         | Lib-only field            | true if the node is part of the class tree, false if it's a spec or hero spec node                                         |
+| `boolean` isSubTreeSelection  | Lib-only field            | true for sub tree selection nodes                                                                                          |
+| `boolean` isApexTalent        | Lib-only field            | true for "apex" talents (Midnight lvl 81+ talents)                                                                         |
+| `number?` requiredPlayerLevel | Lib-only field            | the required level, even if all other conditions are met (such as gates and edges), currently only applies to Apex talents |
 ##### visibleEdges
 | Field                | Differences from C_Traits | Extra info                    |
 |----------------------|---------------------------|-------------------------------|

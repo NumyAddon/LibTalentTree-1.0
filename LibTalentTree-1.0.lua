@@ -1,7 +1,8 @@
 -- the data for LibTalentTree will be loaded (and cached) from blizzard's APIs when the Lib loads
 -- @curseforge-project-slug: libtalenttree@
+--- @diagnostic disable: duplicate-set-field
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 29;
+local MAJOR, MINOR = "LibTalentTree-1.0", 30;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -27,6 +28,7 @@ local isMidnight = select(4, GetBuildInfo()) >= 120000;
 local MAX_LEVEL = 100; -- seems to not break if set too high, but can break things when set too low
 local MAX_SUB_TREE_CURRENCY = isMidnight and 13 or 10; -- blizzard incorrectly reports 20 when asking for the maxQuantity of the currency
 local HERO_TREE_REQUIRED_LEVEL = 71; -- while `C_ClassTalents.GetHeroTalentSpecsForClassSpec` returns this info, it's not immediately available on initial load
+local APEX_TALENT_LEVEL = 81
 
 -- taken from ClassTalentUtil.GetVisualsForClassID
 local CLASS_OFFSETS = {
@@ -130,7 +132,7 @@ do
             treeCurrencyMap = {},
             --- @type table<number, libNodeInfo[]> # treeID -> {nodeID -> nodeInfo}
             nodeData = {},
-            --- @type table<number, table<number, gateInfo>> # treeID -> {conditionID -> gateInfo}
+            --- @type table<number, table<number, { currencyID: number, spentAmountRequired: number }>> # treeID -> {conditionID -> gateInfo}
             gateData = {},
             --- @type table<number, entryInfo[]> # treeID -> {entryID -> entryData}
             entryData = {},
@@ -219,14 +221,16 @@ do
                     data.entryIDs = nodeInfo.entryIDs;
                     data.subTreeID = nodeInfo.subTreeID;
                     data.isSubTreeSelection = nodeInfo.type == Enum.TraitNodeType.SubTreeSelection;
+                    data.isApexTalent = false;
+                    data.requiredPlayerLevel = 0;
 
-                    data.visibleEdges = data.visibleEdges or {}
+                    data.visibleEdges = data.visibleEdges or {};
                     mergeTables(data.visibleEdges, nodeInfo.visibleEdges, 'targetNode');
 
-                    data.conditionIDs = data.conditionIDs or {}
+                    data.conditionIDs = data.conditionIDs or {};
                     mergeTables(data.conditionIDs, nodeInfo.conditionIDs);
 
-                    data.groupIDs = data.groupIDs or {}
+                    data.groupIDs = data.groupIDs or {};
                     mergeTables(data.groupIDs, nodeInfo.groupIDs);
                     for entryIndex, entryID in pairs(nodeInfo.entryIDs) do
                         cache.entryTreeMap[entryID] = treeID;
@@ -247,7 +251,8 @@ do
                                 cache.subTreeSpecMap[entryInfo.subTreeID][specID] = true;
                                 -- I previously used C_ClassTalents.GetHeroTalentSpecsForClassSpec, but it returns nil on initial load
                                 -- it's not actually required to retrieve the data though
-                                local subTreeInfo = C_Traits.GetSubTreeInfo(configID, entryInfo.subTreeID);
+                                --- @type subTreeInfo|nil
+                                local subTreeInfo = C_Traits.GetSubTreeInfo(configID, entryInfo.subTreeID); --- @diagnostic disable-line: assign-type-mismatch
                                 if subTreeInfo then
                                     subTreeInfo.requiredPlayerLevel = HERO_TREE_REQUIRED_LEVEL;
                                     subTreeInfo.maxCurrency = MAX_SUB_TREE_CURRENCY;
@@ -266,9 +271,19 @@ do
 
                     for _, conditionID in pairs(data.conditionIDs) do
                         local cInfo = C_Traits.GetConditionInfo(configID, conditionID)
-                        if cInfo and cInfo.isMet and cInfo.ranksGranted and cInfo.ranksGranted > 0 then
-                            data.grantedForSpecs[specID] = true;
+                        if cInfo then
+                            if cInfo.isMet and cInfo.ranksGranted and cInfo.ranksGranted > 0 then
+                                data.grantedForSpecs[specID] = true;
+                            end
+                            if cInfo.playerLevel then
+                                data.requiredPlayerLevel = math.max(data.requiredPlayerLevel, cInfo.playerLevel);
+                            end
                         end
+                    end
+                    if data.requiredPlayerLevel == 0 then
+                        data.requiredPlayerLevel = nil;
+                    elseif data.requiredPlayerLevel >= APEX_TALENT_LEVEL then
+                        data.isApexTalent = true;
                     end
 
                     if nil == data.isClassNode then
