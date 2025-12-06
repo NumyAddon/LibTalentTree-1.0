@@ -302,7 +302,7 @@ do
             -- some subtree nodes incorrectly suggest they are visible for all specs, so we just correct that
             if nodeInfo.subTreeID then
                 for specID, _ in pairs(nodeInfo.visibleForSpecs) do
-                    nodeInfo.visibleForSpecs[specID] = cache.subTreeSpecMap[nodeInfo.subTreeID][specID] or false;
+                    nodeInfo.visibleForSpecs[specID] = nodeInfo.visibleForSpecs[specID] and cache.subTreeSpecMap[nodeInfo.subTreeID][specID] or false;
                 end
             end
         end
