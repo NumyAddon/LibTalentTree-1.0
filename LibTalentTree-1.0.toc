@@ -1,4 +1,7 @@
-## Interface: @toc-version-retail@,@toc-version-midnight@,120000
+## Interface: @toc-version-midnight@, @toc-version-retail@
+#@debug@
+## Interface: 120000
+#@end-debug@
 ## Title: Lib: LibTalentTree-1.0
 ## Notes: Library for retrieving class and spec talent tree information
 ## Author: Numy
