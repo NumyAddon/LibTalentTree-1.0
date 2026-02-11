@@ -2,7 +2,7 @@
 -- @curseforge-project-slug: libtalenttree@
 --- @diagnostic disable: duplicate-set-field
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 30;
+local MAJOR, MINOR = "LibTalentTree-1.0", 31;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -217,12 +217,14 @@ do
                     data.posY = nodeInfo.posY;
                     data.type = nodeInfo.type;
                     data.maxRanks = nodeInfo.maxRanks;
+                    data.totalMaxRanks = nodeInfo.totalMaxRanks;
                     data.flags = nodeInfo.flags;
                     data.entryIDs = nodeInfo.entryIDs;
                     data.subTreeID = nodeInfo.subTreeID;
                     data.isSubTreeSelection = nodeInfo.type == Enum.TraitNodeType.SubTreeSelection;
                     data.isApexTalent = false;
-                    data.requiredPlayerLevel = 0;
+                    data.requiredPlayerLevel = math.huge;
+                    data.requiredPlayerLevelPerRank = data.requiredPlayerLevelPerRank or {};
 
                     data.visibleEdges = data.visibleEdges or {};
                     mergeTables(data.visibleEdges, nodeInfo.visibleEdges, 'targetNode');
@@ -272,15 +274,20 @@ do
                     for _, conditionID in pairs(data.conditionIDs) do
                         local cInfo = C_Traits.GetConditionInfo(configID, conditionID)
                         if cInfo then
-                            if cInfo.isMet and cInfo.ranksGranted and cInfo.ranksGranted > 0 then
+                            if cInfo.isMet and cInfo.type == Enum.TraitConditionType.Granted and cInfo.ranksGranted and cInfo.ranksGranted > 0 then
                                 data.grantedForSpecs[specID] = true;
                             end
-                            if cInfo.playerLevel then
-                                data.requiredPlayerLevel = math.max(data.requiredPlayerLevel, cInfo.playerLevel);
+                            if cInfo.playerLevel and cInfo.type == Enum.TraitConditionType.Available then
+                                data.requiredPlayerLevelPerRank[1] = cInfo.playerLevel;
+                                data.requiredPlayerLevel = math.min(data.requiredPlayerLevel, cInfo.playerLevel);
+                            end
+                            if cInfo.playerLevel and cInfo.type == Enum.TraitConditionType.RanksAllowed then
+                                data.requiredPlayerLevelPerRank[cInfo.ranksGranted] = cInfo.playerLevel;
+                                data.requiredPlayerLevel = math.min(data.requiredPlayerLevel, cInfo.playerLevel);
                             end
                         end
                     end
-                    if data.requiredPlayerLevel == 0 then
+                    if data.requiredPlayerLevel == math.huge then
                         data.requiredPlayerLevel = nil;
                     elseif data.requiredPlayerLevel >= APEX_TALENT_LEVEL then
                         data.isApexTalent = true;
