@@ -2,7 +2,7 @@
 -- @curseforge-project-slug: libtalenttree@
 --- @diagnostic disable: duplicate-set-field
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 31;
+local MAJOR, MINOR = "LibTalentTree-1.0", 32;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -458,10 +458,6 @@ function LibTalentTree:GetNodeInfo(nodeID)
 
     ---@diagnostic disable-next-line: missing-fields
     if not cNodeInfo then cNodeInfo = {}; end
-
-    if cNodeInfo.ID == nodeID then
-        return Mixin(libNodeInfo, cNodeInfo);
-    end
 
     return Mixin(cNodeInfo, libNodeInfo);
 end
