@@ -64,6 +64,8 @@ Most of the information returned matches the in-game C_Traits API, which has up-
    * Returns the position of a node in a given tree.
  * `column, row = LibTalentTree:GetNodeGridPosition(nodeID)` [#GetNodeGridPosition](#getnodegridposition)
    * Returns an abstracted grid position of a node in a given tree.
+ * `nodeID1, nodeID2, ... = LibTalentTree:GetNodeIDsForGridPosition(class, column, row)` [#GetNodeIDsForGridPosition](#getnodeidsforgridposition)
+   * Returns a list of nodeIDs for a given grid position.
  * `isClassNode = LibTalentTree:IsClassNode(nodeID)` [#IsClassNode](#isclassnode)
    * Returns true if the node is part of the class tree, false if it's a spec or hero spec node.
  * `edges = LibTalentTree:GetNodeEdges(nodeID)` [#GetNodeEdges](#getnodeedges)
@@ -337,6 +339,26 @@ column, row = LibTalentTree:GetNodeGridPosition(nodeID)
 ```lua
 local LibTalentTree = LibStub("LibTalentTree-1.0")
 local column, row = LibTalentTree:GetNodeGridPosition(12345)
+```
+
+
+### GetNodeIDsForGridPosition
+Returns all nodeIDs that match the given grid position for a given class. In retail there will often be several nodeIDs, while on Forever there will generally only be 1.
+#### Syntax
+```lua
+nodeID1, nodeID2, ... = LibTalentTree:GetNodeIDsForGridPosition(classID | classFile, column, row)
+```
+#### Arguments
+* `number` classID - The [ClassID](https://warcraft.wiki.gg/wiki/ClassID) of the class you want to get the TraitNodeIDs for.
+* `string` classFile - Locale-independent name, e.g. `"WARRIOR"`.
+* `number|nil` column - Column of the node. Can be a decimal with .5 for nodes that sit between 2 columns.
+* `number|nil` row - Row of the node.
+#### Returns
+* `number|nil` `...` nodeIDs - There may be duplicates in case of different specs / hero trees having nodes in the same position.
+#### Example
+```lua
+local LibTalentTree = LibStub("LibTalentTree-1.0")
+local nodeIDs = { LibTalentTree:GetNodeIDsForGridPosition("WARRIOR", 1, 2) }
 ```
 
 

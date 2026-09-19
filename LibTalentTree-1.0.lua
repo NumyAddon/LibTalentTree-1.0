@@ -2,7 +2,7 @@
 -- @curseforge-project-slug: libtalenttree@
 --- @diagnostic disable: duplicate-set-field
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 32;
+local MAJOR, MINOR = "LibTalentTree-1.0", 33;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -23,7 +23,10 @@ if not C_ClassTalents or not C_ClassTalents.InitializeViewLoadout then
     return;
 end
 
-local isMidnight = select(4, GetBuildInfo()) >= 120000;
+local toc = select(4, GetBuildInfo());
+local is4E = toc >= 16000 and toc < 20000;
+local isRetail = toc > 100000;
+local isMidnight = toc >= 120000;
 
 local MAX_LEVEL = 100; -- seems to not break if set too high, but can break things when set too low
 local MAX_SUB_TREE_CURRENCY = isMidnight and 13 or 10; -- blizzard incorrectly reports 20 when asking for the maxQuantity of the currency
@@ -46,6 +49,19 @@ local CLASS_OFFSETS = {
     [12] = { x = 30, y = -29, }, -- Demon Hunter
     [13] = { x = 30, y = -29, }, -- Evoker
 };
+if is4E then
+    CLASS_OFFSETS = {
+        [1] = { x = 60, y = 31, }, -- Warrior
+        [2] = { x = 60, y = 31, }, -- Paladin
+        [3] = { x = 60, y = 31, }, -- Hunter
+        [4] = { x = 60, y = 31, }, -- Rogue
+        [5] = { x = 60, y = 31, }, -- Priest
+        [7] = { x = 60, y = 31, }, -- Shaman
+        [8] = { x = 60, y = 31, }, -- Mage
+        [9] = { x = 60, y = 31, }, -- Warlock
+        [11] = { x = 60, y = 31, }, -- Druid
+    }
+end
 -- taken from ClassTalentTalentsTabTemplate XML
 local BASE_PAN_OFFSET_X = 4;
 local BASE_PAN_OFFSET_Y = -30;
@@ -140,10 +156,13 @@ do
             subTreeData = {},
         };
         for classID = 1, GetNumClasses() do
-            LibTalentTree.cache.classFileMap[select(2, GetClassInfo(classID))] = classID;
+            local _, classFile = GetClassInfo(classID);
+            if classFile then
+                LibTalentTree.cache.classFileMap[classFile] = classID;
 
-            local specID = GetSpecializationInfoForClassID(classID, 1);
-            LibTalentTree.cache.classTreeMap[classID] = C_ClassTalents.GetTraitTreeForSpec(specID);
+                local specID = GetSpecializationInfoForClassID(classID, 1);
+                LibTalentTree.cache.classTreeMap[classID] = C_ClassTalents.GetTraitTreeForSpec(specID);
+            end
         end
     end
 
@@ -169,6 +188,9 @@ do
 
         local nodes;
         local treeID = cache.classTreeMap[classID];
+
+        if not treeID then return end -- only in 4E
+
         local nodeData = {};
         local entryData = {};
         local gateData = {};
@@ -190,7 +212,9 @@ do
             local classCurrencyID = treeCurrencyInfo[1].traitCurrencyID;
             cache.treeCurrencyMap[treeID] = cache.treeCurrencyMap[treeID] or treeCurrencyInfo;
             cache.treeCurrencyMap[treeID][1].isClassCurrency = true;
-            cache.treeCurrencyMap[treeID][2].isSpecCurrency = true;
+            if cache.treeCurrencyMap[treeID][2] then
+                cache.treeCurrencyMap[treeID][2].isSpecCurrency = true;
+            end
             for _, currencyInfo in ipairs(treeCurrencyInfo) do
                 cache.treeCurrencyMap[treeID][currencyInfo.traitCurrencyID] = cache.treeCurrencyMap[treeID][currencyInfo.traitCurrencyID] or currencyInfo;
             end
@@ -575,10 +599,9 @@ local gridPositionCache = {};
 ---
 --- The top row is 1, the bottom row is 10.
 --- The first class column is 1, the last class column is 9.
---- The first spec column is 13. In Midnight this is 14 instead.
+--- The first spec column is 14.
 ---
---- Hero talents are placed in between the class and spec trees, in columns 10, 11, 12.
---- Midnight adds another column to the hero talents, making them sit in columns 10 - 13.
+--- Hero talents are placed in between the class and spec trees, in columns 10, 11, 12, 14.
 --- Hero talent subTrees are stacked to overlap, all subTrees on rows 1 - 5. You're responsible for adjusting this yourself.
 ---
 --- The Hero talent selection node, is hardcoded to row 5.5 and column 10. Making it sit right underneath the sub trees themselves.
@@ -611,6 +634,7 @@ function LibTalentTree:GetNodeGridPosition(nodeID)
     local colSpacing = 60;
     local subTreeColSpacing = colSpacing * 10
     local subTreeColOffset = 9;
+    local subTreeNumColumns = 4;
 
     local row, col;
     local nodeInfo = self:GetLibNodeInfo(nodeID);
@@ -622,7 +646,7 @@ function LibTalentTree:GetNodeGridPosition(nodeID)
             local topCenterPosX = subTreeInfo.posX;
             local topCenterPosY = subTreeInfo.posY;
 
-            local colStart = topCenterPosX - (subTreeColSpacing * (isMidnight and 1.5 or 1));
+            local colStart = topCenterPosX - (subTreeColSpacing * 1.5);
             local halfColEnabled = true;
             col = subTreeColOffset + getGridLineFromCoordinate(colStart, subTreeColSpacing, halfColEnabled, rawX);
 
@@ -636,19 +660,36 @@ function LibTalentTree:GetNodeGridPosition(nodeID)
         row = 5.5;
     end
     if not row or not col then
-        local colStart = 176;
+        local colStart = isRetail and 176 or 160;
         local halfColEnabled = true;
-        local classColEnd = 656;
-        local specColStart = 956;
-        local subTreeOffset = (isMidnight and 4 or 3) * colSpacing;
-        local classSpecGap = (specColStart - classColEnd) - subTreeOffset;
-        if (posX > (classColEnd + (classSpecGap / 2))) then
-            -- remove the gap between the class and spec trees
-            posX = posX - classSpecGap + colSpacing;
+        if isRetail then
+            local classColEnd = 656;
+            local specColStart = 956;
+            local subTreeOffset = subTreeNumColumns * colSpacing;
+            local classSpecGap = (specColStart - classColEnd) - subTreeOffset;
+            if (posX > (classColEnd + (classSpecGap / 2))) then
+                -- remove the gap between the class and spec trees
+                posX = posX - classSpecGap + colSpacing;
+            end
+        else
+            local spec1ColEnd = 350;
+            local spec2ColStart = 560;
+            local spec2ColEnd = 750;
+            local spec3ColStart = 975;
+            local spec1Gap = (spec2ColStart - spec1ColEnd);
+            local spec2Gap = (spec3ColStart - spec2ColEnd);
+            if (posX > (spec2ColEnd + (spec2Gap / 2))) then
+                -- remove the gap between the spec trees
+                posX = posX - spec2Gap + colSpacing;
+            end
+            if (posX > (spec1ColEnd + (spec1Gap / 2))) then
+                -- remove the gap between the spec trees
+                posX = posX - spec1Gap + colSpacing;
+            end
         end
         col = getGridLineFromCoordinate(colStart, colSpacing, halfColEnabled, posX);
 
-        local rowStart = 151;
+        local rowStart = isRetail and 151 or 250;
         local rowSpacing = 60;
         local halfRowEnabled = false;
         row = getGridLineFromCoordinate(rowStart, rowSpacing, halfRowEnabled, posY);
@@ -657,6 +698,29 @@ function LibTalentTree:GetNodeGridPosition(nodeID)
     gridPositionCache[treeID][nodeID] = { col, row };
 
     return col, row;
+end
+
+--- @public
+--- @param class string|number # ClassID or ClassFilename - e.g. "DEATHKNIGHT" or 6 - See https://warcraft.wiki.gg/wiki/ClassID
+--- @param column number|nil # some nodes sit between 2 columns, these columns end in ".5"
+--- @param row number|nil
+--- @return number ... nodeIDs # talents from various specs and hero specs can overlap, resulting in multiple return values
+function LibTalentTree:GetNodeIDsForGridPosition(class, column, row)
+    local treeID = self:GetClassTreeID(class);
+    assert(treeID ~= nil, 'classID must be a valid class');
+    assert(type(column) == 'number', 'column must be a number');
+    assert(type(row) == 'number', 'row must be a number');
+
+    local nodeIDs = C_Traits.GetTreeNodes(treeID);
+    local matchingNodes = {};
+    for _, nodeID in pairs(nodeIDs) do
+        local nodeColumn, nodeRow = self:GetNodeGridPosition(nodeID);
+        if column == nodeColumn and row == nodeRow then
+            table.insert(matchingNodes, nodeID);
+        end
+    end
+
+    return unpack(matchingNodes);
 end
 
 --- @public
