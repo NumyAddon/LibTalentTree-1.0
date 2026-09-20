@@ -3,7 +3,13 @@
 LibTalentTree-1.0 is a library that provides an interface for accessing talent trees and talent node information.
 
 Blizzard's C_Traits API isn't always easy to use, and getting talent information for other classes/specs can be tedious. This library aims to make your life easier.
-> If you're interested in using the library, but have questions or feedback, I would love to hear from you!
+> If you're interested in using the library but have questions or feedback, I would love to hear from you!
+
+## Supported game versions
+ * WoW Retail (Midnight)
+ * WoW Forever
+
+The main focus of this library is for retail, but besides a few obvious differences (grid positions, lack of spec information, and lack of hero talents), the API surface is more or less identical between both flavors.
 
 ## Known issues
  * None, let me know if you find any!
