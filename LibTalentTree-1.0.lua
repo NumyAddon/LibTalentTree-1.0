@@ -2,7 +2,7 @@
 -- @curseforge-project-slug: libtalenttree@
 --- @diagnostic disable: duplicate-set-field
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 34;
+local MAJOR, MINOR = "LibTalentTree-1.0", 35;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -138,9 +138,11 @@ if LibTalentTree.cacheWarmupRegistery then
 end
 
 local forceBuildCache;
+local forceInitCache;
 local cacheWarmedUp = false;
 do
-    local function initCache()
+    local initCache;
+    initCache = function()
         LibTalentTree.cache = {
             --- @type table<string, number> # className -> classID
             classFileMap = {},
@@ -178,6 +180,7 @@ do
             local specID = GetSpecializationInfoForClassID(classID, 1);
             LibTalentTree.cache.classTreeMap[classID] = C_ClassTalents.GetTraitTreeForSpec(specID);
         end
+        initCache = nop;
     end
 
     local level = MAX_LEVEL;
@@ -408,6 +411,11 @@ do
         if backup and backup == '11' then C_CVar.SetCVar('taintLog', backup); end
     end);
 
+    forceInitCache = function()
+        initCache();
+        forceInitCache = nil;
+    end
+
     forceBuildCache = function()
         for classIndex = frame.currentClassIndex + 1, frame.numClasses do
             if classID == 1 then
@@ -528,7 +536,7 @@ end
 --- @return number|nil treeID # TraitTreeID
 function LibTalentTree:GetClassTreeID(class)
     assert(type(class) == 'string' or type(class) == 'number', 'class must be a string or number');
-    if forceBuildCache then forceBuildCache(); end;
+    if forceInitCache then forceInitCache(); end;
 
     local classFileMap = self.cache.classFileMap;
     local classTreeMap = self.cache.classTreeMap;
@@ -543,7 +551,7 @@ end
 --- @return number|nil classID # ClassID or nil - See https://warcraft.wiki.gg/wiki/ClassID
 function LibTalentTree:GetClassIDByTreeID(treeID)
     treeID = tonumber(treeID); ---@diagnostic disable-line: cast-local-type
-    if forceBuildCache then forceBuildCache(); end;
+    if forceInitCache then forceInitCache(); end;
 
     if not self.inverseClassMap then
         local classTreeMap = self.cache.classTreeMap;
