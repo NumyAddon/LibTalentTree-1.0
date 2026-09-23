@@ -36,6 +36,7 @@
 --- @field isSubTreeSelection boolean? # true if the node is a sub tree selection node, nil otherwise
 --- @field isApexTalent boolean # true for "apex" talents (Midnight lvl 81+ talents)
 --- @field requiredPlayerLevel number? # the required level, even if all other conditions are met (such as gates and edges), currently only applies to Apex talents
+--- @field spentAmountRequired { amount: number, tooltipFormat: string }? # if there's a spentAmountRequired condition with a tooltip, it will be added here
 
 --- @class entryInfo: TraitEntryInfo
 --- @field definitionID number # TraitDefinitionID

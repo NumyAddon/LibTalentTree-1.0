@@ -2,7 +2,7 @@
 -- @curseforge-project-slug: libtalenttree@
 --- @diagnostic disable: duplicate-set-field
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 33;
+local MAJOR, MINOR = "LibTalentTree-1.0", 34;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -66,6 +66,17 @@ end
 local BASE_PAN_OFFSET_X = 4;
 local BASE_PAN_OFFSET_Y = -30;
 
+local GetAllClassIDs = C_SpecializationInfo.GetAllClassIDs or function()
+    local classIDs = {}
+    for classID = 1, GetNumClasses() do
+        if GetClassInfo(classID) then
+            table.insert(classIDs, classID);
+        end
+    end
+
+    return classIDs;
+end
+
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
@@ -119,7 +130,12 @@ local function getGridLineFromCoordinate(start, spacing, halfwayEnabled, coordin
     return nil;
 end
 
-LibTalentTree.cacheWarmupRegistery = LibTalentTree.cacheWarmupRegistery or {};
+LibTalentTree.cacheWarmupRegistry = LibTalentTree.cacheWarmupRegistry or {};
+if LibTalentTree.cacheWarmupRegistery then
+    for _, callback in ipairs(LibTalentTree.cacheWarmupRegistery) do
+        table.insert(LibTalentTree.cacheWarmupRegistry, callback);
+    end
+end
 
 local forceBuildCache;
 local cacheWarmedUp = false;
@@ -155,14 +171,12 @@ do
             --- @type table<number, subTreeInfo> # subTreeID -> subTreeInfo
             subTreeData = {},
         };
-        for classID = 1, GetNumClasses() do
+        for _, classID in ipairs(GetAllClassIDs()) do
             local _, classFile = GetClassInfo(classID);
-            if classFile then
-                LibTalentTree.cache.classFileMap[classFile] = classID;
+            LibTalentTree.cache.classFileMap[classFile] = classID;
 
-                local specID = GetSpecializationInfoForClassID(classID, 1);
-                LibTalentTree.cache.classTreeMap[classID] = C_ClassTalents.GetTraitTreeForSpec(specID);
-            end
+            local specID = GetSpecializationInfoForClassID(classID, 1);
+            LibTalentTree.cache.classTreeMap[classID] = C_ClassTalents.GetTraitTreeForSpec(specID);
         end
     end
 
@@ -309,6 +323,9 @@ do
                                 data.requiredPlayerLevelPerRank[cInfo.ranksGranted] = cInfo.playerLevel;
                                 data.requiredPlayerLevel = math.min(data.requiredPlayerLevel, cInfo.playerLevel);
                             end
+                            if cInfo.tooltipFormat and cInfo.spentAmountRequired and cInfo.spentAmountRequired > 0 and cInfo.type == Enum.TraitConditionType.Available then
+                                data.spentAmountRequired = { amount = cInfo.spentAmountRequired, tooltipFormat = cInfo.tooltipFormat };
+                            end
                         end
                     end
                     if data.requiredPlayerLevel == math.huge then
@@ -359,43 +376,44 @@ do
         frame:SetScript("OnUpdate", nil);
         forceBuildCache = nil;
         cacheWarmedUp = true;
-        for _, callback in ipairs(LibTalentTree.cacheWarmupRegistery) do
+        for _, callback in ipairs(LibTalentTree.cacheWarmupRegistry) do
             securecallfunction(callback);
         end
-        LibTalentTree.cacheWarmupRegistery = nil;
+        LibTalentTree.cacheWarmupRegistry = nil;
     end
 
-    frame.currentClassID = 0;
-    frame.numClasses = GetNumClasses();
+    frame.currentClassIndex = 0;
+    frame.classes = GetAllClassIDs();
+    frame.numClasses = table.count(frame.classes);
     frame:SetScript("OnUpdate", function()
         local _, latestMinor = LibStub:GetLibrary(MAJOR);
         if latestMinor ~= MINOR then
             frame:SetScript("OnUpdate", nil);
             return;
         end
-        local classID = frame.currentClassID + 1;
-        if classID == 1 then
+        local classIndex = frame.currentClassIndex + 1;
+        if classIndex == 1 then
             initCache();
-        elseif classID > frame.numClasses then
+        elseif classIndex > frame.numClasses then
             onCacheCompleted();
             return;
         end
-        frame.currentClassID = classID;
+        frame.currentClassIndex = classIndex;
 
         -- buildPartialCache results in a significant amount of pointless taintlog entries when it's set to log level 11
         -- so we just disable it temporarily
         local backup = C_CVar.GetCVar('taintLog');
         if backup and backup == '11' then C_CVar.SetCVar('taintLog', 0); end
-        buildPartialCache(classID);
+        buildPartialCache(frame.classes[classIndex]);
         if backup and backup == '11' then C_CVar.SetCVar('taintLog', backup); end
     end);
 
     forceBuildCache = function()
-        for classID = frame.currentClassID + 1, frame.numClasses do
+        for classIndex = frame.currentClassIndex + 1, frame.numClasses do
             if classID == 1 then
                 initCache();
             end
-            buildPartialCache(classID);
+            buildPartialCache(frame.classes[classIndex]);
         end
         onCacheCompleted();
     end
@@ -415,7 +433,7 @@ function LibTalentTree:RegisterOnCacheWarmup(callback)
     if cacheWarmedUp then
         securecallfunction(callback);
     else
-        table.insert(self.cacheWarmupRegistery, callback);
+        table.insert(self.cacheWarmupRegistry, callback);
     end
 end
 
