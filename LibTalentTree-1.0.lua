@@ -2,7 +2,7 @@
 -- @curseforge-project-slug: libtalenttree@
 --- @diagnostic disable: duplicate-set-field
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 36;
+local MAJOR, MINOR = "LibTalentTree-1.0", 37;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -180,7 +180,8 @@ do
             local specID = GetSpecializationInfoForClassID(classID, 1);
             LibTalentTree.cache.classTreeMap[classID] = C_ClassTalents.GetTraitTreeForSpec(specID);
         end
-        initCache = nop;
+        initCache = function() end;
+        forceInitCache = nil;
     end
 
     local level = MAX_LEVEL;
@@ -201,6 +202,7 @@ do
         [13] = 1465,
     };
     local function buildPartialCache(classID)
+        initCache();
         local cache = LibTalentTree.cache;
 
         local nodes;
@@ -395,9 +397,7 @@ do
             return;
         end
         local classIndex = frame.currentClassIndex + 1;
-        if classIndex == 1 then
-            initCache();
-        elseif classIndex > frame.numClasses then
+        if classIndex > frame.numClasses then
             onCacheCompleted();
             return;
         end
@@ -418,9 +418,6 @@ do
 
     forceBuildCache = function()
         for classIndex = frame.currentClassIndex + 1, frame.numClasses do
-            if classIndex == 1 then
-                initCache();
-            end
             buildPartialCache(frame.classes[classIndex]);
         end
         onCacheCompleted();
