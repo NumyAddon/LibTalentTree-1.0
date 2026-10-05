@@ -2,7 +2,7 @@
 -- @curseforge-project-slug: libtalenttree@
 --- @diagnostic disable: duplicate-set-field
 
-local MAJOR, MINOR = "LibTalentTree-1.0", 35;
+local MAJOR, MINOR = "LibTalentTree-1.0", 36;
 --- @class LibTalentTree-1.0
 local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
@@ -418,7 +418,7 @@ do
 
     forceBuildCache = function()
         for classIndex = frame.currentClassIndex + 1, frame.numClasses do
-            if classID == 1 then
+            if classIndex == 1 then
                 initCache();
             end
             buildPartialCache(frame.classes[classIndex]);
